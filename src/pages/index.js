@@ -1,7 +1,7 @@
 import React from "react"
 import Particles from "react-tsparticles"
 import { loadTrianglesPreset } from "tsparticles-preset-triangles";
-import "../styles/index.css"
+import "../styles/index.scss"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -33,22 +33,22 @@ export default function Home() {
 
       <div className="flex-container">
         <div>
-          <h1 className="flex-item">Hola</h1>
+        	<h1 className="flex-item">Antonio Almena</h1>
 
-          <div className="social">
-            <a href="https://github.com/matteobruni/tsparticles">
-              <FontAwesomeIcon icon={["fab", "github"]} size="2x" />
-            </a>
-            <a href="https://github.com/matteobruni/tsparticles">
-              <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
-            </a>
-            <a href="https://github.com/matteobruni/tsparticles">
-              <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
-            </a>
-            <a href="https://github.com/matteobruni/tsparticles">
-              <FontAwesomeIcon icon={["fab", "linkedin-in"]} size="2x" />
-            </a>
-          </div>
+			{/* <div className="social">
+				<a href="https://github.com/matteobruni/tsparticles">
+				<FontAwesomeIcon icon={["fab", "github"]} size="2x" />
+				</a>
+				<a href="https://github.com/matteobruni/tsparticles">
+				<FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
+				</a>
+				<a href="https://github.com/matteobruni/tsparticles">
+				<FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
+				</a>
+				<a href="https://github.com/matteobruni/tsparticles">
+				<FontAwesomeIcon icon={["fab", "linkedin-in"]} size="2x" />
+				</a>
+			</div> */}
         </div>
 
       </div>

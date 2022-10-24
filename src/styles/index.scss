@@ -1,36 +1,38 @@
-html, body, #root, .App {
-    height: 100vh;
-    font-family: "Helvetica Neue", serif;
-}
+
+// Google Fonts
+@import url(https://fonts.googleapis.com/css2?family=Stick+No+Bills);
+
+// Font Variables
+$snb: 'Stick No Bills', serif;
 
 body {
-    background: #fff;
+    font-family: $snb;
+	color: #fff;
     margin: 0;
+	height: 100vh;
+	background: #ff0000;
+}
+
+h1 {
+    font-size: 40pt;
+	font-family: $snb;
+	margin: 0rem 0rem 1rem;
+}
+
+h2 {
+    font-size: 25pt;
 }
 
 .flex-container {
     height: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 2rem 0rem;
+    margin: 0rem;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     justify-content: center;
-}
-
-.row {
-    width: auto;
-    border-radius: 30px;
-    padding: 10vh 10vw;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.flex-item {
-    color: white;
-    font-weight: bold;
-    text-align: center;
 }
 
 .social {
@@ -56,12 +58,5 @@ body {
 
 .social a:hover {
     color: #dedede;
-    text-decoration: none;}
-
-h1 {
-    font-size: 40pt;
-}
-
-h2 {
-    font-size: 25pt;
+    text-decoration: none;
 }
