@@ -45,13 +45,13 @@ export default function Home() {
 
 				<div className="row mb-3">
 					<div className="circle-container">
-						<OutboundLink to="https://github.com/9ntonio" target="_blank" rel="noreferrer noopener">
+						<OutboundLink href="https://github.com/9ntonio" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="icon" icon={["fab", "github"]} size="2x" />
 						</OutboundLink>
 					</div>
 
 					<div className="circle-container">
-						<OutboundLink to="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
+						<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="linkedin" icon={["fab", "linkedin-in"]} size="2x" />
 						</OutboundLink>
 					</div>
