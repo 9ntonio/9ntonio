@@ -42,17 +42,17 @@ export default function Home() {
 
 				<div className="row mb-3">
 					<div className="circle-container">
-						<Link to="https://github.com/9ntonio" target="_blank" rel="noopener norefer">
+						<Link to="https://github.com/9ntonio" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="icon" icon={["fab", "github"]} size="2x" />
 						</Link>
 					</div>
 					<div className="circle-container">
-						<Link to="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noopener norefer">
+						<Link to="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="linkedin" icon={["fab", "linkedin-in"]} size="2x" />
 						</Link>
 					</div>
 					<div className="circle-container">
-						<Link to="https://twitter.com/9ntonio" target="_blank" rel="noopener norefer">
+						<Link to="https://twitter.com/9ntonio" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="icon" icon={["fab", "twitter"]} size="2x" />
 						</Link>
 					</div>
@@ -61,8 +61,8 @@ export default function Home() {
 				<div className="row">
 					<p className="font-18 mb-3">
 						Hello 👋🏽 my name is Antonio and I live in San Francisco.
-						I'm a Design Technologist who 💖's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noopener norefer">Web API</Link>.
-						I'm currently part of the team over at <Link to="https://www.assurely.com/" target="_blank" rel="noopener norefer">Assurely</Link>.
+						I'm a Design Technologist who 💖's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">Web API</Link>.
+						I'm currently part of the team over at <Link to="https://www.assurely.com/" target="_blank" rel="noreferrer noopener">Assurely</Link>.
 					</p>
 				</div>
 
