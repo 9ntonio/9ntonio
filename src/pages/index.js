@@ -60,8 +60,8 @@ export default function Home() {
 
 				<div className="row">
 					<p className="font-18 mb-3">
-						Hola 👋🏽 my name is Antonio and I live in San Francisco.
-						I'm a Design Technologist who 💖's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noopener norefer">Web APIs</Link>.
+						Hello 👋🏽 my name is Antonio and I live in San Francisco.
+						I'm a Design Technologist who 💖's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noopener norefer">Web API</Link>.
 						I'm currently part of the team over at <Link to="https://www.assurely.com/" target="_blank" rel="noopener norefer">Assurely</Link>.
 					</p>
 				</div>
