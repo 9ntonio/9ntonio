@@ -18,6 +18,15 @@ module.exports = {
   			`gatsby-plugin-sass`,
 			`gatsby-plugin-image`,
 			`gatsby-plugin-sharp`,
-			`gatsby-transformer-sharp`],
+			`gatsby-transformer-sharp`,
+			{
+				resolve: `gatsby-plugin-google-fonts`,
+				options: {
+				  fonts: [
+					`Fredoka\:300,400,500,600,700` // you can also specify font weights and styles
+				  ],
+				  display: 'swap'
+				}
+			  }],
   pathPrefix: "/",
 }
