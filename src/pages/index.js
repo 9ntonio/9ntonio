@@ -7,6 +7,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Seo from "../components/Seo"
 import logo from "../../static/logo.svg"
 import "../styles/index.scss"
@@ -44,15 +45,15 @@ export default function Home() {
 
 				<div className="row mb-3">
 					<div className="circle-container">
-						<Link to="https://github.com/9ntonio" target="_blank" rel="noreferrer noopener">
+						<OutboundLink href="https://github.com/9ntonio" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="icon" icon={["fab", "github"]} size="2x" />
-						</Link>
+						</OutboundLink>
 					</div>
 
 					<div className="circle-container">
-						<Link to="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
+						<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="linkedin" icon={["fab", "linkedin-in"]} size="2x" />
-						</Link>
+						</OutboundLink>
 					</div>
 
 					{/* <div className="circle-container">
