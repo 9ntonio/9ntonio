@@ -1,62 +1,82 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+// !! Google Fonts
+@import url(https://fonts.googleapis.com/css2?family=Fredoka);
 
-// Google Fonts
-@import url(https://fonts.googleapis.com/css2?family=Stick+No+Bills);
-
-// Font Variables
-$snb: 'Stick No Bills', serif;
+// !! Variables
+$fontSystem: 'Fredoka', serif;
+$headerMargin: 0rem 0rem 1rem;
+$primaryColor: #B5F5EC;
+$secondaryColor: #5B8C00;
+$bgColor: #00474f;
+$fontColor: #fff;
+$highlightColor: #a0d911;
+$headerFont: "Fredoka";
 
 body {
-    font-family: $snb;
-	color: #fff;
-    margin: 0;
+    font-family: $fontSystem;
+	color: $fontColor;
+    margin: 0rem;
 	height: 100vh;
-	background: #ff0000;
+	background: inherit;
+}
+
+p {
+	font-weight: 500;
+}
+
+a {
+	color: $primaryColor;
+
+	&:hover {
+		color: $highlightColor;
+	}
 }
 
 h1 {
-    font-size: 40pt;
-	font-family: $snb;
-	margin: 0rem 0rem 1rem;
+	font-family: $headerFont;
+	font-size: 50pt;
+	margin: $headerMargin;
 }
 
 h2 {
-    font-size: 25pt;
+    font-family: $headerFont;
+	font-size: 44pt;
+	margin: $headerMargin;
 }
 
-.flex-container {
-    height: 100%;
-    padding: 2rem 0rem;
-    margin: 0rem;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
+.home-container {
+    padding: 3rem 0rem;
 }
 
-.social {
-    text-align: center;
-    font-size: 20pt;
+.circle-container {
+	width: 43px;
+	height: 43px;
+	background: $secondaryColor;
+	border-radius: 22px;
+	margin-left: 12px;
+
+	> a > .icon {
+		position: relative !important;
+		left: -6px;
+		top: 6px;
+		color: $primaryColor;
+
+		&:hover {
+			color: $secondaryColor;
+		}
+	}
+
+	> .linkedin {
+		@extend .icon;
+		left: -4px;
+	}
+
+	&:hover {
+		cursor: pointer;
+		background: $primaryColor;
+	}
 }
 
-.social a {
-    color: #fff;
-    margin: 0 5px;
-    text-decoration: none;
-}
-
-.social a:visited {
-    color: #fff;
-    text-decoration: none;
-}
-
-.social a:active {
-    color: #fff;
-    text-decoration: none;
-}
-
-.social a:hover {
-    color: #dedede;
-    text-decoration: none;
+.font-18 {
+	font-size: 18px;
 }
