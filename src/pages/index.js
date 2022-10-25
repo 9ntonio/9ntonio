@@ -1,4 +1,5 @@
 import React from "react"
+import ReactPlayer from 'react-player'
 import Particles from "react-tsparticles"
 import { loadTrianglesPreset } from "tsparticles-preset-triangles";
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -67,6 +68,28 @@ export default function Home() {
 				</div>
 
 				<hr />
+			</div>
+		</section>
+
+    	<section>
+			<div className="container">
+				<div className="row">
+					<div className="col-12 col-md-6">
+						<div className="player-wrapper">
+							<ReactPlayer className="react-player" url='https://vimeo.com/374826636' playing controls muted width="100%" height="100%" />
+						</div>
+					</div>
+
+					<div className="col-sm-12 col-md-6">
+						<div className="header">
+							Project Title
+						</div>
+
+						<p>
+							Do laborum aliqua nulla labore sed commodo esse qui eiusmod reprehenderit quis. Proident voluptate enim consequat occaecat mollit sint do sit pariatur aliquip ea nostrud eu ullamco sunt commodo. Nulla anim amet quis velit incididunt ut elit velit irure veniam.
+						</p>
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>

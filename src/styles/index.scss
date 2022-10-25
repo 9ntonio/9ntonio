@@ -1,7 +1,7 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // !! Google Fonts - https://fonts.google.com/specimen/Fredoka
-@import url(https://fonts.googleapis.com/css2?family=Fredoka);
+@import url(https://fonts.googleapis.com/css2?family=Fredoka,200,700);
 
 // !! Variables
 $fontSystem: 'Fredoka', serif;
@@ -22,7 +22,8 @@ body {
 }
 
 p {
-	font-weight: 500;
+	font-weight: 400;
+	font-size: 18px;
 }
 
 a {
@@ -46,7 +47,7 @@ h2 {
 }
 
 .home-container {
-    padding: 3rem 0rem;
+    padding: 3rem 0rem 1.25rem;
 }
 
 .circle-container {
@@ -81,3 +82,21 @@ h2 {
 .font-18 {
 	font-size: 18px;
 }
+
+.player-wrapper {
+	position: relative;
+	padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header {
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 1rem;
+}
+
