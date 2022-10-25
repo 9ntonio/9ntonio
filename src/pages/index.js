@@ -47,16 +47,18 @@ export default function Home() {
 							<FontAwesomeIcon className="icon" icon={["fab", "github"]} size="2x" />
 						</Link>
 					</div>
+
 					<div className="circle-container">
 						<Link to="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="linkedin" icon={["fab", "linkedin-in"]} size="2x" />
 						</Link>
 					</div>
-					<div className="circle-container">
+
+					{/* <div className="circle-container">
 						<Link to="https://twitter.com/9ntonio" target="_blank" rel="noreferrer noopener">
 							<FontAwesomeIcon className="icon" icon={["fab", "twitter"]} size="2x" />
 						</Link>
-					</div>
+					</div> */}
 				</div>
 
 				<div className="row">
@@ -79,13 +81,15 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="col-sm-12 col-md-6">
+					<div className="col-12 col-md-6">
 						<div className="header">
-							Project Title
+							Gusto
 						</div>
 
 						<p>
-							Do laborum aliqua nulla labore sed commodo esse qui eiusmod reprehenderit quis. Proident voluptate enim consequat occaecat mollit sint do sit pariatur aliquip ea nostrud eu ullamco sunt commodo. Nulla anim amet quis velit incididunt ut elit velit irure veniam.
+							I was hired by <Link to="https://www.melonheads.com/" target="_blank" rel="noreferrer noopener">Melon</Link> to assist <Link to="https://gusto.com/" target="_blank" rel="noreferrer noopener">Gusto</Link> with their brand refresh.
+							As the lead developer, I worked with Brand Studio, Marketing and Growth teams to get over 100 pages updated.
+							The team and I were able to deliver on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
 						</p>
 					</div>
 				</div>

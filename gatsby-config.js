@@ -18,14 +18,6 @@ module.exports = {
   			`gatsby-plugin-sass`,
 			`gatsby-plugin-image`,
 			`gatsby-plugin-sharp`,
-			`gatsby-transformer-sharp`,
-			{
-				resolve: 'gatsby-plugin-react-svg',
-				options: {
-					rule: {
-						include: /\.inline\.svg$/,
-					},
-				},
-			}],
+			`gatsby-transformer-sharp`],
   pathPrefix: "/",
 }

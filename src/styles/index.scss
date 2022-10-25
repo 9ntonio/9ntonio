@@ -18,7 +18,7 @@ body {
 	color: $fontColor;
     margin: 0rem;
 	height: 100vh;
-	background: inherit;
+	background: $bgColor;
 }
 
 p {
@@ -85,7 +85,8 @@ h2 {
 
 .player-wrapper {
 	position: relative;
-	padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+	// !! Player ratio: 100 / (1280 / 720)
+	padding-top: 56.25%
 }
 
 .react-player {
@@ -95,8 +96,7 @@ h2 {
 }
 
 .header {
-	font-weight: 700;
-	font-size: 28px;
-	margin-bottom: 1rem;
+	font-weight: 600;
+	font-size: 32px;
 }
 
