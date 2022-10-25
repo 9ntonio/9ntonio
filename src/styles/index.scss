@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Fredoka,200,700);
 
 // !! Variables
-$fontSystem: 'Fredoka', serif;
+$fontSystem: 'Fredoka', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
 $headerMargin: 0rem 0rem 1rem;
 $primaryColor: #B5F5EC;
 $secondaryColor: #5B8C00;
@@ -14,6 +14,9 @@ $highlightColor: #a0d911;
 $headerFont: "Fredoka";
 
 body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
     font-family: $fontSystem;
 	color: $fontColor;
     margin: 0rem;
