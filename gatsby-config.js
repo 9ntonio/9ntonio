@@ -8,10 +8,10 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Collected Works`,
-    description: `Portfolio site for 9NTONIO`,
+    description: `Portfolio for Antonio Almena`,
     author: `@9ntonio`,
     twitterUsername: "@9ntonio",
-    image: "/favicon.png",
+    image: "/social.jpg",
     siteUrl: "https://antonio.almena.io",
   },
   plugins: [`gatsby-plugin-react-helmet`,
