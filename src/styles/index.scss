@@ -47,6 +47,10 @@ h2 {
 	margin: $headerMargin;
 }
 
+img, svg {
+    vertical-align: bottom;
+}
+
 .logo {
 	width: 510px;
 	@media (max-width: 575px) {
