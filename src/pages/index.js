@@ -9,14 +9,14 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Seo from "../components/Seo"
-import logo1 from "../../static/logo-1.svg"
+// import logo1 from "../../static/logo-1.svg"
 import logo2 from "../../static/logo-2.svg"
 import logo3 from "../../static/logo-3.svg"
 import "../styles/index.scss"
 library.add(fab);
 
 export default function Home() {
-	const logoArray = [logo1, logo2, logo3];
+	const logoArray = [logo2, logo3];
 	const randomLogoID = Math.floor(Math.random() * logoArray.length);
 	const logo = logoArray[randomLogoID];
 
