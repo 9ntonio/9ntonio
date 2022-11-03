@@ -12,11 +12,12 @@ import Seo from "../components/Seo"
 import logo2 from "../../static/logo-2.svg"
 import logo3 from "../../static/logo-3.svg"
 import logo4 from "../../static/logo-4.svg"
+import logo5 from "../../static/logo-5.svg"
 import "../styles/index.scss"
 library.add(fab);
 
 export default function Home() {
-	const logoArray = [logo2, logo3, logo4];
+	const logoArray = [logo2, logo3, logo4, logo5];
 	const randomLogoID = Math.floor(Math.random() * logoArray.length);
 	const logo = logoArray[randomLogoID];
 
