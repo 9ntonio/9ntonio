@@ -11,13 +11,11 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Seo from "../components/Seo"
 import logo2 from "../../static/logo-2.svg"
 import logo3 from "../../static/logo-3.svg"
-import logo4 from "../../static/logo-4.svg"
-import logo5 from "../../static/logo-5.svg"
 import "../styles/index.scss"
 library.add(fab);
 
 export default function Home() {
-	const logoArray = [logo2, logo3, logo4, logo5];
+	const logoArray = [logo2, logo3];
 	const randomLogoID = Math.floor(Math.random() * logoArray.length);
 	const logo = logoArray[randomLogoID];
 
@@ -74,12 +72,6 @@ export default function Home() {
 								<FontAwesomeIcon className="linkedin" icon={["fab", "linkedin-in"]} size="2x" />
 							</OutboundLink>
 						</div>
-
-						{/* <div className="circle-container">
-							<Link to="https://twitter.com/9ntonio" target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="icon" icon={["fab", "twitter"]} size="2x" />
-							</Link>
-						</div> */}
 					</div>
 
 					<div className="row">
@@ -106,12 +98,6 @@ export default function Home() {
 									muted
 									width="100%"
 									height="100%"
-									onPause={() => {
-										console.log(`%c Video Paused `, "color:#fff; background:#ff0000;");
-									}}
-									onPlay={() => {
-										console.log(`%c Video Played `, "color:#fff; background:#ff0000;")
-									}}
 								/>
 							</div>
 						</div>
