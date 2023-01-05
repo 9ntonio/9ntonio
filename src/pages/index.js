@@ -10,14 +10,13 @@ import { Link } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Seo from "../components/Seo"
 import logo2 from "../../static/logo-2.svg"
-import logo3 from "../../static/logo-3.svg"
 import "../styles/index.scss"
 library.add(fab);
 
 export default function Home() {
-	const logoArray = [logo2, logo3];
-	const randomLogoID = Math.floor(Math.random() * logoArray.length);
-	const logo = logoArray[randomLogoID];
+	const logoArray = [logo2];
+	// const randomLogoID = Math.floor(Math.random() * logoArray.length);
+	const logo = logoArray[0];
 
 	const optionsTriangle = {
 		preset: "triangles",
@@ -136,7 +135,7 @@ export default function Home() {
 							</a>
 
 							<p>
-								As the Technical Director on the project I worked with Google's engineers in order to adhere to their technical requirements and testing guidelines.
+								As the Technical Director on the project I worked with Google's engineers in order to meet their technical requirements & testing guidelines.
 								The engineers and I created various proof of concepts that were tied to a suite of tests. This allowed us to test our architecture prior to kickoff.
 								In the end, the rollout was flawless.
 							</p>
@@ -164,7 +163,7 @@ export default function Home() {
 							<p>
 								The Odopod team and I created the iOS companion app (as well as the Chromecast app) for Sony's IPTV service.
 								Vue included live TV, DVR, and VOD features using integration with a third party content delivery service.
-								As the Technical Director, I worked with Sony PlayStation on outlining (and building) the applications (iOS and Chromecast), as well as the security architecture needed to adhere to their guidelines.
+								As the Technical Director, I worked with Sony PlayStation on outlining (and building) the applications (iOS and Chromecast), as well as the security architecture needed to adhere to their stringent guidelines.
 							</p>
 						</div>
 					</div>
