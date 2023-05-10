@@ -86,7 +86,7 @@ export default function Home() {
 			<section className="section-container">
 				<div className="container">
 					<div className="row">
-						<div className="col-12 col-md-6">
+						<div className="col-12 col-md-4">
 							<div className="player-wrapper">
 								<ReactPlayer
 									className="react-player"
@@ -100,7 +100,7 @@ export default function Home() {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-6">
+						<div className="col-12 col-md-8">
 							<a href="https://gusto.com/wallet" target="_blank" rel="noreferrer noopener">
 								<div className="header">
 									Gusto

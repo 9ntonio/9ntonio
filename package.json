@@ -41,9 +41,9 @@
   ],
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn dev",
     "clean": "gatsby clean"
   },
   "dependencies": {
