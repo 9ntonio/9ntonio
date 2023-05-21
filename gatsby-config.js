@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Collected Works`,
-    description: `Portfolio for Antonio Almena`,
+    description: `Antonio Almena // Collected Works`,
     author: `@9ntonio`,
     twitterUsername: "@9ntonio",
     image: "/social.jpg",
@@ -32,7 +32,7 @@ module.exports = {
 				resolve: `gatsby-plugin-google-analytics`,
 				options: {
 				  // !! The property ID; the tracking code won't be generated without it
-				  trackingId: "UA-175079985-1",
+				  trackingId: "G-7T17JT1QX7",
 				  // !! Defines where to place the tracking script - `true` in the head and `false` in the body
 				  head: false,
 				  // !! Setting this parameter is optional
