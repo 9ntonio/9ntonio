@@ -79,7 +79,7 @@ export default function Home() {
 						</p>
 					</div>
 
-					<hr className="mt-4 mb-0" />
+					<hr className="mt-2 mb-0" />
 				</div>
 			</section>
 
@@ -87,7 +87,7 @@ export default function Home() {
 				<div className="container">
 					<div className="row">
 						<div className="col-12 col-md-4">
-							<div className="player-wrapper">
+							<div className="player-wrapper shadow-lg">
 								<ReactPlayer
 									className="react-player"
 									url='https://vimeo.com/374826636'
@@ -122,7 +122,7 @@ export default function Home() {
 					<div className="row">
 						<div className="col-12 col-md-4">
 							<a href="https://store.google.com/" target="_blank" rel="noreferrer noopener">
-								<StaticImage src="../../static/google.jpg" alt="Google" height="100%" className="mb-3 mb-md-0" />
+								<StaticImage src="../../static/google.jpg" alt="Google" height="100%" className="mb-3 mb-md-0 shadow-lg" />
 							</a>
 						</div>
 
@@ -148,7 +148,7 @@ export default function Home() {
 					<div className="row">
 						<div className="col-12 col-md-4">
 							<a href="https://www.odopod.com/case-studies/ps-vue" target="_blank" rel="noreferrer noopener">
-								<StaticImage src="../../static/vue.jpg" alt="Google" height="100%" className="mb-3 mb-md-0" />
+								<StaticImage src="../../static/vue.jpg" alt="Google" height="100%" className="mb-3 mb-md-0 shadow-lg" />
 							</a>
 						</div>
 
