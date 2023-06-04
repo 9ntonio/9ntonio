@@ -9203,6 +9203,11 @@ tslib@~2.4.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
   integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
 
+tsparticles-engine@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-engine/-/tsparticles-engine-2.10.1.tgz#43097da18ea6b4123f12115fcbd5243d45e85fd7"
+  integrity sha512-DV2gYsbChyiXYIZYgnXtKHSAZdvnNMJpVf9Cw0gO7vjQ6pcgLAeyboRtvsaTfwKZNzzA7BeSf1lVhgGxorL4CQ==
+
 tsparticles-engine@^2.3.3:
   version "2.3.3"
   resolved "https://registry.npmjs.org/tsparticles-engine/-/tsparticles-engine-2.3.3.tgz"
@@ -9299,12 +9304,26 @@ tsparticles-interaction-particles-collisions@^2.3.3:
   dependencies:
     tsparticles-engine "^2.3.3"
 
+tsparticles-interaction-particles-links@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-interaction-particles-links/-/tsparticles-interaction-particles-links-2.10.1.tgz#280b42a6603b9489abf39fb99f88fd73ee346da6"
+  integrity sha512-O6NkvV5muOsitJkicW3eqwPCjkRDWZzY5Twq8NkqCKTXkzpQtow8ByTMKcIWsW1GR6ltylrgyCId5KMwLRArbA==
+  dependencies:
+    tsparticles-engine "^2.10.1"
+
 tsparticles-interaction-particles-links@^2.3.3:
   version "2.3.3"
   resolved "https://registry.npmjs.org/tsparticles-interaction-particles-links/-/tsparticles-interaction-particles-links-2.3.3.tgz"
   integrity sha512-sOk0FdnP2xL2lDPzMZA1N/ZjtaKgBMnc3hHgYMWPtVQ50GpcCxhiauGTEQW/Wj6+Ja0Qpf/TJ3MwbzPqv3h59Q==
   dependencies:
     tsparticles-engine "^2.3.3"
+
+tsparticles-move-base@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-move-base/-/tsparticles-move-base-2.10.1.tgz#8a5e5036e6477d2dec2f2991a1d4506f75c18d53"
+  integrity sha512-Q7JHIRPuJZw/Jz7vEeCePMR/69ace5rpWPqZ3+KLJnrtayxDEvj4tNRjnPtZusJ1Ve+wp0IxjOwrfGxeHxbmsQ==
+  dependencies:
+    tsparticles-engine "^2.10.1"
 
 tsparticles-move-base@^2.3.3:
   version "2.3.3"
@@ -9349,18 +9368,25 @@ tsparticles-plugin-polygon-mask@^2.3.3:
     tsparticles-engine "^2.3.3"
 
 tsparticles-preset-triangles@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.npmjs.org/tsparticles-preset-triangles/-/tsparticles-preset-triangles-2.3.3.tgz"
-  integrity sha512-8eNyADrGy1p8h6T0Ff+du2owBgoqoaETBmdHWlfHHLBQrYPm5kQjA07m2/ZExJlgxv8iefdubjxwarSPrvfTEQ==
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-preset-triangles/-/tsparticles-preset-triangles-2.10.1.tgz#96a23bdec8405165963f98737e95c64fd28b7543"
+  integrity sha512-lc6emiLcS1UDbEDELj+q25ktr0CaUW3uNpzdKsjDIUB/jAUuF8taoFMjh4grPGzdEePH0VjoAd3plbHx4maFVw==
   dependencies:
-    tsparticles-engine "^2.3.3"
-    tsparticles-interaction-particles-links "^2.3.3"
-    tsparticles-move-base "^2.3.3"
-    tsparticles-shape-circle "^2.3.3"
-    tsparticles-updater-color "^2.3.3"
-    tsparticles-updater-opacity "^2.3.3"
-    tsparticles-updater-out-modes "^2.3.3"
-    tsparticles-updater-size "^2.3.3"
+    tsparticles-engine "^2.10.1"
+    tsparticles-interaction-particles-links "^2.10.1"
+    tsparticles-move-base "^2.10.1"
+    tsparticles-shape-circle "^2.10.1"
+    tsparticles-updater-color "^2.10.1"
+    tsparticles-updater-opacity "^2.10.1"
+    tsparticles-updater-out-modes "^2.10.1"
+    tsparticles-updater-size "^2.10.1"
+
+tsparticles-shape-circle@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-shape-circle/-/tsparticles-shape-circle-2.10.1.tgz#bea5da274d35b857acb3ab3c779fb2ff3d8d2368"
+  integrity sha512-oWfoF1rwBNDS8X8EBZVwt/UF9wBqh3OpV71LxCvTE9lh73FeUeQZ9aSW46t9XODIsNBMPbnAQNkP1wz4zNiw2A==
+  dependencies:
+    tsparticles-engine "^2.10.1"
 
 tsparticles-shape-circle@^2.3.3:
   version "2.3.3"
@@ -9455,6 +9481,13 @@ tsparticles-updater-angle@^2.3.3:
   dependencies:
     tsparticles-engine "^2.3.3"
 
+tsparticles-updater-color@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-updater-color/-/tsparticles-updater-color-2.10.1.tgz#87c4a26de87e0ff3c1b462712bb6fe1b424dfea8"
+  integrity sha512-/7FCR/VzpOuiE0ztGEzzN4vNeLGbS9QUBX78OM59GDZujlHfjfWh1jqedyNXrhkb6mf08B3FZWiQWGysPeL31Q==
+  dependencies:
+    tsparticles-engine "^2.10.1"
+
 tsparticles-updater-color@^2.3.3:
   version "2.3.3"
   resolved "https://registry.npmjs.org/tsparticles-updater-color/-/tsparticles-updater-color-2.3.3.tgz"
@@ -9476,12 +9509,26 @@ tsparticles-updater-life@^2.3.3:
   dependencies:
     tsparticles-engine "^2.3.3"
 
+tsparticles-updater-opacity@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-updater-opacity/-/tsparticles-updater-opacity-2.10.1.tgz#ecfcbdbb97b6bbe4db2efa70fc53e5032b16c806"
+  integrity sha512-l1FOevfK9CMz9cBRT5prQpHACijYJ+3dHvIfx0Y5M5Do4etoT+PurZxDpQlQU6Yd0vXKm3r37paPiQbH5U3Vqg==
+  dependencies:
+    tsparticles-engine "^2.10.1"
+
 tsparticles-updater-opacity@^2.3.3:
   version "2.3.3"
   resolved "https://registry.npmjs.org/tsparticles-updater-opacity/-/tsparticles-updater-opacity-2.3.3.tgz"
   integrity sha512-pA9T7h3FREMb9Xv4Qcnv/5neUdLQVHmexuhuIr6/FqrnsWOQB4+PmdetKKWxfojkFAAWzignDEF78lzzXJzIuQ==
   dependencies:
     tsparticles-engine "^2.3.3"
+
+tsparticles-updater-out-modes@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-updater-out-modes/-/tsparticles-updater-out-modes-2.10.1.tgz#ead34f3ef46b876f03b02c9e4cd09e6f657d4992"
+  integrity sha512-nzP/puePd97FlME9gzmjwdQWoqm+O7GtnkbD33a4NBlzJMgtjbGtmz/Tmc4hLicb/qwS5D8j9xvB+srsuxT7LA==
+  dependencies:
+    tsparticles-engine "^2.10.1"
 
 tsparticles-updater-out-modes@^2.3.3:
   version "2.3.3"
@@ -9496,6 +9543,13 @@ tsparticles-updater-roll@^2.3.3:
   integrity sha512-y2ATGesKf+vTw++VNt21IYp1lEZoWOGUcPEtckcadr5cslwTTnYjvsMqbd6e4e3Iy5tZJXnUyzaPznSUcX7OFw==
   dependencies:
     tsparticles-engine "^2.3.3"
+
+tsparticles-updater-size@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/tsparticles-updater-size/-/tsparticles-updater-size-2.10.1.tgz#6d362781750f3dd1f1ec75c51b15df4139062c39"
+  integrity sha512-Kdtskqm0CRrlsovOsJLcS6NXF0alJ6NlwmW7oWnTK6EeLvEKaqisG/hjcFf+l7eXlmL8j9rYgh6wctaef6GBCw==
+  dependencies:
+    tsparticles-engine "^2.10.1"
 
 tsparticles-updater-size@^2.3.3:
   version "2.3.3"
