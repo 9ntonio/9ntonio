@@ -73,7 +73,7 @@
     "tsparticles-preset-triangles": "^2.3.3"
   },
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^3.0.0"
   },
   "repository": {
     "type": "git",
