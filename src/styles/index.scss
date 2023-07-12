@@ -53,9 +53,14 @@ img, svg {
 
 .logo {
 	width: 510px;
+	margin-bottom: 0.25rem;
 	@media (max-width: 575px) {
 		width: 100%;
 	}
+}
+
+.margin-btm-0 {
+	margin-bottom: 0 !important;
 }
 
 .section-container {

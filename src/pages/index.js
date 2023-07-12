@@ -52,13 +52,20 @@ export default function Home() {
 
 			<section className="mt-3">
 				<div className="container">
-					<div className="row mb-3">
+					<div className="row margin-btm-0">
 						<div className="col">
 							<img src={logo} alt="Logo" className="logo" />
 						</div>
 					</div>
 
-					<div className="row mb-3">
+					<div className="row">
+						<p className="font-18 mb-3">
+							I'm a <Link to="https://medium.com/interactive-mind/the-rise-of-the-design-technologist-e9516aa821a0" target="_blank" rel="noreferrer noopener">Design Technologist</Link> who 💘's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">Web APIs</Link>.
+							I'm currently part of the team over @ <Link to="https://www.assurely.com/" target="_blank" rel="noreferrer noopener">Assurely</Link>.
+						</p>
+					</div>
+
+					<div className="row">
 						<div className="circle-container">
 							<OutboundLink href="https://github.com/9ntonio" target="_blank" rel="noreferrer noopener">
 								<FontAwesomeIcon className="icon" icon={["fab", "github"]} size="2x" />
@@ -72,14 +79,7 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="row">
-						<p className="font-18 mb-3">
-							I'm a <Link to="https://medium.com/interactive-mind/the-rise-of-the-design-technologist-e9516aa821a0" target="_blank" rel="noreferrer noopener">Design Technologist</Link> who 💘's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">Web APIs</Link>.
-							I'm currently part of the team over @ <Link to="https://www.assurely.com/" target="_blank" rel="noreferrer noopener">Assurely</Link>.
-						</p>
-					</div>
-
-					<hr className="mt-2 mb-0" />
+					<hr className="mt-4 mb-0" />
 				</div>
 			</section>
 
