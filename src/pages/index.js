@@ -75,7 +75,7 @@ export default function Home() {
 					<div className="row">
 						<p className="font-18 mb-3">
 							I'm a <Link to="https://medium.com/interactive-mind/the-rise-of-the-design-technologist-e9516aa821a0" target="_blank" rel="noreferrer noopener">Design Technologist</Link> who 💘's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">Web APIs</Link>.
-							I'm currently part of the team over @ <Link to="https://www.assurely.com/" target="_blank" rel="noreferrer noopener">Assurely</Link>. I live in <Link to="https://www.thrillist.com/events/san-francisco/things-to-do-in-san-francisco-sf-this-weekend" target="_blank" rel="noreferrer noopener">San Francisco</Link>.
+							I'm currently part of the team over @ <Link to="https://www.assurely.com/" target="_blank" rel="noreferrer noopener">Assurely</Link>.
 						</p>
 					</div>
 
