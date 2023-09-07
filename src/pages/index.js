@@ -179,6 +179,8 @@ export default function Home() {
 						<p className="font-20">
 							Blazor, C#, React, NextJS, Gatsby, TypeScript, Prisma, PostgrSQL, GraphQL ,HAML, SCSS, Bootstrap, Figma and a lot of Web API's.
 						</p>
+
+						<a rel="me" href="https://mastodon.social/@9NTONIO" className="display-none">Mastodon</a>
 					</div>
 				</div>
 			</section>
