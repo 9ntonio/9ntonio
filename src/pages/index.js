@@ -59,7 +59,7 @@ export default function Home() {
 					</div>
 
 					<div className="row">
-						<p className="font-18 mb-3">
+						<p className="text-wrap font-18 mb-3">
 							I'm a <Link to="https://medium.com/interactive-mind/the-rise-of-the-design-technologist-e9516aa821a0" target="_blank" rel="noreferrer noopener">Design Technologist</Link> who 💘's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">Web APIs</Link>.
 							I'm currently part of the team over @ <Link to="https://www.assurely.com/" target="_blank" rel="noreferrer noopener">Assurely</Link>.
 						</p>
@@ -107,7 +107,7 @@ export default function Home() {
 								</div>
 							</a>
 
-							<p>
+							<p className="text-wrap">
 								I was hired by <Link to="https://www.melonheads.com/" target="_blank" rel="noreferrer noopener">Melon</Link> to assist <Link to="https://gusto.com/" target="_blank" rel="noreferrer noopener">Gusto</Link> with their brand refresh.
 								As the lead developer, I worked with Brand Studio, Marketing and Growth teams to get over 100 pages updated.
 								The team and I were able to deliver on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
@@ -133,7 +133,7 @@ export default function Home() {
 								</div>
 							</a>
 
-							<p>
+							<p className="text-wrap">
 								As the Technical Director on the project I worked with Google's engineers in order to meet their technical requirements & testing guidelines.
 								The engineers and I created various proof of concepts that were tied to a suite of tests. This allowed us to test our architecture prior to kickoff.
 								In the end, the rollout was flawless.
@@ -159,7 +159,7 @@ export default function Home() {
 								</div>
 							</a>
 
-							<p>
+							<p className="text-wrap">
 								The Odopod team and I created the iOS companion app (as well as the Chromecast app) for Sony's IPTV service.
 								Vue included live TV, DVR, and VOD features using integration with a third party content delivery service.
 								As the Technical Director, I worked with Sony PlayStation on outlining (and building) the applications (iOS and Chromecast), as well as the security architecture needed to adhere to their stringent guidelines.
@@ -176,7 +176,7 @@ export default function Home() {
 							What technologies have I been working with?
 						</div>
 
-						<p className="font-20">
+						<p className="font-20 text-wrap">
 							Blazor, C#, React, NextJS, Gatsby, TypeScript, Prisma, PostgrSQL, GraphQL ,HAML, SCSS, Bootstrap, Figma and a lot of Web API's.
 						</p>
 
