@@ -69,7 +69,7 @@
     "react-tsparticles": "^2.1.3",
     "sass": "^1.55.0",
     "sharp": "^0.32.0",
-    "tsparticles": "^2.1.3",
+    "tsparticles": "^3.0.0",
     "tsparticles-preset-triangles": "^2.3.3"
   },
   "devDependencies": {
