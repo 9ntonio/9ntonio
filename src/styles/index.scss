@@ -77,6 +77,7 @@ img, svg {
 	background: $secondaryColor;
 	border-radius: 22px;
 	margin-left: 12px;
+	margin-top: 18px;
 
 	> a > .icon {
 		position: relative !important;
@@ -142,4 +143,8 @@ a > .header {
 
 .text-wrap {
 	text-wrap: pretty !important;
+}
+
+.align-center {
+	align-items: center;
 }
