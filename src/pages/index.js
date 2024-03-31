@@ -116,9 +116,8 @@ export default function Home() {
 							<div className="player-wrapper shadow-lg">
 								<ReactPlayer
 									className="react-player"
-									url='https://vimeo.com/374826636'
+									url='https://youtu.be/xCa8kN-8Mms?si=zqaXS4v6lKAcr4Ji&t=52'
 									playing
-									controls
 									muted
 									width="100%"
 									height="100%"
