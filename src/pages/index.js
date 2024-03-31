@@ -14,8 +14,7 @@ import "../styles/index.scss"
 library.add(fab);
 
 export default function Home() {
-	const logoArray = [logo2];
-	const logo = logoArray[0];
+	const logo = logo2;
 
 	const optionsTriangle = {
 		preset: "triangles",
@@ -70,8 +69,7 @@ export default function Home() {
 
 					<div className="row">
 						<p className="text-wrap font-18 mb-3">
-							I'm a <Link to="https://medium.com/interactive-mind/the-rise-of-the-design-technologist-e9516aa821a0" target="_blank" rel="noreferrer noopener">Design Technologist</Link> who 💘's working on projects that combine Design, UX, Animation and <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">Web APIs</Link>.
-							I'm currently looking for new opportunities and would love to hear about your project...
+							I 💘 design & technology. I tend to gravitate towards projects that combine my love for design, UX, animations and a dash of <Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">Web APIs</Link>. I'm currently looking for new opportunities and would love to hear about your project...
 						</p>
 					</div>
 
@@ -104,9 +102,39 @@ export default function Home() {
 							</a>
 
 							<p className="text-wrap">
-								I was hired by <Link to="https://www.melonheads.com/" target="_blank" rel="noreferrer noopener">Melon</Link> to assist <Link to="https://gusto.com/" target="_blank" rel="noreferrer noopener">Gusto</Link> with their brand refresh.
-								As the lead developer, I worked with Brand Studio, Marketing and Growth teams to get over 100 pages updated.
-								The team and I were able to deliver on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
+								I was hired by <Link to="https://www.melonheads.com/" target="_blank" rel="noreferrer noopener">Melon</Link> to assist <Link to="https://gusto.com/" target="_blank" rel="noreferrer noopener">Gusto</Link> with their brand refresh. Gusto is large SaaS startup whose focus is in providing services and products to small business owners. As lead engineer, I led a team of 6 software & QA engineers. While working out of the Gusto offices, I was able to collaborate with Brand Studio, Marketing & Product teams on UI/UX for web applications and marketing pages. The team and I were able to deliver on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="section-container">
+				<div className="container">
+					<div className="row">
+						<div className="col-12 col-md-4">
+							<div className="player-wrapper shadow-lg">
+								<ReactPlayer
+									className="react-player"
+									url='https://vimeo.com/374826636'
+									playing
+									controls
+									muted
+									width="100%"
+									height="100%"
+								/>
+							</div>
+						</div>
+
+						<div className="col-12 col-md-8">
+							<a href="https://client.assurely.com" target="_blank" rel="noreferrer noopener">
+								<div className="header">
+									Assurely
+								</div>
+							</a>
+
+							<p className="text-wrap">
+								Assurely is a small FinTech SaaS startup. Their focus is in insurance products and services. Some of my responsibilities were building the C# application front-end and also their React applications. Product & I would frequently collaborate on UI and other features which allowed for mutual ownership of the design process, which in turn created efficiencies in delivery times.
 							</p>
 						</div>
 					</div>
@@ -130,9 +158,7 @@ export default function Home() {
 							</a>
 
 							<p className="text-wrap">
-								As the Technical Director on the project I worked with Google's engineers in order to meet their technical requirements & testing guidelines.
-								The engineers and I created various proof of concepts that were tied to a suite of tests. This allowed us to test our architecture prior to kickoff.
-								In the end, the rollout was flawless.
+								Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal is to keep users’ front of mind and seek solutions that create more intuitive and accessible products. As the Technical Director on this project, I worked with Google's engineers to meet their technical requirements & testing guidelines. The engineers & I created various proof of concepts that were tied to a suite of unit tests. This allowed us to test our architecture prior to kickoff and assisted in creating a smooth delivery process.
 							</p>
 						</div>
 					</div>
@@ -156,9 +182,7 @@ export default function Home() {
 							</a>
 
 							<p className="text-wrap">
-								The Odopod team and I created the iOS companion app (as well as the Chromecast app) for Sony's IPTV service.
-								Vue included live TV, DVR, and VOD features using integration with a third party content delivery service.
-								As the Technical Director, I worked with Sony PlayStation on outlining (and building) the applications (iOS and Chromecast), as well as the security architecture needed to adhere to their stringent guidelines.
+								The Odopod team and I built the iOS application for Sony's streaming service Vue. The application included live TV, DVR, and VOD features via a 3rd party content delivery service. As the Technical Director, I worked with Sony on the iOS and Chromecast builds while managing both internal and external engineering teams. I was also tasked to manage various design and engineering vendors and insure that they were meeting the brand guidelines set by Odopod.
 							</p>
 						</div>
 					</div>
@@ -173,10 +197,8 @@ export default function Home() {
 						</div>
 
 						<p className="font-20 text-wrap">
-							Blazor, C#, React, NextJS, Gatsby, TypeScript, Prisma, PostgrSQL, GraphQL ,HAML, SCSS, Bootstrap, Figma and a lot of Web API's.
+							React, React Native, Angular, C#, Gatsby, TypeScript, Prisma, PostgrSQL, GraphQL, HAML, SCSS, Figma and a lot of Web API's.
 						</p>
-
-						<a rel="me" href="https://mastodon.social/@9NTONIO" className="display-none">Mastodon</a>
 					</div>
 				</div>
 			</section>
