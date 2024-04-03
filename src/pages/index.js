@@ -116,7 +116,7 @@ export default function Home() {
 							<div className="player-wrapper shadow-lg">
 								<ReactPlayer
 									className="react-player"
-									url='https://youtu.be/xCa8kN-8Mms?si=zqaXS4v6lKAcr4Ji&t=52'
+									url='https://www.youtube.com/watch?v=7-ORIZRCYJw'
 									playing
 									muted
 									width="100%"
