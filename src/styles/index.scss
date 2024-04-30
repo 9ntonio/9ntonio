@@ -2,10 +2,17 @@
 
 // !! Google Fonts - https://fonts.google.com/specimen/Fredoka
 // !! Variables
-$fontSystem: 'Fredoka', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+$fontSystem:
+	"Fredoka",
+	-apple-system,
+	BlinkMacSystemFont,
+	Roboto,
+	"Helvetica Neue",
+	sans-serif;
+
 $headerMargin: 0rem 0rem 1rem;
-$primaryColor: #B5F5EC;
-$secondaryColor: #5B8C00;
+$primaryColor: #b5f5ec;
+$secondaryColor: #5b8c00;
 $bgColor: #00474f;
 $fontColor: #fff;
 $highlightColor: #a0d911;
@@ -15,9 +22,9 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-    font-family: $fontSystem;
+	font-family: $fontSystem;
 	color: $fontColor;
-    margin: 0rem;
+	margin: 0rem;
 	height: 100vh;
 	background: $bgColor;
 }
@@ -42,13 +49,14 @@ h1 {
 }
 
 h2 {
-    font-family: $headerFont;
+	font-family: $headerFont;
 	font-size: 44pt;
 	margin: $headerMargin;
 }
 
-img, svg {
-    vertical-align: bottom;
+img,
+svg {
+	vertical-align: bottom;
 }
 
 .logo {
@@ -64,11 +72,11 @@ img, svg {
 }
 
 .section-container {
-    padding: 3rem 0rem 0rem;
+	padding: 3rem 0rem 0rem;
 }
 
 .section-container-last {
-    padding: 3rem 0rem;
+	padding: 3rem 0rem;
 }
 
 .circle-container {
@@ -123,7 +131,7 @@ img, svg {
 }
 
 .header {
-    line-height: 1.25;
+	line-height: 1.25;
 	font-weight: 500;
 	font-size: 32px;
 	color: $primaryColor;
@@ -133,7 +141,7 @@ a > .header {
 	@extend .header;
 	cursor: pointer;
 	&:hover {
-		color: $highlightColor
+		color: $highlightColor;
 	}
 }
 
