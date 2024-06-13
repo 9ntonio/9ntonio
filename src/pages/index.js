@@ -11,6 +11,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Seo from "../components/Seo";
 import logo from "../../static/logo-2.svg";
 import "../styles/index.scss";
+
 library.add(fab);
 
 export default function Home() {
@@ -47,6 +48,7 @@ export default function Home() {
 			{/* !! Particles Init !! */}
 			<Particles init={particlesInit} options={optionsTriangle} id="particles" />
 			<Seo Sitetitle="Antonio Almena" />
+
 			<section className="mt-4">
 				<div className="container">
 					<div className="row align-center mb-1">
@@ -67,11 +69,8 @@ export default function Home() {
 
 					<div className="row">
 						<p className="text-wrap font-18 mb-3">
-							I 💘 design & technology. I tend to gravitate towards projects that combine my love for design, UX, animations and a dash of{" "}
-							<Link to="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">
-								Web APIs
-							</Link>
-							. I'm currently looking for new opportunities and would love to hear about your project...
+							I 💘 the space where design & technology meet. I enjoy working on projects that combine design, UX/UI, animations and web APIs. Add me to your collaborative environment and
+							I will show you some amazing possibilities.
 						</p>
 					</div>
 
@@ -158,35 +157,11 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* <section className="section-container">
-				<div className="container">
-					<div className="row">
-						<div className="col-12 col-md-4">
-							<div className="player-wrapper shadow-lg">
-								<ReactPlayer className="react-player" url="https://www.youtube.com/watch?v=7-ORIZRCYJw" playing muted width="100%" height="100%" />
-							</div>
-						</div>
-
-						<div className="col-12 col-md-8">
-							<a href="https://client.assurely.com" target="_blank" rel="noreferrer noopener">
-								<div className="header">Assurely</div>
-							</a>
-
-							<p className="text-wrap">
-								Assurely is a small FinTech SaaS startup. Their focus is in insurance products and services. Some of my responsibilities were building the C# application front-end and
-								also their React applications. Product & I would frequently collaborate on UI and other features which allowed for mutual ownership of the design process, which in turn
-								created efficiencies in delivery times.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section> */}
-
 			<section className="section-container-last">
 				<div className="container">
 					<div className="row">
 						<div className="header">What technologies have I been working with?</div>
-						<p className="font-20 text-wrap">React, React Native, Angular, C#, Gatsby, TypeScript, Prisma, PostgrSQL, GraphQL, HAML, SCSS, Figma and a lot of Web API's.</p>
+						<p className="font-20 text-wrap">React, React Native, Angular, iOS, Android, C#, Gatsby, TypeScript, Prisma, PostgrSQL, GraphQL, Figma and a lot of Web API's.</p>
 					</div>
 				</div>
 			</section>
