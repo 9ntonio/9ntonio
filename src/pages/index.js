@@ -161,7 +161,9 @@ export default function Home() {
 				<div className="container">
 					<div className="row">
 						<div className="header">What technologies have I been working with?</div>
-						<p className="font-20 text-wrap">React, React Native, Angular, iOS, Android, C#, Gatsby, TypeScript, Prisma, PostgrSQL, GraphQL, Figma and a lot of Web API's.</p>
+						<p className="font-20 text-wrap">
+							React, React Native, Angular, iOS, Android, C#, Blazor, Vite, AI, TypeScript, Prisma, PostgrSQL, GraphQL, Mongo, Figma and a lot of Web API's.
+						</p>
 					</div>
 				</div>
 			</section>
