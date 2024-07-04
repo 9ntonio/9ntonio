@@ -7,7 +7,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import Seo from "../components/Seo";
 import logo from "../../static/logo-2.svg";
 import "../styles/index.scss";
@@ -88,7 +88,7 @@ export default function Home() {
 						</div>
 
 						<div className="col-12 col-md-8">
-							<a href="https://gusto.com/wallet" target="_blank" rel="noreferrer noopener">
+							<a href="https://gusto.com/" target="_blank" rel="noreferrer noopener">
 								<div className="header">Gusto</div>
 							</a>
 
