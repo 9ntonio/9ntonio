@@ -49,7 +49,7 @@ module.exports = {
 					// !! Setting this parameter is also optional
 					// respectDNT: true,
 					// !! Avoids sending pageview hits from custom paths
-					exclude: ["/secret/**"],
+					// exclude: ["/secret/**"],
 					// !! Defaults to https://www.googletagmanager.com
 					origin: "https://antonio.almena.io/",
 					// !! Delays processing pageview events on route update (in milliseconds)
