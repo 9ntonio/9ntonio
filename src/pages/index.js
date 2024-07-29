@@ -69,8 +69,7 @@ export default function Home() {
 
 					<div className="row">
 						<p className="text-wrap font-18 mb-3">
-							I 💘 the space where design & technology meet. I enjoy working on projects that combine design, UX/UI, animations and web APIs. Add me to your collaborative environment and
-							I will show you some amazing possibilities.
+							I 💘 the space where design & technology meet. I enjoy working on projects that combine design, UX/UI, animations and web APIs.
 						</p>
 					</div>
 
