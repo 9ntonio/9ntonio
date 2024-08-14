@@ -47,8 +47,8 @@ export default function Home() {
 		<div className="App">
 			{/* !! Particles Init !! */}
 			<Particles init={particlesInit} options={optionsTriangle} id="particles" />
-			<Seo Sitetitle="Antonio Almena" />
 
+			<Seo Sitetitle="Antonio Almena" />
 			<section className="mt-4">
 				<div className="container">
 					<div className="row align-center mb-1">
@@ -69,7 +69,7 @@ export default function Home() {
 
 					<div className="row">
 						<p className="text-wrap font-18 mb-3">
-							I 💘 the space where design & technology meet. I enjoy working on projects that combine design, UX/UI, animations and web APIs.
+							I 💘 the space where design & technology intersect. I enjoy working on projects that combine design, UX/UI, animations, AI and web APIs.
 						</p>
 					</div>
 
@@ -161,7 +161,7 @@ export default function Home() {
 					<div className="row">
 						<div className="header">What technologies have I been working with?</div>
 						<p className="font-20 text-wrap">
-							React, React Native, Angular, iOS, Android, C#, Blazor, Vite, AI, TypeScript, Prisma, PostgrSQL, GraphQL, Mongo, Figma and a lot of Web API's.
+							React, React Native, iOS, Android, C#, Blazor, Vite, TypeScript, Prisma, PostgrSQL, GraphQL, Mongo, Figma, Artificial Intelligence, AWS, and a lot of Web API's.
 						</p>
 					</div>
 				</div>
