@@ -100,9 +100,9 @@ export default function Home() {
 								<Link to="https://gusto.com/" target="_blank" rel="noreferrer noopener">
 									Gusto
 								</Link>{" "}
-								with their brand refresh. Gusto is large SaaS startup whose focus is in providing services and products to small business owners. As lead engineer, I led a team of 6
-								software & QA engineers. While working out of the Gusto offices, I was able to collaborate with Brand Studio, Marketing & Product teams on UI/UX for web applications
-								and marketing pages. The team and I were able to deliver on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
+								with their brand refresh. Gusto is large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a
+								team of 6 software & QA engineers. While working out of the Gusto offices, I collaberated with Brand Studio, Marketing & Product teams. Together we were able to deliver
+								on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
 							</p>
 						</div>
 					</div>
@@ -124,9 +124,9 @@ export default function Home() {
 							</a>
 							<p className="text-wrap">
 								Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal is to
-								keep users’ front of mind and seek solutions that create more intuitive and accessible products. As the Technical Director on this project, I worked with Google's
-								engineers to meet their technical requirements & testing guidelines. The engineers & I created various proof of concepts that were tied to a suite of unit tests. This
-								allowed us to test our architecture prior to kickoff and assisted in creating a smooth delivery process.
+								keep users’ front of mind and seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's engineers to
+								meet their technical & testing requirements. The engineers & I created various proof of concepts & prototypes that were tied to a suite of unit tests. This allowed us
+								to test our architecture prior to kickoff and assisted in creating a seemless delivery process.
 							</p>
 						</div>
 					</div>
@@ -148,8 +148,8 @@ export default function Home() {
 							</a>
 							<p className="text-wrap">
 								The Odopod team and I built the iOS application for Sony's streaming service Vue. The application included live TV, DVR, and VOD features via a 3rd party content
-								delivery service. As the Technical Director, I worked with Sony on the iOS and Chromecast builds while managing both internal and external engineering teams. I was also
-								tasked to manage various design and engineering vendors and insure that they were meeting the brand guidelines set by Odopod.
+								delivery service. As the Technical Director, I worked with Sony on the iOS and Chromecast builds while also managing both internal & external engineering teams. I also
+								assisted various design & engineering vendors by on-boarding them into the product's vast ecosystem.
 							</p>
 						</div>
 					</div>
