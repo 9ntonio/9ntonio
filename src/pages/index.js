@@ -101,7 +101,7 @@ export default function Home() {
 									Gusto
 								</Link>{" "}
 								with their brand refresh. Gusto is large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a
-								team of 6 software & QA engineers. While working out of the Gusto offices, I collaberated with Brand Studio, Marketing & Product teams. Together we were able to deliver
+								team of 6 software & QA engineers. While working out of the Gusto offices, I collaborated with Brand Studio, Marketing & Product teams. Together we were able to deliver
 								on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
 							</p>
 						</div>
