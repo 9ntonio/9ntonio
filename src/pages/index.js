@@ -69,7 +69,7 @@ export default function Home() {
 
 					<div className="row">
 						<p className="text-wrap font-18 mb-3">
-							I 💘 the space where design & technology intersect. My background is in both design & engineering. I enjoy creating design systems based in human-centric design principles.
+							I 💘 the space where design & technology overlap. My background is in both design & engineering. I enjoy creating design systems based in human-centric design principles.
 							My core strengths are in: Coding, Application Architecture, UI/UX, Prototyping, Technical Writing, Animation and I’m also able to code in multiple languages. My leadership
 							skills stem from my team management and client relations experience. I’ve been lucky to work across various industries: FinTech, Automotive, Gaming and Entertainment to
 							name a few.
@@ -164,7 +164,11 @@ export default function Home() {
 					<div className="row">
 						<div className="header">What technologies have I been working with?</div>
 						<p className="font-20 text-wrap">
-							React, React Native, iOS, Android, C#, Blazor, Vite, TypeScript, Prisma, PostgrSQL, GraphQL, Mongo, Figma, Intelligence Artificielle, AWS, and a lot of Web API's.
+							React, React Native, iOS, Android, C#, Blazor, Vite, TypeScript, Prisma, PostgrSQL, GraphQL, Mongo, Figma, Intelligence Artificielle,{" "}
+							<a href="https://www.cursor.com/" target="_blank" rel="noreferrer noopener">
+								Cursor
+							</a>
+							, and a lot of Web API's.
 						</p>
 					</div>
 				</div>
