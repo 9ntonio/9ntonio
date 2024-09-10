@@ -165,6 +165,10 @@ export default function Home() {
 						<div className="header">What technologies have I been working with?</div>
 						<p className="font-20 text-wrap">
 							React, React Native, iOS, Android, C#, Blazor, Vite, TypeScript, Prisma, PostgrSQL, GraphQL, Mongo, Figma,{" "}
+							<a href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">
+								Next.js
+							</a>
+							,{" "}
 							<a href="https://claude.ai/" target="_blank" rel="noreferrer noopener">
 								Intelligence Artificielle
 							</a>
