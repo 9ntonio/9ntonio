@@ -7,7 +7,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { OutboundLink } from "gatsby-plugin-google-gtag";
+import { OutboundLink } from "gatsby-plugin-gtag";
 import Seo from "../components/Seo";
 import logo from "../../static/logo-2.svg";
 import "../styles/index.scss";
@@ -48,7 +48,8 @@ export default function Home() {
 			{/* !! Particles Init !! */}
 			<Particles init={particlesInit} options={optionsTriangle} id="particles" />
 
-			<Seo Sitetitle="Antonio Almena" />
+			<Seo Sitetitle="Antonio Almena" description="I'm Antonio Almena, I use both sides of my brain 🧠..." />
+
 			<section className="mt-4">
 				<div className="container">
 					<div className="row align-center mb-1">

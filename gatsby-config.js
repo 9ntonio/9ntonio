@@ -14,14 +14,14 @@ module.exports = {
 	},
 	plugins: [
 		{
-			resolve: `gatsby-plugin-google-gtag`,
+			resolve: `gatsby-plugin-gtag`,
 			options: {
-				trackingIds: [
-					"G-640WERC942", // Replace with your Google Analytics tracking ID
-				],
-				pluginConfig: {
-					head: true,
-				},
+				// your google analytics tracking id
+				trackingId: `G-640WERC942`,
+				// Puts tracking script in the head instead of the body
+				head: false,
+				// enable ip anonymization
+				anonymize: true,
 			},
 		},
 		{
