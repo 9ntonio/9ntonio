@@ -6,7 +6,7 @@
 module.exports = {
 	/* Your site config here */
 	siteMetadata: {
-		title: `I use both sides of my brain 🧠`,
+		title: `I use both sides of my brain 🧠...`,
 		description: `Antonio Almena`,
 		author: `@9ntonio`,
 		image: "/social.jpg",
@@ -28,7 +28,8 @@ module.exports = {
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
 				fonts: [
-					`Fredoka\:300,400,500,600,700`, // you can also specify font weights and styles
+					// you can also specify font weights and styles
+					`Fredoka\:300,400,500,600,700`,
 				],
 				display: "swap",
 			},
