@@ -53,7 +53,7 @@ export default function Home() {
 			<section className="mt-4">
 				<div className="container">
 					<div className="row align-center mb-1">
-						<img src={logo} alt="Logo" className="logo" />
+						<img src={logo} alt="Logo" className="logo" height="83px" width="auto" />
 
 						<div className="circle-container">
 							<OutboundLink href="https://github.com/9ntonio" target="_blank" rel="noreferrer noopener">
