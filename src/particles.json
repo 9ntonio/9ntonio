@@ -1,45 +1,45 @@
 {
-  "fpsLimit": 60,
-  "fullScreen": {
-    "zIndex": -1
-  },
-  "particles": {
-    "number": {
-      "value": 1,
-      "density": {
-        "enable": true,
-        "area": 1001
-      }
-    },
-    "color": {
-      "value": "#fff"
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "opacity": {
-      "value": 0.25
-    },
-    "size": {
-      "value": { "min": 1, "max": 10 },
-      "animation": {
-        "count": 1,
-        "enable": true,
-        "speed": 6,
-        "sync": true,
-        "startValue": "min"
-      }
-    },
-    "move": {
-      "enable": true,
-      "speed": { "min": 1, "max": 5 },
-      "direction": "none",
-      "straight": false,
-      "outMode": "destroy"
-    }
-  },
-  "detectRetina": true,
-  "background": {
-    "color": "#d9d9d9"
-  }
+	"fpsLimit": 60,
+	"fullScreen": {
+		"zIndex": -1
+	},
+	"particles": {
+		"number": {
+			"value": 1,
+			"density": {
+				"enable": true,
+				"area": 1001
+			}
+		},
+		"color": {
+			"value": "#fff"
+		},
+		"shape": {
+			"type": "circle"
+		},
+		"opacity": {
+			"value": 0.25
+		},
+		"size": {
+			"value": { "min": 1, "max": 10 },
+			"animation": {
+				"count": 1,
+				"enable": true,
+				"speed": 6,
+				"sync": true,
+				"startValue": "min"
+			}
+		},
+		"move": {
+			"enable": true,
+			"speed": { "min": 1, "max": 5 },
+			"direction": "none",
+			"straight": false,
+			"outMode": "destroy"
+		}
+	},
+	"detectRetina": true,
+	"background": {
+		"color": "#d9d9d9"
+	}
 }
