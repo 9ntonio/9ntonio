@@ -45,7 +45,6 @@ export default function Home() {
 
 	return (
 		<div className="App">
-			{/* !! Particles Init !! */}
 			<Particles init={particlesInit} options={optionsTriangle} id="particles" />
 
 			<Seo Sitetitle="Antonio Almena" description="I'm Antonio Almena, I use both sides of my brain 🧠..." />

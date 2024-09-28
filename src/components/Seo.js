@@ -84,16 +84,17 @@ function Seo({ description, meta, Sitetitle }) {
 	);
 }
 
+Seo.propTypes = {
+	description: PropTypes.string,
+	lang: PropTypes.string,
+	meta: PropTypes.arrayOf(PropTypes.object),
+	Sitetitle: PropTypes.string.isRequired,
+};
+
 Seo.defaultProps = {
 	lang: `en`,
 	meta: [],
 	description: ``,
-};
-
-Seo.propTypes = {
-	description: PropTypes.string,
-	meta: PropTypes.arrayOf(PropTypes.object),
-	Sitetitle: PropTypes.string.isRequired,
 };
 
 export default Seo;
