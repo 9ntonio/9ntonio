@@ -55,12 +55,6 @@ export default function Home() {
 						<img src={logo} alt="Logo" className="logo" height="83px" width="auto" />
 
 						<div className="circle-container">
-							<OutboundLink href="https://github.com/9ntonio" target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="icon" icon={["fab", "github"]} size="2x" />
-							</OutboundLink>
-						</div>
-
-						<div className="circle-container">
 							<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
 								<FontAwesomeIcon className="linkedin" icon={["fab", "linkedin-in"]} size="2x" />
 							</OutboundLink>
