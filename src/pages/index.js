@@ -2,8 +2,7 @@ import React from "react";
 import ReactPlayer from "react-player";
 import Particles from "react-tsparticles";
 import { loadTrianglesPreset } from "tsparticles-preset-triangles";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
@@ -11,8 +10,6 @@ import { OutboundLink } from "gatsby-plugin-gtag";
 import Seo from "../components/Seo";
 import logo from "../../static/logo-2.svg";
 import "../styles/index.scss";
-
-library.add(fab);
 
 export default function Home() {
 	const optionsTriangle = {
@@ -56,7 +53,7 @@ export default function Home() {
 
 						<div className="circle-container">
 							<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="linkedin" icon={["fab", "linkedin-in"]} size="2x" />
+								<FontAwesomeIcon className="linkedin" icon={faLinkedinIn} size="2x" />
 							</OutboundLink>
 						</div>
 					</div>
