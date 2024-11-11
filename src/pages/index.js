@@ -169,9 +169,11 @@ export default function Home() {
 							</a>
 							, and a lot of{" "}
 							<a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">
-								Web API's
+								Web API's.
+							</a>{" "}
+							<a href="https://www.staygold.boo/" target="_blank" rel="noreferrer noopener">
+								💖 Stay gold!
 							</a>
-							.
 						</p>
 					</div>
 				</div>
