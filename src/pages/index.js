@@ -155,17 +155,13 @@ export default function Home() {
 					<div className="row">
 						<div className="header">What technologies have I been working with?</div>
 						<p className="font-20 text-wrap">
-							React, React Native, Angular, iOS, Android, C#, Blazor, Vite, Expo, TypeScript, PostgrSQL, Mongo, Figma,{" "}
+							Angular, React, React Native, iOS, Android, C#, Blazor, Vite, Expo, TypeScript, PostgrSQL, Mongo, Figma,{" "}
 							<a href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">
 								Next.js
 							</a>
 							,{" "}
 							<a href="https://claude.ai/" target="_blank" rel="noreferrer noopener">
 								Intelligence Artificielle
-							</a>
-							,{" "}
-							<a href="https://www.cursor.com/" target="_blank" rel="noreferrer noopener">
-								Cursor
 							</a>
 							, and a lot of{" "}
 							<a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">
