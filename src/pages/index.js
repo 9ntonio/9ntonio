@@ -5,13 +5,15 @@ import { loadTrianglesPreset } from "tsparticles-preset-triangles";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
 import { OutboundLink } from "gatsby-plugin-gtag";
 import Seo from "../components/Seo";
 import logo from "../../static/logo-2.svg";
 import "../styles/index.scss";
 
 export default function Home() {
+	const LINK_TARGET = "_blank";
+	const LINK_REL = "noreferrer noopener";
+
 	const optionsTriangle = {
 		preset: "triangles",
 		particles: {
@@ -54,7 +56,7 @@ export default function Home() {
 						<img src={logo} alt="Logo" className="logo" height="83px" width="auto" />
 
 						<div className="circle-container">
-							<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target="_blank" rel="noreferrer noopener">
+							<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target={LINK_TARGET} rel={LINK_REL}>
 								<FontAwesomeIcon className="linkedin" icon={faLinkedinIn} size="2x" />
 							</OutboundLink>
 						</div>
@@ -83,19 +85,19 @@ export default function Home() {
 						</div>
 
 						<div className="col-12 col-md-8">
-							<a href="https://gusto.com/" target="_blank" rel="noreferrer noopener">
+							<OutboundLink href="https://gusto.com/" target={LINK_TARGET} rel={LINK_REL}>
 								<div className="header">Gusto</div>
-							</a>
+							</OutboundLink>
 
 							<p className="text-wrap">
 								I was hired by{" "}
-								<Link to="https://www.melonheads.com/" target="_blank" rel="noreferrer noopener">
+								<OutboundLink href="https://www.melonheads.com/" target={LINK_TARGET} rel={LINK_REL}>
 									Melon
-								</Link>{" "}
+								</OutboundLink>{" "}
 								to assist{" "}
-								<Link to="https://gusto.com/" target="_blank" rel="noreferrer noopener">
+								<OutboundLink href="https://gusto.com/" target={LINK_TARGET} rel={LINK_REL}>
 									Gusto
-								</Link>{" "}
+								</OutboundLink>{" "}
 								with their brand refresh. Gusto is large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a
 								team of 6 software & QA engineers. While working out of the Gusto offices, I collaborated with Brand Studio, Marketing & Product teams. Together we were able to deliver
 								on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
@@ -109,13 +111,13 @@ export default function Home() {
 				<div className="container">
 					<div className="row">
 						<div className="col-12 col-md-4">
-							<a href="https://store.google.com/" target="_blank" rel="noreferrer noopener">
+							<a href="https://store.google.com/" target={LINK_TARGET} rel={LINK_REL}>
 								<StaticImage src="../../static/google.jpg" alt="Google" height="100%" className="mb-3 mb-md-0 shadow-lg" />
 							</a>
 						</div>
 
 						<div className="col-12 col-md-8">
-							<a href="https://store.google.com" target="_blank" rel="noreferrer noopener">
+							<a href="https://store.google.com" target={LINK_TARGET} rel={LINK_REL}>
 								<div className="header">Google Store</div>
 							</a>
 							<p className="text-wrap">
@@ -133,13 +135,13 @@ export default function Home() {
 				<div className="container">
 					<div className="row">
 						<div className="col-12 col-md-4">
-							<a href="https://www.odopod.com/case-studies/ps-vue" target="_blank" rel="noreferrer noopener">
+							<a href="https://www.odopod.com/case-studies/ps-vue" target={LINK_TARGET} rel={LINK_REL}>
 								<StaticImage src="../../static/vue.jpg" alt="Google" height="100%" className="mb-3 mb-md-0 shadow-lg" />
 							</a>
 						</div>
 
 						<div className="col-12 col-md-8">
-							<OutboundLink href="https://www.odopod.com/case-studies/ps-vue" target="_blank" rel="noreferrer noopener">
+							<OutboundLink href="https://www.odopod.com/case-studies/ps-vue" target={LINK_TARGET} rel={LINK_REL}>
 								<div className="header">PlayStation Vue</div>
 							</OutboundLink>
 							<p className="text-wrap">
@@ -160,14 +162,14 @@ export default function Home() {
 							Angular, React, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, Tailwind,{" "}
 							{["Next.js", "Claude AI", "Web API's "].map((tech, i) => (
 								<React.Fragment key={tech}>
-									<OutboundLink href={techUrls[i]} target="_blank" rel="noreferrer noopener">
+									<OutboundLink href={techUrls[i]} target={LINK_TARGET} rel={LINK_REL}>
 										{tech}
 									</OutboundLink>
 									{i < 2 && ", "}
 								</React.Fragment>
 							))}
 							& a lot of{" "}
-							<OutboundLink href="https://www.staygold.boo/" target="_blank" rel="noreferrer noopener">
+							<OutboundLink href="https://www.staygold.boo/" target={LINK_TARGET} rel={LINK_REL}>
 								💖... Stay gold!
 							</OutboundLink>
 						</p>
