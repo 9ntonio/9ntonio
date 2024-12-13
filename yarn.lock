@@ -10251,7 +10251,7 @@ tsparticles-move-base@^2.12.0:
   dependencies:
     tsparticles-engine "^2.12.0"
 
-tsparticles-preset-triangles@^2.12.2:
+tsparticles-preset-triangles@^3:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/tsparticles-preset-triangles/-/tsparticles-preset-triangles-2.12.0.tgz#c924e3a0bd575294bc43699d2f5cf4418e9e8d57"
   integrity sha512-Wuvoq9R7YRXyQRj65vVcqha95gUMFq0RHOrCK5nBaOoQpnlODMDBBhs4DTVd/E9lKZFgTwd0nAoRjo41+GvEAA==
@@ -10295,7 +10295,7 @@ tsparticles-updater-size@^2.12.0:
   dependencies:
     tsparticles-engine "^2.12.0"
 
-tsparticles@^2.12.2:
+tsparticles@^3:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-3.7.1.tgz#64499b18466a1cbf4815ed77b0aafec054134949"
   integrity sha512-NNkOYIo01eHpDuaJxDCGgcLEMZKEJTCN/XPVCLg7VxgEWN19rjXpDnDguISxadS8GSFPws7hpGgbeDDAm3MX+Q==
