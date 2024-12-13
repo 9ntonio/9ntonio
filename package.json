@@ -71,7 +71,7 @@
 		"sass": "^1.55.0",
 		"sharp": "^0.33.5",
 		"tsparticles": "^3",
-		"tsparticles-preset-triangles": "^3"
+		"tsparticles-preset-triangles": "^2.12.0"
 	},
 	"devDependencies": {
 		"prettier": "^3.0.0"

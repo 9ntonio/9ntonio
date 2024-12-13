@@ -10251,7 +10251,7 @@ tsparticles-move-base@^2.12.0:
   dependencies:
     tsparticles-engine "^2.12.0"
 
-tsparticles-preset-triangles@^3:
+tsparticles-preset-triangles@^2.12.0:
   version "2.12.0"
   resolved "https://registry.yarnpkg.com/tsparticles-preset-triangles/-/tsparticles-preset-triangles-2.12.0.tgz#c924e3a0bd575294bc43699d2f5cf4418e9e8d57"
   integrity sha512-Wuvoq9R7YRXyQRj65vVcqha95gUMFq0RHOrCK5nBaOoQpnlODMDBBhs4DTVd/E9lKZFgTwd0nAoRjo41+GvEAA==
