@@ -40,11 +40,13 @@ export default function Home() {
 		await loadTrianglesPreset(engine);
 	};
 
+	const techUrls = ["https://nextjs.org/", "https://claude.ai/", "https://developer.mozilla.org/en-US/docs/Web/API"];
+
 	return (
 		<div className="App">
 			<Particles init={particlesInit} options={optionsTriangle} id="particles" />
 
-			<Seo Sitetitle="Antonio Almena" description="I'm Antonio Almena, I use both sides of my brain 🧠..." />
+			<Seo siteTitle="Antonio Almena" description="I'm Antonio Almena, I use both sides of my brain 🧠..." />
 
 			<section className="mt-4">
 				<div className="container">
@@ -120,7 +122,7 @@ export default function Home() {
 								Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal is to
 								keep users’ front of mind and seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's engineers to
 								meet their technical & testing requirements. The engineers & I created various proof of concepts & prototypes that were tied to a suite of unit tests. This allowed us
-								to test our architecture prior to kickoff and assisted in creating a seemless delivery process.
+								to test our architecture prior to kickoff and assisted in creating a seamless delivery process.
 							</p>
 						</div>
 					</div>
@@ -137,9 +139,9 @@ export default function Home() {
 						</div>
 
 						<div className="col-12 col-md-8">
-							<a href="https://www.odopod.com/case-studies/ps-vue" target="_blank" rel="noreferrer noopener">
-								<div className="header">Playstion Vue</div>
-							</a>
+							<OutboundLink href="https://www.odopod.com/case-studies/ps-vue" target="_blank" rel="noreferrer noopener">
+								<div className="header">PlayStation Vue</div>
+							</OutboundLink>
 							<p className="text-wrap">
 								The Odopod team and I built the iOS application for Sony's streaming service Vue. The application included live TV, DVR, and VOD features via a 3rd party content
 								delivery service. As the Technical Director, I worked with Sony on the iOS and Chromecast builds while also managing both internal & external engineering teams. I also
@@ -155,21 +157,19 @@ export default function Home() {
 					<div className="row">
 						<div className="header">What technologies have I been working with?</div>
 						<p className="font-20 text-wrap">
-							Angular, React, React Native, iOS, Android, C#, Blazor, Vite, Expo, TypeScript, PostgrSQL, Mongo, Figma,{" "}
-							<a href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">
-								Next.js
-							</a>
-							,{" "}
-							<a href="https://claude.ai/" target="_blank" rel="noreferrer noopener">
-								Intelligence Artificielle
-							</a>
-							, and a lot of{" "}
-							<a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="noreferrer noopener">
-								Web API's.
-							</a>{" "}
-							<a href="https://www.staygold.boo/" target="_blank" rel="noreferrer noopener">
-								💖 Stay gold!
-							</a>
+							Angular, React, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, Tailwind,{" "}
+							{["Next.js", "Claude AI", "Web API's "].map((tech, i) => (
+								<React.Fragment key={tech}>
+									<OutboundLink href={techUrls[i]} target="_blank" rel="noreferrer noopener">
+										{tech}
+									</OutboundLink>
+									{i < 2 && ", "}
+								</React.Fragment>
+							))}
+							& a lot of{" "}
+							<OutboundLink href="https://www.staygold.boo/" target="_blank" rel="noreferrer noopener">
+								💖... Stay gold!
+							</OutboundLink>
 						</p>
 					</div>
 				</div>
