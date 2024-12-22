@@ -48,7 +48,7 @@ export default function Home() {
 		<div className="App">
 			<Particles init={particlesInit} options={optionsTriangle} id="particles" />
 
-			<Seo siteTitle="Antonio Almena" description="I'm Antonio Almena, I use both sides of my brain 🧠..." />
+			<Seo description="I'm Antonio Almena, I use both sides of my brain 🧠..." Sitetitle="Antonio Almena" meta="software development" />
 
 			<section className="mt-4">
 				<div className="container">
