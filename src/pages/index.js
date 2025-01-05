@@ -169,7 +169,7 @@ export default function Home() {
 								</React.Fragment>
 							))}
 							& a lot of{" "}
-							<OutboundLink href="https://www.staygold.boo/" target={LINK_TARGET} rel={LINK_REL}>
+							<OutboundLink href="https://en.wikipedia.org/wiki/The_Outsiders_(film)" target={LINK_TARGET} rel={LINK_REL}>
 								💖... Stay gold!
 							</OutboundLink>
 						</p>
