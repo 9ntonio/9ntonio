@@ -62,15 +62,42 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="row">
-						<p className="text-wrap font-18 mb-3">
-							I 💘 the space where design & technology overlap. My background is in both design & engineering. I enjoy creating design systems based in human-centric design principles.
-							My core strengths are in: Coding, Application Architecture, UI/UX, Prototyping, Technical Writing, Animation and I’m also able to code in multiple languages. My leadership
-							skills stem from my team management and client relations experience. I’ve been lucky to work across various industries: FinTech, Automotive, Gaming and Entertainment to
-							name a few.
-						</p>
-					</div>
+					<p className="text-wrap font-18 mb-2">
+						I'm an engineer with a unique expertise bridging technical implementation & design systems. I leverage my computer science background in order to create AI-enhanced development workflows & highly performant applications. I specialize in automating design-to-development processes using cutting-edge AI tools and methodologies.
+					</p>
 
+					<div className="container">
+						<div className="row">
+							<div className="col-12 col-md-7">
+								<p className="text-wrap font-18">
+								<u>Key Technical & Design Achievements:</u>
+									<ul>
+										<li>Architected an AI-powered design system compiler reducing component creation time ~ 4 hours to 45 minutes</li>
+										<li>Implemented an AI-powered code generation pipeline, automating 70% of documentation</li>
+										<li>Built visual regression testing pipelines with AI-assisted bug detection, achieving 99% design consistency</li>
+										<li>Created custom GitHub Copilot workflows increasing team productivity by 40%</li>
+										<li>Automated accessibility testing using AI, catching 95% of WCAG violations pre-deployment</li>
+									</ul>
+								</p>
+							</div>
+
+							<div className="col-12 col-md-5">
+								<p className="text-wrap font-18">
+									<u>Core Competencies:</u>
+								<ul>
+									<li>Software Architecture & Distributed Systems Design</li>
+									<li>UI/UX Design & User Research</li>
+									<li>Technical Leadership & Agile Team Management</li>
+									<li>Full-Stack Web Development</li>
+									<li>Design Systems & Component Libraries</li>
+									<li>Technical Documentation & Knowledge Management</li>
+									<li>CI/CD & DevOps Practices</li>
+									<li>Agile & Scrum Methodologies</li>
+									</ul>
+								</p>
+							</div>
+						</div>
+					</div>
 					<hr className="mt-1 mb-0" />
 				</div>
 			</section>
@@ -160,7 +187,7 @@ export default function Home() {
 						<div className="header">What technologies have I been working with?</div>
 						<p className="font-20 text-wrap">
 							Angular, React, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, Tailwind,{" "}
-							{["Next.js", "Claude AI", "Web API's "].map((tech, i) => (
+							{["Next.js", "Claude AI", "Web APIs "].map((tech, i) => (
 								<React.Fragment key={tech}>
 									<OutboundLink href={techUrls[i]} target={LINK_TARGET} rel={LINK_REL}>
 										{tech}
