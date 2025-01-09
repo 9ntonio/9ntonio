@@ -63,14 +63,15 @@ export default function Home() {
 					</div>
 
 					<p className="text-wrap font-18 mb-2">
-						I'm an engineer with a unique expertise bridging technical implementation & design systems. I leverage my computer science background in order to create AI-enhanced development workflows & highly performant applications. I specialize in automating design-to-development processes using cutting-edge AI tools and methodologies.
+						I'm an engineer with a unique expertise bridging technical implementation & design systems. I leverage my computer science background in order to create AI-enhanced development
+						workflows & highly performant applications. I specialize in automating design-to-development processes using cutting-edge AI tools and methodologies.
 					</p>
 
 					<div className="container">
 						<div className="row">
 							<div className="col-12 col-md-7">
 								<p className="text-wrap font-18">
-								<u>Key Technical & Design Achievements:</u>
+									<u>Key Technical & Design Achievements:</u>
 									<ul>
 										<li>Architected an AI-powered design system compiler reducing component creation time ~ 4 hours to 45 minutes</li>
 										<li>Implemented an AI-powered code generation pipeline, automating 70% of documentation</li>
@@ -84,15 +85,15 @@ export default function Home() {
 							<div className="col-12 col-md-5">
 								<p className="text-wrap font-18">
 									<u>Core Competencies:</u>
-								<ul>
-									<li>Software Architecture & Distributed Systems Design</li>
-									<li>UI/UX Design & User Research</li>
-									<li>Technical Leadership & Agile Team Management</li>
-									<li>Full-Stack Web Development</li>
-									<li>Design Systems & Component Libraries</li>
-									<li>Technical Documentation & Knowledge Management</li>
-									<li>CI/CD & DevOps Practices</li>
-									<li>Agile & Scrum Methodologies</li>
+									<ul>
+										<li>Software Architecture & Distributed Systems Design</li>
+										<li>UI/UX Design & User Research</li>
+										<li>Technical Leadership & Agile Team Management</li>
+										<li>Full-Stack Web Development</li>
+										<li>Design Systems & Component Libraries</li>
+										<li>Technical Documentation & Knowledge Management</li>
+										<li>CI/CD & DevOps Practices</li>
+										<li>Agile & Scrum Methodologies</li>
 									</ul>
 								</p>
 							</div>
