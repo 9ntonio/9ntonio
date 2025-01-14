@@ -119,8 +119,8 @@ export default function Home() {
 
 							<p className="text-wrap">
 								I was hired by{" "}
-								<OutboundLink href="https://www.melonheads.com/" target={LINK_TARGET} rel={LINK_REL}>
-									Melon
+								<OutboundLink href="https://www.deptagency.com/" target={LINK_TARGET} rel={LINK_REL}>
+									DEPT®
 								</OutboundLink>{" "}
 								to assist{" "}
 								<OutboundLink href="https://gusto.com/" target={LINK_TARGET} rel={LINK_REL}>
