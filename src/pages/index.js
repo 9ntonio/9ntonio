@@ -198,7 +198,7 @@ export default function Home() {
 							))}
 							& a lot of{" "}
 							<OutboundLink href="https://en.wikipedia.org/wiki/The_Outsiders_(film)" target={LINK_TARGET} rel={LINK_REL}>
-								💖... Stay gold!
+								💖... Stay gold
 							</OutboundLink>
 						</p>
 					</div>
