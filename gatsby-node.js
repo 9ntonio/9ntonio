@@ -1,3 +1,10 @@
+const express = require("express");
+const path = require("path");
+
+exports.onCreateDevServer = ({ app }) => {
+	app.use("/unknown-pleasures", express.static(path.resolve("static/unknown-pleasures")));
+};
+
 exports.onCreatePage = ({ page, actions }) => {
 	const { createPage, deletePage } = actions;
 

@@ -42,4 +42,5 @@ module.exports = {
 		`gatsby-transformer-sharp`,
 	],
 	pathPrefix: "/",
+	assetPrefix: "/",
 };
