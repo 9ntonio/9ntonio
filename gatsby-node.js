@@ -3,52 +3,58 @@ const path = require("path");
 const fs = require("fs-extra");
 
 exports.onCreateDevServer = ({ app }) => {
-	// Serve the directory with minimal middleware
+	// Serve the unknown-pleasures directory
 	app.use("/unknown-pleasures", express.static(path.resolve("static/unknown-pleasures")));
-};
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-	if (stage === "build-html" || stage === "develop-html") {
-		actions.setWebpackConfig({
-			module: {
-				rules: [
-					{
-						test: /react-player|tsparticles/,
-						use: loaders.null(),
-					},
-				],
-			},
-		});
-	}
+	// Important: Also serve assets from their original path for Vite
+	app.use("/assets", express.static(path.resolve("static/unknown-pleasures/assets")));
 };
 
 exports.onPreBuild = ({ reporter }) => {
 	const sourceDir = path.join(__dirname, "static", "unknown-pleasures");
 	const publicDir = path.join(__dirname, "public", "unknown-pleasures");
+	const publicAssetsDir = path.join(__dirname, "public", "assets");
 
 	try {
-		// Ensure source directory exists
+		// Ensure source directories exist
 		if (!fs.existsSync(sourceDir)) {
 			reporter.panic("unknown-pleasures directory not found in static folder");
 			return;
 		}
 
-		// Clean and recreate the target directory
-		fs.removeSync(publicDir);
-		fs.ensureDirSync(publicDir);
-
-		// Copy directory
-		fs.copySync(sourceDir, publicDir);
-
-		// Verify the HTML file was copied correctly
-		const htmlPath = path.join(publicDir, "index.html");
-		if (fs.existsSync(htmlPath)) {
-			const content = fs.readFileSync(htmlPath, "utf8");
-			reporter.info(`Successfully copied index.html (${content.length} bytes)`);
-		} else {
-			reporter.error("index.html not found in built directory");
+		const sourceAssetsDir = path.join(sourceDir, "assets");
+		if (!fs.existsSync(sourceAssetsDir)) {
+			reporter.panic("assets directory not found in unknown-pleasures");
+			return;
 		}
+
+		// Clean and recreate directories
+		fs.removeSync(publicDir);
+		fs.removeSync(publicAssetsDir);
+		fs.ensureDirSync(publicDir);
+		fs.ensureDirSync(publicAssetsDir);
+
+		// Copy main directory
+		fs.copySync(sourceDir, publicDir);
+		reporter.info("Copied unknown-pleasures directory to public");
+
+		// Also copy assets to root assets directory
+		fs.copySync(sourceAssetsDir, publicAssetsDir);
+		reporter.info("Copied assets to root assets directory");
+
+		// Log copied files
+		const logDirectory = (dir, label) => {
+			const files = fs.readdirSync(dir);
+			reporter.info(`Contents of ${label}:`);
+			files.forEach((file) => {
+				const stats = fs.statSync(path.join(dir, file));
+				reporter.info(`- ${file} (${stats.size} bytes)`);
+			});
+		};
+
+		logDirectory(publicDir, "public/unknown-pleasures");
+		logDirectory(publicAssetsDir, "public/assets");
 	} catch (error) {
-		reporter.panic("Failed to copy unknown-pleasures directory", error);
+		reporter.panic("Failed to copy directories", error);
 	}
 };

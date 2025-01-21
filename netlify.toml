@@ -9,13 +9,23 @@
 [[plugins]]
   package = "@netlify/plugin-gatsby"
 
-# Serve HTML files correctly
+# Handle Vite's asset files
 [[headers]]
-  for = "/unknown-pleasures/index.html"
+  for = "/assets/*"
   [headers.values]
-    Content-Type = "text/html"
-    Cache-Control = "no-cache"
-    X-Frame-Options = "SAMEORIGIN"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/unknown-pleasures/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Important: Redirect asset requests to the correct location
+[[redirects]]
+  from = "/assets/*"
+  to = "/unknown-pleasures/assets/:splat"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/unknown-pleasures"
@@ -28,3 +38,9 @@
   to = "/unknown-pleasures/:splat"
   status = 200
   force = true
+
+# Fallback must come last
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
