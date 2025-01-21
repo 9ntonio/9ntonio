@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 
 exports.onCreateDevServer = ({ app }) => {
+	// This will only run during development
 	app.use("/unknown-pleasures", express.static(path.resolve("static/unknown-pleasures")));
 };
 

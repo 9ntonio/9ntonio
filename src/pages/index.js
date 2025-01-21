@@ -196,9 +196,9 @@ export default function Home() {
 									{i < 2 && ", "}
 								</React.Fragment>
 							))}
-							& a lot of{" "}
+							& a lot of 💖.{" "}
 							<OutboundLink href="https://en.wikipedia.org/wiki/The_Outsiders_(film)" target={LINK_TARGET} rel={LINK_REL}>
-								💖... Stay gold
+								Stay Gold
 							</OutboundLink>
 						</p>
 					</div>
