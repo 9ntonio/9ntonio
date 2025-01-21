@@ -3,59 +3,19 @@ const path = require("path");
 const fs = require("fs-extra");
 
 exports.onCreateDevServer = ({ app }) => {
-	// Serve static files with proper MIME types
+	// Serve the entire unknown-pleasures directory statically
 	app.use(
 		"/unknown-pleasures",
 		express.static(path.resolve("static/unknown-pleasures"), {
-			setHeaders: (res, filePath) => {
-				if (path.extname(filePath) === ".js") {
-					res.setHeader("Content-Type", "application/javascript");
-				}
-			},
+			index: "index.html",
 		}),
 	);
-};
 
-exports.onPreBuild = ({ reporter }) => {
-	const sourceDir = path.join(__dirname, "static", "unknown-pleasures");
-	const publicDir = path.join(__dirname, "public", "unknown-pleasures");
-
-	try {
-		// Ensure source directory exists
-		if (!fs.existsSync(sourceDir)) {
-			reporter.panic("unknown-pleasures directory not found in static folder");
-			return;
-		}
-
-		// Clean the target directory if it exists
-		fs.removeSync(publicDir);
-
-		// Create the target directory
-		fs.ensureDirSync(publicDir);
-
-		// Copy directory with detailed logging
-		fs.copySync(sourceDir, publicDir, {
-			filter: (src) => {
-				const isValid = fs.existsSync(src);
-				const fileName = path.basename(src);
-				reporter.info(`Copying: ${fileName} (${isValid ? "valid" : "invalid"})`);
-				return isValid;
-			},
-		});
-
-		// Verify JavaScript files
-		const jsFiles = fs.readdirSync(publicDir).filter((file) => file.endsWith(".js"));
-		reporter.info(`JavaScript files copied: ${jsFiles.join(", ")}`);
-
-		// Verify file permissions
-		jsFiles.forEach((file) => {
-			const filePath = path.join(publicDir, file);
-			fs.chmodSync(filePath, "644");
-			reporter.info(`Set permissions for: ${file}`);
-		});
-	} catch (error) {
-		reporter.panic("Failed to copy unknown-pleasures directory", error);
-	}
+	// Log requests to help with debugging
+	app.use("/unknown-pleasures", (req, res, next) => {
+		console.log(`Request to unknown-pleasures: ${req.path}`);
+		next();
+	});
 };
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
@@ -73,15 +33,17 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 	}
 };
 
-// Create dedicated page for unknown-pleasures
-exports.createPages = async ({ actions }) => {
-	const { createPage } = actions;
+exports.onCreatePage = ({ page, actions }) => {
+	const { createPage, deletePage } = actions;
 
-	createPage({
-		path: "/unknown-pleasures",
-		component: require.resolve("./src/pages/unknown-pleasures.js"),
-		context: {
-			layout: "unknown-pleasures",
-		},
-	});
+	if (page.path === "/unknown-pleasures") {
+		deletePage(page);
+		createPage({
+			...page,
+			context: {
+				...page.context,
+				noWrapper: true,
+			},
+		});
+	}
 };

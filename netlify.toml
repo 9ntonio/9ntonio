@@ -9,23 +9,25 @@
 [[plugins]]
   package = "@netlify/plugin-gatsby"
 
-# JavaScript files handling
+# Handle all assets including Vite's hashed JS files
 [[headers]]
-  for = "/unknown-pleasures/*.js"
+  for = "/assets/*"
   [headers.values]
-    Content-Type = "application/javascript"
-    Cache-Control = "public, max-age=31536000"
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# General unknown-pleasures assets
 [[headers]]
-  for = "/unknown-pleasures/*"
+  for = "/unknown-pleasures/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000"
-    X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=31536000, immutable"
 
-# Specific redirects for unknown-pleasures
+# Redirect for Vite's asset files
+[[redirects]]
+  from = "/assets/*"
+  to = "/unknown-pleasures/assets/:splat"
+  status = 200
+  force = true
+
+# Main unknown-pleasures redirects
 [[redirects]]
   from = "/unknown-pleasures"
   to = "/unknown-pleasures/index.html"
@@ -38,9 +40,9 @@
   status = 200
   force = true
 
-# Ensure index.html is served with correct content type
-[[headers]]
-  for = "/unknown-pleasures/index.html"
-  [headers.values]
-    Content-Type = "text/html"
-    Cache-Control = "public, max-age=0, must-revalidate"
+# General fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Path = {exclude = ["/unknown-pleasures/**", "/assets/**"]}}
