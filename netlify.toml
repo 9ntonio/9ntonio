@@ -1,9 +1,17 @@
 [[redirects]]
+  from = "/unknown-pleasures"
+  to = "/unknown-pleasures/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/unknown-pleasures/*"
   to = "/unknown-pleasures/:splat"
   status = 200
+  force = true
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Ensure static assets are handled
+[[headers]]
+  for = "/unknown-pleasures/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000"
