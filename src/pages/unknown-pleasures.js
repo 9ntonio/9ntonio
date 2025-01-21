@@ -1,14 +1,15 @@
 import React from "react";
-import Seo from "../components/Seo"; // Adjust path as needed
+import Seo from "../components/Seo";
 
 const UnknownPleasuresPage = () => {
 	const [mounted, setMounted] = React.useState(false);
 
 	React.useEffect(() => {
-		setMounted(true);
+		if (typeof window !== "undefined") {
+			setMounted(true);
+		}
 	}, []);
 
-	// Define meta array outside of the render to keep it clear
 	const pageMeta = [
 		{
 			name: "keywords",
@@ -28,7 +29,18 @@ const UnknownPleasuresPage = () => {
 		return (
 			<>
 				<Seo Sitetitle="Unknown Pleasures" description="Unknown Pleasures visualization experiment" meta={pageMeta} />
-				<div>Loading...</div>
+				<div
+					style={{
+						width: "100vw",
+						height: "100vh",
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						background: "#000",
+					}}
+				>
+					Loading...
+				</div>
 			</>
 		);
 	}
@@ -36,16 +48,24 @@ const UnknownPleasuresPage = () => {
 	return (
 		<>
 			<Seo Sitetitle="Unknown Pleasures" description="Unknown Pleasures visualization experiment" meta={pageMeta} />
-			<iframe
-				src="/unknown-pleasures/index.html"
+			<div
 				style={{
-					width: "100%",
+					width: "100vw",
 					height: "100vh",
-					border: "none",
-					display: "block",
+					overflow: "hidden",
 				}}
-				title="Unknown Pleasures"
-			/>
+			>
+				<iframe
+					src="/unknown-pleasures/index.html"
+					style={{
+						width: "100%",
+						height: "100%",
+						border: "none",
+						display: "block",
+					}}
+					title="Unknown Pleasures"
+				/>
+			</div>
 		</>
 	);
 };

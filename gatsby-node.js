@@ -1,8 +1,9 @@
 const express = require("express");
 const path = require("path");
+const fs = require("fs");
 
 exports.onCreateDevServer = ({ app }) => {
-	// This will only run during development
+	// Serve static files during development
 	app.use("/unknown-pleasures", express.static(path.resolve("static/unknown-pleasures")));
 };
 
@@ -20,19 +21,30 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 		});
 	}
 };
-exports.onCreatePage = ({ page, actions }) => {
-	const { createPage, deletePage } = actions;
 
-	// Exclude your custom page from Gatsby's React runtime
-	if (page.path === "/unknown-pleasures") {
-		deletePage(page);
-		createPage({
-			...page,
-			component: require.resolve("./static/unknown-pleasures/index.html"),
-			context: {
-				...page.context,
-				noWrapper: true, // Custom flag to indicate standalone page
-			},
-		});
+// Create the unknown-pleasures page
+exports.createPages = async ({ actions }) => {
+	const { createPage } = actions;
+
+	// Create the unknown-pleasures page
+	createPage({
+		path: "/unknown-pleasures",
+		component: require.resolve("./src/pages/unknown-pleasures.js"),
+		context: {
+			layout: "unknown-pleasures",
+		},
+	});
+};
+
+// Ensure the static directory is copied during build
+exports.onPreBuild = ({ reporter }) => {
+	const staticDir = path.join(__dirname, "static", "unknown-pleasures");
+	const publicDir = path.join(__dirname, "public", "unknown-pleasures");
+
+	if (fs.existsSync(staticDir)) {
+		fs.cpSync(staticDir, publicDir, { recursive: true });
+		reporter.info("Copied unknown-pleasures directory to public folder");
+	} else {
+		reporter.warn("unknown-pleasures directory not found in static folder");
 	}
 };

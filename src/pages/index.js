@@ -14,9 +14,20 @@ const Particles = React.lazy(() => import("react-tsparticles"));
 
 export default function Home() {
 	const [isMounted, setIsMounted] = React.useState(false);
+	const [isParticlesLoaded, setIsParticlesLoaded] = React.useState(false);
+	const [hasError, setHasError] = React.useState(false);
 
 	React.useEffect(() => {
-		setIsMounted(true);
+		// Ensure we're in the browser environment
+		if (typeof window !== "undefined") {
+			setIsMounted(true);
+		}
+
+		// Cleanup function
+		return () => {
+			setIsMounted(false);
+			setIsParticlesLoaded(false);
+		};
 	}, []);
 
 	const LINK_TARGET = "_blank";
@@ -51,19 +62,88 @@ export default function Home() {
 			await loadTrianglesPreset(engine);
 		} catch (error) {
 			console.error("Failed to initialize particles:", error);
+			setHasError(true);
 		}
+	}, []);
+
+	const handleParticlesLoaded = React.useCallback(() => {
+		setIsParticlesLoaded(true);
+		console.log("Particles loaded successfully");
 	}, []);
 
 	const techUrls = ["https://nextjs.org/", "https://claude.ai/", "https://developer.mozilla.org/en-US/docs/Web/API"];
 
+	// SSR-safe loading state
 	if (!isMounted) {
-		return null;
+		return (
+			<div className="App">
+				<div
+					style={{
+						background: "#00474f",
+						position: "fixed",
+						top: 0,
+						right: 0,
+						bottom: 0,
+						left: 0,
+					}}
+				/>
+				<Seo
+					description="I'm Antonio Almena, I use both sides of my brain 🧠..."
+					Sitetitle="Antonio Almena"
+					meta={[
+						{
+							name: "keywords",
+							content: "software development, engineering, AI, design systems",
+						},
+						{
+							property: "og:type",
+							content: "website",
+						},
+						{
+							name: "robots",
+							content: "index, follow",
+						},
+					]}
+				/>
+			</div>
+		);
 	}
 
 	return (
 		<div className="App">
-			<Suspense fallback={<div style={{ background: "#00474f", position: "fixed", top: 0, right: 0, bottom: 0, left: 0 }} />}>
-				{isMounted && <Particles init={particlesInit} options={optionsTriangle} id="particles" loaded={() => console.log("Particles loaded")} />}
+			<Suspense
+				fallback={
+					<div
+						style={{
+							background: "#00474f",
+							position: "fixed",
+							top: 0,
+							right: 0,
+							bottom: 0,
+							left: 0,
+						}}
+					/>
+				}
+			>
+				{isMounted && !hasError && (
+					<>
+						<Particles init={particlesInit} options={optionsTriangle} id="particles" loaded={handleParticlesLoaded} />
+						{!isParticlesLoaded && (
+							<div
+								style={{
+									position: "fixed",
+									top: 0,
+									right: 0,
+									bottom: 0,
+									left: 0,
+									background: "#00474f",
+									zIndex: -1,
+									transition: "opacity 0.3s ease-in-out",
+								}}
+							/>
+						)}
+					</>
+				)}
 			</Suspense>
 
 			<Seo
@@ -143,8 +223,29 @@ export default function Home() {
 					<div className="row">
 						<div className="col-12 col-md-4">
 							<div className="player-wrapper shadow-lg">
-								<Suspense fallback={<div style={{ background: "#ccc", width: "100%", height: "100%" }} />}>
-									{isMounted && <ReactPlayer className="react-player" url="https://vimeo.com/374826636" playing controls muted width="100%" height="100%" />}
+								<Suspense
+									fallback={
+										<div
+											style={{
+												background: "#ccc",
+												width: "100%",
+												height: "100%",
+											}}
+										/>
+									}
+								>
+									{isMounted && (
+										<ReactPlayer
+											className="react-player"
+											url="https://vimeo.com/374826636"
+											playing
+											controls
+											muted
+											width="100%"
+											height="100%"
+											onError={(e) => console.error("Video player error:", e)}
+										/>
+									)}
 								</Suspense>
 							</div>
 						</div>

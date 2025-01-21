@@ -40,11 +40,13 @@
 		"gatsby-theme"
 	],
 	"scripts": {
-		"build": "gatsby build --prefix-paths",
 		"dev": "gatsby develop",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
 		"start": "yarn dev",
-		"clean": "gatsby clean"
+		"clean": "gatsby clean",
+		"build": "GATSBY_CPU_COUNT=2 gatsby build",
+		"serve": "gatsby serve",
+		"postbuild": "cp -r static/unknown-pleasures public/"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-common-types": "^6.7.2",
@@ -53,6 +55,7 @@
 		"@fortawesome/free-regular-svg-icons": "^6.5.1",
 		"@fortawesome/free-solid-svg-icons": "^6.5.1",
 		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@netlify/plugin-gatsby": "^3.8.1",
 		"bootstrap": "^5.3.3",
 		"express": "^4.21.2",
 		"gatsby": "^5.13.3",

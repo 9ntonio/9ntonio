@@ -1,10 +1,4 @@
-/**
- * !! Configure your Gatsby site with this file.
- * !! See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-	/* Your site config here */
 	siteMetadata: {
 		title: `I use both sides of my brain 🧠...`,
 		description: `Antonio Almena`,
@@ -16,21 +10,15 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-gtag`,
 			options: {
-				// your google analytics tracking id
 				trackingId: `G-640WERC942`,
-				// Puts tracking script in the head instead of the body
-				head: false,
-				// enable ip anonymization
+				head: true, // Changed to true to ensure tracking script loads properly
 				anonymize: true,
 			},
 		},
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [
-					// you can also specify font weights and styles
-					`Fredoka\:300,400,500,600,700`,
-				],
+				fonts: [`Fredoka\:300,400,500,600,700`],
 				display: "swap",
 			},
 		},
@@ -41,9 +29,11 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
 	],
-	pathPrefix: "/",
 	flags: {
 		DEV_SSR: true,
+		FAST_DEV: true, // Added for better development performance
+		PRESERVE_FILE_DOWNLOAD_CACHE: true, // Added for better caching
+		PARALLEL_SOURCING: true, // Added for better build performance
 	},
-	assetPrefix: process.env.NODE_ENV === "production" ? "https://agitated-saha-24099f.netlify.app" : "",
+	// Remove assetPrefix - let Netlify handle this
 };
