@@ -46,7 +46,8 @@
 		"clean": "gatsby clean",
 		"build": "GATSBY_CPU_COUNT=2 gatsby build",
 		"serve": "gatsby serve",
-		"postbuild": "cp -r static/unknown-pleasures public/"
+		"postbuild": "cp -r static/unknown-pleasures public/ && echo 'Copied unknown-pleasures to public dir'",
+		"preserve": "echo 'Checking public/unknown-pleasures exists...' && ls public/unknown-pleasures || echo 'Warning: directory not found'"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-common-types": "^6.7.2",
