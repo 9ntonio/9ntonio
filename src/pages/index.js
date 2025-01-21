@@ -321,6 +321,60 @@ export default function Home() {
 				</div>
 			</section>
 
+			<section className="section-container">
+				<div className="container">
+					<div className="row">
+						<div className="col-12 col-md-4">
+							<a href="https://antonio.almena.io/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
+								<StaticImage
+									src="../../static/unknown-pleasures.png"
+									alt="Unknown Pleasures"
+									placeholder="blurred"
+									layout="fullWidth"
+									aspectRatio={3 / 2}
+									className="mb-3 mb-md-0 shadow-lg"
+								/>
+							</a>
+						</div>
+
+						<div className="col-12 col-md-8">
+							<a href="https://antonio.almena.io/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
+								<div className="header">Unknown Pleasures</div>
+							</a>
+							<p className="text-wrap">
+								In 1979{" "}
+								<a href="https://en.wikipedia.org/wiki/Factory_Records" target="_blank">
+									Factory Records{" "}
+								</a>
+								released their 10th album{" "}
+								<a href="https://en.wikipedia.org/wiki/Unknown_Pleasures" target="_blank">
+									Unknown Pleasures{" "}
+								</a>
+								by Joy Division. The artwork is credited to both the band &{" "}
+								<a href="https://en.wikipedia.org/wiki/Peter_Saville_(graphic_designer)" target="_blank">
+									Peter Saville{" "}
+								</a>
+								. The album cover uses an image of radio waves from pulsar{" "}
+								<a href="https://en.wikipedia.org/wiki/CP_1919" target="_blank">
+									CP 1919
+								</a>
+								. The background is black (instead of white) because Peter Saville said "I was convinced that it was just sexier in black". It is considered one of "the best albums of
+								all time".
+							</p>
+
+							<p>
+								I'm obsesed with this album, musically & artistically. So much so that for some time I've been trying to make an app that would use the album song's as the data for the
+								graph. I've treid before and hit walls. Recently I've started working on it again and with some help from{" "}
+								<a href="https://www.anthropic.com/" target="_blank">
+									Claude
+								</a>
+								, a path was shown.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section className="section-container-last">
 				<div className="container">
 					<div className="row">
