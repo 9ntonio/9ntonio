@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import favicon from "../../static/favicon.png";
 
-function Seo({ description, meta, Sitetitle }) {
+function Seo({ description = "", meta = [], Sitetitle }) {
 	const { site } = useStaticQuery(graphql`
 		query {
 			site {
@@ -20,7 +20,61 @@ function Seo({ description, meta, Sitetitle }) {
 	`);
 
 	const metaDescription = description || site.siteMetadata.description;
-	const imageSE0 = site.siteMetadata.image;
+	const imageSEO = site.siteMetadata.image;
+
+	const defaultMeta = [
+		{
+			name: `description`,
+			content: metaDescription,
+		},
+		{
+			property: `og:type`,
+			content: `website`,
+		},
+		{
+			property: `og:url`,
+			content: site.siteMetadata.siteUrl,
+		},
+		{
+			property: `og:title`,
+			content: `${Sitetitle} | ${site.siteMetadata.title}`,
+		},
+		{
+			property: `og:description`,
+			content: metaDescription,
+		},
+		{
+			property: `og:image`,
+			content: `${site.siteMetadata.siteUrl}${imageSEO}`,
+		},
+		{
+			name: `twitter:card`,
+			content: `summary_large_image`,
+		},
+		{
+			property: `twitter:url`,
+			content: site.siteMetadata.siteUrl,
+		},
+		{
+			name: `twitter:creator`,
+			content: site.siteMetadata?.author || "",
+		},
+		{
+			name: `twitter:title`,
+			content: `${Sitetitle} | ${site.siteMetadata.title}`,
+		},
+		{
+			name: `twitter:description`,
+			content: metaDescription,
+		},
+		{
+			name: `twitter:image`,
+			content: `${site.siteMetadata.siteUrl}${imageSEO}`,
+		},
+	];
+
+	// Ensure meta is always an array before concatenating
+	const metaArray = Array.isArray(meta) ? meta : [];
 
 	return (
 		<Helmet
@@ -28,73 +82,22 @@ function Seo({ description, meta, Sitetitle }) {
 				lang: "en",
 			}}
 			title={`${Sitetitle} | ${site.siteMetadata.title}`}
-			meta={[
-				{
-					name: `description`,
-					content: metaDescription,
-				},
-				{
-					property: `og:type`,
-					content: `website`,
-				},
-				{
-					property: `og:url`,
-					content: `${site.siteMetadata.siteUrl}`,
-				},
-				{
-					property: `og:title`,
-					content: `${Sitetitle} | ${site.siteMetadata.title}`,
-				},
-				{
-					property: `og:description`,
-					content: metaDescription,
-				},
-				{
-					name: `og:image`,
-					content: `${site.siteMetadata.siteUrl}${imageSE0}`,
-				},
-				{
-					name: `twitter:card`,
-					content: `summary_large_image`,
-				},
-				{
-					property: `twitter:url`,
-					content: `${site.siteMetadata.siteUrl}`,
-				},
-				{
-					name: `twitter:creator`,
-					content: site.siteMetadata?.author || ``,
-				},
-				{
-					name: `twitter:title`,
-					content: `${Sitetitle} | ${site.siteMetadata.title}`,
-				},
-				{
-					name: `twitter:description`,
-					content: metaDescription,
-				},
-				{
-					name: `twitter:image`,
-					content: `${site.siteMetadata.siteUrl}${imageSE0}`,
-				},
-			].concat(meta)}
-		>
-			<link rel="icon" href={favicon} />
-		</Helmet>
+			meta={defaultMeta.concat(metaArray)}
+			link={[{ rel: "icon", href: favicon }]}
+		/>
 	);
 }
 
 Seo.propTypes = {
 	description: PropTypes.string,
-	lang: PropTypes.string,
-	meta: PropTypes.arrayOf(PropTypes.object),
+	meta: PropTypes.arrayOf(
+		PropTypes.shape({
+			name: PropTypes.string,
+			content: PropTypes.string.isRequired,
+			property: PropTypes.string,
+		}),
+	),
 	Sitetitle: PropTypes.string.isRequired,
-};
-
-Seo.defaultProps = {
-	lang: `en`,
-	meta: [],
-	description: ``,
 };
 
 export default Seo;

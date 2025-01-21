@@ -42,5 +42,8 @@ module.exports = {
 		`gatsby-transformer-sharp`,
 	],
 	pathPrefix: "/",
-	assetPrefix: "/",
+	flags: {
+		DEV_SSR: true,
+	},
+	assetPrefix: process.env.NODE_ENV === "production" ? "https://agitated-saha-24099f.netlify.app" : "",
 };

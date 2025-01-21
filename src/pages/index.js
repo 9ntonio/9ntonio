@@ -1,16 +1,24 @@
-import React from "react";
-import ReactPlayer from "react-player";
-import Particles from "react-tsparticles";
-import { loadTrianglesPreset } from "tsparticles-preset-triangles";
+import React, { Suspense } from "react";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
 import { OutboundLink } from "gatsby-plugin-gtag";
-import Seo from "../components/Seo";
+import { loadTrianglesPreset } from "tsparticles-preset-triangles";
+import Seo from "../components/seo";
 import logo from "../../static/logo-2.svg";
 import "../styles/index.scss";
 
+// Dynamic imports for browser-dependent components
+const ReactPlayer = React.lazy(() => import("react-player"));
+const Particles = React.lazy(() => import("react-tsparticles"));
+
 export default function Home() {
+	const [isMounted, setIsMounted] = React.useState(false);
+
+	React.useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
 	const LINK_TARGET = "_blank";
 	const LINK_REL = "noreferrer noopener";
 
@@ -38,17 +46,44 @@ export default function Home() {
 		},
 	};
 
-	const particlesInit = async (engine) => {
-		await loadTrianglesPreset(engine);
-	};
+	const particlesInit = React.useCallback(async (engine) => {
+		try {
+			await loadTrianglesPreset(engine);
+		} catch (error) {
+			console.error("Failed to initialize particles:", error);
+		}
+	}, []);
 
 	const techUrls = ["https://nextjs.org/", "https://claude.ai/", "https://developer.mozilla.org/en-US/docs/Web/API"];
 
+	if (!isMounted) {
+		return null;
+	}
+
 	return (
 		<div className="App">
-			<Particles init={particlesInit} options={optionsTriangle} id="particles" />
+			<Suspense fallback={<div style={{ background: "#00474f", position: "fixed", top: 0, right: 0, bottom: 0, left: 0 }} />}>
+				{isMounted && <Particles init={particlesInit} options={optionsTriangle} id="particles" loaded={() => console.log("Particles loaded")} />}
+			</Suspense>
 
-			<Seo description="I'm Antonio Almena, I use both sides of my brain 🧠..." Sitetitle="Antonio Almena" meta="software development" />
+			<Seo
+				description="I'm Antonio Almena, I use both sides of my brain 🧠..."
+				Sitetitle="Antonio Almena"
+				meta={[
+					{
+						name: "keywords",
+						content: "software development, engineering, AI, design systems",
+					},
+					{
+						property: "og:type",
+						content: "website",
+					},
+					{
+						name: "robots",
+						content: "index, follow",
+					},
+				]}
+			/>
 
 			<section className="mt-4">
 				<div className="container">
@@ -108,7 +143,9 @@ export default function Home() {
 					<div className="row">
 						<div className="col-12 col-md-4">
 							<div className="player-wrapper shadow-lg">
-								<ReactPlayer className="react-player" url="https://vimeo.com/374826636" playing controls muted width="100%" height="100%" />
+								<Suspense fallback={<div style={{ background: "#ccc", width: "100%", height: "100%" }} />}>
+									{isMounted && <ReactPlayer className="react-player" url="https://vimeo.com/374826636" playing controls muted width="100%" height="100%" />}
+								</Suspense>
 							</div>
 						</div>
 
@@ -140,7 +177,7 @@ export default function Home() {
 					<div className="row">
 						<div className="col-12 col-md-4">
 							<a href="https://store.google.com/" target={LINK_TARGET} rel={LINK_REL}>
-								<StaticImage src="../../static/google.jpg" alt="Google" height="100%" className="mb-3 mb-md-0 shadow-lg" />
+								<StaticImage src="../../static/google.jpg" alt="Google" placeholder="blurred" layout="fullWidth" aspectRatio={3 / 2} className="mb-3 mb-md-0 shadow-lg" />
 							</a>
 						</div>
 
@@ -150,7 +187,7 @@ export default function Home() {
 							</a>
 							<p className="text-wrap">
 								Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal is to
-								keep users’ front of mind and seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's engineers to
+								keep users' front of mind and seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's engineers to
 								meet their technical & testing requirements. The engineers & I created various proof of concepts & prototypes that were tied to a suite of unit tests. This allowed us
 								to test our architecture prior to kickoff and assisted in creating a seamless delivery process.
 							</p>
@@ -164,7 +201,7 @@ export default function Home() {
 					<div className="row">
 						<div className="col-12 col-md-4">
 							<a href="https://www.odopod.com/case-studies/ps-vue" target={LINK_TARGET} rel={LINK_REL}>
-								<StaticImage src="../../static/vue.jpg" alt="Google" height="100%" className="mb-3 mb-md-0 shadow-lg" />
+								<StaticImage src="../../static/vue.jpg" alt="PlayStation Vue" placeholder="blurred" layout="fullWidth" aspectRatio={3 / 2} className="mb-3 mb-md-0 shadow-lg" />
 							</a>
 						</div>
 

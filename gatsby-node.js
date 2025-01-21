@@ -6,6 +6,20 @@ exports.onCreateDevServer = ({ app }) => {
 	app.use("/unknown-pleasures", express.static(path.resolve("static/unknown-pleasures")));
 };
 
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+	if (stage === "build-html" || stage === "develop-html") {
+		actions.setWebpackConfig({
+			module: {
+				rules: [
+					{
+						test: /react-player|tsparticles/,
+						use: loaders.null(),
+					},
+				],
+			},
+		});
+	}
+};
 exports.onCreatePage = ({ page, actions }) => {
 	const { createPage, deletePage } = actions;
 
