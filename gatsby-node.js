@@ -2,18 +2,20 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs-extra");
 
-// Development server configuration
 exports.onCreateDevServer = ({ app }) => {
-	app.use("/unknown-pleasures", express.static(path.resolve("static/unknown-pleasures")));
-
-	// Log middleware to debug requests
-	app.use("/unknown-pleasures", (req, res, next) => {
-		console.log(`[Dev Server] Accessing: ${req.path}`);
-		next();
-	});
+	// Serve static files with proper MIME types
+	app.use(
+		"/unknown-pleasures",
+		express.static(path.resolve("static/unknown-pleasures"), {
+			setHeaders: (res, filePath) => {
+				if (path.extname(filePath) === ".js") {
+					res.setHeader("Content-Type", "application/javascript");
+				}
+			},
+		}),
+	);
 };
 
-// Build-time configuration
 exports.onPreBuild = ({ reporter }) => {
 	const sourceDir = path.join(__dirname, "static", "unknown-pleasures");
 	const publicDir = path.join(__dirname, "public", "unknown-pleasures");
@@ -25,15 +27,32 @@ exports.onPreBuild = ({ reporter }) => {
 			return;
 		}
 
-		// Ensure public directory exists
+		// Clean the target directory if it exists
+		fs.removeSync(publicDir);
+
+		// Create the target directory
 		fs.ensureDirSync(publicDir);
 
 		// Copy directory with detailed logging
-		fs.copySync(sourceDir, publicDir);
+		fs.copySync(sourceDir, publicDir, {
+			filter: (src) => {
+				const isValid = fs.existsSync(src);
+				const fileName = path.basename(src);
+				reporter.info(`Copying: ${fileName} (${isValid ? "valid" : "invalid"})`);
+				return isValid;
+			},
+		});
 
-		// Verify copy
-		const files = fs.readdirSync(publicDir);
-		reporter.info(`Copied unknown-pleasures directory to public folder. Contents: ${files.join(", ")}`);
+		// Verify JavaScript files
+		const jsFiles = fs.readdirSync(publicDir).filter((file) => file.endsWith(".js"));
+		reporter.info(`JavaScript files copied: ${jsFiles.join(", ")}`);
+
+		// Verify file permissions
+		jsFiles.forEach((file) => {
+			const filePath = path.join(publicDir, file);
+			fs.chmodSync(filePath, "644");
+			reporter.info(`Set permissions for: ${file}`);
+		});
 	} catch (error) {
 		reporter.panic("Failed to copy unknown-pleasures directory", error);
 	}

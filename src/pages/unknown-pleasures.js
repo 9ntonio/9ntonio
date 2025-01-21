@@ -10,46 +10,85 @@ const UnknownPleasuresPage = () => {
 		if (typeof window !== "undefined") {
 			setMounted(true);
 
-			// Debug: Check if the file exists
-			fetch("/unknown-pleasures/index.html")
-				.then((response) => {
-					if (!response.ok) {
-						throw new Error(`HTTP error! status: ${response.status}`);
+			// Debug: Check if the necessary files exist
+			const filesToCheck = [
+				"/unknown-pleasures/index.html",
+				// Add your JS file paths here
+				// e.g., '/unknown-pleasures/script.js'
+			];
+
+			Promise.all(
+				filesToCheck.map((file) =>
+					fetch(file)
+						.then((response) => ({
+							file,
+							status: response.status,
+							ok: response.ok,
+						}))
+						.catch((error) => ({
+							file,
+							error: error.message,
+							ok: false,
+						})),
+				),
+			).then((results) => {
+				results.forEach((result) => {
+					if (!result.ok) {
+						console.error(`Failed to load ${result.file}:`, result);
+					} else {
+						console.log(`Successfully loaded ${result.file}`);
 					}
-					console.log("Unknown Pleasures index.html found");
-				})
-				.catch((err) => {
-					console.error("Failed to fetch Unknown Pleasures:", err);
-					setError(err.message);
 				});
+			});
 		}
 	}, []);
 
-	// Handle iframe load errors
-	const handleIframeError = () => {
-		console.error("Failed to load iframe content");
-		setError("Failed to load content");
-	};
+	const handleIframeLoad = () => {
+		if (iframeRef.current) {
+			try {
+				// Log iframe content for debugging
+				const iframeDocument = iframeRef.current.contentDocument;
+				const scripts = iframeDocument?.getElementsByTagName("script");
+				console.log("Scripts found:", scripts?.length);
 
-	const pageMeta = [
-		{
-			name: "keywords",
-			content: "unknown pleasures,visualization,experimental",
-		},
-		{
-			property: "og:type",
-			content: "website",
-		},
-		{
-			name: "robots",
-			content: "noindex",
-		},
-	];
+				// Check if scripts are loaded
+				if (scripts?.length) {
+					Array.from(scripts).forEach((script, index) => {
+						console.log(`Script ${index + 1}:`, {
+							src: script.src,
+							type: script.type,
+							async: script.async,
+							defer: script.defer,
+						});
+					});
+				}
+			} catch (e) {
+				console.error("Error accessing iframe content:", e);
+			}
+		}
+	};
 
 	if (!mounted) {
 		return (
 			<>
-				<Seo Sitetitle="Unknown Pleasures" description="Unknown Pleasures visualization experiment" meta={pageMeta} />
+				<Seo
+					Sitetitle="Unknown Pleasures"
+					description="Unknown Pleasures visualization experiment"
+					meta={[
+						{
+							name: "keywords",
+							content: "unknown pleasures,visualization,experimental",
+						},
+						{
+							property: "og:type",
+							content: "website",
+						},
+						{
+							name: "robots",
+							content: "noindex",
+						},
+					]}
+				/>
 				<div
 					style={{
 						width: "100vw",
@@ -67,35 +106,26 @@ const UnknownPleasuresPage = () => {
 		);
 	}
 
-	if (error) {
-		return (
-			<>
-				<Seo Sitetitle="Unknown Pleasures - Error" description="Error loading Unknown Pleasures" meta={pageMeta} />
-				<div
-					style={{
-						width: "100vw",
-						height: "100vh",
-						display: "flex",
-						flexDirection: "column",
-						justifyContent: "center",
-						alignItems: "center",
-						background: "#000",
-						color: "#fff",
-						padding: "20px",
-						textAlign: "center",
-					}}
-				>
-					<h1>Error Loading Content</h1>
-					<p>{error}</p>
-					<p>Path: /unknown-pleasures/index.html</p>
-				</div>
-			</>
-		);
-	}
-
 	return (
 		<>
-			<Seo Sitetitle="Unknown Pleasures" description="Unknown Pleasures visualization experiment" meta={pageMeta} />
+			<Seo
+				Sitetitle="Unknown Pleasures"
+				description="Unknown Pleasures visualization experiment"
+				meta={[
+					{
+						name: "keywords",
+						content: "unknown pleasures,visualization,experimental",
+					},
+					{
+						property: "og:type",
+						content: "website",
+					},
+					{
+						name: "robots",
+						content: "noindex",
+					},
+				]}
+			/>
 			<div
 				style={{
 					width: "100vw",
@@ -113,7 +143,7 @@ const UnknownPleasuresPage = () => {
 						border: "none",
 						display: "block",
 					}}
-					onError={handleIframeError}
+					onLoad={handleIframeLoad}
 					title="Unknown Pleasures"
 				/>
 			</div>
