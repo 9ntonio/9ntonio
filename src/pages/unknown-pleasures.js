@@ -2,14 +2,7 @@ import React from "react";
 import Seo from "../components/Seo";
 
 const UnknownPleasuresPage = () => {
-	const [mounted, setMounted] = React.useState(false);
 	const iframeRef = React.useRef(null);
-
-	React.useEffect(() => {
-		if (typeof window !== "undefined") {
-			setMounted(true);
-		}
-	}, []);
 
 	return (
 		<>
@@ -19,7 +12,7 @@ const UnknownPleasuresPage = () => {
 				meta={[
 					{
 						name: "keywords",
-						content: "unknown pleasures,visualization,experimental",
+						content: "unknown pleasures,visualization,experimental, music, data, javascript, html, css, antonio almena",
 					},
 					{
 						property: "og:type",
