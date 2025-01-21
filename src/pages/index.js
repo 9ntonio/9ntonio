@@ -363,8 +363,8 @@ export default function Home() {
 							</p>
 
 							<p>
-								I'm obsesed with this album, musically & artistically. So much so that for some time I've been trying to make an app that would use the album song's as the data for the
-								graph. I've treid before and hit walls. Recently I've started working on it again and with some help from{" "}
+								I'm obsessed with this album, musically & artistically. So much so that for some time I've been trying to make an app that would use the album song's as the data for
+								the graph. I've tried before and hit walls. Recently I've started working on it again and with some help from{" "}
 								<a href="https://www.anthropic.com/" target="_blank">
 									Claude
 								</a>
