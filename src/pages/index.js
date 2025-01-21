@@ -352,9 +352,9 @@ export default function Home() {
 								</a>
 								by Joy Division. The artwork is credited to both the band &{" "}
 								<a href="https://en.wikipedia.org/wiki/Peter_Saville_(graphic_designer)" target="_blank">
-									Peter Saville{" "}
+									Peter Saville.{" "}
 								</a>
-								. The album cover uses an image of radio waves from pulsar{" "}
+								The album cover uses an image of radio waves from pulsar{" "}
 								<a href="https://en.wikipedia.org/wiki/CP_1919" target="_blank">
 									CP 1919
 								</a>
