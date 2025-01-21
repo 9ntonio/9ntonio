@@ -35,5 +35,4 @@ module.exports = {
 		PRESERVE_FILE_DOWNLOAD_CACHE: true, // Added for better caching
 		PARALLEL_SOURCING: true, // Added for better build performance
 	},
-	// Remove assetPrefix - let Netlify handle this
 };

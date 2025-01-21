@@ -93,7 +93,8 @@ export default function Home() {
 					meta={[
 						{
 							name: "keywords",
-							content: "software development, engineering, AI, design systems",
+							content:
+								"software development, engineering, AI, design systems, front end development, web development, design technology, design systems, design systems engineering, design systems architecture, design systems development, design systems engineering, design systems architecture, design systems development, design systems engineering, design systems architecture, design systems development",
 						},
 						{
 							property: "og:type",
