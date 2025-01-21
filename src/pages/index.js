@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
 import { OutboundLink } from "gatsby-plugin-gtag";
 import { loadTrianglesPreset } from "tsparticles-preset-triangles";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 import logo from "../../static/logo-2.svg";
 import "../styles/index.scss";
 

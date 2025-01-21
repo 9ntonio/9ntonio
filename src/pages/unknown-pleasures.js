@@ -1,5 +1,5 @@
 import React from "react";
-import Seo from "../components/seo"; // Adjust path as needed
+import Seo from "../components/Seo"; // Adjust path as needed
 
 const UnknownPleasuresPage = () => {
 	const [mounted, setMounted] = React.useState(false);
