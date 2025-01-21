@@ -3,19 +3,8 @@ const path = require("path");
 const fs = require("fs-extra");
 
 exports.onCreateDevServer = ({ app }) => {
-	// Serve the entire unknown-pleasures directory statically
-	app.use(
-		"/unknown-pleasures",
-		express.static(path.resolve("static/unknown-pleasures"), {
-			index: "index.html",
-		}),
-	);
-
-	// Log requests to help with debugging
-	app.use("/unknown-pleasures", (req, res, next) => {
-		console.log(`Request to unknown-pleasures: ${req.path}`);
-		next();
-	});
+	// Serve the directory with minimal middleware
+	app.use("/unknown-pleasures", express.static(path.resolve("static/unknown-pleasures")));
 };
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
@@ -33,17 +22,33 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 	}
 };
 
-exports.onCreatePage = ({ page, actions }) => {
-	const { createPage, deletePage } = actions;
+exports.onPreBuild = ({ reporter }) => {
+	const sourceDir = path.join(__dirname, "static", "unknown-pleasures");
+	const publicDir = path.join(__dirname, "public", "unknown-pleasures");
 
-	if (page.path === "/unknown-pleasures") {
-		deletePage(page);
-		createPage({
-			...page,
-			context: {
-				...page.context,
-				noWrapper: true,
-			},
-		});
+	try {
+		// Ensure source directory exists
+		if (!fs.existsSync(sourceDir)) {
+			reporter.panic("unknown-pleasures directory not found in static folder");
+			return;
+		}
+
+		// Clean and recreate the target directory
+		fs.removeSync(publicDir);
+		fs.ensureDirSync(publicDir);
+
+		// Copy directory
+		fs.copySync(sourceDir, publicDir);
+
+		// Verify the HTML file was copied correctly
+		const htmlPath = path.join(publicDir, "index.html");
+		if (fs.existsSync(htmlPath)) {
+			const content = fs.readFileSync(htmlPath, "utf8");
+			reporter.info(`Successfully copied index.html (${content.length} bytes)`);
+		} else {
+			reporter.error("index.html not found in built directory");
+		}
+	} catch (error) {
+		reporter.panic("Failed to copy unknown-pleasures directory", error);
 	}
 };

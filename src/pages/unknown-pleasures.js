@@ -11,57 +11,40 @@ const UnknownPleasuresPage = () => {
 		}
 	}, []);
 
-	const handleIframeLoad = () => {
-		if (iframeRef.current) {
-			console.log("Unknown Pleasures iframe loaded");
-		}
-	};
-
-	const pageMeta = [
-		{
-			name: "keywords",
-			content: "unknown pleasures,visualization,experimental",
-		},
-		{
-			property: "og:type",
-			content: "website",
-		},
-		{
-			name: "robots",
-			content: "noindex",
-		},
-	];
-
-	if (!mounted) {
-		return (
-			<>
-				<Seo Sitetitle="Unknown Pleasures" description="Unknown Pleasures visualization experiment" meta={pageMeta} />
-				<div
-					style={{
-						width: "100vw",
-						height: "100vh",
-						display: "flex",
-						justifyContent: "center",
-						alignItems: "center",
-						background: "#000",
-						color: "#fff",
-					}}
-				>
-					Loading...
-				</div>
-			</>
-		);
-	}
-
 	return (
 		<>
-			<Seo Sitetitle="Unknown Pleasures" description="Unknown Pleasures visualization experiment" meta={pageMeta} />
+			<Seo
+				Sitetitle="Unknown Pleasures"
+				description="Unknown Pleasures visualization experiment"
+				meta={[
+					{
+						name: "keywords",
+						content: "unknown pleasures,visualization,experimental",
+					},
+					{
+						property: "og:type",
+						content: "website",
+					},
+					{
+						name: "robots",
+						content: "noindex",
+					},
+				]}
+			/>
+
+			{/* Container with minimal styling to avoid interference */}
 			<div
 				style={{
+					margin: 0,
+					padding: 0,
 					width: "100vw",
 					height: "100vh",
 					overflow: "hidden",
-					background: "#000",
+					position: "fixed",
+					top: 0,
+					left: 0,
+					right: 0,
+					bottom: 0,
 				}}
 			>
 				<iframe
@@ -71,9 +54,13 @@ const UnknownPleasuresPage = () => {
 						width: "100%",
 						height: "100%",
 						border: "none",
+						margin: 0,
+						padding: 0,
 						display: "block",
+						position: "absolute",
+						top: 0,
+						left: 0,
 					}}
-					onLoad={handleIframeLoad}
 					title="Unknown Pleasures"
 				/>
 			</div>
