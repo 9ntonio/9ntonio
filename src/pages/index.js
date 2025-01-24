@@ -325,7 +325,7 @@ export default function Home() {
 				<div className="container">
 					<div className="row">
 						<div className="col-12 col-md-4">
-							<a href="https://antonio.almena.io/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
+							<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
 								<StaticImage
 									src="../../static/unknown-pleasures.png"
 									alt="Unknown Pleasures"
@@ -338,7 +338,7 @@ export default function Home() {
 						</div>
 
 						<div className="col-12 col-md-8">
-							<a href="https://antonio.almena.io/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
+							<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
 								<div className="header">Unknown Pleasures</div>
 							</a>
 							<p className="text-wrap">
