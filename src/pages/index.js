@@ -153,7 +153,8 @@ export default function Home() {
 				meta={[
 					{
 						name: "keywords",
-						content: "software development, engineering, AI, design systems",
+						content:
+							"software development, engineering, AI, design systems, front end development, web development, design technology, design systems, design systems engineering, design systems architecture, design systems development, design systems engineering, design systems architecture, design systems development, design systems engineering, design systems architecture, design systems development",
 					},
 					{
 						property: "og:type",
@@ -189,11 +190,11 @@ export default function Home() {
 								<p className="text-wrap font-18">
 									<u>Key Technical & Design Achievements:</u>
 									<ul>
-										<li>Architected an AI-powered design system compiler reducing component creation time ~ 4 hours to 45 minutes</li>
+										<li>Architected an AI-powered design system compiler reducing component creation time ~ 4 hours to 60 minutes</li>
 										<li>Implemented an AI-powered code generation pipeline, automating 70% of documentation</li>
-										<li>Built visual regression testing pipelines with AI-assisted bug detection, achieving 99% design consistency</li>
+										<li>Built visual regression testing pipelines with AI-assisted bug detection, achieving 90% design consistency</li>
 										<li>Created custom GitHub Copilot workflows increasing team productivity by 40%</li>
-										<li>Automated accessibility testing using AI, catching 95% of WCAG violations pre-deployment</li>
+										<li>Automated accessibility testing using AI, catching 90% of WCAG violations pre-deployment</li>
 									</ul>
 								</p>
 							</div>
