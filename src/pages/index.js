@@ -94,7 +94,7 @@ export default function Home() {
 						{
 							name: "keywords",
 							content:
-								"software development, engineering, AI, design systems, front end development, web development, design technology, design systems, design systems engineering, design systems architecture, design systems development, design systems engineering, design systems architecture, design systems development, design systems engineering, design systems architecture, design systems development",
+								"software development, engineering, AI, design systems, front end development, web development, design technology, design systems engineering, design systems architecture",
 						},
 						{
 							property: "og:type",
@@ -139,7 +139,7 @@ export default function Home() {
 									left: 0,
 									background: "#00474f",
 									zIndex: -1,
-									transition: "opacity 0.3s ease-in-out",
+									transition: "opacity 0.5s ease-in-out",
 								}}
 							/>
 						)}
@@ -154,7 +154,7 @@ export default function Home() {
 					{
 						name: "keywords",
 						content:
-							"software development, engineering, AI, design systems, front end development, web development, design technology, design systems, design systems engineering, design systems architecture, design systems development, design systems engineering, design systems architecture, design systems development, design systems engineering, design systems architecture, design systems development",
+							"software development, engineering, AI, design systems, front end development, web development, design technology, design systems engineering, design systems architecture",
 					},
 					{
 						property: "og:type",
@@ -179,40 +179,40 @@ export default function Home() {
 						</div>
 					</div>
 
-					<p className="text-wrap font-18 mb-2">
-						I'm an engineer with a unique expertise bridging technical implementation & design systems. I leverage my computer science background in order to create AI-enhanced development
-						workflows & highly performant applications. I specialize in automating design-to-development processes using cutting-edge AI tools and methodologies.
+					<p className="text-wrap font-18 mb-3">
+						Senior Full Stack Engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specialized in developing scalable
+						component libraries, optimizing application performance, and implementing modern frontend architectures. I have a strong background in design systems and automated testing.
+					</p>
+
+					<p className="text-wrap font-18 mb-4">
+						My experience allows me to hit the ground running & quickly identify opportunities for improvement, ensuring seamless integration into any team environment.
 					</p>
 
 					<div className="container">
 						<div className="row">
 							<div className="col-12 col-md-7">
-								<p className="text-wrap font-18">
-									<u>Key Technical & Design Achievements:</u>
+								<div className="text-wrap font-18">
+									<u>TECHNICAL EXPERTISE</u>
 									<ul>
-										<li>Architected an AI-powered design system compiler reducing component creation time ~ 4 hours to 60 minutes</li>
-										<li>Implemented an AI-powered code generation pipeline, automating 70% of documentation</li>
-										<li>Built visual regression testing pipelines with AI-assisted bug detection, achieving 90% design consistency</li>
-										<li>Created custom GitHub Copilot workflows increasing team productivity by 40%</li>
-										<li>Automated accessibility testing using AI, catching 90% of WCAG violations pre-deployment</li>
+										<li>Frontend: React 18, Angular 17, TypeScript 5.x, RxJS, JavaScript (ES6+)</li>
+										<li>Backend: C# & Blazor</li>
+										<li>State Management: NgRx, Redux, Angular Signals</li>
+										<li>Testing: Jest, Playwright, Jasmine, Karma</li>
+										<li>Build Tools: Vite, Esbuild, Webpack, Angular CLI, NX</li>
 									</ul>
-								</p>
+								</div>
 							</div>
-
 							<div className="col-12 col-md-5">
-								<p className="text-wrap font-18">
-									<u>Core Competencies:</u>
+								<div className="text-wrap font-18">
+									<div className="d-none d-md-block">&nbsp;</div>
 									<ul>
-										<li>Software Architecture & Distributed Systems Design</li>
-										<li>UI/UX Design & User Research</li>
-										<li>Technical Leadership & Agile Team Management</li>
-										<li>Full-Stack Web Development</li>
-										<li>Design Systems & Component Libraries</li>
-										<li>Technical Documentation & Knowledge Management</li>
-										<li>CI/CD & DevOps Practices</li>
-										<li>Agile & Scrum Methodologies</li>
+										<li>Performance: SSR, Code Splitting, Bundle Optimization</li>
+										<li>CSS: SCSS, CSS-in-JS, Tailwind, Angular Material</li>
+										<li>Design Systems: Storybook, Style Dictionary</li>
+										<li>Version Control: Git, GitHub</li>
+										<li>CI/CD: Jenkins, GitHub Actions</li>
 									</ul>
-								</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -266,7 +266,7 @@ export default function Home() {
 								<OutboundLink href="https://gusto.com/" target={LINK_TARGET} rel={LINK_REL}>
 									Gusto
 								</OutboundLink>{" "}
-								with their brand refresh. Gusto is large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a
+								with their brand refresh. Gusto is a large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a
 								team of 6 software & QA engineers. While working out of the Gusto offices, I collaborated with Brand Studio, Marketing & Product teams. Together we were able to deliver
 								on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
 							</p>
