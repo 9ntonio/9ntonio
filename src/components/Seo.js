@@ -75,6 +75,7 @@ function Seo({ description = "", meta = [], Sitetitle }) {
 
 	// Ensure meta is always an array before concatenating
 	const metaArray = Array.isArray(meta) ? meta : [];
+	console.log(`metaArray: ${metaArray}`);
 
 	return (
 		<Helmet

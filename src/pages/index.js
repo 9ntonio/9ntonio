@@ -88,7 +88,7 @@ export default function Home() {
 					}}
 				/>
 				<Seo
-					description="I'm Antonio Almena, I use both sides of my brain 🧠..."
+					description="Senior Full Stack Engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specialized in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures. I have a strong background in design systems and automated testing."
 					Sitetitle="Antonio Almena"
 					meta={[
 						{
@@ -148,7 +148,7 @@ export default function Home() {
 			</Suspense>
 
 			<Seo
-				description="I'm Antonio Almena, I use both sides of my brain 🧠..."
+				description="Senior Full Stack Engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specialized in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures. I have a strong background in design systems and automated testing."
 				Sitetitle="Antonio Almena"
 				meta={[
 					{
