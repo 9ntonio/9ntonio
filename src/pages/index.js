@@ -16,11 +16,14 @@ export default function Home() {
 	const [isMounted, setIsMounted] = React.useState(false);
 	const [isParticlesLoaded, setIsParticlesLoaded] = React.useState(false);
 	const [hasError, setHasError] = React.useState(false);
+	const [isMobile, setIsMobile] = React.useState(false);
 
 	React.useEffect(() => {
 		// Ensure we're in the browser environment
 		if (typeof window !== "undefined") {
 			setIsMounted(true);
+			// Check if device is mobile (using 768px as breakpoint)
+			setIsMobile(window.innerWidth < 768);
 		}
 
 		// Cleanup function
@@ -126,7 +129,7 @@ export default function Home() {
 					/>
 				}
 			>
-				{isMounted && !hasError && (
+				{isMounted && !hasError && !isMobile && (
 					<>
 						<Particles init={particlesInit} options={optionsTriangle} id="particles" loaded={handleParticlesLoaded} />
 						{!isParticlesLoaded && (
@@ -199,6 +202,8 @@ export default function Home() {
 										<li>State Management: NgRx, Redux, Angular Signals</li>
 										<li>Testing: Jest, Playwright, Jasmine, Karma</li>
 										<li>Build Tools: Vite, Esbuild, Webpack, Angular CLI, NX</li>
+										<li>Automated component accessibility testing using AI</li>
+										<li>Architected AI-powered design system compiler reducing creation time by ~50%</li>
 									</ul>
 								</div>
 							</div>
@@ -364,12 +369,16 @@ export default function Home() {
 							</p>
 
 							<p>
-								I'm obsessed with this album, musically & artistically. So much so that for some time I've been trying to make an app that would use the album song's as the data for
-								the graph. I've tried before and hit walls. Recently I've started working on it again and with some help from{" "}
+								I'm obsessed with this album. So much so that for some time I've been trying to make an app that would use the album song's as the data for the waveform. I've tried
+								before and hit walls. Recently I've started working on it again and with some help from{" "}
 								<a href="https://www.anthropic.com/" target="_blank">
 									Claude
 								</a>
-								, a path was shown.
+								, a path was made.{" "}
+								<a href="https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf" target="_blank">
+									Read my post describing the process
+								</a>
+								.
 							</p>
 						</div>
 					</div>
@@ -381,7 +390,7 @@ export default function Home() {
 					<div className="row">
 						<div className="header">What technologies have I been working with?</div>
 						<p className="font-20 text-wrap">
-							Angular, React, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, Tailwind,{" "}
+							Angular, React, ReactNative, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, NX, Tailwind,{" "}
 							{["Next.js", "Claude AI", "Web APIs "].map((tech, i) => (
 								<React.Fragment key={tech}>
 									<OutboundLink href={techUrls[i]} target={LINK_TARGET} rel={LINK_REL}>

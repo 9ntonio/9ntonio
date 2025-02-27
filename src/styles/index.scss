@@ -84,8 +84,11 @@ svg {
 	height: 43px;
 	background: $secondaryColor;
 	border-radius: 22px;
-	margin-left: 12px;
-	margin-top: 18px;
+	margin-top: 16px;
+	@media (max-width: 575px) {
+		margin-top: 0;
+		margin-left: 16px;
+	}
 
 	> a > .icon {
 		position: relative !important;
