@@ -117,6 +117,7 @@ const styles = {
 		border: "none",
 		borderRadius: "0.5rem",
 		cursor: "pointer",
+		textDecoration: "none",
 	},
 	buttonPrimary: {
 		padding: "0.5rem 0.75rem",
@@ -127,6 +128,7 @@ const styles = {
 		border: "none",
 		borderRadius: "0.5rem",
 		cursor: "pointer",
+		textDecoration: "none",
 		transition: "all 0.25s ease-out",
 	},
 	buttonPrimaryHover: {
