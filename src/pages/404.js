@@ -40,7 +40,7 @@ const NotFoundPage = ({ location }) => {
 	}, []);
 
 	return (
-		<main style={styles.container}>
+		<div style={styles.container}>
 			<Helmet>
 				<title>Antonio Almena | Page Not Found</title>
 				<meta name="description" content="The page you're looking for doesn't exist or has been moved." />
@@ -71,7 +71,7 @@ const NotFoundPage = ({ location }) => {
 					Home
 				</Link>
 			</div>
-		</main>
+		</div>
 	);
 };
 
