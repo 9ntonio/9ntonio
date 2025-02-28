@@ -7,6 +7,7 @@
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		@apply bg-background;
 	}
 
 	a {
@@ -22,6 +23,10 @@
 }
 
 @layer components {
+	.container {
+		@apply px-6 md:px-0 mx-auto;
+	}
+
 	.player-wrapper {
 		position: relative;
 		padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
@@ -35,7 +40,7 @@
 	}
 
 	.circle-container {
-		@apply w-[46px] h-[46px] bg-secondary rounded-full mt-6;
+		@apply w-[46px] h-[46px] bg-secondary rounded-full mt-0 md:mt-6;
 	}
 
 	.circle-container:hover {

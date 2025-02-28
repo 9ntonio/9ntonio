@@ -33,7 +33,7 @@ export default function Home() {
 	}, []);
 
 	const LINK_TARGET = "_blank";
-	const LINK_REL = "noreferrer noopener";
+	const LINK_REL = "noreferrer";
 
 	const optionsTriangle = {
 		preset: "triangles",
@@ -135,8 +135,8 @@ export default function Home() {
 			/>
 
 			<section className="mt-4">
-				<div className="container mx-auto">
-					<div className="flex flex-row items-center mb-4">
+				<div className="container">
+					<div className="flex flex-col md:flex-row md:items-center mb-4">
 						<img src={logo} alt="Logo" className="w-full sm:w-[510px] mb-1" height="83px" width="auto" />
 
 						<div className="circle-container">
@@ -155,7 +155,7 @@ export default function Home() {
 						My experience allows me to hit the ground running & quickly identify opportunities for improvement, ensuring seamless integration into any team environment.
 					</p>
 
-					<div className="container mx-auto">
+					<div>
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-7/12">
 								<div className="text-pretty text-xl">
@@ -192,7 +192,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto mb-12">
+				<div className="container mb-12">
 					<div className="flex flex-wrap">
 						<div className="w-full md:w-1/3 mb-4 md:mb-0">
 							<div className="player-wrapper">
@@ -237,7 +237,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto mb-12">
+				<div className="container mb-12">
 					<div className="flex flex-wrap">
 						<div className="w-full md:w-1/3 mb-4 md:mb-0">
 							<a href="https://store.google.com/" target={LINK_TARGET} rel={LINK_REL}>
@@ -261,7 +261,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto mb-12">
+				<div className="container mb-12">
 					<div className="flex flex-wrap">
 						<div className="w-full md:w-1/3 mb-4 md:mb-0">
 							<a href="https://www.odopod.com/case-studies/ps-vue" target={LINK_TARGET} rel={LINK_REL}>
@@ -284,7 +284,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto mb-12">
+				<div className="container mb-12">
 					<div className="flex flex-wrap">
 						<div className="w-full md:w-1/3">
 							<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
@@ -294,7 +294,7 @@ export default function Home() {
 
 						<div className="w-full md:w-2/3">
 							<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
-								<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">Unknown Pleasures</div>
+								<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2 mt-4 md:mt-0">Unknown Pleasures</div>
 							</a>
 							<p className="text-xl">
 								In 1979{" "}
@@ -335,7 +335,7 @@ export default function Home() {
 			</section>
 
 			<section>
-				<div className="container mx-auto mb-12">
+				<div className="container mb-4">
 					<div className="flex flex-wrap">
 						<div className="text-primary text-3xl font-bold leading-tight mb-2">What technologies have I been working with?</div>
 
