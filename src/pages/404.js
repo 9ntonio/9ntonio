@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Helmet } from "react-helmet"; // For SEO purposes
+import backgroundImage from "../../static/hazard.webp";
 
 /**
  * NotFoundPage - A 404 page template for Gatsby with JavaScript
@@ -15,114 +16,118 @@ import { Helmet } from "react-helmet"; // For SEO purposes
  */
 
 const NotFoundPage = ({ location }) => {
+	const [isHovered, setIsHovered] = React.useState(false);
+	const [isMobile, setIsMobile] = React.useState(false);
+
 	// Optional: Log or track 404 errors
 	React.useEffect(() => {
 		// You could send this information to your analytics platform
 		console.log(`404 error occurred at path: ${location.pathname}`);
 	}, [location.pathname]);
 
-	// Handler to go back to previous page
-	const handleGoBack = () => {
-		// Use the browser's history to go back
-		window.history.back();
-	};
+	React.useEffect(() => {
+		// Handle responsive design
+		const mediaQuery = window.matchMedia("(max-width: 575px)");
+		const handleResize = (e) => setIsMobile(e.matches);
+
+		// Set initial value
+		setIsMobile(mediaQuery.matches);
+
+		// Add listener for window resize
+		mediaQuery.addEventListener("change", handleResize);
+
+		return () => mediaQuery.removeEventListener("change", handleResize);
+	}, []);
 
 	return (
 		<main style={styles.container}>
-			{/* SEO head content */}
 			<Helmet>
 				<title>Antonio Almena | Page Not Found</title>
 				<meta name="description" content="The page you're looking for doesn't exist or has been moved." />
 			</Helmet>
 
-			{/* Main error code display */}
-			<h1 style={styles.errorCode}>404</h1>
+			<h1
+				style={{
+					...styles.errorCode,
+					fontSize: isMobile ? "3rem" : "10rem",
+				}}
+			>
+				Don't Forget
+				<br />
+				to Dream
+			</h1>
 
-			{/* Error title */}
-			<h2 style={styles.title}>Page Not Found</h2>
-
-			{/* Error message */}
-			<p style={styles.message}>The page you're looking for doesn't exist or has been moved.</p>
-
-			{/* Navigation buttons container */}
 			<div style={styles.buttonContainer}>
-				{/* Back button */}
-				<button onClick={handleGoBack} style={styles.button} aria-label="Go back to previous page">
-					Go Back
-				</button>
-
-				{/* Home button using Gatsby Link */}
-				<Link to="/" style={styles.buttonPrimary} aria-label="Go to home page">
-					Go to Home
+				<Link
+					to="/"
+					style={{
+						...styles.buttonPrimary,
+						...(isHovered && styles.buttonPrimaryHover),
+					}}
+					onMouseEnter={() => setIsHovered(true)}
+					onMouseLeave={() => setIsHovered(false)}
+					aria-label="Go to home page"
+				>
+					Home
 				</Link>
 			</div>
 		</main>
 	);
 };
 
-// Inline styles object
 const styles = {
 	container: {
+		fontFamily: "Fredoka, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
 		justifyContent: "center",
 		height: "100vh",
 		textAlign: "center",
-		padding: "0 20px",
-		backgroundColor: "#D3D3D3",
-		fontFamily: "Fredoka, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif",
+		padding: "0 1rem",
+		backgroundColor: "#333",
+		backgroundImage: `url(${backgroundImage})`,
+		backgroundSize: "cover",
+		backgroundPosition: "center",
 	},
 	errorCode: {
-		fontSize: "12rem",
 		fontWeight: 700,
-		margin: "0",
-		color: "#FF5C00",
-		lineHeight: 1,
-	},
-	title: {
-		fontSize: "3rem",
-		fontWeight: 600,
-		margin: "10px 0 20px",
-		color: "#111827",
-	},
-	message: {
-		fontSize: "1.25rem",
-		color: "#6b7280",
-		maxWidth: "600px",
-		marginBottom: "1re",
+		color: "#fff",
+		lineHeight: 0.9,
+		background: "#ff0000",
+		padding: "1.5rem",
+		borderRadius: "1rem",
+		border: "1px solid #ff0000",
+		boxSizing: "border-box",
 	},
 	buttonContainer: {
 		display: "flex",
-		gap: "15px",
-		marginTop: "10px",
+		gap: "1rem",
 	},
 	button: {
-		padding: "10px 20px",
+		padding: "0.5rem 0.75rem",
 		fontSize: "1rem",
 		backgroundColor: "#fff",
-		color: "#374151",
+		color: "#333",
 		border: "none",
-		borderRadius: "5px",
+		borderRadius: "0.5rem",
 		cursor: "pointer",
-		transition: "background-color 0.2s",
-		textDecoration: "none",
 	},
 	buttonPrimary: {
-		padding: "10px 20px",
-		fontSize: "1rem",
-		backgroundColor: "#FF5C00",
-		color: "white",
+		padding: "0.5rem 0.75rem",
+		fontSize: "1.25rem",
+		fontWeight: 600,
+		backgroundColor: "#ff0000",
+		color: "#fff",
 		border: "none",
-		borderRadius: "5px",
+		borderRadius: "0.5rem",
 		cursor: "pointer",
-		transition: "background-color 0.2s",
-		textDecoration: "none",
-		display: "inline-flex",
-		alignItems: "center",
-		justifyContent: "center",
+		transition: "all 0.25s ease-out",
+	},
+	buttonPrimaryHover: {
+		backgroundColor: "#fff",
+		color: "#ff0000",
 	},
 };
 
-// Export the page component
 export default NotFoundPage;
