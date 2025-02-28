@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	p {
+		@apply text-pretty mb-4;
+	}
+}
+
+@layer components {
+	.player-wrapper {
+		position: relative;
+		padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+		@apply mr-6;
+	}
+
+	.react-player {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.circle-container {
+		@apply w-[46px] h-[46px] bg-secondary rounded-full mt-6;
+	}
+
+	.circle-container:hover {
+		@apply cursor-pointer bg-primary;
+	}
+
+	.circle-container > a > .icon:hover {
+		@apply text-secondary;
+	}
+
+	.circle-container > a > .linkedin {
+		@apply relative left-[10px] top-[8px] text-primary;
+	}
+
+	.circle-container > a > .linkedin:hover {
+		@apply text-secondary;
+	}
+}

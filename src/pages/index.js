@@ -6,7 +6,6 @@ import { OutboundLink } from "gatsby-plugin-gtag";
 import { loadTrianglesPreset } from "tsparticles-preset-triangles";
 import Seo from "../components/Seo";
 import logo from "../../static/logo-2.svg";
-import "../styles/index.scss";
 
 // Dynamic imports for browser-dependent components
 const ReactPlayer = React.lazy(() => import("react-player"));
@@ -80,16 +79,7 @@ export default function Home() {
 	if (!isMounted) {
 		return (
 			<div className="App">
-				<div
-					style={{
-						background: "#00474f",
-						position: "fixed",
-						top: 0,
-						right: 0,
-						bottom: 0,
-						left: 0,
-					}}
-				/>
+				<div className="fixed inset-0 bg-background" />
 				<Seo
 					description="Senior Full Stack Engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specialized in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures. I have a strong background in design systems and automated testing."
 					Sitetitle="Antonio Almena"
@@ -114,38 +104,12 @@ export default function Home() {
 	}
 
 	return (
-		<div className="App">
-			<Suspense
-				fallback={
-					<div
-						style={{
-							background: "#00474f",
-							position: "fixed",
-							top: 0,
-							right: 0,
-							bottom: 0,
-							left: 0,
-						}}
-					/>
-				}
-			>
+		<div className="font-fredoka text-textColor">
+			<Suspense fallback={<div className="fixed inset-0 bg-background" />}>
 				{isMounted && !hasError && !isMobile && (
 					<>
 						<Particles init={particlesInit} options={optionsTriangle} id="particles" loaded={handleParticlesLoaded} />
-						{!isParticlesLoaded && (
-							<div
-								style={{
-									position: "fixed",
-									top: 0,
-									right: 0,
-									bottom: 0,
-									left: 0,
-									background: "#00474f",
-									zIndex: -1,
-									transition: "opacity 0.5s ease-in-out",
-								}}
-							/>
-						)}
+						{!isParticlesLoaded && <div className="fixed inset-0 bg-background -z-10 transition-opacity duration-500" />}
 					</>
 				)}
 			</Suspense>
@@ -171,9 +135,9 @@ export default function Home() {
 			/>
 
 			<section className="mt-4">
-				<div className="container">
-					<div className="row align-center mb-1">
-						<img src={logo} alt="Logo" className="logo" height="83px" width="auto" />
+				<div className="container mx-auto">
+					<div className="flex flex-row items-center mb-4">
+						<img src={logo} alt="Logo" className="w-full sm:w-[510px] mb-1" height="83px" width="auto" />
 
 						<div className="circle-container">
 							<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target={LINK_TARGET} rel={LINK_REL}>
@@ -182,21 +146,21 @@ export default function Home() {
 						</div>
 					</div>
 
-					<p className="text-wrap font-18 mb-3">
-						Senior Full Stack Engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specialized in developing scalable
-						component libraries, optimizing application performance, and implementing modern frontend architectures. I have a strong background in design systems and automated testing.
+					<p className="text-xl mb-4">
+						Senior full stack engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specializing in developing scalable
+						component libraries, optimizing application performance & implementing modern frontend architectures. I have a strong background in design systems and automated testing.
 					</p>
 
-					<p className="text-wrap font-18 mb-4">
+					<p className="text-xl mb-6">
 						My experience allows me to hit the ground running & quickly identify opportunities for improvement, ensuring seamless integration into any team environment.
 					</p>
 
-					<div className="container">
-						<div className="row">
-							<div className="col-12 col-md-7">
-								<div className="text-wrap font-18">
-									<u>TECHNICAL EXPERTISE</u>
-									<ul>
+					<div className="container mx-auto">
+						<div className="flex flex-wrap">
+							<div className="w-full md:w-7/12">
+								<div className="text-pretty text-xl">
+									<div className="text-primary mb-2 font-semibold">TECHNICAL EXPERTISE:</div>
+									<ul className="text-primary list-disc pl-8">
 										<li>Frontend: React 18, Angular 17, TypeScript 5.x, RxJS, JavaScript (ES6+)</li>
 										<li>Backend: C# & Blazor</li>
 										<li>State Management: NgRx, Redux, Angular Signals</li>
@@ -207,10 +171,11 @@ export default function Home() {
 									</ul>
 								</div>
 							</div>
-							<div className="col-12 col-md-5">
-								<div className="text-wrap font-18">
-									<div className="d-none d-md-block">&nbsp;</div>
-									<ul>
+
+							<div className="w-full md:w-5/12">
+								<div className="text-pretty text-xl">
+									<div className="hidden md:block">&nbsp;</div>
+									<ul className="text-primary list-disc pl-8">
 										<li>Performance: SSR, Code Splitting, Bundle Optimization</li>
 										<li>CSS: SCSS, CSS-in-JS, Tailwind, Angular Material</li>
 										<li>Design Systems: Storybook, Style Dictionary</li>
@@ -221,26 +186,17 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-					<hr className="mt-1 mb-0" />
+
+					<hr className="my-8 border-primary" />
 				</div>
 			</section>
 
-			<section className="section-container">
-				<div className="container">
-					<div className="row">
-						<div className="col-12 col-md-4">
-							<div className="player-wrapper shadow-lg">
-								<Suspense
-									fallback={
-										<div
-											style={{
-												background: "#ccc",
-												width: "100%",
-												height: "100%",
-											}}
-										/>
-									}
-								>
+			<section>
+				<div className="container mx-auto mb-12">
+					<div className="flex flex-wrap">
+						<div className="w-full md:w-1/3 mb-4 md:mb-0">
+							<div className="player-wrapper">
+								<Suspense fallback={<div className="w-full h-full bg-gray-300" />}>
 									{isMounted && (
 										<ReactPlayer
 											className="react-player"
@@ -257,18 +213,18 @@ export default function Home() {
 							</div>
 						</div>
 
-						<div className="col-12 col-md-8">
+						<div className="w-full md:w-2/3">
 							<OutboundLink href="https://gusto.com/" target={LINK_TARGET} rel={LINK_REL}>
-								<div className="header">Gusto</div>
+								<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">Gusto</div>
 							</OutboundLink>
 
-							<p className="text-wrap">
+							<p className="text-xl">
 								I was hired by{" "}
-								<OutboundLink href="https://www.deptagency.com/" target={LINK_TARGET} rel={LINK_REL}>
+								<OutboundLink href="https://www.deptagency.com/" target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 									DEPT®
 								</OutboundLink>{" "}
 								to assist{" "}
-								<OutboundLink href="https://gusto.com/" target={LINK_TARGET} rel={LINK_REL}>
+								<OutboundLink href="https://gusto.com/" target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 									Gusto
 								</OutboundLink>{" "}
 								with their brand refresh. Gusto is a large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a
@@ -280,20 +236,20 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="section-container">
-				<div className="container">
-					<div className="row">
-						<div className="col-12 col-md-4">
+			<section>
+				<div className="container mx-auto mb-12">
+					<div className="flex flex-wrap">
+						<div className="w-full md:w-1/3 mb-4 md:mb-0">
 							<a href="https://store.google.com/" target={LINK_TARGET} rel={LINK_REL}>
-								<StaticImage src="../../static/google.jpg" alt="Google" placeholder="blurred" layout="fullWidth" aspectRatio={3 / 2} className="mb-3 mb-md-0 shadow-lg" />
+								<StaticImage src="../../static/google.jpg" alt="Google" placeholder="blurred" layout="fullWidth" aspectRatio={3 / 2} className="mr-6" />
 							</a>
 						</div>
 
-						<div className="col-12 col-md-8">
+						<div className="w-full md:w-2/3">
 							<a href="https://store.google.com" target={LINK_TARGET} rel={LINK_REL}>
-								<div className="header">Google Store</div>
+								<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">Google Store</div>
 							</a>
-							<p className="text-wrap">
+							<p className="text-xl">
 								Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal is to
 								keep users' front of mind and seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's engineers to
 								meet their technical & testing requirements. The engineers & I created various proof of concepts & prototypes that were tied to a suite of unit tests. This allowed us
@@ -304,20 +260,20 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="section-container">
-				<div className="container">
-					<div className="row">
-						<div className="col-12 col-md-4">
+			<section>
+				<div className="container mx-auto mb-12">
+					<div className="flex flex-wrap">
+						<div className="w-full md:w-1/3 mb-4 md:mb-0">
 							<a href="https://www.odopod.com/case-studies/ps-vue" target={LINK_TARGET} rel={LINK_REL}>
-								<StaticImage src="../../static/vue.jpg" alt="PlayStation Vue" placeholder="blurred" layout="fullWidth" aspectRatio={3 / 2} className="mb-3 mb-md-0 shadow-lg" />
+								<StaticImage src="../../static/vue.jpg" alt="PlayStation Vue" placeholder="blurred" layout="fullWidth" aspectRatio={3 / 2} className="mr-6" />
 							</a>
 						</div>
 
-						<div className="col-12 col-md-8">
+						<div className="w-full md:w-2/3">
 							<OutboundLink href="https://www.odopod.com/case-studies/ps-vue" target={LINK_TARGET} rel={LINK_REL}>
-								<div className="header">PlayStation Vue</div>
+								<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">PlayStation Vue</div>
 							</OutboundLink>
-							<p className="text-wrap">
+							<p className="text-xl">
 								The Odopod team and I built the iOS application for Sony's streaming service Vue. The application included live TV, DVR, and VOD features via a 3rd party content
 								delivery service. As the Technical Director, I worked with Sony on the iOS and Chromecast builds while also managing both internal & external engineering teams. I also
 								assisted various design & engineering vendors by on-boarding them into the product's vast ecosystem.
@@ -327,55 +283,48 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="section-container">
-				<div className="container">
-					<div className="row">
-						<div className="col-12 col-md-4">
+			<section>
+				<div className="container mx-auto mb-12">
+					<div className="flex flex-wrap">
+						<div className="w-full md:w-1/3">
 							<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
-								<StaticImage
-									src="../../static/unknown-pleasures.png"
-									alt="Unknown Pleasures"
-									placeholder="blurred"
-									layout="fullWidth"
-									aspectRatio={3 / 2}
-									className="mb-3 mb-md-0 shadow-lg"
-								/>
+								<StaticImage src="../../static/unknown-pleasures.png" alt="Unknown Pleasures" placeholder="blurred" layout="fullWidth" aspectRatio={3 / 2} className="mr-6" />
 							</a>
 						</div>
 
-						<div className="col-12 col-md-8">
+						<div className="w-full md:w-2/3">
 							<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL}>
-								<div className="header">Unknown Pleasures</div>
+								<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">Unknown Pleasures</div>
 							</a>
-							<p className="text-wrap">
+							<p className="text-xl">
 								In 1979{" "}
-								<a href="https://en.wikipedia.org/wiki/Factory_Records" target="_blank">
-									Factory Records{" "}
-								</a>
+								<a href="https://en.wikipedia.org/wiki/Factory_Records" target="_blank" className="text-primary hover:text-highlight">
+									Factory Records
+								</a>{" "}
 								released their 10th album{" "}
-								<a href="https://en.wikipedia.org/wiki/Unknown_Pleasures" target="_blank">
-									Unknown Pleasures{" "}
-								</a>
+								<a href="https://en.wikipedia.org/wiki/Unknown_Pleasures" target="_blank" className="text-primary hover:text-highlight">
+									Unknown Pleasures
+								</a>{" "}
 								by Joy Division. The artwork is credited to both the band &{" "}
-								<a href="https://en.wikipedia.org/wiki/Peter_Saville_(graphic_designer)" target="_blank">
-									Peter Saville.{" "}
-								</a>
+								<a href="https://en.wikipedia.org/wiki/Peter_Saville_(graphic_designer)" target="_blank" className="text-primary hover:text-highlight">
+									Peter Saville.
+								</a>{" "}
 								The album cover uses an image of radio waves from pulsar{" "}
-								<a href="https://en.wikipedia.org/wiki/CP_1919" target="_blank">
+								<a href="https://en.wikipedia.org/wiki/CP_1919" target="_blank" className="text-primary hover:text-highlight">
 									CP 1919
 								</a>
 								. The background is black (instead of white) because Peter Saville said "I was convinced that it was just sexier in black". It is considered one of "the best albums of
 								all time".
 							</p>
 
-							<p>
+							<p className="text-xl">
 								I'm obsessed with this album. So much so that for some time I've been trying to make an app that would use the album song's as the data for the waveform. I've tried
 								before and hit walls. Recently I've started working on it again and with some help from{" "}
-								<a href="https://www.anthropic.com/" target="_blank">
+								<a href="https://www.anthropic.com/" target="_blank" className="text-primary hover:text-highlight">
 									Claude
 								</a>
 								, a path was made.{" "}
-								<a href="https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf" target="_blank">
+								<a href="https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf" target="_blank" className="text-primary hover:text-highlight">
 									Read my post describing the process
 								</a>
 								.
@@ -385,22 +334,23 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="section-container-last">
-				<div className="container">
-					<div className="row">
-						<div className="header">What technologies have I been working with?</div>
-						<p className="font-20 text-wrap">
+			<section>
+				<div className="container mx-auto mb-12">
+					<div className="flex flex-wrap">
+						<div className="text-primary text-3xl font-bold leading-tight mb-2">What technologies have I been working with?</div>
+
+						<p className="text-xl">
 							Angular, React, ReactNative, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, NX, Tailwind,{" "}
 							{["Next.js", "Claude AI", "Web APIs "].map((tech, i) => (
 								<React.Fragment key={tech}>
-									<OutboundLink href={techUrls[i]} target={LINK_TARGET} rel={LINK_REL}>
+									<OutboundLink href={techUrls[i]} target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 										{tech}
 									</OutboundLink>
 									{i < 2 && ", "}
 								</React.Fragment>
 							))}
-							& a lot of 💖.{" "}
-							<OutboundLink href="https://en.wikipedia.org/wiki/The_Outsiders_(film)" target={LINK_TARGET} rel={LINK_REL}>
+							& a lot of 💖&nbsp;
+							<OutboundLink href="https://en.wikipedia.org/wiki/The_Outsiders_(film)" target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 								Stay Gold
 							</OutboundLink>
 						</p>
