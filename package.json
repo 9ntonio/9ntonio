@@ -92,5 +92,10 @@
 		"postcss": "^8.4.32",
 		"postcss-loader": "^7.3.4",
 		"tailwindcss": "^3.4.0"
+	},
+	"resolutions": {
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-server-dom-webpack": "0.0.0-experimental-c8b778b7f-20220825"
 	}
 }
