@@ -1,9 +1,9 @@
 [build]
-  command = "npm run build"
+  command = "yarn build"
   publish = "public"
 
 [build.environment]
-  NODE_VERSION = "18.17.0"
+  NODE_VERSION = "23.7.0"
   GATSBY_CPU_COUNT = "2"
 
 [[plugins]]
