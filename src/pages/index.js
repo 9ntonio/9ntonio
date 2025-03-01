@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faBlog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
 import { OutboundLink } from "gatsby-plugin-gtag";
@@ -138,11 +139,18 @@ export default function Home() {
 				<div className="container">
 					<div className="flex flex-col md:flex-row md:items-center mb-4">
 						<img src={logo} alt="Logo" className="w-full sm:w-[510px] mb-1" height="83px" width="auto" />
+						<div className="flex flex-row">
+							<div className="circle-container">
+								<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target={LINK_TARGET} rel={LINK_REL}>
+									<FontAwesomeIcon className="linkedin" icon={faLinkedinIn} size="2x" />
+								</OutboundLink>
+							</div>
 
-						<div className="circle-container">
-							<OutboundLink href="https://www.linkedin.com/in/antonio-almena/" target={LINK_TARGET} rel={LINK_REL}>
-								<FontAwesomeIcon className="linkedin" icon={faLinkedinIn} size="2x" />
-							</OutboundLink>
+							<div className="circle-container">
+								<OutboundLink href="https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf" target={LINK_TARGET} rel={LINK_REL}>
+									<FontAwesomeIcon className="blog" icon={faBlog} size="2x" />
+								</OutboundLink>
+							</div>
 						</div>
 					</div>
 
@@ -229,7 +237,7 @@ export default function Home() {
 								</OutboundLink>{" "}
 								with their brand refresh. Gusto is a large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a
 								team of 6 software & QA engineers. While working out of the Gusto offices, I collaborated with Brand Studio, Marketing & Product teams. Together we were able to deliver
-								on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
+								over +100 pages on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
 							</p>
 						</div>
 					</div>
@@ -298,19 +306,19 @@ export default function Home() {
 							</a>
 							<p className="text-xl">
 								In 1979{" "}
-								<a href="https://en.wikipedia.org/wiki/Factory_Records" target="_blank" className="text-primary hover:text-highlight">
+								<a href="https://en.wikipedia.org/wiki/Factory_Records" target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 									Factory Records
 								</a>{" "}
 								released their 10th album{" "}
-								<a href="https://en.wikipedia.org/wiki/Unknown_Pleasures" target="_blank" className="text-primary hover:text-highlight">
+								<a href="https://en.wikipedia.org/wiki/Unknown_Pleasures" target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 									Unknown Pleasures
 								</a>{" "}
 								by Joy Division. The artwork is credited to both the band &{" "}
-								<a href="https://en.wikipedia.org/wiki/Peter_Saville_(graphic_designer)" target="_blank" className="text-primary hover:text-highlight">
+								<a href="https://en.wikipedia.org/wiki/Peter_Saville_(graphic_designer)" target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 									Peter Saville.
 								</a>{" "}
 								The album cover uses an image of radio waves from pulsar{" "}
-								<a href="https://en.wikipedia.org/wiki/CP_1919" target="_blank" className="text-primary hover:text-highlight">
+								<a href="https://en.wikipedia.org/wiki/CP_1919" target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 									CP 1919
 								</a>
 								. The background is black (instead of white) because Peter Saville said "I was convinced that it was just sexier in black". It is considered one of "the best albums of
@@ -320,11 +328,16 @@ export default function Home() {
 							<p className="text-xl">
 								I'm obsessed with this album. So much so that for some time I've been trying to make an app that would use the album song's as the data for the waveform. I've tried
 								before and hit walls. Recently I've started working on it again and with some help from{" "}
-								<a href="https://www.anthropic.com/" target="_blank" className="text-primary hover:text-highlight">
+								<a href="https://www.anthropic.com/" target={LINK_TARGET} rel={LINK_REL} className="text-primary hover:text-highlight">
 									Claude
 								</a>
 								, a path was made.{" "}
-								<a href="https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf" target="_blank" className="text-primary hover:text-highlight">
+								<a
+									href="https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf"
+									target={LINK_TARGET}
+									rel={LINK_REL}
+									className="text-primary hover:text-highlight"
+								>
 									Read my post describing the process
 								</a>
 								.
