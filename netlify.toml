@@ -9,6 +9,21 @@
 [[plugins]]
   package = "@netlify/plugin-gatsby"
 
+# Minify HTML plugin configuration
+[[plugins]]
+  package = "netlify-plugin-minify-html"
+
+  [plugins.inputs]
+    # The fileFilter option is important - it tells the plugin which files to process
+    fileFilter = ["*.html"]
+
+    # Add additional options for the html-minifier library
+    [plugins.inputs.minifierOptions]
+      removeComments = true
+      collapseWhitespace = true
+      minifyCSS = true
+      minifyJS = true
+
 # Handle Vite's asset files
 [[headers]]
   for = "/assets/*"
