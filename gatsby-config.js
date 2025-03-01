@@ -29,6 +29,9 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
 	],
+	trailingSlash: "always",
+	graphqlTypegen: true,
+	jsxRuntime: "automatic",
 	flags: {
 		DEV_SSR: true,
 		FAST_DEV: true,
