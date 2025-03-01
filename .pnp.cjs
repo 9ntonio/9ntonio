@@ -47,6 +47,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-google-fonts", "npm:1.0.1"],\
           ["gatsby-plugin-gtag", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:1.0.13"],\
           ["gatsby-plugin-image", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.14.0"],\
+          ["gatsby-plugin-netlify", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.1.1"],\
           ["gatsby-plugin-postcss", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.14.0"],\
           ["gatsby-plugin-preload-fonts", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:4.14.0"],\
           ["gatsby-plugin-react-helmet", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.14.0"],\
@@ -2694,6 +2695,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@babel-runtime-npm-7.26.0-9afa3c4ef6-10c0.zip/node_modules/@babel/runtime/",\
         "packageDependencies": [\
           ["@babel/runtime", "npm:7.26.0"],\
+          ["regenerator-runtime", "npm:0.14.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.26.9", {\
+        "packageLocation": "../../.yarn/berry/cache/@babel-runtime-npm-7.26.9-8369ff039f-10c0.zip/node_modules/@babel/runtime/",\
+        "packageDependencies": [\
+          ["@babel/runtime", "npm:7.26.9"],\
           ["regenerator-runtime", "npm:0.14.1"]\
         ],\
         "linkType": "HARD"\
@@ -6671,10 +6680,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:f84d18c473fad3c01e1cf352f81ad13de804ca40da5bf6e752464a2e78dcb097ad579b06da5ff33a55ba9957fb9c74909b99fc5e215420a3f9b5dc87ad71363b#npm:3.5.2", {\
-        "packageLocation": "./.yarn/__virtual__/ajv-keywords-virtual-11d24a6cf1/3/.yarn/berry/cache/ajv-keywords-npm-3.5.2-0e391b70e2-10c0.zip/node_modules/ajv-keywords/",\
+      ["virtual:f2b36937f163b579815d3163513b3330d7a31aaf0599eea66346382b8838395c613f4204e9809cc2ff6bba09c17ab0c34b37deadcb147de7e2f5e535d6ccc245#npm:3.5.2", {\
+        "packageLocation": "./.yarn/__virtual__/ajv-keywords-virtual-80fc73abbe/3/.yarn/berry/cache/ajv-keywords-npm-3.5.2-0e391b70e2-10c0.zip/node_modules/ajv-keywords/",\
         "packageDependencies": [\
-          ["ajv-keywords", "virtual:f84d18c473fad3c01e1cf352f81ad13de804ca40da5bf6e752464a2e78dcb097ad579b06da5ff33a55ba9957fb9c74909b99fc5e215420a3f9b5dc87ad71363b#npm:3.5.2"],\
+          ["ajv-keywords", "virtual:f2b36937f163b579815d3163513b3330d7a31aaf0599eea66346382b8838395c613f4204e9809cc2ff6bba09c17ab0c34b37deadcb147de7e2f5e535d6ccc245#npm:3.5.2"],\
           ["@types/ajv", null],\
           ["ajv", "npm:6.12.6"]\
         ],\
@@ -6821,6 +6830,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-google-fonts", "npm:1.0.1"],\
           ["gatsby-plugin-gtag", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:1.0.13"],\
           ["gatsby-plugin-image", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.14.0"],\
+          ["gatsby-plugin-netlify", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.1.1"],\
           ["gatsby-plugin-postcss", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.14.0"],\
           ["gatsby-plugin-preload-fonts", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:4.14.0"],\
           ["gatsby-plugin-react-helmet", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.14.0"],\
@@ -12010,6 +12020,34 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["gatsby-plugin-netlify", [\
+      ["npm:5.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/gatsby-plugin-netlify-npm-5.1.1-ce49983f88-10c0.zip/node_modules/gatsby-plugin-netlify/",\
+        "packageDependencies": [\
+          ["gatsby-plugin-netlify", "npm:5.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/gatsby-plugin-netlify-virtual-f04bac9a72/3/.yarn/berry/cache/gatsby-plugin-netlify-npm-5.1.1-ce49983f88-10c0.zip/node_modules/gatsby-plugin-netlify/",\
+        "packageDependencies": [\
+          ["gatsby-plugin-netlify", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.1.1"],\
+          ["@babel/runtime", "npm:7.26.9"],\
+          ["@types/gatsby", null],\
+          ["fs-extra", "npm:11.3.0"],\
+          ["gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.14.1"],\
+          ["gatsby-core-utils", "npm:4.14.0"],\
+          ["kebab-hash", "npm:0.1.2"],\
+          ["lodash.mergewith", "npm:4.6.2"],\
+          ["webpack-assets-manifest", "virtual:f04bac9a72c76f984f3d711270132aa9febf7a7d09a9eb6884eaa8c50eb56b73e58d572d8c6267ea530865cc93ca40503ae548d5265f54c4ca6bb045dae3997c#npm:5.2.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/gatsby",\
+          "gatsby"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["gatsby-plugin-page-creator", [\
       ["npm:5.14.0", {\
         "packageLocation": "../../.yarn/berry/cache/gatsby-plugin-page-creator-npm-5.14.0-108d9a71e6-10c0.zip/node_modules/gatsby-plugin-page-creator/",\
@@ -14290,6 +14328,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["kebab-hash", [\
+      ["npm:0.1.2", {\
+        "packageLocation": "../../.yarn/berry/cache/kebab-hash-npm-0.1.2-e130c7867f-10c0.zip/node_modules/kebab-hash/",\
+        "packageDependencies": [\
+          ["kebab-hash", "npm:0.1.2"],\
+          ["lodash.kebabcase", "npm:4.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["keyv", [\
       ["npm:4.5.4", {\
         "packageLocation": "../../.yarn/berry/cache/keyv-npm-4.5.4-4c8e2cf7f7-10c0.zip/node_modules/keyv/",\
@@ -14571,6 +14619,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lockfile", [\
+      ["npm:1.0.4", {\
+        "packageLocation": "../../.yarn/berry/cache/lockfile-npm-1.0.4-00301b5723-10c0.zip/node_modules/lockfile/",\
+        "packageDependencies": [\
+          ["lockfile", "npm:1.0.4"],\
+          ["signal-exit", "npm:3.0.7"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lodash", [\
       ["npm:4.17.21", {\
         "packageLocation": "../../.yarn/berry/cache/lodash-npm-4.17.21-6382451519-10c0.zip/node_modules/lodash/",\
@@ -14652,11 +14710,38 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lodash.get", [\
+      ["npm:4.4.2", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash.get-npm-4.4.2-7bda64ed87-10c0.zip/node_modules/lodash.get/",\
+        "packageDependencies": [\
+          ["lodash.get", "npm:4.4.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lodash.has", [\
+      ["npm:4.5.2", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash.has-npm-4.5.2-0a10673e08-10c0.zip/node_modules/lodash.has/",\
+        "packageDependencies": [\
+          ["lodash.has", "npm:4.5.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["lodash.isarguments", [\
       ["npm:3.1.0", {\
         "packageLocation": "../../.yarn/berry/cache/lodash.isarguments-npm-3.1.0-9e74d350b8-10c0.zip/node_modules/lodash.isarguments/",\
         "packageDependencies": [\
           ["lodash.isarguments", "npm:3.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lodash.kebabcase", [\
+      ["npm:4.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash.kebabcase-npm-4.1.1-89ffca7e1f-10c0.zip/node_modules/lodash.kebabcase/",\
+        "packageDependencies": [\
+          ["lodash.kebabcase", "npm:4.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -14693,6 +14778,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/lodash.merge-npm-4.6.2-77cb4416bf-10c0.zip/node_modules/lodash.merge/",\
         "packageDependencies": [\
           ["lodash.merge", "npm:4.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lodash.mergewith", [\
+      ["npm:4.6.2", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash.mergewith-npm-4.6.2-7d2d4201ec-10c0.zip/node_modules/lodash.mergewith/",\
+        "packageDependencies": [\
+          ["lodash.mergewith", "npm:4.6.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18808,7 +18902,7 @@ const RAW_RUNTIME_STATE =
           ["schema-utils", "npm:2.7.0"],\
           ["@types/json-schema", "npm:7.0.15"],\
           ["ajv", "npm:6.12.6"],\
-          ["ajv-keywords", "virtual:f84d18c473fad3c01e1cf352f81ad13de804ca40da5bf6e752464a2e78dcb097ad579b06da5ff33a55ba9957fb9c74909b99fc5e215420a3f9b5dc87ad71363b#npm:3.5.2"]\
+          ["ajv-keywords", "virtual:f2b36937f163b579815d3163513b3330d7a31aaf0599eea66346382b8838395c613f4204e9809cc2ff6bba09c17ab0c34b37deadcb147de7e2f5e535d6ccc245#npm:3.5.2"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -18818,7 +18912,7 @@ const RAW_RUNTIME_STATE =
           ["schema-utils", "npm:2.7.1"],\
           ["@types/json-schema", "npm:7.0.15"],\
           ["ajv", "npm:6.12.6"],\
-          ["ajv-keywords", "virtual:f84d18c473fad3c01e1cf352f81ad13de804ca40da5bf6e752464a2e78dcb097ad579b06da5ff33a55ba9957fb9c74909b99fc5e215420a3f9b5dc87ad71363b#npm:3.5.2"]\
+          ["ajv-keywords", "virtual:f2b36937f163b579815d3163513b3330d7a31aaf0599eea66346382b8838395c613f4204e9809cc2ff6bba09c17ab0c34b37deadcb147de7e2f5e535d6ccc245#npm:3.5.2"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -18828,7 +18922,7 @@ const RAW_RUNTIME_STATE =
           ["schema-utils", "npm:3.3.0"],\
           ["@types/json-schema", "npm:7.0.15"],\
           ["ajv", "npm:6.12.6"],\
-          ["ajv-keywords", "virtual:f84d18c473fad3c01e1cf352f81ad13de804ca40da5bf6e752464a2e78dcb097ad579b06da5ff33a55ba9957fb9c74909b99fc5e215420a3f9b5dc87ad71363b#npm:3.5.2"]\
+          ["ajv-keywords", "virtual:f2b36937f163b579815d3163513b3330d7a31aaf0599eea66346382b8838395c613f4204e9809cc2ff6bba09c17ab0c34b37deadcb147de7e2f5e535d6ccc245#npm:3.5.2"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -21234,6 +21328,35 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/webpack-cli",\
           "webpack-cli"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["webpack-assets-manifest", [\
+      ["npm:5.2.1", {\
+        "packageLocation": "../../.yarn/berry/cache/webpack-assets-manifest-npm-5.2.1-f736b7198f-10c0.zip/node_modules/webpack-assets-manifest/",\
+        "packageDependencies": [\
+          ["webpack-assets-manifest", "npm:5.2.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f04bac9a72c76f984f3d711270132aa9febf7a7d09a9eb6884eaa8c50eb56b73e58d572d8c6267ea530865cc93ca40503ae548d5265f54c4ca6bb045dae3997c#npm:5.2.1", {\
+        "packageLocation": "./.yarn/__virtual__/webpack-assets-manifest-virtual-ef3f293a4d/3/.yarn/berry/cache/webpack-assets-manifest-npm-5.2.1-f736b7198f-10c0.zip/node_modules/webpack-assets-manifest/",\
+        "packageDependencies": [\
+          ["webpack-assets-manifest", "virtual:f04bac9a72c76f984f3d711270132aa9febf7a7d09a9eb6884eaa8c50eb56b73e58d572d8c6267ea530865cc93ca40503ae548d5265f54c4ca6bb045dae3997c#npm:5.2.1"],\
+          ["@types/webpack", null],\
+          ["chalk", "npm:4.1.2"],\
+          ["deepmerge", "npm:4.3.1"],\
+          ["lockfile", "npm:1.0.4"],\
+          ["lodash.get", "npm:4.4.2"],\
+          ["lodash.has", "npm:4.5.2"],\
+          ["schema-utils", "npm:3.3.0"],\
+          ["tapable", "npm:2.2.1"],\
+          ["webpack", null]\
+        ],\
+        "packagePeers": [\
+          "@types/webpack",\
+          "webpack"\
         ],\
         "linkType": "HARD"\
       }]\
