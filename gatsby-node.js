@@ -1,7 +1,18 @@
-const express = require("express");
-const path = require("path");
 const fs = require("fs-extra");
+const path = require("path");
+const express = require("express");
 
+// This will adapt your Gatsby site for Netlify
+exports.onPostBuild = async ({ reporter }) => {
+	try {
+		const { createPages } = require("gatsby-adapter-netlify/create-pages");
+		await createPages({ reporter });
+	} catch (e) {
+		reporter.warn("Could not create Netlify adapter pages:", e);
+	}
+};
+
+// Keep your existing onCreateDevServer and onPreBuild functions
 exports.onCreateDevServer = ({ app }) => {
 	// Serve the unknown-pleasures directory
 	app.use("/unknown-pleasures", express.static(path.resolve("static/unknown-pleasures")));

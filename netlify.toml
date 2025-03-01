@@ -1,13 +1,29 @@
 [build]
-  command = "npm run build"
+  command = "yarn build"
   publish = "public"
 
 [build.environment]
-  NODE_VERSION = "18.17.0"
+  NODE_VERSION = "23.7.0"
   GATSBY_CPU_COUNT = "2"
 
 [[plugins]]
   package = "@netlify/plugin-gatsby"
+
+# Minify HTML plugin configuration
+[[plugins]]
+  package = "netlify-plugin-minify-html"
+
+  [plugins.inputs]
+    # Use contexts to specify which HTML files to process
+    # This targets HTML files in all contexts (production, branch-deploy, deploy-preview)
+    contexts = ["production", "branch-deploy", "deploy-preview"]
+
+    # Add additional options for the html-minifier library
+    [plugins.inputs.minifierOptions]
+      removeComments = true
+      collapseWhitespace = true
+      minifyCSS = true
+      minifyJS = true
 
 # Handle Vite's asset files
 [[headers]]
