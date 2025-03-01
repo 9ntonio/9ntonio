@@ -14,8 +14,9 @@
   package = "netlify-plugin-minify-html"
 
   [plugins.inputs]
-    # The fileFilter option is important - it tells the plugin which files to process
-    fileFilter = ["*.html"]
+    # Use contexts to specify which HTML files to process
+    # This targets HTML files in all contexts (production, branch-deploy, deploy-preview)
+    contexts = ["production", "branch-deploy", "deploy-preview"]
 
     # Add additional options for the html-minifier library
     [plugins.inputs.minifierOptions]
