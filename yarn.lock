@@ -4581,7 +4581,7 @@ __metadata:
     common-tags: "npm:^1.8.2"
     express: "npm:^4.21.2"
     fs-extra: "npm:^11.2.0"
-    gatsby: "npm:^5.13.3"
+    gatsby: "npm:^5.14.1"
     gatsby-adapter-netlify: "npm:^1.2.0"
     gatsby-plugin-google-fonts: "npm:^1.0.1"
     gatsby-plugin-gtag: "npm:^1.0.13"
@@ -8899,7 +8899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^5.13.3":
+"gatsby@npm:^5.14.1":
   version: 5.14.1
   resolution: "gatsby@npm:5.14.1"
   dependencies:
