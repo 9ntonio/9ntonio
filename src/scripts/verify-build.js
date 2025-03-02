@@ -3,8 +3,8 @@ const path = require("path");
 
 const publicDir = path.join(__dirname, "..", "public", "unknown-pleasures");
 
-console.log("Verifying build...");
-console.log("Contents of /public/unknown-pleasures:");
+console.log("!!! Verifying build...");
+console.log("!!! Contents of /public/unknown-pleasures:");
 
 function listFiles(dir) {
 	fs.readdirSync(dir).forEach((file) => {

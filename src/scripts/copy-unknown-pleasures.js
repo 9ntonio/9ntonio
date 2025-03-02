@@ -9,4 +9,4 @@ fs.ensureDirSync(targetDir);
 
 // Copy the directory
 fs.copySync(sourceDir, targetDir);
-console.log("Unknown Pleasures directory copied successfully");
+console.log("!!! Unknown Pleasures directory copied successfully");

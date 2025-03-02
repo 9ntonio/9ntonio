@@ -46,8 +46,8 @@
 		"clean": "gatsby clean",
 		"build": "GATSBY_CPU_COUNT=2 gatsby build",
 		"serve": "gatsby serve",
-		"postbuild": "cp -r static/unknown-pleasures public/ && echo 'Copied unknown-pleasures to public dir'",
-		"preserve": "echo 'Checking public/unknown-pleasures exists...' && ls public/unknown-pleasures || echo 'Warning: directory not found'",
+		"postbuild": "cp -r static/unknown-pleasures public/ && echo '!!!Copied unknown-pleasures to public dir'",
+		"preserve": "echo 'Checking public/unknown-pleasures exists...' && ls public/unknown-pleasures || echo '!!! Warning: directory not found'",
 		"verify-build": "node scripts/verify-build.js"
 	},
 	"dependencies": {
@@ -94,6 +94,11 @@
 		"node-addon-api": "^8.3.1",
 		"postcss": "^8.4.32",
 		"postcss-loader": "^7.3.4",
+		"prettier": "^3.0.0",
 		"tailwindcss": "^3.4.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/9ntonio/9ntonio"
 	}
 }
