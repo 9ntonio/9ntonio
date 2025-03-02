@@ -1,46 +1,47 @@
 [build]
-  command = "npm run build"
-  publish = "public"
+command = "yarn build"
+publish = "public"
 
 [build.environment]
-  NODE_VERSION = "18.17.0"
-  GATSBY_CPU_COUNT = "2"
+NODE_VERSION = "18.17.0"
+GATSBY_CPU_COUNT = "2"
 
 [[plugins]]
-  package = "@netlify/plugin-gatsby"
+package = "@netlify/plugin-gatsby"
 
-# Handle Vite's asset files
+# Handle assets files with proper caching
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/unknown-pleasures/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+for = "/unknown-pleasures/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 
-# Important: Redirect asset requests to the correct location
+# Important: Ensure proper routing for unknown-pleasures section and its assets
 [[redirects]]
-  from = "/assets/*"
-  to = "/unknown-pleasures/assets/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/unknown-pleasures"
-  to = "/unknown-pleasures/index.html"
-  status = 200
-  force = true
+from = "/unknown-pleasures"
+to = "/unknown-pleasures/index.html"
+status = 200
+force = true
 
 [[redirects]]
-  from = "/unknown-pleasures/*"
-  to = "/unknown-pleasures/:splat"
-  status = 200
-  force = true
+from = "/unknown-pleasures/*"
+to = "/unknown-pleasures/:splat"
+status = 200
+force = true
 
-# Fallback must come last
+# Important: Handle assets properly - ensure they can be accessed from both locations
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/assets/*"
+to = "/assets/:splat"
+status = 200
+force = true
+
+# Fallback for SPA
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200

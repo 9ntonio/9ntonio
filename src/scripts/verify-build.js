@@ -1,22 +1,32 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-const publicDir = path.join(__dirname, "..", "public", "unknown-pleasures");
+const requiredPaths = [
+  'public/unknown-pleasures/index.html',
+  'public/unknown-pleasures/assets',
+  'public/assets',
+  'public/index.html',
+];
 
-console.log("Verifying build...");
-console.log("Contents of /public/unknown-pleasures:");
+function verifyFiles() {
+  console.log('🔍 Verifying build output...');
 
-function listFiles(dir) {
-	fs.readdirSync(dir).forEach((file) => {
-		const fullPath = path.join(dir, file);
-		const stats = fs.statSync(fullPath);
-		console.log(`${file} - ${stats.size} bytes`);
+  const missingPaths = requiredPaths.filter(reqPath => {
+    const exists = fs.existsSync(path.resolve(reqPath));
+    if (!exists) {
+      console.error(`❌ Missing: ${reqPath}`);
+    } else {
+      console.log(`✅ Found: ${reqPath}`);
+    }
+    return !exists;
+  });
 
-		if (file.endsWith(".js")) {
-			const content = fs.readFileSync(fullPath, "utf8").slice(0, 100);
-			console.log(`First 100 chars of ${file}:`, content);
-		}
-	});
+  if (missingPaths.length > 0) {
+    console.error('❌ Build verification failed! Missing critical files');
+    process.exit(1);
+  } else {
+    console.log('✅ Build verification successful! All required files present.');
+  }
 }
 
-listFiles(publicDir);
+verifyFiles();

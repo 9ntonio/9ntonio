@@ -1,9 +1,13 @@
 {
 	"name": "antonio-almena-portfolio",
 	"description": "Antonio Almena Portfolio",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"homepage": "https://antonio.almena.io",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/9ntonio/9ntonio"
+	},
 	"keywords": [
 		"tsparticles",
 		"particles",
@@ -37,54 +41,64 @@
 		"animated",
 		"background",
 		"gatsby",
-		"gatsby-theme"
+		"gatsby-theme",
+		"unknown-pleasures",
+		"joy-division"
 	],
 	"scripts": {
 		"dev": "gatsby develop",
-		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"start": "yarn dev",
 		"clean": "gatsby clean",
-		"build": "GATSBY_CPU_COUNT=2 gatsby build",
+		"build": "GATSBY_CPU_COUNT=2 gatsby build && yarn postbuild",
 		"serve": "gatsby serve",
-		"postbuild": "cp -r static/unknown-pleasures public/ && echo 'Copied unknown-pleasures to public dir'",
-		"preserve": "echo 'Checking public/unknown-pleasures exists...' && ls public/unknown-pleasures || echo 'Warning: directory not found'",
+		"postbuild": "node -e \"const fs=require('fs-extra');const path=require('path');const srcDir=path.resolve('static/unknown-pleasures');const destDir=path.resolve('public/unknown-pleasures');const assetsSrcDir=path.resolve('static/unknown-pleasures/assets');const assetsDestDir=path.resolve('public/assets');if(!fs.existsSync(destDir)){fs.mkdirSync(destDir,{recursive:true});console.log('Created directory:',destDir);}fs.copySync(srcDir,destDir,{recursive:true});console.log('✅ Copied unknown-pleasures to public dir');if(!fs.existsSync(assetsDestDir)){fs.mkdirSync(assetsDestDir,{recursive:true});console.log('Created directory:',assetsDestDir);}fs.copySync(assetsSrcDir,assetsDestDir,{recursive:true});console.log('✅ Copied assets to public/assets dir');\"",
 		"verify-build": "node scripts/verify-build.js"
 	},
 	"dependencies": {
+		"@babel/core": "^7.22.0",
 		"@fortawesome/fontawesome-common-types": "^6.7.2",
 		"@fortawesome/fontawesome-svg-core": "^6.5.1",
 		"@fortawesome/free-brands-svg-icons": "^6.5.1",
 		"@fortawesome/free-regular-svg-icons": "^6.5.1",
 		"@fortawesome/free-solid-svg-icons": "^6.5.1",
 		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@gatsbyjs/reach-router": "^2.0.0",
 		"@netlify/plugin-gatsby": "^3.8.1",
-		"bootstrap": "^5.3.3",
+		"@popperjs/core": "^2.11.8",
+		"common-tags": "^1.8.2",
 		"express": "^4.21.2",
-		"gatsby": "^5.13.3",
+		"fs-extra": "^11.2.0",
+		"gatsby": "^5.14.1",
+		"gatsby-adapter-netlify": "^1.2.0",
 		"gatsby-plugin-google-fonts": "^1.0.1",
 		"gatsby-plugin-gtag": "^1.0.13",
 		"gatsby-plugin-image": "^3.12.3",
+		"gatsby-plugin-netlify": "^5.1.1",
+		"gatsby-plugin-postcss": "^6.13.0",
 		"gatsby-plugin-preload-fonts": "^4.14.0",
 		"gatsby-plugin-react-helmet": "^6.13.1",
-		"gatsby-plugin-sass": "6.14.0",
 		"gatsby-plugin-sharp": "5.14.0",
 		"gatsby-source-filesystem": "5.14.0",
 		"gatsby-transformer-sharp": "5.14.0",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
+		"prop-types": "^15.8.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
 		"react-helmet": "6.1.0",
 		"react-player": "2.16.0",
 		"react-tsparticles": "^2.12.2",
 		"sass": "^1.55.0",
 		"sharp": "^0.33.5",
 		"tsparticles": "^3",
-		"tsparticles-preset-triangles": "^2.12.0"
+		"tsparticles-preset-triangles": "^2.12.0",
+		"webpack": "^5.88.0"
 	},
 	"devDependencies": {
-		"prettier": "^3.0.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/9ntonio/9ntonio"
+		"autoprefixer": "^10.4.16",
+		"node-addon-api": "^8.3.1",
+		"postcss": "^8.4.32",
+		"postcss-loader": "^7.3.4",
+		"prettier": "^3.0.0",
+		"tailwindcss": "^3.4.0"
 	}
 }

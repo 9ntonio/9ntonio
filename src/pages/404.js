@@ -3,18 +3,6 @@ import { Link } from "gatsby";
 import { Helmet } from "react-helmet"; // For SEO purposes
 import backgroundImage from "../../static/hazard.webp";
 
-/**
- * NotFoundPage - A 404 page template for Gatsby with JavaScript
- *
- * Gatsby automatically uses the component exported from src/pages/404.js as the 404 page
- *
- * Features:
- * - SEO optimized with Helmet
- * - Navigation back to home page using Gatsby Link
- * - Custom styling
- * - Error tracking capability
- */
-
 const NotFoundPage = ({ location }) => {
 	const [isHovered, setIsHovered] = React.useState(false);
 	const [isMobile, setIsMobile] = React.useState(false);
@@ -57,7 +45,7 @@ const NotFoundPage = ({ location }) => {
 				to Dream
 			</h1>
 
-			<div style={styles.buttonContainer}>
+			<div>
 				<Link
 					to="/"
 					style={{
@@ -104,20 +92,7 @@ const styles = {
 		borderRadius: "1rem",
 		border: "1px solid #ff0000",
 		boxSizing: "border-box",
-	},
-	buttonContainer: {
-		display: "flex",
-		gap: "1rem",
-	},
-	button: {
-		padding: "0.5rem 0.75rem",
-		fontSize: "1rem",
-		backgroundColor: "#fff",
-		color: "#333",
-		border: "none",
-		borderRadius: "0.5rem",
-		cursor: "pointer",
-		textDecoration: "none",
+		marginBottom: "3rem",
 	},
 	buttonPrimary: {
 		padding: "0.5rem 0.75rem",
