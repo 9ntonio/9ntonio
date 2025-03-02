@@ -1,41 +1,50 @@
+# Netlify configuration file
+# This file defines build settings, redirects, and other Netlify-specific configurations
+
 [build]
-  command = "yarn build"
-  publish = "public"
+command = "yarn build && yarn verify-build"
+publish = "public"
 
 [build.environment]
-  NODE_VERSION = "18.17.0"
-  GATSBY_CPU_COUNT = "2"
+NODE_VERSION = "18.17.0"
+GATSBY_CPU_COUNT = "2"
 
 [[plugins]]
-  package = "@netlify/plugin-gatsby"
+package = "@netlify/plugin-gatsby"
 
-# Handle Vite's asset files - all assets will be served from this location
+# Handle assets files with proper caching
 [[headers]]
-  for = "/unknown-pleasures/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+for = "/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 
-# Important: Redirect asset requests to the correct location
+[[headers]]
+for = "/unknown-pleasures/assets/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# Important: Ensure proper routing for unknown-pleasures section and its assets
 [[redirects]]
-  from = "/assets/*"
-  to = "/unknown-pleasures/assets/:splat"
-  status = 200
-  force = true
+from = "/unknown-pleasures"
+to = "/unknown-pleasures/index.html"
+status = 200
+force = true
 
 [[redirects]]
-  from = "/unknown-pleasures"
-  to = "/unknown-pleasures/index.html"
-  status = 200
-  force = true
+from = "/unknown-pleasures/*"
+to = "/unknown-pleasures/:splat"
+status = 200
+force = true
 
+# Important: Handle assets properly - ensure they can be accessed from both locations
 [[redirects]]
-  from = "/unknown-pleasures/*"
-  to = "/unknown-pleasures/:splat"
-  status = 200
-  force = true
+from = "/assets/*"
+to = "/assets/:splat"
+status = 200
+force = true
 
-# Fallback must come last
+# Fallback for SPA
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200

@@ -41,13 +41,12 @@
 	],
 	"scripts": {
 		"dev": "gatsby develop",
-		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"start": "yarn dev",
 		"clean": "gatsby clean",
-		"build": "GATSBY_CPU_COUNT=2 gatsby build",
+		"build": "GATSBY_CPU_COUNT=2 gatsby build && yarn postbuild",
 		"serve": "gatsby serve",
-		"postbuild": "cp -r static/unknown-pleasures public/ && echo '!!!Copied unknown-pleasures to public dir'",
-		"preserve": "echo 'Checking public/unknown-pleasures exists...' && ls public/unknown-pleasures || echo '!!! Warning: directory not found'",
+		"postbuild": "node -e \"const fs=require('fs-extra');const path=require('path');const srcDir=path.resolve('static/unknown-pleasures');const destDir=path.resolve('public/unknown-pleasures');const assetsSrcDir=path.resolve('static/unknown-pleasures/assets');const assetsDestDir=path.resolve('public/assets');if(!fs.existsSync(destDir)){fs.mkdirSync(destDir,{recursive:true});console.log('Created directory:',destDir);}fs.copySync(srcDir,destDir,{recursive:true});console.log('✅ Copied unknown-pleasures to public dir');if(!fs.existsSync(assetsDestDir)){fs.mkdirSync(assetsDestDir,{recursive:true});console.log('Created directory:',assetsDestDir);}fs.copySync(assetsSrcDir,assetsDestDir,{recursive:true});console.log('✅ Copied assets to public/assets dir');\"",
 		"verify-build": "node scripts/verify-build.js"
 	},
 	"dependencies": {
