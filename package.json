@@ -4,6 +4,10 @@
 	"version": "1.1.0",
 	"homepage": "https://antonio.almena.io",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/9ntonio/9ntonio"
+	},
 	"keywords": [
 		"tsparticles",
 		"particles",
@@ -37,7 +41,9 @@
 		"animated",
 		"background",
 		"gatsby",
-		"gatsby-theme"
+		"gatsby-theme",
+		"unknown-pleasures",
+		"joy-division"
 	],
 	"scripts": {
 		"dev": "gatsby develop",
@@ -94,9 +100,5 @@
 		"postcss-loader": "^7.3.4",
 		"prettier": "^3.0.0",
 		"tailwindcss": "^3.4.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/9ntonio/9ntonio"
 	}
 }
