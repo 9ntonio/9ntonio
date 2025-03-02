@@ -18,13 +18,13 @@ exports.onPreBuild = ({ reporter }) => {
 	try {
 		// Ensure source directories exist
 		if (!fs.existsSync(sourceDir)) {
-			reporter.panic("unknown-pleasures directory not found in static folder");
+			reporter.panic("!!! unknown-pleasures directory not found in static folder");
 			return;
 		}
 
 		const sourceAssetsDir = path.join(sourceDir, "assets");
 		if (!fs.existsSync(sourceAssetsDir)) {
-			reporter.panic("assets directory not found in unknown-pleasures");
+			reporter.panic("!!! assets directory not found in unknown-pleasures");
 			return;
 		}
 
@@ -36,16 +36,16 @@ exports.onPreBuild = ({ reporter }) => {
 
 		// Copy main directory
 		fs.copySync(sourceDir, publicDir);
-		reporter.info("Copied unknown-pleasures directory to public");
+		reporter.info("!!! Copied unknown-pleasures directory to public");
 
 		// Also copy assets to root assets directory
 		fs.copySync(sourceAssetsDir, publicAssetsDir);
-		reporter.info("Copied assets to root assets directory");
+		reporter.info("!!! Copied assets to root assets directory");
 
 		// Log copied files
 		const logDirectory = (dir, label) => {
 			const files = fs.readdirSync(dir);
-			reporter.info(`Contents of ${label}:`);
+			reporter.info(`!!! Contents of ${label}:`);
 			files.forEach((file) => {
 				const stats = fs.statSync(path.join(dir, file));
 				reporter.info(`- ${file} (${stats.size} bytes)`);
@@ -55,6 +55,6 @@ exports.onPreBuild = ({ reporter }) => {
 		logDirectory(publicDir, "public/unknown-pleasures");
 		logDirectory(publicAssetsDir, "public/assets");
 	} catch (error) {
-		reporter.panic("Failed to copy directories", error);
+		reporter.panic("!!! Failed to copy directories", error);
 	}
 };
