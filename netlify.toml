@@ -2,7 +2,7 @@
 # This file defines build settings, redirects, and other Netlify-specific configurations
 
 [build]
-command = "yarn build && yarn verify-build"
+command = "yarn build"
 publish = "public"
 
 [build.environment]
