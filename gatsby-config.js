@@ -1,13 +1,12 @@
 module.exports = {
 	siteMetadata: {
-		title: `I use both sides of my brain 🧠...`,
+		title: `Design Technologist`,
 		description: `Antonio Almena`,
 		author: `@9ntonio`,
 		image: "/social.jpg",
 		siteUrl: "https://antonio.almena.io",
 	},
 	plugins: [
-		`gatsby-plugin-postcss`,
 		{
 			resolve: `gatsby-plugin-gtag`,
 			options: {
@@ -23,6 +22,7 @@ module.exports = {
 				display: "swap",
 			},
 		},
+		`gatsby-plugin-postcss`,
 		`gatsby-plugin-preload-fonts`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-image`,
