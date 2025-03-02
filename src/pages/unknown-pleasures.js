@@ -61,11 +61,11 @@ const UnknownPleasuresPage = () => {
     <>
       <Seo
         Sitetitle="Unknown Pleasures"
-        description="Unknown Pleasures visualization experiment inspired by Joy Division's iconic album art"
+        description="Unknown Pleasures visualization experiment inspired by Joy Division's Unknown Pleasures album art"
         meta={[
           {
             name: "keywords",
-            content: "unknown pleasures,visualization,experimental,music,data,javascript,joy division,antonio almena",
+            content: "unknown pleasures,visualization,experimental,music,data,javascript,joy division,antonio almena, 9ntonio",
           },
           {
             property: "og:type",
@@ -135,7 +135,7 @@ const UnknownPleasuresPage = () => {
             top: 0,
             left: 0,
           }}
-          title="Unknown Pleasures Visualization"
+          title="Unknown Pleasures"
           allow="autoplay; microphone; camera; midi; geolocation; accelerometer; gyroscope; payment; magnetometer; encrypted-media; usb"
           loading="eager"
           importance="high"

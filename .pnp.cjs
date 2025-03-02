@@ -38,7 +38,6 @@ const RAW_RUNTIME_STATE =
           ["@netlify/plugin-gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.8.2"],\
           ["@popperjs/core", "npm:2.11.8"],\
           ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.20"],\
-          ["bootstrap", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.3.3"],\
           ["common-tags", "npm:1.8.2"],\
           ["express", "npm:4.21.2"],\
           ["fs-extra", "npm:11.3.0"],\
@@ -6608,7 +6607,6 @@ const RAW_RUNTIME_STATE =
           ["@netlify/plugin-gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.8.2"],\
           ["@popperjs/core", "npm:2.11.8"],\
           ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.20"],\
-          ["bootstrap", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.3.3"],\
           ["common-tags", "npm:1.8.2"],\
           ["express", "npm:4.21.2"],\
           ["fs-extra", "npm:11.3.0"],\
@@ -7499,28 +7497,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/boolbase-npm-1.0.0-965fe9af6d-10c0.zip/node_modules/boolbase/",\
         "packageDependencies": [\
           ["boolbase", "npm:1.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["bootstrap", [\
-      ["npm:5.3.3", {\
-        "packageLocation": "../../.yarn/berry/cache/bootstrap-npm-5.3.3-da08e2f0fe-10c0.zip/node_modules/bootstrap/",\
-        "packageDependencies": [\
-          ["bootstrap", "npm:5.3.3"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.3.3", {\
-        "packageLocation": "./.yarn/__virtual__/bootstrap-virtual-d1c3aab0de/3/.yarn/berry/cache/bootstrap-npm-5.3.3-da08e2f0fe-10c0.zip/node_modules/bootstrap/",\
-        "packageDependencies": [\
-          ["bootstrap", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.3.3"],\
-          ["@popperjs/core", "npm:2.11.8"],\
-          ["@types/popperjs__core", null]\
-        ],\
-        "packagePeers": [\
-          "@popperjs/core",\
-          "@types/popperjs__core"\
         ],\
         "linkType": "HARD"\
       }]\

@@ -1,6 +1,3 @@
-# Netlify configuration file
-# This file defines build settings, redirects, and other Netlify-specific configurations
-
 [build]
 command = "yarn build"
 publish = "public"

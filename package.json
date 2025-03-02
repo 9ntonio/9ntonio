@@ -60,7 +60,6 @@
 		"@gatsbyjs/reach-router": "^2.0.0",
 		"@netlify/plugin-gatsby": "^3.8.1",
 		"@popperjs/core": "^2.11.8",
-		"bootstrap": "^5.3.3",
 		"common-tags": "^1.8.2",
 		"express": "^4.21.2",
 		"fs-extra": "^11.2.0",
