@@ -18025,16 +18025,20 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["react-server-dom-webpack", "virtual:7fc46da5f538ac530bdf3bb67f1938a3daf990767a27742a2903627d3dc0b75b37636ce0d56cbdeffbd3ff3927aa753668aaa2c6bf227aae5e4df320a0358825#npm:0.0.0-experimental-c8b778b7f-20220825"],\
           ["@types/react", null],\
+          ["@types/react-dom", null],\
           ["@types/webpack", null],\
           ["acorn", "npm:6.4.2"],\
           ["loose-envify", "npm:1.4.0"],\
           ["neo-async", "npm:2.6.2"],\
           ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:18.2.0"],\
           ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.98.0"]\
         ],\
         "packagePeers": [\
+          "@types/react-dom",\
           "@types/react",\
           "@types/webpack",\
+          "react-dom",\
           "react",\
           "webpack"\
         ],\
