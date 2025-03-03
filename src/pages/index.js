@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faBlog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { StaticImage } from "gatsby-plugin-image";
@@ -147,7 +147,13 @@ export default function Home() {
 							</div>
 
 							<div className="circle-container">
-								<OutboundLink href="https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf" target={LINK_TARGET} rel={LINK_REL}>
+								<OutboundLink href="https://www.github.com/9ntonio" target={LINK_TARGET} rel={LINK_REL}>
+									<FontAwesomeIcon className="github" icon={faGithub} size="2x" />
+								</OutboundLink>
+							</div>
+
+							<div className="circle-container">
+								<OutboundLink href="https://www.medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf" target={LINK_TARGET} rel={LINK_REL}>
 									<FontAwesomeIcon className="blog" icon={faBlog} size="2x" />
 								</OutboundLink>
 							</div>

@@ -56,8 +56,13 @@
 		@apply relative left-[10px] top-[7px] text-primary;
 	}
 
+	.circle-container > a > .github {
+		@apply relative left-[8px] top-[7px] text-primary;
+	}
+
 	.circle-container > a > .linkedin:hover,
-	.circle-container > a > .blog:hover {
+	.circle-container > a > .blog:hover,
+	.circle-container > a > .github:hover {
 		@apply text-secondary;
 	}
 }
