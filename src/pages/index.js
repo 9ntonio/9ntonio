@@ -82,7 +82,7 @@ export default function Home() {
 			<div className="App">
 				<div className="fixed inset-0 bg-background" />
 				<Seo
-					description="Senior Full Stack Engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specialized in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures. I have a strong background in design systems and automated testing."
+					description="Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics by up to 60%"
 					Sitetitle="Antonio Almena"
 					meta={[
 						{
@@ -116,8 +116,7 @@ export default function Home() {
 			</Suspense>
 
 			<Seo
-				description="Senior Full Stack Engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specialized in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures. I have a strong background in design systems and automated testing."
-				Sitetitle="Antonio Almena"
+				description="Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics by up to 60%"
 				meta={[
 					{
 						name: "keywords",
@@ -161,8 +160,7 @@ export default function Home() {
 					</div>
 
 					<p className="text-xl mb-4">
-						Senior full stack engineer with 8+ years of experience building high-performance web applications using React, Angular, C# & Blazor. Specializing in developing scalable
-						component libraries, optimizing application performance & implementing modern frontend architectures. I have a strong background in design systems and automated testing.
+					Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics by up to 60%.
 					</p>
 
 					<p className="text-xl mb-6">
@@ -175,8 +173,8 @@ export default function Home() {
 								<div className="text-pretty text-xl">
 									<div className="text-primary mb-2 font-semibold">TECHNICAL EXPERTISE:</div>
 									<ul className="text-primary list-disc pl-8">
-										<li>Frontend: React 18, Angular 17, TypeScript 5.x, RxJS, JavaScript (ES6+)</li>
-										<li>Backend: C# & Blazor</li>
+										<li>Frontend: React, Angular, TypeScript, iOS, Android, JavaScript (ES6+) & Blazor</li>
+										<li>Backend: C#, .NET, Node</li>
 										<li>State Management: NgRx, Redux, Angular Signals</li>
 										<li>Testing: Jest, Playwright, Jasmine, Karma</li>
 										<li>Build Tools: Vite, Esbuild, Webpack, Angular CLI, NX</li>
