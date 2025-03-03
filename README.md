@@ -125,5 +125,5 @@ Directed technical implementation of enterprise applications and design systems.
 
 ## AWARDS & RECOGNITION
 
-**Communication Arts Interactive Annual Award** - Excellence in Interactive Design
-**Webby Award Nominee** - Best User Experience (Google Store project)
+- **Communication Arts Interactive Annual Award** - Excellence in Interactive Design
+- **Webby Award Nominee** - Best User Experience (Google Store project)
