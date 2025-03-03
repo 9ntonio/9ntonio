@@ -83,7 +83,6 @@ export default function Home() {
 				<div className="fixed inset-0 bg-background" />
 				<Seo
 					description="Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics by up to 60%"
-					Sitetitle="Antonio Almena"
 					meta={[
 						{
 							name: "keywords",
