@@ -172,7 +172,7 @@ export default function Home() {
 								<div className="text-pretty text-xl">
 									<div className="text-primary mb-2 font-semibold">TECHNICAL EXPERTISE:</div>
 									<ul className="text-primary list-disc pl-8">
-										<li>Frontend: React, Angular, TypeScript, iOS, Android, JavaScript (ES6+) & Blazor</li>
+										<li>Frontend: React, Angular, TypeScript, Next.js, iOS, Android, JavaScript (ES6+) & Blazor</li>
 										<li>Backend: C#, .NET, Node</li>
 										<li>State Management: NgRx, Redux, Angular Signals</li>
 										<li>Testing: Jest, Playwright, Jasmine, Karma</li>
