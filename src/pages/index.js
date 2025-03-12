@@ -166,7 +166,7 @@ export default function Home() {
 						My experience allows me to hit the ground running & quickly identify opportunities for improvement, ensuring seamless integration into any team environment.
 					</p>
 
-					<div>
+					<div className="mb-4">
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-7/12">
 								<div className="text-pretty text-xl">
@@ -192,6 +192,20 @@ export default function Home() {
 										<li>Design Systems: Storybook, Style Dictionary</li>
 										<li>Version Control: Git, GitHub</li>
 										<li>CI/CD: Jenkins, GitHub Actions</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div className="flex flex-wrap">
+							<div className="w-full md:w-7/12">
+								<div className="text-pretty text-xl">
+									<div className="text-primary mb-2 font-semibold">AWARDS:</div>
+									<ul className="text-primary list-disc pl-8">
+										<li>Communication Arts Interactive Annual Award: <a	 href="https://www.commarts.com/project/22631/inside-your-scion" target={LINK_TARGET} rel={LINK_REL}>Excellence in Interactive Design</a></li>
+										<li>Webby Award Nominee: Best User Experience (Google Store)</li>
 									</ul>
 								</div>
 							</div>
