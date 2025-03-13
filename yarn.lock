@@ -2478,8 +2478,8 @@ __metadata:
   linkType: hard
 
 "@netlify/plugin-gatsby@npm:^3.8.1":
-  version: 3.8.2
-  resolution: "@netlify/plugin-gatsby@npm:3.8.2"
+  version: 3.8.3
+  resolution: "@netlify/plugin-gatsby@npm:3.8.3"
   dependencies:
     "@netlify/functions": "npm:^1.6.0"
     "@netlify/ipx": "npm:^1.4.6"
@@ -2501,7 +2501,7 @@ __metadata:
   peerDependencies:
     "@gatsbyjs/reach-router": "*"
     common-tags: ^1.8.2
-  checksum: 10c0/cb174dd96f4f12f0a38afa9ef0111bbe474ed44795f89d259ab65247cf1d4d8a4afa97d68624ea024d0c221052fab4c087c80b88a9a046b49b96f671330de980
+  checksum: 10c0/3c26efd69838cb375738145de40bcf7965aa320b308cfd64056416aca7c96f2ca22eb176ca678f178a6e3da6084bb4395c302d9a7d6af458f5477b6655d9b871
   languageName: node
   linkType: hard
 
