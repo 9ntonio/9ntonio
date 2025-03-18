@@ -12,7 +12,7 @@ My experience allows me to hit the ground running & quickly identify opportuniti
 
 ## TECHNICAL SKILLS
 
-- **Frontend Development**: React, Angular, TypeScript, JavaScript (ES6+), Blazor & iOS
+- **Frontend Development**: React, Angular, TypeScript, Next.js, JavaScript (ES6+), Blazor & iOS
 - **Backend Technologies**: C#, .NET Core, Node
 - **State Management**: NgRx, Redux, Angular Signals
 - **Testing Frameworks**: Jest, Playwright, Jasmine, Karma
