@@ -67,7 +67,7 @@
 		"@netlify/plugin-gatsby": "^3.8.1",
 		"@popperjs/core": "^2.11.8",
 		"common-tags": "^1.8.2",
-		"express": "^4.21.2",
+		"express": "^5.0.0",
 		"fs-extra": "^11.2.0",
 		"gatsby": "^5.14.1",
 		"gatsby-adapter-netlify": "^1.2.0",
