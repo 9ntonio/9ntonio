@@ -68,7 +68,7 @@ const RAW_RUNTIME_STATE =
           ["tailwindcss", "npm:3.4.17"],\
           ["tsparticles", "npm:3.8.1"],\
           ["tsparticles-preset-triangles", "npm:2.12.0"],\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.5"]\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.6"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -6698,7 +6698,7 @@ const RAW_RUNTIME_STATE =
           ["tailwindcss", "npm:3.4.17"],\
           ["tsparticles", "npm:3.8.1"],\
           ["tsparticles-preset-triangles", "npm:2.12.0"],\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.5"]\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.6"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -17016,7 +17016,7 @@ const RAW_RUNTIME_STATE =
           ["postcss", "npm:8.5.3"],\
           ["semver", "npm:7.7.1"],\
           ["tailwindcss", "npm:3.4.17"],\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.5"]\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.6"]\
         ],\
         "packagePeers": [\
           "@rspack/core",\
@@ -20222,10 +20222,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:9fbb34ba5e44512cf019dc97d85428925c55f5b287bfb0b3ae5c22ea2dbc28c057b73a4b39ce28883985d3d935cd9c1ce5fd19e6f7ef886193c6193c6cd38f6d#npm:5.3.12", {\
-        "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-02a2db7e62/7/runner/cache/others/berry/cache/terser-webpack-plugin-npm-5.3.12-2ad999979d-10c0.zip/node_modules/terser-webpack-plugin/",\
+      ["virtual:73561b4338f492866adff72d9b58a5d0d36c01552933f4fdeefbaa2a1a8821006a6c0d49818f6fda58e51b7f94c546e4689f437dcfbf6f13c4cd2aab1ee334d7#npm:5.3.12", {\
+        "packageLocation": "./.yarn/__virtual__/terser-webpack-plugin-virtual-b2e963626b/7/runner/cache/others/berry/cache/terser-webpack-plugin-npm-5.3.12-2ad999979d-10c0.zip/node_modules/terser-webpack-plugin/",\
         "packageDependencies": [\
-          ["terser-webpack-plugin", "virtual:9fbb34ba5e44512cf019dc97d85428925c55f5b287bfb0b3ae5c22ea2dbc28c057b73a4b39ce28883985d3d935cd9c1ce5fd19e6f7ef886193c6193c6cd38f6d#npm:5.3.12"],\
+          ["terser-webpack-plugin", "virtual:73561b4338f492866adff72d9b58a5d0d36c01552933f4fdeefbaa2a1a8821006a6c0d49818f6fda58e51b7f94c546e4689f437dcfbf6f13c4cd2aab1ee334d7#npm:5.3.12"],\
           ["@jridgewell/trace-mapping", "npm:0.3.25"],\
           ["@swc/core", null],\
           ["@types/esbuild", null],\
@@ -20238,7 +20238,7 @@ const RAW_RUNTIME_STATE =
           ["serialize-javascript", "npm:6.0.2"],\
           ["terser", "npm:5.39.0"],\
           ["uglify-js", null],\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.5"]\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.6"]\
         ],\
         "packagePeers": [\
           "@swc/core",\
@@ -21293,17 +21293,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["npm:5.99.5", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webpack-npm-5.99.5-11a7812253-10c0.zip/node_modules/webpack/",\
+      ["npm:5.99.6", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webpack-npm-5.99.6-d4f5128f13-10c0.zip/node_modules/webpack/",\
         "packageDependencies": [\
-          ["webpack", "npm:5.99.5"]\
+          ["webpack", "npm:5.99.6"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.5", {\
-        "packageLocation": "./.yarn/__virtual__/webpack-virtual-9fbb34ba5e/7/runner/cache/others/berry/cache/webpack-npm-5.99.5-11a7812253-10c0.zip/node_modules/webpack/",\
+      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.6", {\
+        "packageLocation": "./.yarn/__virtual__/webpack-virtual-73561b4338/7/runner/cache/others/berry/cache/webpack-npm-5.99.6-d4f5128f13-10c0.zip/node_modules/webpack/",\
         "packageDependencies": [\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.5"],\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.99.6"],\
           ["@types/eslint-scope", "npm:3.7.7"],\
           ["@types/estree", "npm:1.0.6"],\
           ["@types/webpack-cli", null],\
@@ -21325,7 +21325,7 @@ const RAW_RUNTIME_STATE =
           ["neo-async", "npm:2.6.2"],\
           ["schema-utils", "npm:4.3.0"],\
           ["tapable", "npm:2.2.1"],\
-          ["terser-webpack-plugin", "virtual:9fbb34ba5e44512cf019dc97d85428925c55f5b287bfb0b3ae5c22ea2dbc28c057b73a4b39ce28883985d3d935cd9c1ce5fd19e6f7ef886193c6193c6cd38f6d#npm:5.3.12"],\
+          ["terser-webpack-plugin", "virtual:73561b4338f492866adff72d9b58a5d0d36c01552933f4fdeefbaa2a1a8821006a6c0d49818f6fda58e51b7f94c546e4689f437dcfbf6f13c4cd2aab1ee334d7#npm:5.3.12"],\
           ["watchpack", "npm:2.4.2"],\
           ["webpack-cli", null],\
           ["webpack-sources", "npm:3.2.3"]\
