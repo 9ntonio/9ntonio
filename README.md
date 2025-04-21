@@ -48,7 +48,7 @@ Led development of enterprise-grade web applications serving 500+ clients, focus
 
 ### Missing Corner - Senior Frontend Engineer
 
-_August 2024 - February 2025
+_August 2024 - February 2025_
 
 Missing Corner is an award-winning technology consultancy that transforms businesses by generating ideas, building products, and accelerating growth.
 
