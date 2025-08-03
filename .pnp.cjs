@@ -66,7 +66,7 @@ const RAW_RUNTIME_STATE =
           ["sass", "npm:1.89.2"],\
           ["sharp", "npm:0.34.3"],\
           ["tailwindcss", "npm:3.4.17"],\
-          ["tsparticles", "npm:3.8.1"],\
+          ["tsparticles", "npm:3.9.0"],\
           ["tsparticles-preset-triangles", "npm:2.12.0"],\
           ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.101.0"]\
         ],\
@@ -5353,20 +5353,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@tsparticles/basic", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-basic-npm-3.8.1-5a783da567-10c0.zip/node_modules/@tsparticles/basic/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-basic-npm-3.9.0-88bfe3e6d7-10c0.zip/node_modules/@tsparticles/basic/",\
         "packageDependencies": [\
-          ["@tsparticles/basic", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"],\
-          ["@tsparticles/move-base", "npm:3.8.1"],\
-          ["@tsparticles/plugin-hex-color", "npm:3.8.1"],\
-          ["@tsparticles/plugin-hsl-color", "npm:3.8.1"],\
-          ["@tsparticles/plugin-rgb-color", "npm:3.8.1"],\
-          ["@tsparticles/shape-circle", "npm:3.8.1"],\
-          ["@tsparticles/updater-color", "npm:3.8.1"],\
-          ["@tsparticles/updater-opacity", "npm:3.8.1"],\
-          ["@tsparticles/updater-out-modes", "npm:3.8.1"],\
-          ["@tsparticles/updater-size", "npm:3.8.1"]\
+          ["@tsparticles/basic", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"],\
+          ["@tsparticles/move-base", "npm:3.9.0"],\
+          ["@tsparticles/plugin-hex-color", "npm:3.9.0"],\
+          ["@tsparticles/plugin-hsl-color", "npm:3.9.0"],\
+          ["@tsparticles/plugin-rgb-color", "npm:3.9.0"],\
+          ["@tsparticles/shape-circle", "npm:3.9.0"],\
+          ["@tsparticles/updater-color", "npm:3.9.0"],\
+          ["@tsparticles/updater-opacity", "npm:3.9.0"],\
+          ["@tsparticles/updater-out-modes", "npm:3.9.0"],\
+          ["@tsparticles/updater-size", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5378,104 +5378,111 @@ const RAW_RUNTIME_STATE =
           ["@tsparticles/engine", "npm:3.8.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:3.9.0", {\
+        "packageLocation": "./.yarn/unplugged/@tsparticles-engine-npm-3.9.0-d604c3b43e/node_modules/@tsparticles/engine/",\
+        "packageDependencies": [\
+          ["@tsparticles/engine", "npm:3.9.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-attract", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-attract-npm-3.8.1-5a4f2a2ea5-10c0.zip/node_modules/@tsparticles/interaction-external-attract/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-attract-npm-3.9.0-e5a5c7291c-10c0.zip/node_modules/@tsparticles/interaction-external-attract/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-attract", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-attract", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-bounce", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-bounce-npm-3.8.1-f07abc285c-10c0.zip/node_modules/@tsparticles/interaction-external-bounce/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-bounce-npm-3.9.0-afe808b884-10c0.zip/node_modules/@tsparticles/interaction-external-bounce/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-bounce", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-bounce", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-bubble", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-bubble-npm-3.8.1-77bab48f8c-10c0.zip/node_modules/@tsparticles/interaction-external-bubble/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-bubble-npm-3.9.0-dfb9108254-10c0.zip/node_modules/@tsparticles/interaction-external-bubble/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-bubble", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-bubble", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-connect", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-connect-npm-3.8.1-47253be25d-10c0.zip/node_modules/@tsparticles/interaction-external-connect/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-connect-npm-3.9.0-3339ffba9f-10c0.zip/node_modules/@tsparticles/interaction-external-connect/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-connect", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-connect", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-grab", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-grab-npm-3.8.1-54263cb58d-10c0.zip/node_modules/@tsparticles/interaction-external-grab/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-grab-npm-3.9.0-8c85249c4e-10c0.zip/node_modules/@tsparticles/interaction-external-grab/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-grab", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-grab", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-pause", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-pause-npm-3.8.1-e5e1608bc0-10c0.zip/node_modules/@tsparticles/interaction-external-pause/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-pause-npm-3.9.0-64481eb3fe-10c0.zip/node_modules/@tsparticles/interaction-external-pause/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-pause", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-pause", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-push", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-push-npm-3.8.1-868a9668c3-10c0.zip/node_modules/@tsparticles/interaction-external-push/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-push-npm-3.9.0-58fa11af0b-10c0.zip/node_modules/@tsparticles/interaction-external-push/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-push", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-push", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-remove", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-remove-npm-3.8.1-db7b6fe03e-10c0.zip/node_modules/@tsparticles/interaction-external-remove/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-remove-npm-3.9.0-996a178255-10c0.zip/node_modules/@tsparticles/interaction-external-remove/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-remove", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-remove", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-repulse", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-repulse-npm-3.8.1-db89aac131-10c0.zip/node_modules/@tsparticles/interaction-external-repulse/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-repulse-npm-3.9.0-cba8c41fc7-10c0.zip/node_modules/@tsparticles/interaction-external-repulse/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-repulse", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-repulse", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-external-slow", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-slow-npm-3.8.1-9a788e20ba-10c0.zip/node_modules/@tsparticles/interaction-external-slow/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-external-slow-npm-3.9.0-f444762e8f-10c0.zip/node_modules/@tsparticles/interaction-external-slow/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-external-slow", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-external-slow", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5491,368 +5498,368 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@tsparticles/interaction-particles-attract", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-particles-attract-npm-3.8.1-882c256180-10c0.zip/node_modules/@tsparticles/interaction-particles-attract/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-particles-attract-npm-3.9.0-1d290444c0-10c0.zip/node_modules/@tsparticles/interaction-particles-attract/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-particles-attract", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-particles-attract", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-particles-collisions", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-particles-collisions-npm-3.8.1-1587dca0a4-10c0.zip/node_modules/@tsparticles/interaction-particles-collisions/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-particles-collisions-npm-3.9.0-294d6b4089-10c0.zip/node_modules/@tsparticles/interaction-particles-collisions/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-particles-collisions", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-particles-collisions", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/interaction-particles-links", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-particles-links-npm-3.8.1-e2944160b7-10c0.zip/node_modules/@tsparticles/interaction-particles-links/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-interaction-particles-links-npm-3.9.0-ca6368e68b-10c0.zip/node_modules/@tsparticles/interaction-particles-links/",\
         "packageDependencies": [\
-          ["@tsparticles/interaction-particles-links", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/interaction-particles-links", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/move-base", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-move-base-npm-3.8.1-3e95f3c808-10c0.zip/node_modules/@tsparticles/move-base/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-move-base-npm-3.9.0-a86a823a84-10c0.zip/node_modules/@tsparticles/move-base/",\
         "packageDependencies": [\
-          ["@tsparticles/move-base", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/move-base", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/move-parallax", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-move-parallax-npm-3.8.1-e06b7306e1-10c0.zip/node_modules/@tsparticles/move-parallax/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-move-parallax-npm-3.9.0-d6c847e85a-10c0.zip/node_modules/@tsparticles/move-parallax/",\
         "packageDependencies": [\
-          ["@tsparticles/move-parallax", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/move-parallax", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/plugin-absorbers", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-absorbers-npm-3.8.1-72e0ab01d9-10c0.zip/node_modules/@tsparticles/plugin-absorbers/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-absorbers-npm-3.9.0-b0b5f5249c-10c0.zip/node_modules/@tsparticles/plugin-absorbers/",\
         "packageDependencies": [\
-          ["@tsparticles/plugin-absorbers", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/plugin-absorbers", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/plugin-easing-quad", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-easing-quad-npm-3.8.1-3a0e63dd82-10c0.zip/node_modules/@tsparticles/plugin-easing-quad/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-easing-quad-npm-3.9.0-dec9544c8b-10c0.zip/node_modules/@tsparticles/plugin-easing-quad/",\
         "packageDependencies": [\
-          ["@tsparticles/plugin-easing-quad", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/plugin-easing-quad", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/plugin-emitters", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-emitters-npm-3.8.1-622712b710-10c0.zip/node_modules/@tsparticles/plugin-emitters/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-emitters-npm-3.9.0-9a0061038c-10c0.zip/node_modules/@tsparticles/plugin-emitters/",\
         "packageDependencies": [\
-          ["@tsparticles/plugin-emitters", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/plugin-emitters", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/plugin-emitters-shape-circle", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-emitters-shape-circle-npm-3.8.1-ac6fd19659-10c0.zip/node_modules/@tsparticles/plugin-emitters-shape-circle/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-emitters-shape-circle-npm-3.9.0-edeabd2118-10c0.zip/node_modules/@tsparticles/plugin-emitters-shape-circle/",\
         "packageDependencies": [\
-          ["@tsparticles/plugin-emitters-shape-circle", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"],\
-          ["@tsparticles/plugin-emitters", "npm:3.8.1"]\
+          ["@tsparticles/plugin-emitters-shape-circle", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"],\
+          ["@tsparticles/plugin-emitters", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/plugin-emitters-shape-square", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-emitters-shape-square-npm-3.8.1-df93a67084-10c0.zip/node_modules/@tsparticles/plugin-emitters-shape-square/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-emitters-shape-square-npm-3.9.0-091be9fdd6-10c0.zip/node_modules/@tsparticles/plugin-emitters-shape-square/",\
         "packageDependencies": [\
-          ["@tsparticles/plugin-emitters-shape-square", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"],\
-          ["@tsparticles/plugin-emitters", "npm:3.8.1"]\
+          ["@tsparticles/plugin-emitters-shape-square", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"],\
+          ["@tsparticles/plugin-emitters", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/plugin-hex-color", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-hex-color-npm-3.8.1-edd2933ce9-10c0.zip/node_modules/@tsparticles/plugin-hex-color/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-hex-color-npm-3.9.0-0216698447-10c0.zip/node_modules/@tsparticles/plugin-hex-color/",\
         "packageDependencies": [\
-          ["@tsparticles/plugin-hex-color", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/plugin-hex-color", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/plugin-hsl-color", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-hsl-color-npm-3.8.1-95e011a042-10c0.zip/node_modules/@tsparticles/plugin-hsl-color/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-hsl-color-npm-3.9.0-9c35d4d7e7-10c0.zip/node_modules/@tsparticles/plugin-hsl-color/",\
         "packageDependencies": [\
-          ["@tsparticles/plugin-hsl-color", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/plugin-hsl-color", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/plugin-rgb-color", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-rgb-color-npm-3.8.1-4225549678-10c0.zip/node_modules/@tsparticles/plugin-rgb-color/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-plugin-rgb-color-npm-3.9.0-bc104fb3c5-10c0.zip/node_modules/@tsparticles/plugin-rgb-color/",\
         "packageDependencies": [\
-          ["@tsparticles/plugin-rgb-color", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/plugin-rgb-color", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/shape-circle", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-circle-npm-3.8.1-e81ea111dd-10c0.zip/node_modules/@tsparticles/shape-circle/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-circle-npm-3.9.0-50e663c74a-10c0.zip/node_modules/@tsparticles/shape-circle/",\
         "packageDependencies": [\
-          ["@tsparticles/shape-circle", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/shape-circle", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/shape-emoji", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-emoji-npm-3.8.1-65260074e1-10c0.zip/node_modules/@tsparticles/shape-emoji/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-emoji-npm-3.9.0-5e48f25f07-10c0.zip/node_modules/@tsparticles/shape-emoji/",\
         "packageDependencies": [\
-          ["@tsparticles/shape-emoji", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/shape-emoji", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/shape-image", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-image-npm-3.8.1-5b6016d0c9-10c0.zip/node_modules/@tsparticles/shape-image/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-image-npm-3.9.0-ba2568baf1-10c0.zip/node_modules/@tsparticles/shape-image/",\
         "packageDependencies": [\
-          ["@tsparticles/shape-image", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/shape-image", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/shape-line", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-line-npm-3.8.1-c80033395c-10c0.zip/node_modules/@tsparticles/shape-line/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-line-npm-3.9.0-2dc20906f5-10c0.zip/node_modules/@tsparticles/shape-line/",\
         "packageDependencies": [\
-          ["@tsparticles/shape-line", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/shape-line", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/shape-polygon", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-polygon-npm-3.8.1-2ac92ba543-10c0.zip/node_modules/@tsparticles/shape-polygon/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-polygon-npm-3.9.0-5a324bfc6f-10c0.zip/node_modules/@tsparticles/shape-polygon/",\
         "packageDependencies": [\
-          ["@tsparticles/shape-polygon", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/shape-polygon", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/shape-square", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-square-npm-3.8.1-9746dffff0-10c0.zip/node_modules/@tsparticles/shape-square/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-square-npm-3.9.0-2752e0204d-10c0.zip/node_modules/@tsparticles/shape-square/",\
         "packageDependencies": [\
-          ["@tsparticles/shape-square", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/shape-square", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/shape-star", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-star-npm-3.8.1-0f76f0995a-10c0.zip/node_modules/@tsparticles/shape-star/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-star-npm-3.9.0-a6e6ec9d66-10c0.zip/node_modules/@tsparticles/shape-star/",\
         "packageDependencies": [\
-          ["@tsparticles/shape-star", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/shape-star", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/shape-text", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-text-npm-3.8.1-209fd97d09-10c0.zip/node_modules/@tsparticles/shape-text/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-shape-text-npm-3.9.0-e008f6f0f4-10c0.zip/node_modules/@tsparticles/shape-text/",\
         "packageDependencies": [\
-          ["@tsparticles/shape-text", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/shape-text", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/slim", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-slim-npm-3.8.1-e746cff367-10c0.zip/node_modules/@tsparticles/slim/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-slim-npm-3.9.0-8d0efdfbf8-10c0.zip/node_modules/@tsparticles/slim/",\
         "packageDependencies": [\
-          ["@tsparticles/slim", "npm:3.8.1"],\
-          ["@tsparticles/basic", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-attract", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-bounce", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-bubble", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-connect", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-grab", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-pause", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-push", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-remove", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-repulse", "npm:3.8.1"],\
-          ["@tsparticles/interaction-external-slow", "npm:3.8.1"],\
-          ["@tsparticles/interaction-particles-attract", "npm:3.8.1"],\
-          ["@tsparticles/interaction-particles-collisions", "npm:3.8.1"],\
-          ["@tsparticles/interaction-particles-links", "npm:3.8.1"],\
-          ["@tsparticles/move-parallax", "npm:3.8.1"],\
-          ["@tsparticles/plugin-easing-quad", "npm:3.8.1"],\
-          ["@tsparticles/shape-emoji", "npm:3.8.1"],\
-          ["@tsparticles/shape-image", "npm:3.8.1"],\
-          ["@tsparticles/shape-line", "npm:3.8.1"],\
-          ["@tsparticles/shape-polygon", "npm:3.8.1"],\
-          ["@tsparticles/shape-square", "npm:3.8.1"],\
-          ["@tsparticles/shape-star", "npm:3.8.1"],\
-          ["@tsparticles/updater-life", "npm:3.8.1"],\
-          ["@tsparticles/updater-rotate", "npm:3.8.1"],\
-          ["@tsparticles/updater-stroke-color", "npm:3.8.1"]\
+          ["@tsparticles/slim", "npm:3.9.0"],\
+          ["@tsparticles/basic", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-attract", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-bounce", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-bubble", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-connect", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-grab", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-pause", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-push", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-remove", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-repulse", "npm:3.9.0"],\
+          ["@tsparticles/interaction-external-slow", "npm:3.9.0"],\
+          ["@tsparticles/interaction-particles-attract", "npm:3.9.0"],\
+          ["@tsparticles/interaction-particles-collisions", "npm:3.9.0"],\
+          ["@tsparticles/interaction-particles-links", "npm:3.9.0"],\
+          ["@tsparticles/move-parallax", "npm:3.9.0"],\
+          ["@tsparticles/plugin-easing-quad", "npm:3.9.0"],\
+          ["@tsparticles/shape-emoji", "npm:3.9.0"],\
+          ["@tsparticles/shape-image", "npm:3.9.0"],\
+          ["@tsparticles/shape-line", "npm:3.9.0"],\
+          ["@tsparticles/shape-polygon", "npm:3.9.0"],\
+          ["@tsparticles/shape-square", "npm:3.9.0"],\
+          ["@tsparticles/shape-star", "npm:3.9.0"],\
+          ["@tsparticles/updater-life", "npm:3.9.0"],\
+          ["@tsparticles/updater-rotate", "npm:3.9.0"],\
+          ["@tsparticles/updater-stroke-color", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-color", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-color-npm-3.8.1-3942277e18-10c0.zip/node_modules/@tsparticles/updater-color/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-color-npm-3.9.0-cbce8189f8-10c0.zip/node_modules/@tsparticles/updater-color/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-color", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-color", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-destroy", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-destroy-npm-3.8.1-9552210f6b-10c0.zip/node_modules/@tsparticles/updater-destroy/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-destroy-npm-3.9.0-c24af9d077-10c0.zip/node_modules/@tsparticles/updater-destroy/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-destroy", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-destroy", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-life", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-life-npm-3.8.1-f54c65aedf-10c0.zip/node_modules/@tsparticles/updater-life/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-life-npm-3.9.0-8a6fab28e9-10c0.zip/node_modules/@tsparticles/updater-life/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-life", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-life", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-opacity", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-opacity-npm-3.8.1-68ca8a2e82-10c0.zip/node_modules/@tsparticles/updater-opacity/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-opacity-npm-3.9.0-5e92872317-10c0.zip/node_modules/@tsparticles/updater-opacity/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-opacity", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-opacity", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-out-modes", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-out-modes-npm-3.8.1-caeb104849-10c0.zip/node_modules/@tsparticles/updater-out-modes/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-out-modes-npm-3.9.0-db27460261-10c0.zip/node_modules/@tsparticles/updater-out-modes/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-out-modes", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-out-modes", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-roll", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-roll-npm-3.8.1-ec11ae3596-10c0.zip/node_modules/@tsparticles/updater-roll/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-roll-npm-3.9.0-4b2b5911e8-10c0.zip/node_modules/@tsparticles/updater-roll/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-roll", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-roll", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-rotate", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-rotate-npm-3.8.1-ce618ad0e2-10c0.zip/node_modules/@tsparticles/updater-rotate/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-rotate-npm-3.9.0-3c9ae07202-10c0.zip/node_modules/@tsparticles/updater-rotate/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-rotate", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-rotate", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-size", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-size-npm-3.8.1-1922cf88e0-10c0.zip/node_modules/@tsparticles/updater-size/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-size-npm-3.9.0-8d3c2ce505-10c0.zip/node_modules/@tsparticles/updater-size/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-size", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-size", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-stroke-color", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-stroke-color-npm-3.8.1-9d0d7130ab-10c0.zip/node_modules/@tsparticles/updater-stroke-color/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-stroke-color-npm-3.9.0-5aa9459e6e-10c0.zip/node_modules/@tsparticles/updater-stroke-color/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-stroke-color", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-stroke-color", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-tilt", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-tilt-npm-3.8.1-063fa2adb7-10c0.zip/node_modules/@tsparticles/updater-tilt/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-tilt-npm-3.9.0-c73448825a-10c0.zip/node_modules/@tsparticles/updater-tilt/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-tilt", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-tilt", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-twinkle", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-twinkle-npm-3.8.1-f81bc1c939-10c0.zip/node_modules/@tsparticles/updater-twinkle/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-twinkle-npm-3.9.0-003bf04e98-10c0.zip/node_modules/@tsparticles/updater-twinkle/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-twinkle", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-twinkle", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@tsparticles/updater-wobble", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-wobble-npm-3.8.1-21859f3481-10c0.zip/node_modules/@tsparticles/updater-wobble/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@tsparticles-updater-wobble-npm-3.9.0-3b88a4f260-10c0.zip/node_modules/@tsparticles/updater-wobble/",\
         "packageDependencies": [\
-          ["@tsparticles/updater-wobble", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"]\
+          ["@tsparticles/updater-wobble", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6982,7 +6989,7 @@ const RAW_RUNTIME_STATE =
           ["sass", "npm:1.89.2"],\
           ["sharp", "npm:0.34.3"],\
           ["tailwindcss", "npm:3.4.17"],\
-          ["tsparticles", "npm:3.8.1"],\
+          ["tsparticles", "npm:3.9.0"],\
           ["tsparticles-preset-triangles", "npm:2.12.0"],\
           ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.101.0"]\
         ],\
@@ -20750,23 +20757,23 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tsparticles", [\
-      ["npm:3.8.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/tsparticles-npm-3.8.1-683d12c823-10c0.zip/node_modules/tsparticles/",\
+      ["npm:3.9.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/tsparticles-npm-3.9.0-3e34b6c310-10c0.zip/node_modules/tsparticles/",\
         "packageDependencies": [\
-          ["tsparticles", "npm:3.8.1"],\
-          ["@tsparticles/engine", "npm:3.8.1"],\
+          ["tsparticles", "npm:3.9.0"],\
+          ["@tsparticles/engine", "npm:3.9.0"],\
           ["@tsparticles/interaction-external-trail", "npm:3.8.1"],\
-          ["@tsparticles/plugin-absorbers", "npm:3.8.1"],\
-          ["@tsparticles/plugin-emitters", "npm:3.8.1"],\
-          ["@tsparticles/plugin-emitters-shape-circle", "npm:3.8.1"],\
-          ["@tsparticles/plugin-emitters-shape-square", "npm:3.8.1"],\
-          ["@tsparticles/shape-text", "npm:3.8.1"],\
-          ["@tsparticles/slim", "npm:3.8.1"],\
-          ["@tsparticles/updater-destroy", "npm:3.8.1"],\
-          ["@tsparticles/updater-roll", "npm:3.8.1"],\
-          ["@tsparticles/updater-tilt", "npm:3.8.1"],\
-          ["@tsparticles/updater-twinkle", "npm:3.8.1"],\
-          ["@tsparticles/updater-wobble", "npm:3.8.1"]\
+          ["@tsparticles/plugin-absorbers", "npm:3.9.0"],\
+          ["@tsparticles/plugin-emitters", "npm:3.9.0"],\
+          ["@tsparticles/plugin-emitters-shape-circle", "npm:3.9.0"],\
+          ["@tsparticles/plugin-emitters-shape-square", "npm:3.9.0"],\
+          ["@tsparticles/shape-text", "npm:3.9.0"],\
+          ["@tsparticles/slim", "npm:3.9.0"],\
+          ["@tsparticles/updater-destroy", "npm:3.9.0"],\
+          ["@tsparticles/updater-roll", "npm:3.9.0"],\
+          ["@tsparticles/updater-tilt", "npm:3.9.0"],\
+          ["@tsparticles/updater-twinkle", "npm:3.9.0"],\
+          ["@tsparticles/updater-wobble", "npm:3.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
