@@ -4310,7 +4310,7 @@ const RAW_RUNTIME_STATE =
           ["etag", "npm:1.8.1"],\
           ["fs-extra", "npm:10.1.0"],\
           ["linkfs", "npm:2.1.0"],\
-          ["multer", "npm:2.0.1"],\
+          ["multer", "npm:2.0.2"],\
           ["node-fetch", "virtual:021a300b61b0fdf6410317607fb40d4e250ef547740c20c5b5c0064109c815c4ac1833a9feb57823a8c94be2918e5142e09037218b5412c8b47996f76c0d1a04#npm:2.7.0"],\
           ["node-stream-zip", "npm:1.15.0"],\
           ["pathe", "npm:0.3.9"],\
@@ -11911,7 +11911,7 @@ const RAW_RUNTIME_STATE =
           ["mini-css-extract-plugin", "virtual:fb74cd734f3452bfd32d61460c2929d6e5645149132e2b09c1a1095232d5ca7ff5e2bac6c1e02c2ad27895225986dbf344f6d26c869d93519e717dec18cf1019#npm:1.6.2"],\
           ["mitt", "npm:1.2.0"],\
           ["moment", "npm:2.30.1"],\
-          ["multer", "npm:2.0.1"],\
+          ["multer", "npm:2.0.2"],\
           ["node-fetch", "virtual:021a300b61b0fdf6410317607fb40d4e250ef547740c20c5b5c0064109c815c4ac1833a9feb57823a8c94be2918e5142e09037218b5412c8b47996f76c0d1a04#npm:2.7.0"],\
           ["node-html-parser", "npm:5.4.2"],\
           ["normalize-path", "npm:3.0.0"],\
@@ -15684,10 +15684,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["multer", [\
-      ["npm:2.0.1", {\
-        "packageLocation": "../../.yarn/berry/cache/multer-npm-2.0.1-6192e70742-10c0.zip/node_modules/multer/",\
+      ["npm:2.0.2", {\
+        "packageLocation": "../../.yarn/berry/cache/multer-npm-2.0.2-8feabf7be2-10c0.zip/node_modules/multer/",\
         "packageDependencies": [\
-          ["multer", "npm:2.0.1"],\
+          ["multer", "npm:2.0.2"],\
           ["append-field", "npm:1.0.0"],\
           ["busboy", "npm:1.6.0"],\
           ["concat-stream", "npm:2.0.0"],\
