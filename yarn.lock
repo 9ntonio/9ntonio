@@ -8926,8 +8926,8 @@ __metadata:
   linkType: hard
 
 "gatsby-adapter-netlify@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "gatsby-adapter-netlify@npm:1.2.0"
+  version: 1.2.1
+  resolution: "gatsby-adapter-netlify@npm:1.2.1"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     "@netlify/cache-utils": "npm:^5.1.5"
@@ -8939,7 +8939,7 @@ __metadata:
     gatsby-core-utils: "npm:^4.14.0"
   peerDependencies:
     gatsby: ^5.10.0-alpha
-  checksum: 10c0/c18775c65a5cb4ba5784dd5a7a247a92902c92e18d3398f91f5355364fb0fbd871c08ccda8fba0e5953c364fab899d699b76e43047841678027fba3ffc1de55a
+  checksum: 10c0/19d9612f897964df8da5c263c8dd45e13089e81d9daa25176a53d3f81412730f7aea107f3025fb8a44f3cb639b0ca52e4d672a9773fb80d1d5f921a3495ea7d9
   languageName: node
   linkType: hard
 
