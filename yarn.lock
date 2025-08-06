@@ -10365,8 +10365,8 @@ __metadata:
   linkType: hard
 
 "ipx@npm:^1.3.1":
-  version: 1.3.1
-  resolution: "ipx@npm:1.3.1"
+  version: 1.3.2
+  resolution: "ipx@npm:1.3.2"
   dependencies:
     "@fastify/accept-negotiator": "npm:^1.1.0"
     consola: "npm:^3.2.3"
@@ -10382,7 +10382,7 @@ __metadata:
     xss: "npm:^1.0.14"
   bin:
     ipx: bin/ipx.mjs
-  checksum: 10c0/2a259056e806bfeeef7b70084b2b32c46cb80cfc33fc7cb7cb01e4b8b5e39f4568202f14fc3185086ccf271668a708f0fa319a80790ebe55b7ea7f1ff41f68a5
+  checksum: 10c0/f4b0f94bc8a6df00fec93a61163681f449b374ed7959f23db4f9c7424d9272a80e40ef06780054215e0789d3b59e195f6977bc32eb14cf321e7a8e56636671bf
   languageName: node
   linkType: hard
 
