@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
-import { useEffect } from "react";
 
+/**
+ * SEO component using Gatsby's Head API for proper SSR and hydration
+ * This approach is more performant and follows React best practices
+ */
 function Seo({ description = "", meta = [], Sitetitle = "Antonio Almena" }) {
 	const { site } = useStaticQuery(graphql`
 		query {
@@ -22,61 +25,48 @@ function Seo({ description = "", meta = [], Sitetitle = "Antonio Almena" }) {
 	const siteUrl = site.siteMetadata?.siteUrl || "";
 	const imageSEO = site.siteMetadata?.image || "/social.jpg";
 	const author = site.siteMetadata?.author || "@9ntonio";
+	const fullTitle = `${Sitetitle} | ${siteTitle}`;
 
-	useEffect(() => {
-		if (typeof document !== "undefined") {
-			// Set document title
-			document.title = `${Sitetitle} | ${siteTitle}`;
+	// Default meta tags with proper structure
+	const defaultMeta = [
+		{ name: "description", content: metaDescription },
+		{ name: "keywords", content: "software development, engineering, AI, design systems, front end development, web development, design technology" },
+		{ name: "robots", content: "index, follow" },
+		{ name: "viewport", content: "width=device-width, initial-scale=1" },
+		{ property: "og:type", content: "website" },
+		{ property: "og:url", content: siteUrl },
+		{ property: "og:title", content: fullTitle },
+		{ property: "og:description", content: metaDescription },
+		{ property: "og:image", content: `${siteUrl}${imageSEO}` },
+		{ name: "twitter:card", content: "summary_large_image" },
+		{ name: "twitter:creator", content: author },
+		{ name: "twitter:title", content: fullTitle },
+		{ name: "twitter:description", content: metaDescription },
+		{ name: "twitter:image", content: `${siteUrl}${imageSEO}` },
+	];
 
-			// Set HTML lang attribute
-			document.documentElement.lang = "en";
+	// Merge default meta with user-provided meta
+	const allMeta = [...defaultMeta, ...(Array.isArray(meta) ? meta : [])];
 
-			// Favicon is handled in HTML template
+	return (
+		<>
+			<title>{fullTitle}</title>
+			<html lang="en" />
+			{allMeta.map((tag, index) => {
+				if (!tag || !tag.content) return null;
 
-			// Clear existing meta tags that we manage
-			const existingMeta = document.querySelectorAll('meta[data-seo="true"]');
-			existingMeta.forEach((meta) => meta.remove());
+				const key = `${tag.name || tag.property}-${index}`;
 
-			// Create and append new meta tags
-			const metaTags = [
-				{ name: "description", content: metaDescription },
-				{ name: "keywords", content: "software development, engineering, AI, design systems, front end development, web development, design technology" },
-				{ name: "robots", content: "index, follow" },
-				{ name: "viewport", content: "width=device-width, initial-scale=1" },
-				{ property: "og:type", content: "website" },
-				{ property: "og:url", content: siteUrl },
-				{ property: "og:title", content: `${Sitetitle} | ${siteTitle}` },
-				{ property: "og:description", content: metaDescription },
-				{ property: "og:image", content: `${siteUrl}${imageSEO}` },
-				{ name: "twitter:card", content: "summary_large_image" },
-				{ name: "twitter:creator", content: author },
-				{ name: "twitter:title", content: `${Sitetitle} | ${siteTitle}` },
-				{ name: "twitter:description", content: metaDescription },
-				{ name: "twitter:image", content: `${siteUrl}${imageSEO}` },
-				// Add user-provided meta tags
-				...(Array.isArray(meta) ? meta : []),
-			];
-
-			metaTags.forEach((tag) => {
-				if (tag && tag.content) {
-					const metaElement = document.createElement("meta");
-					metaElement.setAttribute("data-seo", "true");
-
-					if (tag.name) {
-						metaElement.setAttribute("name", tag.name);
-					} else if (tag.property) {
-						metaElement.setAttribute("property", tag.property);
-					}
-
-					metaElement.setAttribute("content", tag.content);
-					document.head.appendChild(metaElement);
+				if (tag.name) {
+					return <meta key={key} name={tag.name} content={tag.content} />;
+				} else if (tag.property) {
+					return <meta key={key} property={tag.property} content={tag.content} />;
 				}
-			});
-		}
-	}, [description, Sitetitle, meta, metaDescription, siteTitle, siteUrl, imageSEO, author]);
 
-	// Return null since we're managing the head directly
-	return null;
+				return null;
+			})}
+		</>
+	);
 }
 
 Seo.propTypes = {

@@ -89,6 +89,5 @@ module.exports = {
 		FAST_DEV: true,
 		PRESERVE_FILE_DOWNLOAD_CACHE: true,
 		PARALLEL_SOURCING: true,
-		FAST_REFRESH: true,
 	},
 };

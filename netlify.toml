@@ -5,6 +5,7 @@ publish = "public"
 [build.environment]
 NODE_VERSION = "18.17.0"
 GATSBY_CPU_COUNT = "2"
+GATSBY_CONTINUE_BUILD_ON_MISSING_ADAPTER = "true"
 
 [[plugins]]
 package = "@netlify/plugin-gatsby"
