@@ -6,135 +6,21 @@ publish = "public"
 NODE_VERSION = "18.17.0"
 GATSBY_CPU_COUNT = "2"
 GATSBY_CONTINUE_BUILD_ON_MISSING_ADAPTER = "true"
-NETLIFY_CLEAR_CACHE = "true"
 
-# Asset optimization settings
+# Disable processing to prevent conflicts with Gatsby's own optimization
 [build.processing]
-skip_processing = false
-
-[build.processing.css]
-bundle = true
-minify = true
-
-[build.processing.js]
-bundle = true
-minify = true
-
-[build.processing.html]
-pretty_urls = true
-
-[build.processing.images]
-compress = true
+skip_processing = true
 
 [[plugins]]
 package = "@netlify/plugin-gatsby"
 
-# Enable additional optimizations
-[context.production]
-command = "yarn build"
-
-[context.production.environment]
-GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES = "true"
-GATSBY_CPU_COUNT = "2"
-
-# Optimized caching headers for different asset types
-[[headers]]
-for = "/*.js"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-Content-Encoding = "br, gzip"
-
-[[headers]]
-for = "/*.css"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-Content-Encoding = "br, gzip"
-
-[[headers]]
-for = "/*.woff2"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/*.webp"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/*.avif"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/*.jpg"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/*.png"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/*.svg"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-# Handle assets files with proper caching
-[[headers]]
-for = "/assets/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/unknown-pleasures/assets/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-# HTML files - shorter cache for content updates
-[[headers]]
-for = "/*.html"
-[headers.values]
-Cache-Control = "public, max-age=0, must-revalidate"
-
-# Service worker
-[[headers]]
-for = "/sw.js"
-[headers.values]
-Cache-Control = "public, max-age=0, must-revalidate"
-
-# Robots.txt
-[[headers]]
-for = "/robots.txt"
-[headers.values]
-Content-Type = "text/plain"
-Cache-Control = "public, max-age=3600"
-
-# Sitemap files
-[[headers]]
-for = "/sitemap*.xml"
-[headers.values]
-Content-Type = "application/xml"
-Cache-Control = "public, max-age=3600"
-
-# Security and performance headers
+# Basic security headers only
 [[headers]]
 for = "/*"
 [headers.values]
 X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
-Referrer-Policy = "strict-origin-when-cross-origin"
-Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-# Resource hints for better performance
-Link = '''</static/logo-2.svg>; rel=preload; as=image,
-</static/gusto.webp>; rel=preload; as=image,
-</favicon.png>; rel=preload; as=image,
-<https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2>; rel=preload; as=font; type=font/woff2; crossorigin,
-<https://fonts.gstatic.com/s/fredoka/v14/X7nO4R8wZKCVl-PGzj9pGlOqpKkFcw.woff2>; rel=preload; as=font; type=font/woff2; crossorigin,
-<https://fonts.gstatic.com>; rel=preconnect; crossorigin,
-<https://fonts.googleapis.com>; rel=dns-prefetch,
-<https://www.google-analytics.com>; rel=dns-prefetch'''
 
 # Important: Ensure proper routing for unknown-pleasures section and its assets
 [[redirects]]
