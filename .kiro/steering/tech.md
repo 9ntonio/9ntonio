@@ -41,7 +41,8 @@
 ## Deployment & Hosting
 
 - **Netlify**: Static hosting with build optimization
-- **Netlify Plugin Gatsby**: Gatsby-specific optimizations
+- **Gatsby Adapter Netlify**: Official Gatsby 5+ adapter for optimized deployments
+- **Netlify Plugin Gatsby**: Legacy plugin for additional optimizations (transitional)
 - **PWA Manifest**: Web App Manifest for installable app experience
 - **Service Worker**: Basic caching strategy
 

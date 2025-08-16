@@ -75,7 +75,7 @@ This portfolio demonstrates technical expertise through both content and impleme
 ### Deployment & Hosting
 
 - **Netlify**: Static hosting with build optimization
-- **Netlify Plugin Gatsby**: Gatsby-specific optimizations
+- **Gatsby Adapter Netlify**: Official Gatsby 5+ adapter for optimized Netlify deployments with datastore engine function support
 - **PWA Manifest**: Web App Manifest for installable app experience
 - **Service Worker**: Basic caching strategy
 
@@ -340,7 +340,7 @@ The project uses a highly optimized Terser configuration achieving **83.7% JavaS
 
 ## 🔧 Configuration Files
 
-- **gatsby-config.js**: Main Gatsby configuration with plugins and PWA manifest
+- **gatsby-config.js**: Main Gatsby configuration with Netlify adapter, plugins, and PWA manifest
 - **gatsby-node.js**: Build-time logic, webpack config, file copying
 - **gatsby-browser.js**: Browser-side Gatsby APIs
 - **tailwind.config.js**: Tailwind CSS configuration
@@ -368,17 +368,44 @@ The `analyze-bundle.js` script provides:
 
 ## 🚀 Deployment
 
+### Gatsby 5 Adapter Configuration
+
+The project uses the official Gatsby 5 adapter for optimized Netlify deployments:
+
+```javascript
+// gatsby-config.js
+module.exports = {
+  adapter: require("gatsby-adapter-netlify").default({
+    excludeDatastoreFromEngineFunction: false,
+  }),
+  // ... rest of configuration
+};
+```
+
+**Benefits of Gatsby Adapter Netlify:**
+
+- **Native Integration**: Purpose-built for Netlify's infrastructure
+- **Optimized Builds**: Enhanced build performance and caching
+- **Edge Functions**: Support for Netlify Edge Functions when needed
+- **Datastore Integration**: Configurable datastore engine function support
+- **Automatic Configuration**: Handles Netlify-specific optimizations automatically
+- **Future-Proof**: Official Gatsby 5+ deployment strategy
+
+**Configuration Options:**
+- `excludeDatastoreFromEngineFunction: false` - Enables datastore integration with Netlify's engine functions for enhanced performance
+
 ### Netlify Configuration
 
-- Automatic deployments from main branch
-- Build optimization with Gatsby plugin
-- Environment variables configured
-- Custom headers and redirects
+- **Gatsby Adapter**: Official `gatsby-adapter-netlify` for Gatsby 5+ compatibility
+- **Automatic Deployments**: From main branch with optimized build process
+- **Build Optimization**: Native Netlify integration with enhanced performance
+- **Environment Variables**: Configured for production deployment
+- **Custom Headers**: Optimized caching and security headers
 
 ### Build Process
 
 1. **Pre-build**: Copy unknown-pleasures static files
-2. **Build**: Gatsby build with CPU limit (2 cores)
+2. **Build**: Gatsby build with Netlify adapter and CPU limit (2 cores)
 3. **Post-build**: Verify file copying and run bundle analysis
 4. **Analysis**: Generate reports and metrics
 

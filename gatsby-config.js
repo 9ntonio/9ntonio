@@ -1,4 +1,7 @@
 module.exports = {
+	adapter: require("gatsby-adapter-netlify").default({
+		excludeDatastoreFromEngineFunction: false,
+	}),
 	siteMetadata: {
 		title: `Design Technologist`,
 		description: `Antonio Almena`,
