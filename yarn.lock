@@ -4745,6 +4745,7 @@ __metadata:
     gatsby-plugin-google-fonts: "npm:^1.0.1"
     gatsby-plugin-gtag: "npm:^1.0.13"
     gatsby-plugin-image: "npm:^3.12.3"
+    gatsby-plugin-manifest: "npm:^5.14.0"
     gatsby-plugin-minify: "npm:^0.5.0"
     gatsby-plugin-netlify: "npm:^5.1.1"
     gatsby-plugin-postcss: "npm:^6.13.0"
@@ -9160,6 +9161,21 @@ __metadata:
     gatsby-source-filesystem:
       optional: true
   checksum: 10c0/2e50a95a196694a47a50ce5883c4569da0a96ce5024c2a7d5f037deb487a01658ce9abdca3a4490edc7407418760d1871de814b4c530f8decb2b1d1e04ff5ed0
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-manifest@npm:^5.14.0":
+  version: 5.14.0
+  resolution: "gatsby-plugin-manifest@npm:5.14.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.20.13"
+    gatsby-core-utils: "npm:^4.14.0"
+    gatsby-plugin-utils: "npm:^4.14.0"
+    semver: "npm:^7.5.3"
+    sharp: "npm:^0.32.6"
+  peerDependencies:
+    gatsby: ^5.0.0-next
+  checksum: 10c0/0e9665ee93e62899c6db39796cbb1656af2c4a7feb2ff2684dc6dd80e8e9d723e4e68c8a995c31595a043fcb580cd268fec87ff5d8feee35347d83fe91ff1379
   languageName: node
   linkType: hard
 

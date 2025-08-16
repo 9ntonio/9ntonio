@@ -80,6 +80,7 @@ The Antonio Almena Portfolio is a high-performance personal portfolio website sh
 │   ├── components/         # Reusable React components
 │   │   ├── Seo.js         # SEO/meta tags component
 │   │   ├── FontAwesome.js # Lazy-loaded icon component
+│   │   ├── VideoModal.js  # Accessible video modal component
 │   │   ├── PerformanceMonitor.js  # Dev performance tracking
 │   │   └── PreloadResources.js    # Resource hints component
 │   ├── pages/             # Page components (auto-routed by Gatsby)

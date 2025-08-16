@@ -27,42 +27,29 @@
 		@apply px-6 md:px-0 mx-auto;
 	}
 
-	.player-wrapper {
-		position: relative;
-		padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
-		@apply mr-6;
-	}
 
-	.react-player {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
 
 	.circle-container {
-		@apply w-[46px] h-[46px] bg-secondary rounded-full  mr-4 mt-0 md:mt-6;
+		@apply w-[46px] h-[46px] bg-secondary rounded-full mr-4 mt-0 md:mt-6 flex items-center justify-center;
 	}
 
 	.circle-container:hover {
 		@apply cursor-pointer bg-primary;
 	}
 
-	.circle-container > a > .icon:hover {
+	/* Target the OutboundLink component */
+	.circle-container > a {
+		@apply flex items-center justify-center w-full h-full rounded-full;
+	}
+
+	/* Target the FontAwesome icons */
+	.circle-container svg {
+		@apply text-primary;
+	}
+
+	.circle-container:hover svg {
 		@apply text-secondary;
 	}
 
-	.circle-container > a > .linkedin,
-	.circle-container > a > .blog {
-		@apply relative left-[10px] top-[7px] text-primary;
-	}
 
-	.circle-container > a > .github {
-		@apply relative left-[8px] top-[7px] text-primary;
-	}
-
-	.circle-container > a > .linkedin:hover,
-	.circle-container > a > .blog:hover,
-	.circle-container > a > .github:hover {
-		@apply text-secondary;
-	}
 }

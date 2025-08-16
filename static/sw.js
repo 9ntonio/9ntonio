@@ -1,4 +1,4 @@
-const CACHE_NAME = "antonio-almena-v2";
+const CACHE_NAME = "antonio-almena-v5";
 const urlsToCache = ["/", "/logo-2.svg", "/google.webp", "/vue.webp", "/unknown-pleasures.webp"];
 
 self.addEventListener("install", (event) => {

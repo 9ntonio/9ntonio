@@ -14,12 +14,14 @@ This portfolio demonstrates technical expertise through both content and impleme
 
 - **Interactive Particle Background**: Uses tsparticles with triangles preset for visual appeal
 - **Performance Optimized**: Lighthouse score optimized from 64 to 90+ through strategic lazy loading and code splitting
+- **PWA Ready**: Web App Manifest enables installation as a native-like app experience
 - **Accessibility Compliant**: WCAG 2.1 AA compliant with comprehensive aria-labels and screen reader support
 - **Error Handling**: Comprehensive error boundaries and direct DOM SEO management with favicon handling for robust user experience
 - **Favicon Management**: Dual-layer favicon system with static HTML fallbacks and dynamic JavaScript management
+- **Video Modal System**: Interactive video thumbnails with play button overlays trigger accessible modal component for embedded video playback with keyboard navigation and backdrop controls
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
 - **Unknown Pleasures Project**: Special interactive visualization inspired by Joy Division's album cover
-- **Video Portfolio**: Embedded Vimeo showcases of major projects (Gusto, Google Store, PlayStation Vue)
+- **Video Portfolio**: Interactive video thumbnails with modal playback for major projects (Gusto with VideoModal using StaticImage, Google Store, PlayStation Vue with external links)
 
 ### Notable Projects Featured
 
@@ -35,6 +37,7 @@ This portfolio demonstrates technical expertise through both content and impleme
 - **Gatsby 5.14.1**: Static site generator with React
 - **React 18.3.1**: UI library with hooks and Suspense
 - **Node.js 18.17.0**: Runtime environment
+- **PWA Support**: Web App Manifest for installable app experience
 
 ### Styling & Design
 
@@ -70,6 +73,7 @@ This portfolio demonstrates technical expertise through both content and impleme
 
 - **Netlify**: Static hosting with build optimization
 - **Netlify Plugin Gatsby**: Gatsby-specific optimizations
+- **PWA Manifest**: Web App Manifest for installable app experience
 - **Service Worker**: Basic caching strategy
 
 ## 🚀 Quick Start
@@ -151,6 +155,7 @@ yarn verify-build            # Verify build integrity
 │   │   ├── Seo.js         # SEO/meta tags component with dynamic favicon management
 │   │   ├── FontAwesome.js # Lazy-loaded icon component
 │   │   ├── ErrorBoundary.js # Error handling and recovery
+│   │   ├── VideoModal.js  # Accessible video modal with keyboard navigation
 │   │   ├── PerformanceMonitor.js  # Dev performance tracking
 │   │   ├── LayoutStabilityMonitor.js  # CLS and LCP monitoring
 │   │   └── PreloadResources.js    # Resource hints component
@@ -202,6 +207,25 @@ This portfolio has been optimized for maximum performance:
     - ReactPlayer
 - **Better Caching**: Users only re-download changed chunks
 
+### Component Implementation
+
+- **Interactive Video Thumbnails**: Gusto project uses StaticImage with local asset and VideoModal for embedded playback
+- **Enhanced User Interface**: Play button overlay with hover effects and smooth transitions
+- **Consistent Image Optimization**: All project showcases use Gatsby's StaticImage with WebP/AVIF formats
+- **Modal Integration**: VideoModal component provides accessible, keyboard-navigable video playback
+
+### Video Modal Integration Strategy
+
+The Gusto project section now uses an interactive video thumbnail with modal playback:
+
+- **Enhanced User Experience**: Video thumbnail with play button overlay triggers modal playback
+- **Professional Presentation**: Polished interface with hover effects and smooth transitions
+- **Accessibility**: Proper aria-labels and keyboard navigation support
+- **Performance**: Optimized thumbnail loading with modal-based video playback
+- **Visual Appeal**: Play button overlay with hover animations for clear user interaction
+
+**Thumbnail Implementation**: Uses Gatsby's StaticImage component with `static/gusto.webp` for optimized loading with blur-up placeholder and responsive image generation.
+
 ### Advanced JavaScript Minification
 
 The project uses a highly optimized Terser configuration achieving **83.7% JavaScript compression**:
@@ -227,9 +251,18 @@ The project uses a highly optimized Terser configuration achieving **83.7% JavaS
 - **Progressive Enhancement**: Works without JavaScript, enhanced with client-side management
 - **Browser Compatibility**: Multiple formats (ICO, PNG) for broad browser support
 
+### Progressive Web App (PWA) Features
+
+- **Web App Manifest**: Enables installation as a native-like app on mobile and desktop
+- **App Identity**: Configured with proper name, short name, and branding colors
+- **Theme Integration**: Uses project color scheme (#00474f background, #b5f5ec theme color)
+- **Minimal UI Display**: Optimized for app-like experience when installed
+- **Icon Support**: Uses favicon.ico as the app icon for consistent branding
+
 ### Layout Shift Prevention
 
 - **Explicit Dimensions**: All images and containers have stable dimensions using aspect-ratio CSS
+- **Consistent Aspect Ratios**: All project showcase sections use uniform 3:2 aspect ratio for visual harmony
 - **Stable Loading States**: Fallback components match exact dimensions of loaded content
 - **Font Loading Optimization**: Display swap strategy with fallback fonts to prevent FOIT
 - **Real-time Monitoring**: Development tools track and log layout shifts for debugging
@@ -240,9 +273,10 @@ The project uses a highly optimized Terser configuration achieving **83.7% JavaS
 ### WCAG 2.1 AA Compliance
 
 - **Screen Reader Support**: All links have descriptive aria-labels
-- **Keyboard Navigation**: Full keyboard accessibility
+- **Keyboard Navigation**: Full keyboard accessibility including Escape key modal dismissal
 - **Color Contrast**: Meets AA standards throughout
 - **External Link Indicators**: Clear indication of links opening in new tabs
+- **Modal Accessibility**: Proper focus management, backdrop dismissal, and keyboard controls
 - **Error Handling**: Accessible error messages, recovery options, and stable SEO management
 
 ### Implementation Details
@@ -250,7 +284,9 @@ The project uses a highly optimized Terser configuration achieving **83.7% JavaS
 - Comprehensive `aria-label` attributes for all interactive elements
 - `aria-hidden="true"` for decorative icons
 - Semantic HTML structure
-- Focus management and indicators
+- Focus management and indicators in modals
+- Keyboard event handling (Escape key, click outside)
+- Body scroll prevention during modal display
 - Graceful error boundaries with user-friendly messages
 
 ## 🎨 Design System
@@ -276,7 +312,7 @@ The project uses a highly optimized Terser configuration achieving **83.7% JavaS
 
 ## 🔧 Configuration Files
 
-- **gatsby-config.js**: Main Gatsby configuration with plugins
+- **gatsby-config.js**: Main Gatsby configuration with plugins and PWA manifest
 - **gatsby-node.js**: Build-time logic, webpack config, file copying
 - **gatsby-browser.js**: Browser-side Gatsby APIs
 - **tailwind.config.js**: Tailwind CSS configuration
@@ -386,17 +422,24 @@ Read about the AI-assisted development process: [Unknown Pleasures in a Brave Ne
 
 ## 📚 Documentation
 
+- **[MISSING_ASSETS.md](./MISSING_ASSETS.md)**: Required assets for full functionality
 - **[ACCESSIBILITY_GUIDE.md](./ACCESSIBILITY_GUIDE.md)**: Comprehensive accessibility implementation guide
 - **[MINIFICATION_GUIDE.md](./MINIFICATION_GUIDE.md)**: JavaScript minification and optimization details
 - **[TERSER_OPTIMIZATION_GUIDE.md](./TERSER_OPTIMIZATION_GUIDE.md)**: Advanced Terser configuration achieving 83.7% compression
 - **[LAYOUT_SHIFT_GUIDE.md](./LAYOUT_SHIFT_GUIDE.md)**: Cumulative Layout Shift prevention and monitoring
 - **[ERROR_HANDLING_GUIDE.md](./ERROR_HANDLING_GUIDE.md)**: Error boundaries and direct DOM SEO management
+- **[VIDEO_MODAL_IMPLEMENTATION.md](./VIDEO_MODAL_IMPLEMENTATION.md)**: Accessible video modal component with keyboard navigation
+- **[VIDEO_MODAL_INTEGRATION_GUIDE.md](./VIDEO_MODAL_INTEGRATION_GUIDE.md)**: Integration guide for VideoModal component
+- **[VIDEO_THUMBNAIL_IMPLEMENTATION_UPDATE.md](./VIDEO_THUMBNAIL_IMPLEMENTATION_UPDATE.md)**: Interactive video thumbnail with play button overlay implementation
 - **[SEO_OPTIMIZATION_UPDATE.md](./SEO_OPTIMIZATION_UPDATE.md)**: Direct DOM SEO management replacing React Helmet
 - **[FAVICON_MANAGEMENT_UPDATE.md](./FAVICON_MANAGEMENT_UPDATE.md)**: Comprehensive dual-layer favicon management system
 - **[HTML_TEMPLATE_FAVICON_UPDATE.md](./HTML_TEMPLATE_FAVICON_UPDATE.md)**: Static favicon fallbacks in HTML template
+- **[PWA_MANIFEST_UPDATE.md](./PWA_MANIFEST_UPDATE.md)**: Progressive Web App implementation with installable app experience
 - **[PERFORMANCE_OPTIMIZATIONS.md](./PERFORMANCE_OPTIMIZATIONS.md)**: Detailed performance optimization strategies
 - **[SSR_OPTIMIZATION_UPDATE.md](./SSR_OPTIMIZATION_UPDATE.md)**: Latest SSR performance optimization details
 - **[GIT_HOOKS_INTEGRATION_UPDATE.md](./GIT_HOOKS_INTEGRATION_UPDATE.md)**: Git hooks setup with Husky and lint-staged for automated code quality
+- **[ASPECT_RATIO_CONSISTENCY_UPDATE.md](./ASPECT_RATIO_CONSISTENCY_UPDATE.md)**: Aspect ratio standardization for visual consistency
+- **[VIDEO_OPTIMIZATION_UPDATE.md](./VIDEO_OPTIMIZATION_UPDATE.md)**: Video content optimization with StaticImage and external links
 - **[DOCUMENTATION_UPDATES.md](./DOCUMENTATION_UPDATES.md)**: Summary of all documentation improvements
 - **[CLAUDE.md](./CLAUDE.md)**: AI assistant guidelines and project conventions
 

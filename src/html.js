@@ -28,7 +28,7 @@ export default function HTML(props) {
 						.container{max-width:1200px;margin:0 auto;padding:0 1rem}
 						.circle-container{display:inline-flex;align-items:center;justify-content:center;width:3rem;height:3rem;margin:0 .5rem;border-radius:50%;background:rgba(255,255,255,.1);transition:background .3s ease;flex-shrink:0}
 						.circle-container:hover{background:rgba(255,255,255,.2)}
-						.player-wrapper{position:relative;width:100%;aspect-ratio:16/9;min-height:200px;background:#00474f;border-radius:.5rem;overflow:hidden}
+						.player-wrapper{position:relative;width:100%;aspect-ratio:3/2;background:#00474f;border-radius:.5rem;overflow:hidden}
 						.react-player{position:absolute;top:0;left:0;width:100%!important;height:100%!important}
 						img{max-width:100%;height:auto}
 						.loading-placeholder{display:flex;align-items:center;justify-content:center;min-height:inherit;background:rgba(255,255,255,.1);border-radius:inherit}

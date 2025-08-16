@@ -35,8 +35,7 @@
 .player-wrapper {
 	position: relative;
 	width: 100%;
-	aspect-ratio: 16/9;
-	min-height: 200px;
+	aspect-ratio: 3/2;
 	background: #00474f;
 	border-radius: 0.5rem;
 	overflow: hidden;

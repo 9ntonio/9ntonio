@@ -78,7 +78,15 @@ const FontAwesome = React.lazy(() => import("../components/FontAwesome"));
 
 // Layout stability with aspect ratios
 <img width="510" height="83" style={{ aspectRatio: '510/83' }} />
-<div style={{ aspectRatio: '16/9', minHeight: '200px' }}>
+<div className="video-container">
+  <ReactPlayer style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%"
+  }} />
+</div>
 ```
 
 ### **Accessibility Enhancements**
@@ -133,6 +141,7 @@ yarn build:production && yarn serve
 
 - `src/components/FontAwesome.js` - Lazy-loaded icons
 - `src/components/ErrorBoundary.js` - Error handling
+- `src/components/VideoModal.js` - Accessible video modal with keyboard navigation
 - `src/components/LayoutStabilityMonitor.js` - CLS monitoring
 - `src/components/PerformanceMonitor.js` - Performance tracking
 

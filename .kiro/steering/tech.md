@@ -5,6 +5,7 @@
 - **Gatsby 5.14.1**: Static site generator with React
 - **React 18.3.1**: UI library with hooks and Suspense
 - **Node.js 18.17.0**: Runtime environment
+- **PWA Support**: Web App Manifest for installable app experience
 
 ## Styling & Design
 
@@ -40,6 +41,7 @@
 
 - **Netlify**: Static hosting with build optimization
 - **Netlify Plugin Gatsby**: Gatsby-specific optimizations
+- **PWA Manifest**: Web App Manifest for installable app experience
 - **Service Worker**: Basic caching strategy
 
 ## Common Commands
@@ -93,6 +95,7 @@ yarn verify-build            # Verify build integrity
 ## Performance Targets
 
 - **Lighthouse Performance**: 90+
+- **Lighthouse PWA**: Installable and optimized PWA experience
 - **Accessibility**: WCAG 2.1 AA compliance
 - **Bundle Size**: Monitor and optimize large chunks (>100KB)
 - **Core Web Vitals**: Optimized FCP, LCP, CLS

@@ -6,10 +6,10 @@ import PreloadResources from "../components/PreloadResources";
 import PerformanceMonitor from "../components/PerformanceMonitor";
 import LayoutStabilityMonitor from "../components/LayoutStabilityMonitor";
 import ErrorBoundary from "../components/ErrorBoundary";
+import VideoModal from "../components/VideoModal";
 import logo from "../../static/logo-2.svg";
 
 // *Lazy load heavy components only when needed
-const ReactPlayer = React.lazy(() => import("react-player/lazy"));
 const Particles = React.lazy(() => import("react-tsparticles"));
 const FontAwesome = React.lazy(() => import("../components/FontAwesome"));
 
@@ -18,6 +18,7 @@ export default function Home() {
 	const [isParticlesLoaded, setIsParticlesLoaded] = React.useState(false);
 	const [hasError, setHasError] = React.useState(false);
 	const [showParticles, setShowParticles] = React.useState(false);
+	const [isVideoModalOpen, setIsVideoModalOpen] = React.useState(false);
 
 	React.useEffect(() => {
 		// *Ensure we're in the browser environment
@@ -218,28 +219,30 @@ export default function Home() {
 					<div className="container mb-12">
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-1/3 mb-4 md:mb-0">
-								<div className="player-wrapper" style={{ aspectRatio: "16/9", minHeight: "200px" }}>
-									<Suspense
-										fallback={
-											<div className="w-full h-full bg-green-800 rounded-lg animate-pulse flex items-center justify-center" style={{ aspectRatio: "16/9" }}>
-												<div className="text-white text-sm">Loading video...</div>
-											</div>
-										}
+								<div className="mr-6" style={{ aspectRatio: "3/2" }}>
+									<button
+										onClick={() => setIsVideoModalOpen(true)}
+										aria-label="Play Gusto project video"
+										className="relative block w-full h-full overflow-hidden rounded-lg border-none cursor-pointer group"
+										style={{ aspectRatio: "3/2" }}
 									>
-										{isMounted && (
-											<ReactPlayer
-												className="react-player"
-												url="https://vimeo.com/374826636"
-												playing={false}
-												controls
-												muted
-												width="100%"
-												height="100%"
-												light={true}
-												onError={(e) => console.error("Video player error:", e)}
-											/>
-										)}
-									</Suspense>
+										<StaticImage
+											src="../../static/gusto.webp"
+											alt="Gusto project video thumbnail"
+											placeholder="blurred"
+											layout="fullWidth"
+											aspectRatio={3 / 2}
+											formats={["auto", "webp", "avif"]}
+											quality={85}
+											className="transition-transform duration-300 group-hover:scale-105"
+										/>
+										{/* Play Button Overlay */}
+										<div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all duration-300">
+											<div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+												<div className="w-0 h-0 border-l-[16px] border-l-black border-y-[12px] border-y-transparent ml-1"></div>
+											</div>
+										</div>
+									</button>
 								</div>
 							</div>
 
@@ -487,6 +490,13 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
+
+				<VideoModal
+					isOpen={isVideoModalOpen}
+					onClose={() => setIsVideoModalOpen(false)}
+					videoUrl="https://player.vimeo.com/video/374826636"
+					title="Gusto Project Showcase"
+				/>
 			</div>
 		</ErrorBoundary>
 	);

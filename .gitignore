@@ -2,3 +2,13 @@ node_modules
 public
 .DS_Store
 .cache
+*.log
+.env
+.env.local
+.env.production
+.env.development
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~

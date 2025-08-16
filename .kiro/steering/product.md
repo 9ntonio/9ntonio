@@ -8,10 +8,11 @@ A high-performance personal portfolio website showcasing the work and expertise 
 
 - **Interactive Particle Background**: Uses tsparticles with triangles preset for visual appeal
 - **Performance Optimized**: Lighthouse score optimized from 64 to 90+ through strategic lazy loading and code splitting
+- **PWA Ready**: Web App Manifest enables installation as a native-like app experience
 - **Accessibility Compliant**: WCAG 2.1 AA compliant with comprehensive aria-labels and screen reader support
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
 - **Unknown Pleasures Project**: Special interactive visualization inspired by Joy Division's album cover
-- **Video Portfolio**: Embedded Vimeo showcases of major projects (Gusto, Google Store, PlayStation Vue)
+- **Video Portfolio**: Optimized image showcases with external video links for major projects
 
 ## Target Audience
 
@@ -22,7 +23,7 @@ A high-performance personal portfolio website showcasing the work and expertise 
 
 ## Core Value Proposition
 
-Demonstrates technical expertise through both content and implementation - the portfolio itself serves as a working example of modern web development best practices including performance optimization, accessibility, and responsive design.
+Demonstrates technical expertise through both content and implementation - the portfolio itself serves as a working example of modern web development best practices including performance optimization, accessibility, responsive design, and Progressive Web App capabilities.
 
 ## Notable Projects Featured
 

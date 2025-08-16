@@ -122,8 +122,14 @@ splitChunks: {
 />
 
 // Video player with fixed aspect ratio
-<div style={{ aspectRatio: '16/9', minHeight: '200px' }}>
-  <ReactPlayer ... />
+<div className="video-container">
+  <ReactPlayer style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%"
+  }} ... />
 </div>
 ```
 
@@ -172,6 +178,7 @@ useEffect(() => {
 ### **New Components**
 
 - `src/components/FontAwesome.js` - Lazy-loaded icon component
+- `src/components/VideoModal.js` - Accessible video modal with keyboard navigation and backdrop controls
 - `src/components/PreloadResources.js` - Resource hints without Helmet
 - `src/components/PerformanceMonitor.js` - Development performance tracking
 - `src/components/LayoutStabilityMonitor.js` - CLS monitoring

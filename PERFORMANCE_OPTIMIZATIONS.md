@@ -115,6 +115,7 @@ useEffect(() => {
 ### New Files
 
 - `src/components/FontAwesome.js` - Lazy-loaded icon component
+- `src/components/VideoModal.js` - Accessible video modal component
 - `src/components/PreloadResources.js` - Resource hints component
 - `src/components/PerformanceMonitor.js` - Development performance tracking
 - `src/components/LayoutStabilityMonitor.js` - CLS and LCP monitoring

@@ -49,6 +49,18 @@ module.exports = {
 		},
 		`gatsby-transformer-sharp`,
 		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Antonio Almena - Design Technologist`,
+				short_name: `Antonio Almena`,
+				start_url: `/`,
+				background_color: `#00474f`,
+				theme_color: `#b5f5ec`,
+				display: `minimal-ui`,
+				icon: `static/favicon.ico`,
+			},
+		},
+		{
 			resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
 			options: {
 				devMode: false,

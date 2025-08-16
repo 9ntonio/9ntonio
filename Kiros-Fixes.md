@@ -63,6 +63,31 @@ const FontAwesome = React.lazy(() => import("../components/FontAwesome"));
 
 ### **3. Configuration-Driven Asset Optimization**
 
+#### **Video Content Strategy**
+
+**Progressive Enhancement Approach:**
+
+```javascript
+// Before: Embedded iframe (heavy initial load)
+<iframe src="https://player.vimeo.com/video/374826636" />
+
+// After: Optimized image with external link
+<a href="https://vimeo.com/374826636">
+  <StaticImage
+    src="../../static/gusto.webp"
+    aspectRatio={3 / 2}
+    formats={["auto", "webp", "avif"]}
+  />
+</a>
+```
+
+**Why This Strategy?**
+
+- **Immediate Visual Feedback**: StaticImage loads instantly with blur-up effect
+- **User Control**: Video content available on demand
+- **Bundle Reduction**: Eliminated embedded iframe JavaScript
+- **Better Performance**: Improved Core Web Vitals through optimized loading
+
 #### **Gatsby Config Strategy (`gatsby-config.js`)**
 
 **Image Optimization Pipeline:**
@@ -313,6 +338,7 @@ export default function () {
 - **JavaScript Bundle**: 83.7% minification
 - **Layout Shifts**: 4 → 0 (perfect CLS)
 - **Load Time**: ~60% reduction in perceived load time
+- **Video Optimization**: Eliminated embedded iframe for faster initial loading
 
 ### **User Experience**
 
