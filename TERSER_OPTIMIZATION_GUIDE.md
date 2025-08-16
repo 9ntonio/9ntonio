@@ -199,28 +199,28 @@ import React, { useState, useEffect } from "react";
 const FontAwesome = React.lazy(() => import("../components/FontAwesome"));
 
 export default function Home() {
-	const [isMounted, setIsMounted] = useState(false);
-	const [isParticlesLoaded, setIsParticlesLoaded] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [isParticlesLoaded, setIsParticlesLoaded] = useState(false);
 
-	useEffect(() => {
-		console.log("Component mounting...");
-		if (typeof window !== "undefined") {
-			setIsMounted(true);
-			console.log("Window detected, setting mounted state");
-		}
-	}, []);
+  useEffect(() => {
+    console.log("Component mounting...");
+    if (typeof window !== "undefined") {
+      setIsMounted(true);
+      console.log("Window detected, setting mounted state");
+    }
+  }, []);
 
-	const handleParticlesLoad = () => {
-		console.log("Particles loaded successfully");
-		setIsParticlesLoaded(true);
-	};
+  const handleParticlesLoad = () => {
+    console.log("Particles loaded successfully");
+    setIsParticlesLoaded(true);
+  };
 
-	return (
-		<div className="font-fredoka text-textColor">
-			{isMounted && <FontAwesome />}
-			{isParticlesLoaded && <div>Particles Ready</div>}
-		</div>
-	);
+  return (
+    <div className="font-fredoka text-textColor">
+      {isMounted && <FontAwesome />}
+      {isParticlesLoaded && <div>Particles Ready</div>}
+    </div>
+  );
 }
 ```
 
@@ -229,19 +229,19 @@ export default function Home() {
 ```javascript
 const a = React.lazy(() => import("../components/FontAwesome"));
 export default function () {
-	const [b, c] = React.useState(!1),
-		[d, e] = React.useState(!1);
-	return (
-		React.useEffect(() => {
-			"undefined" != typeof window && c(!0);
-		}, []),
-		React.createElement(
-			"div",
-			{ className: "font-fredoka text-textColor" },
-			b && React.createElement(a, null),
-			d && React.createElement("div", null, "Particles Ready"),
-		)
-	);
+  const [b, c] = React.useState(!1),
+    [d, e] = React.useState(!1);
+  return (
+    React.useEffect(() => {
+      "undefined" != typeof window && c(!0);
+    }, []),
+    React.createElement(
+      "div",
+      { className: "font-fredoka text-textColor" },
+      b && React.createElement(a, null),
+      d && React.createElement("div", null, "Particles Ready"),
+    )
+  );
 }
 ```
 
@@ -357,17 +357,17 @@ parallel: true;
 ```javascript
 // In gatsby-node.js
 exports.onCreateWebpackConfig = ({ actions, stage }) => {
-	if (stage === "build-javascript") {
-		actions.setWebpackConfig({
-			optimization: {
-				minimizer: [
-					new TerserPlugin({
-						// Advanced configuration here
-					}),
-				],
-			},
-		});
-	}
+  if (stage === "build-javascript") {
+    actions.setWebpackConfig({
+      optimization: {
+        minimizer: [
+          new TerserPlugin({
+            // Advanced configuration here
+          }),
+        ],
+      },
+    });
+  }
 };
 ```
 
@@ -395,24 +395,24 @@ const path = require("path");
 
 // Analyze minification effectiveness
 function analyzeMinification() {
-	const publicDir = path.join(__dirname, "../public");
-	const jsFiles = fs
-		.readdirSync(publicDir)
-		.filter((file) => file.endsWith(".js"))
-		.map((file) => {
-			const filePath = path.join(publicDir, file);
-			const stats = fs.statSync(filePath);
-			return {
-				name: file,
-				size: stats.size,
-				sizeKB: Math.round(stats.size / 1024),
-			};
-		});
+  const publicDir = path.join(__dirname, "../public");
+  const jsFiles = fs
+    .readdirSync(publicDir)
+    .filter((file) => file.endsWith(".js"))
+    .map((file) => {
+      const filePath = path.join(publicDir, file);
+      const stats = fs.statSync(filePath);
+      return {
+        name: file,
+        size: stats.size,
+        sizeKB: Math.round(stats.size / 1024),
+      };
+    });
 
-	console.log("JavaScript Bundle Analysis:");
-	jsFiles.forEach((file) => {
-		console.log(`${file.name}: ${file.sizeKB} KB`);
-	});
+  console.log("JavaScript Bundle Analysis:");
+  jsFiles.forEach((file) => {
+    console.log(`${file.name}: ${file.sizeKB} KB`);
+  });
 }
 ```
 
@@ -443,8 +443,8 @@ Generates detailed before/after comparison showing:
 ```javascript
 // Development: Keep readable
 function calculateUserEngagementRate(interactions, views) {
-	console.log("Calculating engagement...");
-	return (interactions / views) * 100;
+  console.log("Calculating engagement...");
+  return (interactions / views) * 100;
 }
 
 // Production: Let Terser optimize
@@ -456,12 +456,12 @@ function calculateUserEngagementRate(interactions, views) {
 ```javascript
 // Use underscore prefix for private properties
 const myObject = {
-	_privateMethod() {
-		/* will be mangled */
-	},
-	publicMethod() {
-		/* will not be mangled */
-	},
+  _privateMethod() {
+    /* will be mangled */
+  },
+  publicMethod() {
+    /* will not be mangled */
+  },
 };
 ```
 
@@ -470,7 +470,7 @@ const myObject = {
 ```javascript
 // Development logging
 if (process.env.NODE_ENV === "development") {
-	console.log("Debug information");
+  console.log("Debug information");
 }
 
 // Or use pure_funcs to remove specific functions
