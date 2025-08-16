@@ -1,8 +1,9 @@
-# Modern browsers for production builds
-# This configuration targets browsers that support modern JavaScript features
-# reducing bundle size and improving performance
+# Differential serving configuration for modern and legacy builds
+# Modern builds target browsers with ES2020+ support
+# Legacy builds provide fallback for older browsers
 
-# Production environment (default)
+# Modern build targets (default)
+# These browsers support modern JavaScript features natively
 last 2 Chrome versions
 last 2 Firefox versions
 last 2 Safari versions
@@ -11,8 +12,22 @@ not dead
 > 0.5%
 supports es6-module
 supports es6-module-dynamic-import
+supports async-functions
+
+
+# Legacy build targets
+# Fallback for older browsers that need transpilation
+[legacy]
+> 0.25%
+not dead
+ie >= 11
+Chrome >= 60
+Firefox >= 60
+Safari >= 12
+Edge >= 79
 
 # Development environment
+# Use modern features for faster development builds
 [development]
 last 1 chrome version
 last 1 firefox version

@@ -10,7 +10,22 @@ module.exports = {
 				textColor: "#fff",
 			},
 			fontFamily: {
-				fredoka: ["Fredoka", "-apple-system", "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "sans-serif"],
+				fredoka: [
+					"Fredoka",
+					// System fonts with similar characteristics to Fredoka
+					"system-ui",
+					"-apple-system",
+					"BlinkMacSystemFont",
+					// Rounded sans-serif fonts that match Fredoka's character
+					"Nunito",
+					"Comfortaa",
+					"Quicksand",
+					// Standard fallbacks
+					"Roboto",
+					"Helvetica Neue",
+					"Arial",
+					"sans-serif"
+				],
 			},
 		},
 	},

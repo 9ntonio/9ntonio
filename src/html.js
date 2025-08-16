@@ -23,20 +23,28 @@ export default function HTML(props) {
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 
+				{/* Font optimization meta tags */}
+				<meta name="font-display" content="swap" />
+				<meta name="font-loading" content="optimized" />
+
 				{/* Preload critical font weights with proper priorities */}
+				{/* Fredoka Regular (400) - Most commonly used weight */}
 				<link
 					rel="preload"
 					href="https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2"
 					as="font"
 					type="font/woff2"
 					crossOrigin="anonymous"
+					importance="high"
 				/>
+				{/* Fredoka Medium (500) - Secondary weight for emphasis */}
 				<link
 					rel="preload"
 					href="https://fonts.gstatic.com/s/fredoka/v14/X7nO4R8wZKCVl-PGzj9pGlOqpKkFcw.woff2"
 					as="font"
 					type="font/woff2"
 					crossOrigin="anonymous"
+					importance="low"
 				/>
 
 				{/* Critical CSS inline for immediate rendering */}
@@ -66,6 +74,39 @@ export default function HTML(props) {
 				<noscript>
 					<link rel="stylesheet" href="/styles.css" />
 				</noscript>
+
+				{/* Modern JavaScript feature detection and differential serving */}
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function() {
+								// Feature detection for modern JavaScript support
+								var isModern = (
+									'noModule' in HTMLScriptElement.prototype &&
+									'import' in document.createElement('link') &&
+									typeof Symbol !== 'undefined' &&
+									typeof Symbol.iterator !== 'undefined' &&
+									typeof Promise !== 'undefined' &&
+									typeof Object.assign !== 'undefined' &&
+									typeof Array.from !== 'undefined' &&
+									typeof Map !== 'undefined' &&
+									typeof Set !== 'undefined'
+								);
+
+								// Store modern browser detection for later use
+								window.__MODERN_BROWSER__ = isModern;
+
+								// Add class to document for CSS targeting
+								document.documentElement.className += isModern ? ' modern-js' : ' legacy-js';
+
+								// Performance mark for modern browser detection
+								if (typeof performance !== 'undefined' && performance.mark) {
+									performance.mark('modern-detection-complete');
+								}
+							})();
+						`,
+					}}
+				/>
 
 				{props.headComponents}
 			</head>

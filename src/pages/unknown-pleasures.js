@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Seo from "../components/Seo";
+import FontLoadingOptimizer from "../components/FontLoadingOptimizer";
 
 const UnknownPleasuresPage = () => {
 	// Create a reference to the iframe element
@@ -59,6 +60,7 @@ const UnknownPleasuresPage = () => {
 
 	return (
 		<>
+			<FontLoadingOptimizer />
 			<Seo
 				Sitetitle="Unknown Pleasures"
 				description="Unknown Pleasures visualization experiment inspired by Joy Division's Unknown Pleasures album art"

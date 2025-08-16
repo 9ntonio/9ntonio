@@ -1,37 +1,85 @@
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
+
+const PERFORMANCE_METRICS = {
+	MEASURE: "measure",
+	NAVIGATION: "navigation",
+	FIRST_PAINT: "first-paint",
+	FIRST_CONTENTFUL_PAINT: "first-contentful-paint",
+};
 
 export default function PerformanceMonitor() {
-	useEffect(() => {
-		if (typeof window !== "undefined" && "performance" in window) {
-			// Log Core Web Vitals
-			const observer = new PerformanceObserver((list) => {
-				for (const entry of list.getEntries()) {
-					if (entry.entryType === "measure") {
-						console.log(`${entry.name}: ${entry.duration}ms`);
-					}
-				}
+	const logMetrics = useCallback((metrics) => {
+		if (process.env.NODE_ENV === "development") {
+			console.group("🚀 Performance Metrics");
+			Object.entries(metrics).forEach(([key, value]) => {
+				console.log(`${key}: ${typeof value === 'number' ? `${value.toFixed(2)}ms` : value}`);
 			});
-
-			observer.observe({ entryTypes: ["measure"] });
-
-			// Measure key metrics
-			window.addEventListener("load", () => {
-				setTimeout(() => {
-					const navigation = performance.getEntriesByType("navigation")[0];
-					if (navigation) {
-						console.log("Performance Metrics:", {
-							"DOM Content Loaded": navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-							"Load Complete": navigation.loadEventEnd - navigation.loadEventStart,
-							"First Paint": performance.getEntriesByName("first-paint")[0]?.startTime,
-							"First Contentful Paint": performance.getEntriesByName("first-contentful-paint")[0]?.startTime,
-						});
-					}
-				}, 0);
-			});
-
-			return () => observer.disconnect();
+			console.groupEnd();
 		}
 	}, []);
+
+	const handleLoad = useCallback(() => {
+		// Use requestIdleCallback for better performance
+		const measurePerformance = () => {
+			try {
+				const navigation = performance.getEntriesByType(PERFORMANCE_METRICS.NAVIGATION)[0];
+				if (!navigation) return;
+
+				const metrics = {
+					"DOM Content Loaded": navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+					"Load Complete": navigation.loadEventEnd - navigation.loadEventStart,
+					"First Paint": performance.getEntriesByName(PERFORMANCE_METRICS.FIRST_PAINT)[0]?.startTime || 0,
+					"First Contentful Paint": performance.getEntriesByName(PERFORMANCE_METRICS.FIRST_CONTENTFUL_PAINT)[0]?.startTime || 0,
+				};
+
+				logMetrics(metrics);
+			} catch (error) {
+				console.warn("Performance measurement failed:", error);
+			}
+		};
+
+		if (window.requestIdleCallback) {
+			window.requestIdleCallback(measurePerformance);
+		} else {
+			setTimeout(measurePerformance, 0);
+		}
+	}, [logMetrics]);
+
+	useEffect(() => {
+		if (typeof window === "undefined" || !("performance" in window)) {
+			return;
+		}
+
+		let observer = null;
+
+		try {
+			// Only create observer if PerformanceObserver is supported
+			if (window.PerformanceObserver) {
+				observer = new PerformanceObserver((list) => {
+					for (const entry of list.getEntries()) {
+						if (entry.entryType === PERFORMANCE_METRICS.MEASURE) {
+							logMetrics({ [entry.name]: entry.duration });
+						}
+					}
+				});
+
+				observer.observe({ entryTypes: [PERFORMANCE_METRICS.MEASURE] });
+			}
+
+			// Add load event listener
+			window.addEventListener("load", handleLoad);
+
+			return () => {
+				observer?.disconnect();
+				window.removeEventListener("load", handleLoad);
+			};
+		} catch (error) {
+			console.warn("PerformanceMonitor initialization failed:", error);
+			return () => {
+				window.removeEventListener("load", handleLoad);
+			};
+		}
+	}, [handleLoad, logMetrics]);
 
 	return null;
 }

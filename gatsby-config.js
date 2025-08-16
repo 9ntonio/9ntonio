@@ -34,11 +34,14 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Fredoka\:300,400,500,600,700`],
+				fonts: [`Fredoka:300,400,500,600,700`],
 				display: "swap",
 				preconnect: true,
-				crossOrigin: `anonymous`,
+				crossOrigin: "anonymous",
 				preload: true,
+				subsets: ['latin'],
+				// Only load characters we actually use for better performance
+				text: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!?:;()[]{}@#$%&*+-=<>/"\'',
 			},
 		},
 		`gatsby-plugin-postcss`,
@@ -140,5 +143,5 @@ module.exports = {
 		PARALLEL_SOURCING: true,
 	},
 	// Configure modern JavaScript builds
-	polyfill: false, // Disable automatic polyfills for modern builds
+	polyfill: process.env.GATSBY_MODERN_BUILD !== "false" ? false : true, // Disable polyfills for modern builds only
 };

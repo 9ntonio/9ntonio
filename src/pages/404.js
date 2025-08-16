@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "gatsby";
+import FontLoadingOptimizer from "../components/FontLoadingOptimizer";
 import backgroundImage from "../../static/hazard.webp";
 
 const NotFoundPage = ({ location }) => {
@@ -43,6 +44,7 @@ const NotFoundPage = ({ location }) => {
 
 	return (
 		<div style={styles.container}>
+			<FontLoadingOptimizer />
 			<h1
 				style={{
 					...styles.errorCode,

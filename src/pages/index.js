@@ -9,6 +9,7 @@ import LayoutStabilityMonitor from "../components/LayoutStabilityMonitor";
 import ErrorBoundary from "../components/ErrorBoundary";
 import VideoModal from "../components/VideoModal";
 import CriticalCSSLoader from "../components/CriticalCSSLoader";
+import FontLoadingOptimizer from "../components/FontLoadingOptimizer";
 import logo from "../../static/logo-2.svg";
 
 // *Lazy load heavy components only when needed
@@ -95,6 +96,7 @@ export default function Home() {
 			<CriticalCSSLoader>
 				<div className="font-fredoka text-textColor">
 				<PreloadResources />
+				<FontLoadingOptimizer />
 				<ThirdPartyScriptLoader />
 				{process.env.NODE_ENV === "development" && (
 					<>

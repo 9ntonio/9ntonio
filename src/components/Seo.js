@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -27,8 +28,8 @@ function Seo({ description = "", meta = [], Sitetitle = "Antonio Almena" }) {
 	const author = site.siteMetadata?.author || "@9ntonio";
 	const fullTitle = `${Sitetitle} | ${siteTitle}`;
 
-	// Default meta tags with proper structure
-	const defaultMeta = [
+	// Memoize default meta tags to prevent recreation on every render
+	const defaultMeta = React.useMemo(() => [
 		{ name: "description", content: metaDescription },
 		{ name: "keywords", content: "software development, engineering, AI, design systems, front end development, web development, design technology" },
 		{ name: "robots", content: "index, follow" },
@@ -43,10 +44,13 @@ function Seo({ description = "", meta = [], Sitetitle = "Antonio Almena" }) {
 		{ name: "twitter:title", content: fullTitle },
 		{ name: "twitter:description", content: metaDescription },
 		{ name: "twitter:image", content: `${siteUrl}${imageSEO}` },
-	];
+	].filter(tag => tag.content), [metaDescription, siteUrl, fullTitle, imageSEO, author]);
 
-	// Merge default meta with user-provided meta
-	const allMeta = [...defaultMeta, ...(Array.isArray(meta) ? meta : [])];
+	// Merge and validate meta tags
+	const allMeta = React.useMemo(() => {
+		const userMeta = Array.isArray(meta) ? meta.filter(tag => tag?.content) : [];
+		return [...defaultMeta, ...userMeta];
+	}, [defaultMeta, meta]);
 
 	return (
 		<>

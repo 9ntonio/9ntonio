@@ -1,105 +1,81 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs-extra");
+const TerserPlugin = require("terser-webpack-plugin");
+
+// Import modern build utilities
+const {
+  isModernBuild,
+  getTerserOptions,
+  getSplitChunksConfig,
+  getOutputEnvironment,
+  logBuildInfo,
+} = require("./src/utils/modernBuildUtils");
 
 /**
- * Webpack configuration for performance optimization and minification
+ * Webpack configuration for modern JavaScript builds with differential serving
+ * Supports both modern ES2020+ builds and legacy ES5 fallbacks
  */
-exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
 	if (stage === "build-javascript") {
-		const TerserPlugin = require("terser-webpack-plugin");
+		// Determine build type and log configuration
+		const isModern = isModernBuild();
+		const buildTarget = isModern ? "es2020" : "es5";
 
-		// Production build optimizations with enhanced minification
-		actions.setWebpackConfig({
+		logBuildInfo(isModern);
+
+		// Base configuration for both modern and legacy builds
+		const baseConfig = {
+			target: isModern ? ["web", "es2020"] : ["web", "es5"],
+
+			resolve: {
+				mainFields: isModern ? ["browser", "module", "main"] : ["browser", "main", "module"],
+				extensions: [".mjs", ".js", ".jsx", ".json"],
+			},
+
+			module: {
+				rules: [
+					{
+						test: /\.m?js$/,
+						resolve: {
+							fullySpecified: false, // Allow imports without file extensions
+						},
+					},
+				],
+			},
+
+			output: {
+				environment: getOutputEnvironment(isModern),
+			},
+
 			optimization: {
 				minimize: true,
-				minimizer: [
-					new TerserPlugin({
-						terserOptions: {
-							compress: {
-								drop_console: true, // Remove console.log statements
-								drop_debugger: true, // Remove debugger statements
-								pure_funcs: ["console.log", "console.info", "console.debug", "console.warn"], // Remove specific console methods
-								passes: 3, // Run compression three times for better results
-								unsafe_arrows: true, // Convert arrow functions when safe
-								unsafe_methods: true, // Optimize method calls
-								unsafe_proto: true, // Optimize prototype access
-								unsafe_comps: true, // Optimize comparisons
-								unsafe_Function: true, // Optimize Function constructor
-								unsafe_math: true, // Optimize Math operations
-								unsafe_symbols: true, // Optimize Symbol operations
-								unsafe_regexp: true, // Optimize RegExp operations
-								reduce_vars: true, // Reduce variable assignments
-								reduce_funcs: true, // Reduce function calls
-								collapse_vars: true, // Collapse single-use variables
-								inline: 3, // Aggressive function inlining
-								hoist_funs: true, // Hoist function declarations
-								hoist_vars: true, // Hoist variable declarations
-								if_return: true, // Optimize if-return statements
-								join_vars: true, // Join consecutive variable declarations
-								cascade: true, // Cascade sequences
-								side_effects: false, // Remove side-effect-free statements
-								dead_code: true, // Remove unreachable code
-								evaluate: true, // Evaluate constant expressions
-								conditionals: true, // Optimize conditionals
-								unused: true, // Remove unused variables
-								loops: true, // Optimize loops
-								toplevel: true, // Drop unreferenced top-level functions/variables
-							},
-							mangle: {
-								safari10: true, // Fix Safari 10 issues
-								toplevel: true, // Mangle top-level names
-								properties: {
-									regex: /^_/, // Mangle properties starting with underscore
-								},
-							},
-							format: {
-								comments: false, // Remove all comments
-								ascii_only: true, // Ensure ASCII output
-								ecma: 2020, // Use modern ECMAScript features for smaller output
-							},
-							ecma: 2020, // Target modern JavaScript for better optimization
-						},
-						extractComments: false, // Don't create separate license files
-						parallel: true, // Use multiple processes for faster builds
-					}),
-				],
-				splitChunks: {
-					chunks: "all",
-					minSize: 20000,
-					maxSize: 244000,
-					cacheGroups: {
-						vendor: {
-							test: /[\\/]node_modules[\\/]/,
-							name: "vendors",
-							chunks: "all",
-							priority: 1,
-						},
-						fontawesome: {
-							test: /[\\/]node_modules[\\/]@fortawesome[\\/]/,
-							name: "fontawesome",
-							chunks: "all",
-							priority: 10,
-						},
-						particles: {
-							test: /[\\/]node_modules[\\/](react-tsparticles|tsparticles)[\\/]/,
-							name: "particles",
-							chunks: "all",
-							priority: 10,
-						},
-						reactPlayer: {
-							test: /[\\/]node_modules[\\/]react-player[\\/]/,
-							name: "react-player",
-							chunks: "all",
-							priority: 10,
-						},
-					},
+				minimizer: [new TerserPlugin(getTerserOptions(isModern))],
+				splitChunks: getSplitChunksConfig(isModern),
+
+				// Runtime chunk optimization
+				runtimeChunk: {
+					name: "runtime",
 				},
+
+				// Module concatenation for better tree shaking (modern builds only)
+				concatenateModules: isModern,
+
+				// Better module IDs for caching
+				moduleIds: "deterministic",
+				chunkIds: "deterministic",
 			},
-		});
+		};
+
+		actions.setWebpackConfig(baseConfig);
 	} else if (stage === "develop") {
-		// Development optimizations (no minification for faster builds)
+		// Development optimizations with modern JavaScript
 		actions.setWebpackConfig({
+			target: ["web", "es2020"],
+			resolve: {
+				mainFields: ["browser", "module", "main"],
+				extensions: [".mjs", ".js", ".jsx", ".json"],
+			},
 			optimization: {
 				splitChunks: {
 					chunks: "all",
@@ -112,13 +88,6 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
 					},
 				},
 			},
-		});
-	}
-
-	// Configure modern JavaScript target for all stages
-	if (stage === "build-javascript" || stage === "develop") {
-		actions.setWebpackConfig({
-			target: ["web", "es2020"], // Target modern browsers
 		});
 	}
 };
