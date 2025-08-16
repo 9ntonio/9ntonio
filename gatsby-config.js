@@ -17,16 +17,17 @@ module.exports = {
 				trackingId: `G-640WERC942`,
 				head: false, // Load in body to reduce render blocking
 				anonymize: true,
-				// Optimize GA loading
+				// Optimize GA loading with delayed initialization
 				gtagConfig: {
-					optimize_id: "OPT_CONTAINER_ID",
 					anonymize_ip: true,
 					cookie_expires: 63072000, // 2 years
+					send_page_view: false, // Manual page view tracking for better control
 				},
 				pluginConfig: {
-					// Delay GA loading until user interaction
+					// Delay GA loading until user interaction to improve performance
 					respectDNT: true,
 					exclude: ["/preview/**", "/do-not-track/me/too/"],
+					delayOnRouteUpdate: 0, // No delay on route updates
 				},
 			},
 		},

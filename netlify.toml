@@ -127,9 +127,13 @@ Referrer-Policy = "strict-origin-when-cross-origin"
 Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 # Resource hints for better performance
 Link = '''</static/logo-2.svg>; rel=preload; as=image,
+</static/gusto.webp>; rel=preload; as=image,
 </favicon.png>; rel=preload; as=image,
+<https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2>; rel=preload; as=font; type=font/woff2; crossorigin,
+<https://fonts.gstatic.com/s/fredoka/v14/X7nO4R8wZKCVl-PGzj9pGlOqpKkFcw.woff2>; rel=preload; as=font; type=font/woff2; crossorigin,
 <https://fonts.gstatic.com>; rel=preconnect; crossorigin,
-<https://fonts.googleapis.com>; rel=dns-prefetch'''
+<https://fonts.googleapis.com>; rel=dns-prefetch,
+<https://www.google-analytics.com>; rel=dns-prefetch'''
 
 # Important: Ensure proper routing for unknown-pleasures section and its assets
 [[redirects]]

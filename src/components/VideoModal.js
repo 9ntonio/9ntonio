@@ -46,7 +46,7 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 				{/* Video Container */}
 				<div className="relative w-full" style={{ aspectRatio: "16/9" }}>
 					<iframe
-						src={`${videoUrl}?autoplay=1&title=0&byline=0&portrait=0`}
+						src={`${videoUrl}?autoplay=1&title=0&byline=0&portrait=0&dnt=1`}
 						width="100%"
 						height="100%"
 						frameBorder="0"
@@ -54,6 +54,8 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 						allowFullScreen
 						title={title}
 						className="w-full h-full"
+						loading="lazy"
+						importance="low"
 					/>
 				</div>
 			</div>

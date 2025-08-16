@@ -21,7 +21,7 @@ export default function HTML(props) {
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 
-				{/* Preload critical font weights */}
+				{/* Preload critical font weights with proper priorities */}
 				<link
 					rel="preload"
 					href="https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2"
@@ -29,8 +29,15 @@ export default function HTML(props) {
 					type="font/woff2"
 					crossOrigin="anonymous"
 				/>
+				<link
+					rel="preload"
+					href="https://fonts.gstatic.com/s/fredoka/v14/X7nO4R8wZKCVl-PGzj9pGlOqpKkFcw.woff2"
+					as="font"
+					type="font/woff2"
+					crossOrigin="anonymous"
+				/>
 
-				{/* Critical CSS inline */}
+				{/* Critical CSS inline with font-display optimization */}
 				<style
 					dangerouslySetInnerHTML={{
 						__html: `
@@ -46,6 +53,12 @@ export default function HTML(props) {
 						@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 						*{box-sizing:border-box}
 						body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+						/* Prevent layout shift during font loading */
+						.font-fredoka{font-size-adjust:0.5}
+						/* Optimize image loading to prevent layout shifts */
+						img[width][height]{height:auto}
+						/* Ensure proper aspect ratios are maintained */
+						[style*="aspect-ratio"]{contain:layout style}
 					`,
 					}}
 				/>

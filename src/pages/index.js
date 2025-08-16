@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { OutboundLink } from "gatsby-plugin-gtag";
 import Seo from "../components/Seo";
 import PreloadResources from "../components/PreloadResources";
+import ThirdPartyScriptLoader from "../components/ThirdPartyScriptLoader";
 import PerformanceMonitor from "../components/PerformanceMonitor";
 import LayoutStabilityMonitor from "../components/LayoutStabilityMonitor";
 import ErrorBoundary from "../components/ErrorBoundary";
@@ -92,6 +93,7 @@ export default function Home() {
 		<ErrorBoundary>
 			<div className="font-fredoka text-textColor">
 				<PreloadResources />
+				<ThirdPartyScriptLoader />
 				{process.env.NODE_ENV === "development" && (
 					<>
 						<PerformanceMonitor />
@@ -129,7 +131,16 @@ export default function Home() {
 				<section className="mt-4">
 					<div className="container">
 						<div className="flex flex-col md:flex-row md:items-center mb-4">
-							<img src={logo} alt="Antonio Almena - Senior Full Stack Engineer Logo" className="w-full sm:w-[510px] mb-1" height="83" width="510" style={{ aspectRatio: "510/83" }} />
+							<img
+								src={logo}
+								alt="Antonio Almena - Senior Full Stack Engineer Logo"
+								className="w-full sm:w-[510px] mb-1"
+								height="83"
+								width="510"
+								style={{ aspectRatio: "510/83" }}
+								loading="eager"
+								decoding="sync"
+							/>
 							<div className="flex flex-row">
 								<Suspense
 									fallback={
@@ -238,6 +249,8 @@ export default function Home() {
 											quality={75}
 											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105"
+											loading="eager"
+											fetchPriority="high"
 										/>
 										{/* Play Button Overlay */}
 										<div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all duration-300">
@@ -289,7 +302,7 @@ export default function Home() {
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-1/3 mb-4 md:mb-0">
 								<div className="mr-6" style={{ aspectRatio: "3/2" }}>
-									<a href="https://store.google.com/" target={LINK_TARGET} rel={LINK_REL} aria-label="Visit Google Store website (opens in new tab)">
+									<a href="https://store.google.com/" target={LINK_TARGET} rel={LINK_REL} aria-label="Visit Google Store website (opens in new tab)" className="group">
 										<StaticImage
 											src="../../static/google.webp"
 											alt="Google Store project showcase"
@@ -302,6 +315,7 @@ export default function Home() {
 											quality={75}
 											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
+											loading="lazy"
 										/>
 									</a>
 								</div>
@@ -332,6 +346,7 @@ export default function Home() {
 										target={LINK_TARGET}
 										rel={LINK_REL}
 										aria-label="View PlayStation Vue case study on Odopod website (opens in new tab)"
+										className="group"
 									>
 										<StaticImage
 											src="../../static/vue.webp"
@@ -345,6 +360,7 @@ export default function Home() {
 											quality={75}
 											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
+											loading="lazy"
 										/>
 									</a>
 								</div>
@@ -374,7 +390,7 @@ export default function Home() {
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-1/3">
 								<div className="mr-6" style={{ aspectRatio: "3/2" }}>
-									<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL} aria-label="View Unknown Pleasures interactive visualization project (opens in new tab)">
+									<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL} aria-label="View Unknown Pleasures interactive visualization project (opens in new tab)" className="group">
 										<StaticImage
 											src="../../static/unknown-pleasures.webp"
 											alt="Unknown Pleasures Joy Division album cover visualization"
@@ -387,6 +403,7 @@ export default function Home() {
 											quality={75}
 											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
+											loading="lazy"
 										/>
 									</a>
 								</div>

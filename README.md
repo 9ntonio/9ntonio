@@ -188,7 +188,7 @@ yarn verify-build            # Verify build integrity
 │   │   ├── VideoModal.js  # Accessible video modal with keyboard navigation
 │   │   ├── PerformanceMonitor.js  # Dev performance tracking
 │   │   ├── LayoutStabilityMonitor.js  # CLS and LCP monitoring
-│   │   └── PreloadResources.js    # Resource hints component
+│   │   └── PreloadResources.js    # Critical resource preloading and smart resource hints
 │   ├── pages/             # Gatsby page components
 │   │   ├── index.js       # Homepage (main portfolio)
 │   │   ├── 404.js         # Error page
@@ -219,10 +219,11 @@ This portfolio has been optimized for maximum performance:
 - **Code Splitting**: Separate chunks for vendors, particles, react-player
 - **Lazy Loading**: Heavy components load only when needed
 - **Image Optimization**: WebP/AVIF formats with progressive loading, 75% quality compression, and metadata stripping for smaller file sizes
+- **Critical Resource Preloading**: Above-the-fold images (logo, hero images) and direct WOFF2 font file preloading for faster initial render
 - **Layout Shift Prevention**: Comprehensive CLS fixes with explicit dimensions and stable loading states
 - **Bundle Analysis**: Continuous monitoring of JavaScript bundle sizes
 - **Critical CSS**: Inlined essential styles to prevent render blocking
-- **Resource Hints**: DNS prefetch and preconnect for external resources
+- **Smart Resource Hints**: Strategic DNS prefetch and preconnect with user interaction-based loading for third-party resources (Vimeo)
 - **Performance Monitoring**: Real-time CLS and LCP tracking in development
 - **SSR Optimization**: SEO component excluded from server-side rendering fallback for improved hydration
 - **Error Handling**: React error boundaries and direct DOM SEO management for stability
