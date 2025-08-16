@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
-import { Helmet } from "react-helmet"; // For SEO purposes
 import backgroundImage from "../../static/hazard.webp";
 
 const NotFoundPage = ({ location }) => {
@@ -27,13 +26,23 @@ const NotFoundPage = ({ location }) => {
 		return () => mediaQuery.removeEventListener("change", handleResize);
 	}, []);
 
+	useEffect(() => {
+		if (typeof document !== "undefined") {
+			document.title = "Antonio Almena | Page Not Found";
+
+			// Set meta description
+			let metaDescription = document.querySelector('meta[name="description"]');
+			if (!metaDescription) {
+				metaDescription = document.createElement("meta");
+				metaDescription.setAttribute("name", "description");
+				document.head.appendChild(metaDescription);
+			}
+			metaDescription.setAttribute("content", "The page you're looking for doesn't exist or has been moved.");
+		}
+	}, []);
+
 	return (
 		<div style={styles.container}>
-			<Helmet>
-				<title>Antonio Almena | Page Not Found</title>
-				<meta name="description" content="The page you're looking for doesn't exist or has been moved." />
-			</Helmet>
-
 			<h1
 				style={{
 					...styles.errorCode,

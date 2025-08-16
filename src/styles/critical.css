@@ -1,0 +1,93 @@
+/* Critical CSS - inline this in HTML head */
+
+/* Font loading optimization to prevent FOIT/FOUT */
+.font-fredoka {
+	font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-display: swap;
+}
+
+/* Layout containers with stable dimensions */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/* Prevent layout shift for social icons */
+.circle-container {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	margin: 0 0.5rem;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	transition: background 0.3s ease;
+	flex-shrink: 0; /* Prevent shrinking */
+}
+
+.circle-container:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* Video player with stable aspect ratio */
+.player-wrapper {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16/9;
+	min-height: 200px;
+	background: #00474f;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.react-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+/* Stable image dimensions */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Prevent layout shift during loading */
+.loading-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: inherit;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: inherit;
+}
+
+/* Loading states */
+.animate-pulse {
+	animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: .5;
+	}
+}
+
+/* Prevent cumulative layout shift */
+* {
+	box-sizing: border-box;
+}
+
+/* Stable text rendering */
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

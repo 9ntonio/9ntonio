@@ -11,7 +11,7 @@ module.exports = {
 			resolve: `gatsby-plugin-gtag`,
 			options: {
 				trackingId: `G-640WERC942`,
-				head: true,
+				head: false, // Load in body to reduce render blocking
 				anonymize: true,
 			},
 		},
@@ -20,14 +20,54 @@ module.exports = {
 			options: {
 				fonts: [`Fredoka\:300,400,500,600,700`],
 				display: "swap",
+				preconnect: true,
 			},
 		},
 		`gatsby-plugin-postcss`,
 		`gatsby-plugin-preload-fonts`,
-		`gatsby-plugin-react-helmet`,
-		`gatsby-plugin-image`,
-		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-plugin-image`,
+			options: {
+				defaults: {
+					formats: [`auto`, `webp`, `avif`],
+					placeholder: `blurred`,
+					quality: 85,
+					breakpoints: [750, 1080, 1366, 1920],
+				},
+			},
+		},
+		{
+			resolve: `gatsby-plugin-sharp`,
+			options: {
+				defaults: {
+					formats: [`auto`, `webp`, `avif`],
+					placeholder: `blurred`,
+					quality: 85,
+					breakpoints: [750, 1080, 1366, 1920],
+				},
+			},
+		},
 		`gatsby-transformer-sharp`,
+		{
+			resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+			options: {
+				devMode: false,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-minify`,
+			options: {
+				// Minify HTML, CSS, and inline JavaScript
+				collapseWhitespace: true,
+				minifyCSS: true,
+				minifyJS: true,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true,
+				useShortDoctype: true,
+			},
+		},
 	],
 	trailingSlash: "always",
 	graphqlTypegen: true,
@@ -37,5 +77,6 @@ module.exports = {
 		FAST_DEV: true,
 		PRESERVE_FILE_DOWNLOAD_CACHE: true,
 		PARALLEL_SOURCING: true,
+		FAST_REFRESH: true,
 	},
 };
