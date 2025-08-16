@@ -1,11 +1,12 @@
 [build]
-command = "yarn build"
+command = "yarn clean && yarn build:production"
 publish = "public"
 
 [build.environment]
 NODE_VERSION = "18.17.0"
 GATSBY_CPU_COUNT = "2"
 GATSBY_CONTINUE_BUILD_ON_MISSING_ADAPTER = "true"
+NETLIFY_CLEAR_CACHE = "true"
 
 # Asset optimization settings
 [build.processing]
