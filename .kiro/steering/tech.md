@@ -24,7 +24,8 @@
 
 ## Interactive Features
 
-- **react-tsparticles 2.12.2**: Particle background system
+- **react-tsparticles 2.12.2**: Particle background system with tsparticles 2.12.0 core
+- **tsparticles-preset-triangles 2.12.0**: Triangle particle preset for visual effects
 - **react-player 2.16.0**: Video embedding with lazy loading
 - **FontAwesome**: Icon system with lazy loading
 

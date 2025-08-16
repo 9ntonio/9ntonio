@@ -12,7 +12,7 @@ This portfolio demonstrates technical expertise through both content and impleme
 
 ### Key Features
 
-- **Interactive Particle Background**: Uses tsparticles with triangles preset for visual appeal
+- **Interactive Particle Background**: Uses tsparticles 2.12.0 with triangles preset for visual appeal
 - **Performance Optimized**: Lighthouse score optimized from 64 to 90+ through strategic lazy loading and code splitting
 - **PWA Ready**: Web App Manifest enables installation as a native-like app experience
 - **Accessibility Compliant**: WCAG 2.1 AA compliant with comprehensive aria-labels and screen reader support
@@ -57,7 +57,8 @@ This portfolio demonstrates technical expertise through both content and impleme
 
 ### Interactive Features
 
-- **react-tsparticles 2.12.2**: Particle background system
+- **react-tsparticles 2.12.2**: Particle background system with tsparticles 2.12.0 core
+- **tsparticles-preset-triangles 2.12.0**: Triangle particle preset for visual effects
 - **react-player 2.16.0**: Video embedding with lazy loading
 - **FontAwesome**: Icon system with lazy loading
 
