@@ -244,8 +244,7 @@ export default function Home() {
 											layout="constrained"
 											width={480}
 											height={320}
-											aspectRatio={3 / 2}
-											formats={["auto", "webp", "avif"]}
+											formats={["avif", "webp", "auto"]}
 											quality={75}
 											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105"
@@ -310,8 +309,7 @@ export default function Home() {
 											layout="constrained"
 											width={480}
 											height={320}
-											aspectRatio={3 / 2}
-											formats={["auto", "webp", "avif"]}
+											formats={["avif", "webp", "auto"]}
 											quality={75}
 											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
@@ -355,8 +353,7 @@ export default function Home() {
 											layout="constrained"
 											width={480}
 											height={320}
-											aspectRatio={3 / 2}
-											formats={["auto", "webp", "avif"]}
+											formats={["avif", "webp", "auto"]}
 											quality={75}
 											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
@@ -398,8 +395,7 @@ export default function Home() {
 											layout="constrained"
 											width={480}
 											height={320}
-											aspectRatio={3 / 2}
-											formats={["auto", "webp", "avif"]}
+											formats={["avif", "webp", "auto"]}
 											quality={75}
 											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"

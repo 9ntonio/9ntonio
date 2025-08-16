@@ -7,14 +7,75 @@ NODE_VERSION = "18.17.0"
 GATSBY_CPU_COUNT = "2"
 GATSBY_CONTINUE_BUILD_ON_MISSING_ADAPTER = "true"
 
-# Disable processing to prevent conflicts with Gatsby's own optimization
+# Enable selective processing for compression only
 [build.processing]
-skip_processing = true
+skip_processing = false
+
+[build.processing.css]
+bundle = false
+minify = false
+
+[build.processing.js]
+bundle = false
+minify = false
+
+[build.processing.html]
+pretty_urls = true
+
+[build.processing.images]
+compress = false
 
 [[plugins]]
 package = "@netlify/plugin-gatsby"
 
-# Basic security headers only
+# Optimized caching headers for static assets
+[[headers]]
+for = "/*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.css"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.woff2"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.webp"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.avif"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.jpg"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.png"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.svg"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML files - short cache for content updates
+[[headers]]
+for = "/*.html"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+
+# Security headers
 [[headers]]
 for = "/*"
 [headers.values]

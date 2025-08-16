@@ -38,6 +38,7 @@ module.exports = {
 				display: "swap",
 				preconnect: true,
 				crossOrigin: `anonymous`,
+				preload: true,
 			},
 		},
 		`gatsby-plugin-postcss`,
