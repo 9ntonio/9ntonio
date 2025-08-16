@@ -1,7 +1,7 @@
 {
   "enabled": true,
   "name": "Documentation Sync",
-  "description": "Monitors all JavaScript source files and configuration files for changes and triggers documentation updates in README.md and any docs folder",
+  "description": "Monitors all JavaScript source files and configuration files for changes and triggers documentation updates in README.md only\n",
   "version": "1",
   "when": {
     "type": "fileEdited",

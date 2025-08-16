@@ -35,9 +35,10 @@ This portfolio demonstrates technical expertise through both content and impleme
 ### Core Framework
 
 - **Gatsby 5.14.1**: Static site generator with React
-- **React 18.3.1**: UI library with hooks and Suspense
+- **React 18.3.1**: UI library with hooks and Suspense (version locked via resolutions)
 - **Node.js 18.17.0**: Runtime environment
 - **PWA Support**: Web App Manifest for installable app experience
+- **Yarn Resolutions**: Dependency version management for React Server Components compatibility
 
 ### Styling & Design
 
@@ -62,12 +63,13 @@ This portfolio demonstrates technical expertise through both content and impleme
 
 ### Development Tools
 
-- **Yarn 4.6.0**: Package manager with PnP
+- **Yarn 4.6.0**: Package manager with PnP and dependency resolutions
 - **Prettier 3.0.0**: Code formatting
 - **ESLint**: JavaScript linting with Gatsby and accessibility rules
 - **Husky 8.0.3**: Git hooks for automated code quality checks
 - **lint-staged 15.2.0**: Run linters on staged files before commit
 - **EditorConfig**: Consistent coding style (tabs, 200 char limit)
+- **Dependency Management**: Yarn resolutions for React version consistency
 
 ### Deployment & Hosting
 
@@ -96,6 +98,31 @@ yarn install
 # Start development server
 yarn dev
 ```
+
+### Dependency Resolution
+
+The project uses a two-layer approach for dependency management:
+
+**Package Extensions (.yarnrc.yml):**
+```yaml
+packageExtensions:
+    react-server-dom-webpack@*:
+        peerDependencies:
+            react: "^18.0.0"
+            react-dom: "^18.0.0"
+```
+
+**Version Resolutions (package.json):**
+```json
+{
+  "resolutions": {
+    "react-server-dom-webpack/react": "18.3.1",
+    "react-server-dom-webpack/react-dom": "18.3.1"
+  }
+}
+```
+
+This prevents version conflicts with React Server Components and ensures stable builds with React 18.3.1.
 
 Visit `http://localhost:8000` to view the site.
 
@@ -422,6 +449,7 @@ Read about the AI-assisted development process: [Unknown Pleasures in a Brave Ne
 
 ## 📚 Documentation
 
+- **[DEPENDENCY_RESOLUTION_GUIDE.md](./DEPENDENCY_RESOLUTION_GUIDE.md)**: Yarn resolutions for React Server Components compatibility
 - **[MISSING_ASSETS.md](./MISSING_ASSETS.md)**: Required assets for full functionality
 - **[ACCESSIBILITY_GUIDE.md](./ACCESSIBILITY_GUIDE.md)**: Comprehensive accessibility implementation guide
 - **[MINIFICATION_GUIDE.md](./MINIFICATION_GUIDE.md)**: JavaScript minification and optimization details

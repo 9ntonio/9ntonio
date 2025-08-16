@@ -356,6 +356,43 @@ export default function () {
 
 ---
 
+## 🔧 **Dependency Management Strategy**
+
+### **Yarn Resolutions for Stability**
+
+**Why Dependency Resolutions?**
+
+- **Version Consistency**: Prevents React version conflicts in complex dependency trees
+- **Build Stability**: Ensures reliable builds with React Server Components
+- **Future-Proofing**: Maintains compatibility as Gatsby ecosystem evolves
+
+**Implementation:**
+
+Two-layer dependency management approach:
+
+```yaml
+# .yarnrc.yml - Package Extensions
+packageExtensions:
+    react-server-dom-webpack@*:
+        peerDependencies:
+            react: "^18.0.0"
+            react-dom: "^18.0.0"
+```
+
+```json
+// package.json - Version Resolutions
+{
+  "resolutions": {
+    "react-server-dom-webpack/react": "18.3.1",
+    "react-server-dom-webpack/react-dom": "18.3.1"
+  }
+}
+```
+
+**Business Impact**: Eliminates build failures and runtime errors from version mismatches
+
+---
+
 ## 🎯 **Key Takeaways**
 
 ### **Why This Approach Works**
@@ -364,6 +401,7 @@ export default function () {
 2. **Scalable**: Architecture supports future growth without performance degradation
 3. **Maintainable**: Clear component boundaries and configuration-driven optimizations
 4. **Measurable**: Built-in monitoring and analysis tools
+5. **Stable**: Dependency resolutions prevent version conflicts and build failures
 
 ### **Business Value**
 
