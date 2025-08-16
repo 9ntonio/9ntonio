@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+const { getCriticalCSS } = require("./utils/criticalCss");
+
 export default function HTML(props) {
 	return (
 		<html {...props.htmlAttributes}>
@@ -37,31 +39,33 @@ export default function HTML(props) {
 					crossOrigin="anonymous"
 				/>
 
-				{/* Critical CSS inline with font-display optimization */}
+				{/* Critical CSS inline for immediate rendering */}
 				<style
 					dangerouslySetInnerHTML={{
-						__html: `
-						.font-fredoka{font-family:'Fredoka',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-display:swap}
-						.container{max-width:1200px;margin:0 auto;padding:0 1rem}
-						.circle-container{display:inline-flex;align-items:center;justify-content:center;width:3rem;height:3rem;margin:0 .5rem;border-radius:50%;background:rgba(255,255,255,.1);transition:background .3s ease;flex-shrink:0}
-						.circle-container:hover{background:rgba(255,255,255,.2)}
-						.player-wrapper{position:relative;width:100%;aspect-ratio:3/2;background:#00474f;border-radius:.5rem;overflow:hidden}
-						.react-player{position:absolute;top:0;left:0;width:100%!important;height:100%!important}
-						img{max-width:100%;height:auto}
-						.loading-placeholder{display:flex;align-items:center;justify-content:center;min-height:inherit;background:rgba(255,255,255,.1);border-radius:inherit}
-						.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
-						@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-						*{box-sizing:border-box}
-						body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-						/* Prevent layout shift during font loading */
-						.font-fredoka{font-size-adjust:0.5}
-						/* Optimize image loading to prevent layout shifts */
-						img[width][height]{height:auto}
-						/* Ensure proper aspect ratios are maintained */
-						[style*="aspect-ratio"]{contain:layout style}
-					`,
+						__html: getCriticalCSS(),
 					}}
 				/>
+
+				{/* Load non-critical CSS asynchronously */}
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function() {
+								var link = document.createElement('link');
+								link.rel = 'stylesheet';
+								link.href = '/styles.css';
+								link.media = 'print';
+								link.onload = function() { this.media = 'all'; };
+								document.head.appendChild(link);
+							})();
+						`,
+					}}
+				/>
+
+				{/* Noscript fallback for CSS loading */}
+				<noscript>
+					<link rel="stylesheet" href="/styles.css" />
+				</noscript>
 
 				{props.headComponents}
 			</head>

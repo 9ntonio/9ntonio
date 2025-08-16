@@ -139,4 +139,6 @@ module.exports = {
 		PRESERVE_FILE_DOWNLOAD_CACHE: true,
 		PARALLEL_SOURCING: true,
 	},
+	// Configure modern JavaScript builds
+	polyfill: false, // Disable automatic polyfills for modern builds
 };

@@ -5,7 +5,7 @@ const fs = require("fs-extra");
 /**
  * Webpack configuration for performance optimization and minification
  */
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
 	if (stage === "build-javascript") {
 		const TerserPlugin = require("terser-webpack-plugin");
 
@@ -20,13 +20,35 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 								drop_console: true, // Remove console.log statements
 								drop_debugger: true, // Remove debugger statements
 								pure_funcs: ["console.log", "console.info", "console.debug", "console.warn"], // Remove specific console methods
-								passes: 2, // Run compression twice for better results
+								passes: 3, // Run compression three times for better results
 								unsafe_arrows: true, // Convert arrow functions when safe
 								unsafe_methods: true, // Optimize method calls
 								unsafe_proto: true, // Optimize prototype access
+								unsafe_comps: true, // Optimize comparisons
+								unsafe_Function: true, // Optimize Function constructor
+								unsafe_math: true, // Optimize Math operations
+								unsafe_symbols: true, // Optimize Symbol operations
+								unsafe_regexp: true, // Optimize RegExp operations
+								reduce_vars: true, // Reduce variable assignments
+								reduce_funcs: true, // Reduce function calls
+								collapse_vars: true, // Collapse single-use variables
+								inline: 3, // Aggressive function inlining
+								hoist_funs: true, // Hoist function declarations
+								hoist_vars: true, // Hoist variable declarations
+								if_return: true, // Optimize if-return statements
+								join_vars: true, // Join consecutive variable declarations
+								cascade: true, // Cascade sequences
+								side_effects: false, // Remove side-effect-free statements
+								dead_code: true, // Remove unreachable code
+								evaluate: true, // Evaluate constant expressions
+								conditionals: true, // Optimize conditionals
+								unused: true, // Remove unused variables
+								loops: true, // Optimize loops
+								toplevel: true, // Drop unreferenced top-level functions/variables
 							},
 							mangle: {
 								safari10: true, // Fix Safari 10 issues
+								toplevel: true, // Mangle top-level names
 								properties: {
 									regex: /^_/, // Mangle properties starting with underscore
 								},
@@ -34,7 +56,9 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 							format: {
 								comments: false, // Remove all comments
 								ascii_only: true, // Ensure ASCII output
+								ecma: 2020, // Use modern ECMAScript features for smaller output
 							},
+							ecma: 2020, // Target modern JavaScript for better optimization
 						},
 						extractComments: false, // Don't create separate license files
 						parallel: true, // Use multiple processes for faster builds
@@ -88,6 +112,13 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 					},
 				},
 			},
+		});
+	}
+
+	// Configure modern JavaScript target for all stages
+	if (stage === "build-javascript" || stage === "develop") {
+		actions.setWebpackConfig({
+			target: ["web", "es2020"], // Target modern browsers
 		});
 	}
 };

@@ -1,9 +1,32 @@
-/* Critical CSS - inline this in HTML head */
+/* Critical CSS - Above the fold styles for immediate rendering */
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 
 /* Font loading optimization to prevent FOIT/FOUT */
 .font-fredoka {
 	font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	font-display: swap;
+	font-size-adjust: 0.5; /* Prevent layout shift during font loading */
+}
+
+/* Body and HTML base styles */
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #00474f; /* Tailwind bg-background */
 }
 
 /* Layout containers with stable dimensions */
@@ -13,22 +36,68 @@
 	padding: 0 1rem;
 }
 
+@media (min-width: 768px) {
+	.container {
+		padding: 0;
+	}
+}
+
+/* Main content area to prevent layout shift */
+main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Header and navigation styles */
+header {
+	position: relative;
+	z-index: 10;
+}
+
 /* Prevent layout shift for social icons */
 .circle-container {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 3rem;
-	height: 3rem;
-	margin: 0 0.5rem;
+	width: 46px;
+	height: 46px;
+	margin-right: 1rem;
+	margin-top: 0;
 	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.1);
-	transition: background 0.3s ease;
-	flex-shrink: 0; /* Prevent shrinking */
+	background-color: #b5f5ec; /* Tailwind bg-secondary */
+	flex-shrink: 0;
+	transition: background-color 0.3s ease;
 }
 
 .circle-container:hover {
-	background: rgba(255, 255, 255, 0.2);
+	background-color: #00474f; /* Tailwind bg-primary */
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.circle-container {
+		margin-top: 1.5rem;
+	}
+}
+
+/* Link styles */
+.circle-container > a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+/* Icon styles */
+.circle-container svg {
+	color: #00474f; /* Tailwind text-primary */
+}
+
+.circle-container:hover svg {
+	color: #b5f5ec; /* Tailwind text-secondary */
 }
 
 /* Video player with stable aspect ratio */
@@ -39,6 +108,7 @@
 	background: #00474f;
 	border-radius: 0.5rem;
 	overflow: hidden;
+	contain: layout style; /* Optimize for aspect ratio changes */
 }
 
 .react-player {
@@ -52,6 +122,11 @@
 /* Stable image dimensions */
 img {
 	max-width: 100%;
+	height: auto;
+}
+
+/* Optimize images with explicit dimensions */
+img[width][height] {
 	height: auto;
 }
 
@@ -75,18 +150,64 @@ img {
 		opacity: 1;
 	}
 	50% {
-		opacity: .5;
+		opacity: 0.5;
 	}
 }
 
-/* Prevent cumulative layout shift */
-* {
-	box-sizing: border-box;
+/* Typography base styles */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: inherit;
+	line-height: inherit;
 }
 
-/* Stable text rendering */
-body {
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+p {
+	margin: 0 0 1rem 0;
+	text-wrap: pretty;
+}
+
+/* Link styles */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Ensure proper aspect ratios are maintained */
+[style*="aspect-ratio"] {
+	contain: layout style;
+}
+
+/* Prevent flash of unstyled content */
+.gatsby-image-wrapper {
+	overflow: hidden;
+}
+
+/* Optimize for Core Web Vitals */
+.gatsby-image-wrapper img {
+	transition: opacity 0.3s ease;
+}
+
+/* Tailwind base utilities that are critical */
+.bg-background {
+	background-color: #00474f;
+}
+
+.text-primary {
+	color: #00474f;
+}
+
+.text-secondary {
+	color: #b5f5ec;
+}
+
+.bg-primary {
+	background-color: #00474f;
+}
+
+.bg-secondary {
+	background-color: #b5f5ec;
 }

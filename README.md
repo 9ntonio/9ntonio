@@ -424,7 +424,8 @@ module.exports = {
 
 - **Gatsby Adapter**: Official `gatsby-adapter-netlify` for Gatsby 5+ compatibility
 - **Automatic Deployments**: From main branch with optimized build process
-- **Build Optimization**: Native Netlify integration with enhanced performance
+- **Build Optimization**: Clean builds with production-specific optimizations (`yarn clean && yarn build:production`)
+- **Performance**: Skips bundle analysis in production for faster deployment builds
 - **Asset Processing**: Comprehensive build-time optimization including:
   - CSS bundling and minification
   - JavaScript bundling and minification
@@ -437,10 +438,21 @@ module.exports = {
 
 ### Build Process
 
-1. **Pre-build**: Copy unknown-pleasures static files
-2. **Build**: Gatsby build with Netlify adapter and CPU limit (2 cores)
-3. **Post-build**: Verify file copying and run bundle analysis
-4. **Analysis**: Generate reports and metrics
+**Development Build:**
+```bash
+yarn build  # Full build with bundle analysis for development
+```
+
+**Production Deployment:**
+```bash
+yarn clean && yarn build:production  # Optimized production build
+```
+
+**Build Steps:**
+1. **Cache Cleaning**: `yarn clean` ensures fresh builds without stale cache
+2. **Production Build**: `yarn build:production` with optimized settings (no bundle analysis)
+3. **Post-build**: Copy unknown-pleasures static files and verify integrity
+4. **Deployment**: Netlify processes and optimizes assets
 
 ## 🎯 Performance Targets
 

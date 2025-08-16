@@ -8,6 +8,7 @@ import PerformanceMonitor from "../components/PerformanceMonitor";
 import LayoutStabilityMonitor from "../components/LayoutStabilityMonitor";
 import ErrorBoundary from "../components/ErrorBoundary";
 import VideoModal from "../components/VideoModal";
+import CriticalCSSLoader from "../components/CriticalCSSLoader";
 import logo from "../../static/logo-2.svg";
 
 // *Lazy load heavy components only when needed
@@ -91,7 +92,8 @@ export default function Home() {
 
 	return (
 		<ErrorBoundary>
-			<div className="font-fredoka text-textColor">
+			<CriticalCSSLoader>
+				<div className="font-fredoka text-textColor">
 				<PreloadResources />
 				<ThirdPartyScriptLoader />
 				{process.env.NODE_ENV === "development" && (
@@ -242,11 +244,11 @@ export default function Home() {
 											alt="Gusto project video thumbnail"
 											placeholder="blurred"
 											layout="constrained"
-											width={480}
-											height={320}
+											width={600}
+											height={400}
 											formats={["avif", "webp", "auto"]}
-											quality={75}
-											sizes="(max-width: 768px) 100vw, 33vw"
+											quality={80}
+											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105"
 											loading="eager"
 											fetchPriority="high"
@@ -307,11 +309,11 @@ export default function Home() {
 											alt="Google Store project showcase"
 											placeholder="blurred"
 											layout="constrained"
-											width={480}
-											height={320}
+											width={600}
+											height={400}
 											formats={["avif", "webp", "auto"]}
-											quality={75}
-											sizes="(max-width: 768px) 100vw, 33vw"
+											quality={80}
+											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 											loading="lazy"
 										/>
@@ -351,11 +353,11 @@ export default function Home() {
 											alt="PlayStation Vue streaming service application"
 											placeholder="blurred"
 											layout="constrained"
-											width={480}
-											height={320}
+											width={600}
+											height={400}
 											formats={["avif", "webp", "auto"]}
-											quality={75}
-											sizes="(max-width: 768px) 100vw, 33vw"
+											quality={80}
+											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 											loading="lazy"
 										/>
@@ -393,11 +395,11 @@ export default function Home() {
 											alt="Unknown Pleasures Joy Division album cover visualization"
 											placeholder="blurred"
 											layout="constrained"
-											width={480}
-											height={320}
+											width={600}
+											height={400}
 											formats={["avif", "webp", "auto"]}
-											quality={75}
-											sizes="(max-width: 768px) 100vw, 33vw"
+											quality={80}
+											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 											loading="lazy"
 										/>
@@ -525,7 +527,8 @@ export default function Home() {
 					videoUrl="https://player.vimeo.com/video/374826636"
 					title="Gusto Project Showcase"
 				/>
-			</div>
+				</div>
+			</CriticalCSSLoader>
 		</ErrorBoundary>
 	);
 }

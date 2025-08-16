@@ -1,0 +1,19 @@
+# Modern browsers for production builds
+# This configuration targets browsers that support modern JavaScript features
+# reducing bundle size and improving performance
+
+# Production environment (default)
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
+not dead
+> 0.5%
+supports es6-module
+supports es6-module-dynamic-import
+
+# Development environment
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version

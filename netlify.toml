@@ -7,17 +7,17 @@ NODE_VERSION = "18.17.0"
 GATSBY_CPU_COUNT = "2"
 GATSBY_CONTINUE_BUILD_ON_MISSING_ADAPTER = "true"
 
-# Enable selective processing for compression only
+# Enable text compression while keeping asset processing disabled
 [build.processing]
 skip_processing = false
 
 [build.processing.css]
 bundle = false
-minify = false
+minify = true
 
 [build.processing.js]
 bundle = false
-minify = false
+minify = true
 
 [build.processing.html]
 pretty_urls = true
@@ -28,16 +28,7 @@ compress = false
 [[plugins]]
 package = "@netlify/plugin-gatsby"
 
-# Optimized caching headers for static assets
-[[headers]]
-for = "/*.js"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/*.css"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+# Optimized caching headers for static assets (JS and CSS headers moved to compression section)
 
 [[headers]]
 for = "/*.woff2"
@@ -69,11 +60,33 @@ for = "/*.svg"
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
 
-# HTML files - short cache for content updates
+# HTML files - short cache for content updates (moved to compression section)
+
+# Optimized caching headers for text assets (compression handled automatically by Netlify)
+[[headers]]
+for = "/*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.css"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
 for = "/*.html"
 [headers.values]
 Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+for = "/*.json"
+[headers.values]
+Cache-Control = "public, max-age=3600"
+
+[[headers]]
+for = "/*.xml"
+[headers.values]
+Cache-Control = "public, max-age=3600"
 
 # Security headers
 [[headers]]
