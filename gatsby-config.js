@@ -1,6 +1,7 @@
 module.exports = {
 	adapter: require("gatsby-adapter-netlify").default({
 		excludeDatastoreFromEngineFunction: false,
+		imageCDN: false, // Let Netlify handle image optimization
 	}),
 	siteMetadata: {
 		title: `Design Technologist`,
@@ -83,6 +84,34 @@ module.exports = {
 				useShortDoctype: true,
 			},
 		},
+		{
+			resolve: `gatsby-plugin-sitemap`,
+			options: {
+				excludes: [`/404`, `/404.html`],
+				query: `
+					{
+						site {
+							siteMetadata {
+								siteUrl
+							}
+						}
+						allSitePage {
+							nodes {
+								path
+							}
+						}
+					}
+				`,
+				resolveSiteUrl: () => "https://antonio.almena.io",
+				serialize: ({ path }) => {
+					return {
+						url: path,
+						changefreq: `monthly`,
+						priority: path === "/" ? 1.0 : 0.7,
+					}
+				},
+			},
+		},
 	],
 	trailingSlash: "always",
 	graphqlTypegen: true,
@@ -92,5 +121,6 @@ module.exports = {
 		FAST_DEV: true,
 		PRESERVE_FILE_DOWNLOAD_CACHE: true,
 		PARALLEL_SOURCING: true,
+		FAST_REFRESH: true,
 	},
 };

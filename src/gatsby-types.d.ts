@@ -1470,6 +1470,7 @@ type Query_imageSharpArgs = {
 
 
 type Query_siteArgs = {
+  adapter: InputMaybe<SiteAdapterFilterInput>;
   buildTime: InputMaybe<DateQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
   flags: InputMaybe<SiteFlagsFilterInput>;
@@ -1543,6 +1544,7 @@ type Query_sitePluginArgs = {
 };
 
 type Site = Node & {
+  readonly adapter: Maybe<SiteAdapter>;
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly children: ReadonlyArray<Node>;
   readonly flags: Maybe<SiteFlags>;
@@ -1565,6 +1567,22 @@ type Site_buildTimeArgs = {
   formatString: InputMaybe<Scalars['String']>;
   fromNow: InputMaybe<Scalars['Boolean']>;
   locale: InputMaybe<Scalars['String']>;
+};
+
+type SiteAdapter = {
+  readonly name: Maybe<Scalars['String']>;
+};
+
+type SiteAdapterFieldSelector = {
+  readonly name: InputMaybe<FieldSelectorEnum>;
+};
+
+type SiteAdapterFilterInput = {
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SiteAdapterSortInput = {
+  readonly name: InputMaybe<SortOrderEnum>;
 };
 
 type SiteBuildMetadata = Node & {
@@ -1739,6 +1757,7 @@ type SiteEdge = {
 };
 
 type SiteFieldSelector = {
+  readonly adapter: InputMaybe<SiteAdapterFieldSelector>;
   readonly buildTime: InputMaybe<FieldSelectorEnum>;
   readonly children: InputMaybe<NodeFieldSelector>;
   readonly flags: InputMaybe<SiteFlagsFieldSelector>;
@@ -1756,6 +1775,7 @@ type SiteFieldSelector = {
 };
 
 type SiteFilterInput = {
+  readonly adapter: InputMaybe<SiteAdapterFilterInput>;
   readonly buildTime: InputMaybe<DateQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly flags: InputMaybe<SiteFlagsFilterInput>;
@@ -1775,7 +1795,6 @@ type SiteFilterInput = {
 type SiteFlags = {
   readonly DEV_SSR: Maybe<Scalars['Boolean']>;
   readonly FAST_DEV: Maybe<Scalars['Boolean']>;
-  readonly FAST_REFRESH: Maybe<Scalars['Boolean']>;
   readonly PARALLEL_SOURCING: Maybe<Scalars['Boolean']>;
   readonly PRESERVE_FILE_DOWNLOAD_CACHE: Maybe<Scalars['Boolean']>;
 };
@@ -1783,7 +1802,6 @@ type SiteFlags = {
 type SiteFlagsFieldSelector = {
   readonly DEV_SSR: InputMaybe<FieldSelectorEnum>;
   readonly FAST_DEV: InputMaybe<FieldSelectorEnum>;
-  readonly FAST_REFRESH: InputMaybe<FieldSelectorEnum>;
   readonly PARALLEL_SOURCING: InputMaybe<FieldSelectorEnum>;
   readonly PRESERVE_FILE_DOWNLOAD_CACHE: InputMaybe<FieldSelectorEnum>;
 };
@@ -1791,7 +1809,6 @@ type SiteFlagsFieldSelector = {
 type SiteFlagsFilterInput = {
   readonly DEV_SSR: InputMaybe<BooleanQueryOperatorInput>;
   readonly FAST_DEV: InputMaybe<BooleanQueryOperatorInput>;
-  readonly FAST_REFRESH: InputMaybe<BooleanQueryOperatorInput>;
   readonly PARALLEL_SOURCING: InputMaybe<BooleanQueryOperatorInput>;
   readonly PRESERVE_FILE_DOWNLOAD_CACHE: InputMaybe<BooleanQueryOperatorInput>;
 };
@@ -1799,7 +1816,6 @@ type SiteFlagsFilterInput = {
 type SiteFlagsSortInput = {
   readonly DEV_SSR: InputMaybe<SortOrderEnum>;
   readonly FAST_DEV: InputMaybe<SortOrderEnum>;
-  readonly FAST_REFRESH: InputMaybe<SortOrderEnum>;
   readonly PARALLEL_SOURCING: InputMaybe<SortOrderEnum>;
   readonly PRESERVE_FILE_DOWNLOAD_CACHE: InputMaybe<SortOrderEnum>;
 };
@@ -2336,6 +2352,7 @@ type SiteSiteMetadataSortInput = {
 };
 
 type SiteSortInput = {
+  readonly adapter: InputMaybe<SiteAdapterSortInput>;
   readonly buildTime: InputMaybe<SortOrderEnum>;
   readonly children: InputMaybe<NodeSortInput>;
   readonly flags: InputMaybe<SiteFlagsSortInput>;

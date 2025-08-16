@@ -7,8 +7,77 @@ NODE_VERSION = "18.17.0"
 GATSBY_CPU_COUNT = "2"
 GATSBY_CONTINUE_BUILD_ON_MISSING_ADAPTER = "true"
 
+# Asset optimization settings
+[build.processing]
+skip_processing = false
+
+[build.processing.css]
+bundle = true
+minify = true
+
+[build.processing.js]
+bundle = true
+minify = true
+
+[build.processing.html]
+pretty_urls = true
+
+[build.processing.images]
+compress = true
+
 [[plugins]]
 package = "@netlify/plugin-gatsby"
+
+# Enable additional optimizations
+[context.production]
+command = "yarn build"
+
+[context.production.environment]
+GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES = "true"
+GATSBY_CPU_COUNT = "2"
+
+# Optimized caching headers for different asset types
+[[headers]]
+for = "/*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+Content-Encoding = "br, gzip"
+
+[[headers]]
+for = "/*.css"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+Content-Encoding = "br, gzip"
+
+[[headers]]
+for = "/*.woff2"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.webp"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.avif"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.jpg"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.png"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.svg"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 
 # Handle assets files with proper caching
 [[headers]]
@@ -20,6 +89,42 @@ Cache-Control = "public, max-age=31536000, immutable"
 for = "/unknown-pleasures/assets/*"
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML files - shorter cache for content updates
+[[headers]]
+for = "/*.html"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+
+# Service worker
+[[headers]]
+for = "/sw.js"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+
+# Robots.txt
+[[headers]]
+for = "/robots.txt"
+[headers.values]
+Content-Type = "text/plain"
+Cache-Control = "public, max-age=3600"
+
+# Sitemap files
+[[headers]]
+for = "/sitemap*.xml"
+[headers.values]
+Content-Type = "application/xml"
+Cache-Control = "public, max-age=3600"
+
+# Security and performance headers
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 # Important: Ensure proper routing for unknown-pleasures section and its assets
 [[redirects]]
@@ -41,7 +146,21 @@ to = "/assets/:splat"
 status = 200
 force = true
 
-# Fallback for SPA
+# Ensure robots.txt is served correctly (before SPA fallback)
+[[redirects]]
+from = "/robots.txt"
+to = "/robots.txt"
+status = 200
+force = false
+
+# Ensure sitemap is served correctly
+[[redirects]]
+from = "/sitemap*"
+to = "/sitemap:splat"
+status = 200
+force = false
+
+# Fallback for SPA (must be last)
 [[redirects]]
 from = "/*"
 to = "/index.html"

@@ -59,6 +59,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-preload-fonts", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:4.14.0"],\
           ["gatsby-plugin-remove-serviceworker", "npm:1.0.0"],\
           ["gatsby-plugin-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.14.0"],\
+          ["gatsby-plugin-sitemap", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.14.0"],\
           ["gatsby-plugin-webpack-bundle-analyser-v2", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:1.1.32"],\
           ["gatsby-source-filesystem", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.14.0"],\
           ["gatsby-transformer-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.14.0"],\
@@ -5399,6 +5400,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
+      ["npm:17.0.45", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-node-npm-17.0.45-fdb38d1624-10c0.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:17.0.45"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:22.13.8", {\
         "packageLocation": "../../.yarn/berry/cache/@types-node-npm-22.13.8-e280e411c3-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
@@ -5460,6 +5468,16 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/rimraf", "npm:2.0.5"],\
           ["@types/glob", "npm:8.1.0"],\
+          ["@types/node", "npm:22.13.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/sax", [\
+      ["npm:1.2.7", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-sax-npm-1.2.7-8cb29ef8d3-10c0.zip/node_modules/@types/sax/",\
+        "packageDependencies": [\
+          ["@types/sax", "npm:1.2.7"],\
           ["@types/node", "npm:22.13.8"]\
         ],\
         "linkType": "HARD"\
@@ -6314,6 +6332,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-preload-fonts", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:4.14.0"],\
           ["gatsby-plugin-remove-serviceworker", "npm:1.0.0"],\
           ["gatsby-plugin-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.14.0"],\
+          ["gatsby-plugin-sitemap", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.14.0"],\
           ["gatsby-plugin-webpack-bundle-analyser-v2", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:1.1.32"],\
           ["gatsby-source-filesystem", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.14.0"],\
           ["gatsby-transformer-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.14.0"],\
@@ -6652,7 +6671,7 @@ const RAW_RUNTIME_STATE =
           ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.21"],\
           ["@types/postcss", null],\
           ["browserslist", "npm:4.24.4"],\
-          ["caniuse-lite", "npm:1.0.30001703"],\
+          ["caniuse-lite", "npm:1.0.30001735"],\
           ["fraction.js", "npm:4.3.7"],\
           ["normalize-range", "npm:0.1.2"],\
           ["picocolors", "npm:1.1.1"],\
@@ -7266,7 +7285,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/browserslist-npm-4.24.4-2fdeb5face-10c0.zip/node_modules/browserslist/",\
         "packageDependencies": [\
           ["browserslist", "npm:4.24.4"],\
-          ["caniuse-lite", "npm:1.0.30001701"],\
+          ["caniuse-lite", "npm:1.0.30001735"],\
           ["electron-to-chromium", "npm:1.5.109"],\
           ["node-releases", "npm:2.0.19"],\
           ["update-browserslist-db", "virtual:2fdeb5face9914bb5fd94c70f084d153c80d2f09e5aabee010e4220b248dc23fca8f73c7beed0195e45ae6e2b1cb25388f709d7bfc4f00e473d573887faf4e5c#npm:1.1.3"]\
@@ -7525,7 +7544,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["caniuse-api", "npm:3.0.0"],\
           ["browserslist", "npm:4.24.4"],\
-          ["caniuse-lite", "npm:1.0.30001701"],\
+          ["caniuse-lite", "npm:1.0.30001735"],\
           ["lodash.memoize", "npm:4.1.2"],\
           ["lodash.uniq", "npm:4.5.0"]\
         ],\
@@ -7533,17 +7552,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["caniuse-lite", [\
-      ["npm:1.0.30001701", {\
-        "packageLocation": "../../.yarn/berry/cache/caniuse-lite-npm-1.0.30001701-136a9c0306-10c0.zip/node_modules/caniuse-lite/",\
+      ["npm:1.0.30001735", {\
+        "packageLocation": "../../.yarn/berry/cache/caniuse-lite-npm-1.0.30001735-970d671983-10c0.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
-          ["caniuse-lite", "npm:1.0.30001701"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:1.0.30001703", {\
-        "packageLocation": "../../.yarn/berry/cache/caniuse-lite-npm-1.0.30001703-4fd183aaad-10c0.zip/node_modules/caniuse-lite/",\
-        "packageDependencies": [\
-          ["caniuse-lite", "npm:1.0.30001703"]\
+          ["caniuse-lite", "npm:1.0.30001735"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12104,6 +12116,40 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/gatsby",\
           "gatsby"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["gatsby-plugin-sitemap", [\
+      ["npm:6.14.0", {\
+        "packageLocation": "../../.yarn/berry/cache/gatsby-plugin-sitemap-npm-6.14.0-0d70403983-10c0.zip/node_modules/gatsby-plugin-sitemap/",\
+        "packageDependencies": [\
+          ["gatsby-plugin-sitemap", "npm:6.14.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.14.0", {\
+        "packageLocation": "./.yarn/__virtual__/gatsby-plugin-sitemap-virtual-f96805c69c/3/.yarn/berry/cache/gatsby-plugin-sitemap-npm-6.14.0-0d70403983-10c0.zip/node_modules/gatsby-plugin-sitemap/",\
+        "packageDependencies": [\
+          ["gatsby-plugin-sitemap", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.14.0"],\
+          ["@babel/runtime", "npm:7.26.10"],\
+          ["@types/gatsby", null],\
+          ["@types/react", null],\
+          ["@types/react-dom", null],\
+          ["common-tags", "npm:1.8.2"],\
+          ["gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.14.1"],\
+          ["minimatch", "npm:3.1.2"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:18.3.1"],\
+          ["sitemap", "npm:7.1.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/gatsby",\
+          "@types/react-dom",\
+          "@types/react",\
+          "gatsby",\
+          "react-dom",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19496,6 +19542,19 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/sisteransi-npm-1.0.5-af60cc0cfa-10c0.zip/node_modules/sisteransi/",\
         "packageDependencies": [\
           ["sisteransi", "npm:1.0.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sitemap", [\
+      ["npm:7.1.2", {\
+        "packageLocation": "../../.yarn/berry/cache/sitemap-npm-7.1.2-dee930a292-10c0.zip/node_modules/sitemap/",\
+        "packageDependencies": [\
+          ["sitemap", "npm:7.1.2"],\
+          ["@types/node", "npm:17.0.45"],\
+          ["@types/sax", "npm:1.2.7"],\
+          ["arg", "npm:5.0.2"],\
+          ["sax", "npm:1.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\

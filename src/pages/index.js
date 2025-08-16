@@ -295,6 +295,7 @@ export default function Home() {
 											aspectRatio={3 / 2}
 											formats={["auto", "webp", "avif"]}
 											quality={85}
+											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 										/>
 									</a>
 								</div>
@@ -334,6 +335,7 @@ export default function Home() {
 											aspectRatio={3 / 2}
 											formats={["auto", "webp", "avif"]}
 											quality={85}
+											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 										/>
 									</a>
 								</div>
@@ -372,6 +374,7 @@ export default function Home() {
 											aspectRatio={3 / 2}
 											formats={["auto", "webp", "avif"]}
 											quality={85}
+											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 										/>
 									</a>
 								</div>
