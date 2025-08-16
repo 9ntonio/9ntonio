@@ -1,159 +1,149 @@
-# Project Structure & Organization
+# Project Structure
 
-## Root Directory Structure
+## Root Directory Organization
 
 ```
 ├── src/                    # Source code
 ├── static/                 # Static assets (copied to public)
-├── public/                 # Build output (generated)
+├── public/                 # Generated build output
 ├── scripts/                # Build and analysis scripts
 ├── .kiro/                  # Kiro steering rules
-├── .yarn/                  # Yarn PnP dependencies
 └── config files            # Various configuration files
 ```
 
-## Source Code Organization (`src/`)
+## Source Code Structure (`src/`)
 
 ```
 src/
 ├── components/             # Reusable React components
-│   ├── Seo.js             # SEO/meta tags component
+│   ├── Seo.js             # SEO/meta tags with dynamic favicon management
 │   ├── FontAwesome.js     # Lazy-loaded icon component
-│   ├── PerformanceMonitor.js  # Dev performance tracking
-│   └── PreloadResources.js    # Resource hints component
+│   ├── ErrorBoundary.js   # Error handling and recovery
+│   ├── VideoModal.js      # Accessible video modal with keyboard navigation
+│   ├── PerformanceMonitor.js      # Dev performance tracking
+│   ├── LayoutStabilityMonitor.js  # CLS and LCP monitoring
+│   ├── PreloadResources.js        # Resource hints component
+│   └── LazyComponentWrapper.js    # Component lazy loading wrapper
 ├── pages/                  # Gatsby page components
 │   ├── index.js           # Homepage (main portfolio)
 │   ├── 404.js             # Error page
-│   └── unknown-pleasures.js   # Special project page
+│   └── unknown-pleasures.js       # Special project page
 ├── styles/                 # CSS files
 │   ├── global.css         # Global styles with Tailwind
 │   └── critical.css       # Critical CSS for inlining
-├── scripts/                # Client-side scripts
-└── html.js                 # Custom HTML template
+├── hooks/                  # Custom React hooks
+│   └── useParticleSystem.js       # Particle system management
+├── config/                 # Configuration modules
+│   ├── constants.js       # Application constants
+│   └── webpack.config.js  # Webpack configuration overrides
+├── scripts/                # Build-time scripts
+└── html.js                 # Custom HTML template with static favicon fallbacks
 ```
 
-## Static Assets (`static/`)
+## Key Directories
 
-```
-static/
-├── favicon.png            # Site favicon
-├── social.jpg             # Social media preview image
-├── logo-2.svg             # Main logo
-├── *.webp, *.jpg          # Project showcase images
-├── sw.js                  # Service worker
-└── unknown-pleasures/     # Special project assets
-    ├── index.html         # Standalone HTML page
-    └── assets/            # Project-specific assets
-        ├── disorder.mp3   # Audio file
-        └── index-*.js     # Compiled JavaScript
-```
+### `/static/`
+Static assets that are copied directly to the public directory:
+- Images (WebP, AVIF formats preferred)
+- Favicon files
+- robots.txt
+- Service worker files
+- Unknown Pleasures project assets
 
-## Configuration Files
+### `/scripts/`
+Build and analysis utilities:
+- `analyze-bundle.js` - JavaScript bundle size analysis
+- `minification-report.js` - Minification effectiveness reporting
+- `performance-validation.js` - Performance metrics validation
+- `validate-netlify-config.js` - Netlify configuration validation
 
-- **gatsby-config.js**: Main Gatsby configuration with plugins
-- **gatsby-node.js**: Build-time logic, webpack config, file copying
-- **gatsby-browser.js**: Browser-side Gatsby APIs
-- **tailwind.config.js**: Tailwind CSS configuration
-- **postcss.config.js**: PostCSS configuration
-- **package.json**: Dependencies and scripts
-- **netlify.toml**: Deployment configuration
-- **.editorconfig**: Code style rules (tabs, 200 char limit)
-
-## Build Scripts (`scripts/`)
-
-- **analyze-bundle.js**: JavaScript bundle size analysis
-- **minification-report.js**: Minification effectiveness report
-- **verify-build.js**: Build integrity verification
+### `/public/` (Generated)
+Build output directory containing:
+- Optimized HTML, CSS, JS files
+- Processed images with multiple formats
+- Service worker and PWA manifest
+- Webpack bundle analysis reports
 
 ## Component Architecture
 
-### Page Components
+### Core Components
+- **Seo.js**: Handles meta tags, Open Graph, Twitter cards, and favicon management
+- **ErrorBoundary.js**: Catches and handles React errors gracefully
+- **VideoModal.js**: Accessible modal for video playback with keyboard navigation
 
-- **Single responsibility**: Each page handles one main route
-- **Performance optimized**: Lazy loading for heavy components
-- **SEO ready**: Proper meta tags and structured data
-
-### Reusable Components
-
-- **Seo.js**: Centralized SEO/meta tag management
-- **FontAwesome.js**: Lazy-loaded icon system
+### Performance Components
 - **PerformanceMonitor.js**: Development-only performance tracking
-- **PreloadResources.js**: Resource hints for performance
+- **LayoutStabilityMonitor.js**: Real-time CLS detection and logging
+- **PreloadResources.js**: Resource hints for external dependencies
 
-## Styling Conventions
+### Lazy Loading Strategy
+Heavy components are lazy-loaded to improve initial page load:
+- Particles system (desktop only)
+- FontAwesome icons
+- Video players
 
-### Tailwind CSS Classes
+## Configuration Files
 
-- **Responsive**: Mobile-first with `md:` breakpoints
-- **Custom colors**: Defined in tailwind.config.js
-    - `primary`: #b5f5ec (light teal)
-    - `secondary`: #5b8c00 (green)
-    - `background`: #00474f (dark teal)
-    - `highlight`: #FFE8BA (cream)
-    - `textColor`: #fff (white)
+### Core Config
+- `gatsby-config.js` - Main Gatsby configuration with Netlify adapter
+- `gatsby-node.js` - Build-time logic and webpack customization
+- `gatsby-browser.js` - Browser-side Gatsby APIs
+- `package.json` - Dependencies and scripts with yarn resolutions
 
-### CSS Organization
+### Styling Config
+- `tailwind.config.js` - Tailwind CSS configuration with custom colors
+- `postcss.config.js` - PostCSS configuration with autoprefixer
+- `.editorconfig` - Code style consistency (tabs, 200 char limit)
 
-- **Global styles**: Base styles and Tailwind imports
-- **Component styles**: Scoped utility classes
-- **Critical CSS**: Inlined for performance
+### Quality Assurance
+- `.eslintrc.js` - ESLint rules for React, accessibility, and Gatsby
+- `.prettierrc` - Code formatting rules
+- `.husky/` - Git hooks for automated quality checks
 
-## File Naming Conventions
+### Deployment
+- `netlify.toml` - Netlify deployment configuration with asset optimization
+- `.env.local` - Environment variables (not committed)
 
-- **Components**: PascalCase (e.g., `FontAwesome.js`)
-- **Pages**: lowercase (e.g., `index.js`, `unknown-pleasures.js`)
-- **Assets**: kebab-case (e.g., `logo-2.svg`, `unknown-pleasures.webp`)
-- **Scripts**: kebab-case (e.g., `analyze-bundle.js`)
+## Naming Conventions
 
-## Import Patterns
-
-### Lazy Loading
-
-```javascript
-const ReactPlayer = React.lazy(() => import("react-player/lazy"));
-const Particles = React.lazy(() => import("react-tsparticles"));
-```
-
-### Static Assets
-
-```javascript
-import logo from "../../static/logo-2.svg";
-import { StaticImage } from "gatsby-plugin-image";
-```
+### Files
+- React components: PascalCase (e.g., `VideoModal.js`)
+- Pages: lowercase (e.g., `index.js`, `unknown-pleasures.js`)
+- Utilities/hooks: camelCase with prefix (e.g., `useParticleSystem.js`)
+- Config files: lowercase with hyphens (e.g., `gatsby-config.js`)
 
 ### Components
+- Component names: PascalCase
+- Props: camelCase
+- CSS classes: Tailwind utilities preferred, custom classes in kebab-case
 
-```javascript
-import Seo from "../components/Seo";
-import PreloadResources from "../components/PreloadResources";
-```
+## Asset Organization
 
-## Special Directories
+### Images
+- Source images in `/static/` directory
+- Use WebP/AVIF formats when possible
+- Implement responsive images with Gatsby Image
+- 75% quality compression for optimal performance
 
-### `.yarn/` - Yarn PnP
+### Fonts
+- Google Fonts loaded with display swap
+- Fredoka font family with weights 300-700
+- Fallback fonts specified in Tailwind config
 
-- Contains unplugged packages and Yarn releases
-- Managed automatically by Yarn
-- Should not be manually modified
+## Performance Considerations
 
-### `public/` - Build Output
+### Code Splitting
+- Vendor chunks separated from application code
+- Heavy libraries (particles, video player) lazy-loaded
+- Route-based splitting for pages
 
-- Generated during build process
-- Contains optimized assets and HTML
-- Includes copied files from `static/`
-- Should not be committed to version control
+### Bundle Analysis
+- Automated bundle size monitoring
+- Minification reporting with 83.7% compression target
+- Performance validation scripts
 
-### `.kiro/steering/` - AI Assistant Rules
-
-- Contains markdown files with project guidance
-- Automatically included in AI context
-- Helps maintain consistency across development sessions
-
-## Development Workflow
-
-1. **Start development**: `yarn dev`
-2. **Make changes**: Edit files in `src/`
-3. **Add assets**: Place in `static/` for copying to `public/`
-4. **Test build**: `yarn build && yarn serve`
-5. **Analyze performance**: `yarn analyze-bundle`
-6. **Format code**: `yarn format`
+### Accessibility
+- WCAG 2.1 AA compliance throughout
+- Comprehensive aria-labels and screen reader support
+- Keyboard navigation for all interactive elements
+- Error boundaries with accessible error messages

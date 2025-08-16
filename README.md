@@ -49,7 +49,8 @@ This portfolio demonstrates technical expertise through both content and impleme
 
 ### Performance & Optimization
 
-- **Gatsby Image**: Optimized images with WebP/AVIF formats
+- **Gatsby Image**: Optimized images with WebP/AVIF formats, 75% quality compression, and metadata stripping
+- **Responsive Images**: Enhanced breakpoints (480, 750, 1080, 1366, 1920px) for optimal mobile performance
 - **Code Splitting**: Webpack chunks for vendors, particles, react-player
 - **Lazy Loading**: React.lazy() for heavy components
 - **Bundle Analysis**: Custom script for monitoring JS bundle sizes
@@ -217,7 +218,7 @@ This portfolio has been optimized for maximum performance:
 
 - **Code Splitting**: Separate chunks for vendors, particles, react-player
 - **Lazy Loading**: Heavy components load only when needed
-- **Image Optimization**: WebP/AVIF formats with progressive loading
+- **Image Optimization**: WebP/AVIF formats with progressive loading, 75% quality compression, and metadata stripping for smaller file sizes
 - **Layout Shift Prevention**: Comprehensive CLS fixes with explicit dimensions and stable loading states
 - **Bundle Analysis**: Continuous monitoring of JavaScript bundle sizes
 - **Critical CSS**: Inlined essential styles to prevent render blocking

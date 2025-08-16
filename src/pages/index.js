@@ -230,10 +230,13 @@ export default function Home() {
 											src="../../static/gusto.webp"
 											alt="Gusto project video thumbnail"
 											placeholder="blurred"
-											layout="fullWidth"
+											layout="constrained"
+											width={480}
+											height={320}
 											aspectRatio={3 / 2}
 											formats={["auto", "webp", "avif"]}
-											quality={85}
+											quality={75}
+											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105"
 										/>
 										{/* Play Button Overlay */}
@@ -291,10 +294,13 @@ export default function Home() {
 											src="../../static/google.webp"
 											alt="Google Store project showcase"
 											placeholder="blurred"
-											layout="fullWidth"
+											layout="constrained"
+											width={480}
+											height={320}
 											aspectRatio={3 / 2}
 											formats={["auto", "webp", "avif"]}
-											quality={85}
+											quality={75}
+											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 										/>
 									</a>
@@ -331,10 +337,13 @@ export default function Home() {
 											src="../../static/vue.webp"
 											alt="PlayStation Vue streaming service application"
 											placeholder="blurred"
-											layout="fullWidth"
+											layout="constrained"
+											width={480}
+											height={320}
 											aspectRatio={3 / 2}
 											formats={["auto", "webp", "avif"]}
-											quality={85}
+											quality={75}
+											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 										/>
 									</a>
@@ -370,10 +379,13 @@ export default function Home() {
 											src="../../static/unknown-pleasures.webp"
 											alt="Unknown Pleasures Joy Division album cover visualization"
 											placeholder="blurred"
-											layout="fullWidth"
+											layout="constrained"
+											width={480}
+											height={320}
 											aspectRatio={3 / 2}
 											formats={["auto", "webp", "avif"]}
-											quality={85}
+											quality={75}
+											sizes="(max-width: 768px) 100vw, 33vw"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 										/>
 									</a>

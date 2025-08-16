@@ -125,6 +125,11 @@ X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
 Referrer-Policy = "strict-origin-when-cross-origin"
 Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+# Resource hints for better performance
+Link = '''</static/logo-2.svg>; rel=preload; as=image,
+</favicon.png>; rel=preload; as=image,
+<https://fonts.gstatic.com>; rel=preconnect; crossorigin,
+<https://fonts.googleapis.com>; rel=dns-prefetch'''
 
 # Important: Ensure proper routing for unknown-pleasures section and its assets
 [[redirects]]

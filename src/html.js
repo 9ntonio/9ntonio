@@ -19,6 +19,16 @@ export default function HTML(props) {
 				<link rel="dns-prefetch" href="//vimeo.com" />
 				<link rel="dns-prefetch" href="//player.vimeo.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+				{/* Preload critical font weights */}
+				<link
+					rel="preload"
+					href="https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2"
+					as="font"
+					type="font/woff2"
+					crossOrigin="anonymous"
+				/>
 
 				{/* Critical CSS inline */}
 				<style

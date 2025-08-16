@@ -1,33 +1,33 @@
 # Product Overview
 
-## Antonio Almena Portfolio
-
-A high-performance personal portfolio website showcasing the work and expertise of Antonio Almena, a Senior Full Stack Engineer with 12+ years of experience.
+Antonio Almena Portfolio is a high-performance personal portfolio website showcasing the work and expertise of a Senior Full Stack Engineer with 12+ years of experience.
 
 ## Key Features
 
-- **Interactive Particle Background**: Uses tsparticles with triangles preset for visual appeal
-- **Performance Optimized**: Lighthouse score optimized from 64 to 90+ through strategic lazy loading and code splitting
-- **PWA Ready**: Web App Manifest enables installation as a native-like app experience
-- **Accessibility Compliant**: WCAG 2.1 AA compliant with comprehensive aria-labels and screen reader support
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Unknown Pleasures Project**: Special interactive visualization inspired by Joy Division's album cover
-- **Video Portfolio**: Optimized image showcases with external video links for major projects
+- Interactive particle background system using tsparticles
+- Performance-optimized with Lighthouse scores 90+
+- PWA-ready with web app manifest
+- WCAG 2.1 AA accessibility compliant
+- Video portfolio with modal playback system
+- Special "Unknown Pleasures" interactive visualization project
+- Responsive design with mobile-first approach
 
 ## Target Audience
 
 - Potential employers and clients
 - Fellow developers and designers
-- Recruiters in tech industry
-- Design and development community
-
-## Core Value Proposition
-
-Demonstrates technical expertise through both content and implementation - the portfolio itself serves as a working example of modern web development best practices including performance optimization, accessibility, responsive design, and Progressive Web App capabilities.
+- Industry professionals seeking collaboration
 
 ## Notable Projects Featured
 
-- **Gusto**: Payroll, HR & Benefits platform (DEPT® collaboration)
-- **Google Store**: E-commerce platform (Odopod/Google collaboration)
-- **PlayStation Vue**: Streaming service interface (Odopod/Sony collaboration)
+- **Gusto**: Payroll, HR & Benefits platform
+- **Google Store**: E-commerce platform
+- **PlayStation Vue**: Streaming service interface
 - **Unknown Pleasures**: Personal creative coding project using AI assistance
+
+## Performance Goals
+
+- Lighthouse Performance: 90+
+- Accessibility: WCAG 2.1 AA compliance
+- Core Web Vitals optimization
+- Bundle size monitoring and optimization

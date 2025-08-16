@@ -17,6 +17,17 @@ module.exports = {
 				trackingId: `G-640WERC942`,
 				head: false, // Load in body to reduce render blocking
 				anonymize: true,
+				// Optimize GA loading
+				gtagConfig: {
+					optimize_id: "OPT_CONTAINER_ID",
+					anonymize_ip: true,
+					cookie_expires: 63072000, // 2 years
+				},
+				pluginConfig: {
+					// Delay GA loading until user interaction
+					respectDNT: true,
+					exclude: ["/preview/**", "/do-not-track/me/too/"],
+				},
 			},
 		},
 		{
@@ -25,6 +36,7 @@ module.exports = {
 				fonts: [`Fredoka\:300,400,500,600,700`],
 				display: "swap",
 				preconnect: true,
+				crossOrigin: `anonymous`,
 			},
 		},
 		`gatsby-plugin-postcss`,
@@ -35,8 +47,9 @@ module.exports = {
 				defaults: {
 					formats: [`auto`, `webp`, `avif`],
 					placeholder: `blurred`,
-					quality: 85,
-					breakpoints: [750, 1080, 1366, 1920],
+					quality: 75, // Reduced from 85 for better compression
+					breakpoints: [480, 750, 1080, 1366, 1920],
+					backgroundColor: `transparent`,
 				},
 			},
 		},
@@ -46,9 +59,13 @@ module.exports = {
 				defaults: {
 					formats: [`auto`, `webp`, `avif`],
 					placeholder: `blurred`,
-					quality: 85,
-					breakpoints: [750, 1080, 1366, 1920],
+					quality: 75, // Reduced from 85 for better compression
+					breakpoints: [480, 750, 1080, 1366, 1920],
+					backgroundColor: `transparent`,
 				},
+				// Optimize image processing
+				stripMetadata: true,
+				defaultQuality: 75,
 			},
 		},
 		`gatsby-transformer-sharp`,
