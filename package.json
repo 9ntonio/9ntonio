@@ -66,6 +66,7 @@
 		"validate-modern-build": "node scripts/validate-modern-build.js",
 		"compare-builds": "node scripts/compare-builds.js",
 		"validate-performance": "node scripts/validate-performance.cjs",
+		"pre-commit": "npm run format && npx lint-staged",
 		"prepare": "husky install"
 	},
 	"dependencies": {
@@ -142,7 +143,7 @@
 			"eslint --fix",
 			"prettier --write"
 		],
-		"*.{json,md,css}": [
+		"*.{json,md,css,scss}": [
 			"prettier --write"
 		]
 	}
