@@ -27,6 +27,7 @@ module.exports = {
 					"sans-serif",
 				],
 			},
+			fontDisplay: ["swap"], // Prevent font loading layout shifts
 		},
 	},
 	plugins: [],

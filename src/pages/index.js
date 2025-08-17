@@ -76,8 +76,8 @@ export default function Home() {
 
 				<section className="mt-4">
 					<div className="container">
-						<div className="flex flex-col md:flex-row md:items-center mb-4">
-							<div className="logo-container mb-1" style={{ width: '510px', height: '83px', maxWidth: '100%' }}>
+						<div className="header-container flex flex-col md:flex-row md:items-center mb-4">
+							<div className="logo-container mb-1">
 								<img
 									src={logo}
 									alt="Antonio Almena - Senior Full Stack Engineer Logo"
@@ -89,13 +89,13 @@ export default function Home() {
 									decoding="sync"
 								/>
 							</div>
-							<div className="flex flex-row" style={{ minHeight: '48px', minWidth: '168px' }}>
+							<div className="social-icons-container">
 								<Suspense
 									fallback={
 										<div className="flex flex-row">
-											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12 mr-2" style={{ width: '48px', height: '48px' }} />
-											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12 mr-2" style={{ width: '48px', height: '48px' }} />
-											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12" style={{ width: '48px', height: '48px' }} />
+											<div className="circle-container bg-secondary" />
+											<div className="circle-container bg-secondary" />
+											<div className="circle-container bg-secondary" />
 										</div>
 									}
 								>
@@ -195,6 +195,7 @@ export default function Home() {
 											className="transition-transform duration-300 group-hover:scale-105 w-full h-full object-cover"
 											loading="eager"
 											fetchPriority="high"
+											style={{ aspectRatio: "400/267" }}
 										/>
 										{/* Play Button Overlay */}
 										<div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all duration-300">
@@ -265,6 +266,7 @@ export default function Home() {
 											sizes="(max-width: 640px) 95vw, (max-width: 768px) 48vw, (max-width: 1024px) 32vw, 380px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg w-full h-full object-cover"
 											loading="lazy"
+											style={{ aspectRatio: "400/267" }}
 										/>
 									</a>
 								</div>
@@ -309,6 +311,7 @@ export default function Home() {
 											sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 350px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg w-full h-full object-cover"
 											loading="lazy"
+											style={{ aspectRatio: "400/267" }}
 										/>
 									</a>
 								</div>
@@ -357,6 +360,7 @@ export default function Home() {
 											sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 350px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg w-full h-full object-cover"
 											loading="lazy"
+											style={{ aspectRatio: "400/267" }}
 										/>
 									</a>
 								</div>

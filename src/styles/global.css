@@ -3,11 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+	/* Font loading states to prevent layout shifts */
+	html.fonts-loading {
+		/* Use system font during loading to maintain layout */
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	}
+
+	html.fonts-loaded {
+		/* Switch to custom font after loading */
+		font-family: "Fredoka", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	}
+
+	html.font-fallback {
+		/* Fallback if custom font fails to load */
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+	}
+
 	body {
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		@apply bg-background;
+		/* Prevent layout shifts during font loading */
+		font-display: swap;
 	}
 
 	a {
@@ -25,6 +43,7 @@
 @layer components {
 	.container {
 		@apply px-6 md:px-0 mx-auto;
+		max-width: 1200px; /* Prevent horizontal layout shifts */
 	}
 
 	/* Prevent layout shifts with consistent text sizing */
@@ -32,12 +51,17 @@
 		@apply text-xl leading-7 mb-4;
 		/* Reserve space to prevent CLS */
 		min-height: 1.75rem;
+		/* Prevent font swap layout shifts */
+		font-display: swap;
 	}
 
 	/* Fixed dimensions for circle containers */
 	.circle-container {
-		@apply w-[46px] h-[46px] bg-secondary rounded-full mr-4 mt-0 md:mt-6 flex items-center justify-center;
+		@apply w-[48px] h-[48px] bg-secondary rounded-full mr-4 mt-0 md:mt-6 flex items-center justify-center;
 		flex-shrink: 0; /* Prevent shrinking that causes layout shifts */
+		/* Reserve exact space to prevent shifts */
+		min-width: 48px;
+		min-height: 48px;
 	}
 
 	.circle-container:hover {
@@ -52,10 +76,24 @@
 	/* Target the FontAwesome icons */
 	.circle-container svg {
 		@apply text-primary;
+		/* Prevent icon size shifts */
+		width: 24px !important;
+		height: 24px !important;
+		/* Ensure consistent positioning */
+		display: block;
+		margin: auto;
 	}
 
 	.circle-container:hover svg {
 		@apply text-secondary;
+	}
+
+	/* Specific FontAwesome icon sizing */
+	.circle-container .linkedin,
+	.circle-container .github,
+	.circle-container .blog {
+		width: 24px !important;
+		height: 24px !important;
 	}
 
 	/* Project image containers with fixed aspect ratios */
@@ -63,6 +101,8 @@
 		aspect-ratio: 3/2;
 		width: 100%;
 		overflow: hidden;
+		/* Prevent image loading shifts */
+		min-height: 200px;
 	}
 
 	/* Logo container with reserved space */
@@ -71,5 +111,53 @@
 		max-width: 510px;
 		height: 83px;
 		aspect-ratio: 510/83;
+		/* Prevent logo loading shifts */
+		min-height: 83px;
+	}
+
+	/* Font loading stability */
+	.font-loading {
+		/* Prevent font swap layout shifts */
+		font-display: swap;
+		/* Reserve consistent line height */
+		line-height: 1.75;
+	}
+
+	/* Header stability */
+	.header-container {
+		min-height: 120px; /* Reserve space for header content */
+	}
+
+	/* Social icons container stability */
+	.social-icons-container {
+		min-height: 48px;
+		min-width: 168px; /* 3 icons × 48px + 2 gaps × 16px */
+		display: flex;
+		align-items: center;
+	}
+
+	/* Particles container stability */
+	#particles {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		/* Prevent particles from affecting layout */
+		pointer-events: none;
+	}
+
+	/* Prevent layout shifts during image loading */
+	.gatsby-image-wrapper {
+		/* Ensure consistent sizing during load */
+		min-height: inherit;
+	}
+
+	/* Prevent text layout shifts */
+	.text-primary,
+	.text-stable {
+		/* Consistent line height to prevent shifts */
+		line-height: 1.75;
 	}
 }
