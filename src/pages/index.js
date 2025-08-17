@@ -15,15 +15,15 @@ import { suppressHydrationWarnings } from "../utils/ssrSafeHelpers";
 import { LINK_ATTRIBUTES, TECH_URLS, TECH_NAMES, VIDEO_CONFIG, SEO_CONFIG } from "../config/homePageConstants";
 import logo from "../../static/logo-2.svg";
 
-// Lazy load only the heaviest, non-critical components
+// !! Lazy load only the heaviest, non-critical components
 const PreloadResources = React.lazy(() => import(/* webpackChunkName: "preload-resources" */ "../components/PreloadResources"));
 const ThirdPartyScriptLoader = React.lazy(() => import(/* webpackChunkName: "third-party-scripts" */ "../components/ThirdPartyScriptLoader"));
 
-// Lazy load heavy components only when needed - with better chunking
+// !! Lazy load heavy components only when needed - with better chunking
 const Particles = React.lazy(() => import(/* webpackChunkName: "particles" */ "react-tsparticles"));
 const FontAwesome = React.lazy(() => import(/* webpackChunkName: "fontawesome" */ "../components/FontAwesome"));
 
-// Lazy load video modal only when needed
+// !! Lazy load video modal only when needed
 const VideoModal = React.lazy(() => import(/* webpackChunkName: "video-modal" */ "../components/VideoModal"));
 
 export default function Home() {
@@ -31,12 +31,12 @@ export default function Home() {
 	const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
 	const isHydrated = useHydrated();
 
-	// Suppress hydration warnings in production
+	// !! Suppress hydration warnings in production
 	React.useEffect(() => {
 		suppressHydrationWarnings();
 	}, []);
 
-	// SSR-safe loading state - prevent hydration mismatches
+	// !! SSR-safe loading state - prevent hydration mismatches
 	if (!isMounted || !isHydrated) {
 		return (
 			<div className="App">
@@ -207,6 +207,7 @@ export default function Home() {
 											fetchPriority="high"
 											style={{ aspectRatio: "400/267" }}
 										/>
+
 										{/* Play Button Overlay */}
 										<div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all duration-300">
 											<div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
