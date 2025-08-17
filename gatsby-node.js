@@ -208,8 +208,8 @@ exports.onPreBuild = ({ reporter }) => {
 };
 
 /**
- * Post-build hook as a backup to ensure files are properly copied
- * This is an extra safety measure in case onPreBuild hook doesn't work as expected
+ * Post-build hook to ensure files are properly copied and not overwritten
+ * This runs after Gatsby's build process to restore the correct files
  */
 exports.onPostBuild = ({ reporter }) => {
 	const sourceDir = path.join(process.cwd(), "static", "unknown-pleasures");
@@ -217,28 +217,38 @@ exports.onPostBuild = ({ reporter }) => {
 	const publicAssetsDir = path.join(process.cwd(), "public", "assets");
 
 	try {
-		// Verify that the unknown-pleasures directory exists in the public folder
-		if (!fs.existsSync(publicDir)) {
-			reporter.info("🔄 unknown-pleasures directory not found in public folder, copying now");
+		// Always force copy to ensure we have the correct files
+		reporter.info("🔄 Ensuring unknown-pleasures files are correct in public folder");
 
-			// If source directory exists, copy it
-			if (fs.existsSync(sourceDir)) {
-				fs.ensureDirSync(publicDir);
-				fs.copySync(sourceDir, publicDir);
-				reporter.info("✅ Copied unknown-pleasures directory to public in post-build");
+		// If source directory exists, copy it (overwriting any Gatsby-generated files)
+		if (fs.existsSync(sourceDir)) {
+			// Remove any existing directory to ensure clean copy
+			fs.removeSync(publicDir);
+			fs.ensureDirSync(publicDir);
+			fs.copySync(sourceDir, publicDir);
+			reporter.info("✅ Copied unknown-pleasures directory to public in post-build");
 
-				// Also copy assets
-				const sourceAssetsDir = path.join(sourceDir, "assets");
-				if (fs.existsSync(sourceAssetsDir)) {
-					fs.ensureDirSync(publicAssetsDir);
-					fs.copySync(sourceAssetsDir, publicAssetsDir);
-					reporter.info("✅ Copied assets to root assets directory in post-build");
+			// Also copy assets
+			const sourceAssetsDir = path.join(sourceDir, "assets");
+			if (fs.existsSync(sourceAssetsDir)) {
+				fs.removeSync(publicAssetsDir);
+				fs.ensureDirSync(publicAssetsDir);
+				fs.copySync(sourceAssetsDir, publicAssetsDir);
+				reporter.info("✅ Copied assets to root assets directory in post-build");
+			}
+
+			// Verify the correct files are in place
+			const indexPath = path.join(publicDir, "index.html");
+			if (fs.existsSync(indexPath)) {
+				const content = fs.readFileSync(indexPath, "utf8");
+				if (content.includes("Unknown Pleasures") && content.includes("canvas id=\"visualizer\"")) {
+					reporter.info("✅ Verified correct Unknown Pleasures experiment is in place");
+				} else {
+					reporter.warn("⚠️ Unknown Pleasures index.html may not be the correct file");
 				}
-			} else {
-				reporter.error("❌ Source unknown-pleasures directory not found");
 			}
 		} else {
-			reporter.info("✅ unknown-pleasures directory exists in public folder");
+			reporter.error("❌ Source unknown-pleasures directory not found");
 		}
 	} catch (error) {
 		reporter.error("❌ Error in post-build check", error);

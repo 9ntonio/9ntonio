@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Seo from "../components/Seo";
 import FontLoadingOptimizer from "../components/FontLoadingOptimizer";
 
@@ -6,57 +6,13 @@ const UnknownPleasuresPage = () => {
 	// Create a reference to the iframe element
 	const iframeRef = useRef(null);
 
-	// State to track if the iframe loaded successfully
-	const [iframeLoaded, setIframeLoaded] = useState(false);
+	// Simple state to track errors
 	const [hasError, setHasError] = useState(false);
 
-	// Effect to handle iframe loading and potential issues
-	useEffect(() => {
-		const iframe = iframeRef.current;
-
-		if (!iframe) return;
-
-		// Handle iframe load event
-		const handleLoad = () => {
-			console.log("Unknown Pleasures iframe loaded successfully");
-			setIframeLoaded(true);
-
-			// Try to resolve cross-origin issues by sending a message
-			try {
-				if (iframe.contentWindow) {
-					// This is just an attempt to communicate with the iframe
-					iframe.contentWindow.postMessage("iframeLoaded", "*");
-				}
-			} catch (e) {
-				console.log("Note: Cross-origin communication not possible", e);
-			}
-		};
-
-		// Handle iframe error event
-		const handleError = (error) => {
-			console.error("Error loading Unknown Pleasures iframe:", error);
-			setHasError(true);
-		};
-
-		// Add event listeners
-		iframe.addEventListener("load", handleLoad);
-		iframe.addEventListener("error", handleError);
-
-		// Set a timeout to check if iframe loaded after 5 seconds
-		const timeoutId = setTimeout(() => {
-			if (!iframeLoaded) {
-				console.warn("Iframe may not have loaded properly");
-				// Don't set error here - the iframe might be loading fine even if we can't access its content
-			}
-		}, 5000);
-
-		// Clean up event listeners
-		return () => {
-			iframe.removeEventListener("load", handleLoad);
-			iframe.removeEventListener("error", handleError);
-			clearTimeout(timeoutId);
-		};
-	}, [iframeLoaded]);
+	// Simple error handler
+	const handleError = () => {
+		setHasError(true);
+	};
 
 	return (
 		<>
@@ -139,8 +95,8 @@ const UnknownPleasuresPage = () => {
 					title="Unknown Pleasures"
 					allow="autoplay; microphone; camera; midi; geolocation; accelerometer; gyroscope; payment; magnetometer; encrypted-media; usb"
 					loading="eager"
-					importance="high"
-					sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-downloads allow-modals"
+					onError={handleError}
+					sandbox="allow-scripts allow-forms allow-popups allow-downloads allow-modals"
 				/>
 			</div>
 		</>
