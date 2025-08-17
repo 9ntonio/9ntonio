@@ -3,15 +3,20 @@
  * Centralized critical CSS to prevent duplication between html.js and global.css
  */
 
-export const CRITICAL_CSS = `
+import { COLORS, LOGO_DIMENSIONS, CIRCLE_SIZE, FONT_FAMILIES } from './designTokens';
+
+/**
+ * Generate critical CSS with design tokens
+ */
+const generateCriticalCSS = () => `
   /* Critical above-the-fold styles with font fallbacks */
   * { box-sizing: border-box; }
 
   body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #00474f;
-    color: #fff;
+    background-color: ${COLORS.background};
+    color: ${COLORS.textColor};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
@@ -20,7 +25,7 @@ export const CRITICAL_CSS = `
 
   /* Font loading with size-adjusted fallbacks to prevent CLS */
   .font-fredoka {
-    font-family: Fredoka, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: ${FONT_FAMILIES.fredoka};
     font-display: swap;
     font-size-adjust: 0.5;
   }
@@ -40,9 +45,9 @@ export const CRITICAL_CSS = `
   /* Logo container - prevent CLS */
   .logo-container {
     width: 100%;
-    max-width: 510px;
-    height: 83px;
-    aspect-ratio: 510/83;
+    max-width: ${LOGO_DIMENSIONS.width}px;
+    height: ${LOGO_DIMENSIONS.height}px;
+    aspect-ratio: ${LOGO_DIMENSIONS.aspectRatio};
     display: block;
   }
 
@@ -69,14 +74,14 @@ export const CRITICAL_CSS = `
 
   /* Circle containers - prevent shrinking */
   .circle-container {
-    width: 46px;
-    height: 46px;
+    width: ${CIRCLE_SIZE.width};
+    height: ${CIRCLE_SIZE.height};
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #5b8c00;
+    background-color: ${COLORS.secondary};
     margin-right: 1rem;
   }
 
@@ -93,25 +98,39 @@ export const CRITICAL_CSS = `
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+  }
+
+  /* Prevent layout shifts during loading */
+  .gatsby-image-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Loading states */
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
   }
 
   /* Font loading optimization */
   .font-loading {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    visibility: hidden;
   }
 
   .font-loaded .font-loading {
-    opacity: 1;
+    visibility: visible;
   }
 
   /* Prevent flash of unstyled content */
-  .text-primary { color: #b5f5ec; }
-  .text-highlight { color: #FFE8BA; }
-  .bg-background { background-color: #00474f; }
-  .bg-secondary { background-color: #5b8c00; }
-  .bg-primary { background-color: #b5f5ec; }
+  .text-primary { color: ${COLORS.primary}; }
+  .text-highlight { color: ${COLORS.highlight}; }
+  .bg-background { background-color: ${COLORS.background}; }
+  .bg-secondary { background-color: ${COLORS.secondary}; }
+  .bg-primary { background-color: ${COLORS.primary}; }
 
   /* Critical layout styles */
   .flex { display: flex; }
@@ -150,11 +169,6 @@ export const CRITICAL_CSS = `
   .pl-8 { padding-left: 2rem; }
   .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: .5; }
-  }
-
   @media (min-width: 768px) {
     .md\\:w-1\\/3 { width: 33.333333%; }
     .md\\:w-2\\/3 { width: 66.666667%; }
@@ -164,11 +178,29 @@ export const CRITICAL_CSS = `
     .md\\:items-center { align-items: center; }
     .md\\:mb-0 { margin-bottom: 0; }
     .md\\:mt-0 { margin-top: 0; }
+    .md\\:mt-6 { margin-top: 1.5rem; }
     .md\\:block { display: block; }
   }
 `;
 
 /**
  * Get critical CSS for inlining in HTML head
+ * @returns {string} Critical CSS string
  */
-export const getCriticalCSS = () => CRITICAL_CSS;
+export const getCriticalCSS = () => {
+  try {
+    return generateCriticalCSS();
+  } catch (error) {
+    console.error('Error generating critical CSS:', error);
+    // Return minimal fallback CSS to prevent complete styling failure
+    return `
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background-color: #00474f;
+        color: #fff;
+      }
+    `;
+  }
+};

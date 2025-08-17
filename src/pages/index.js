@@ -6,6 +6,9 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import ResourceHints from "../components/ResourceHints";
 import FontLoadingStrategy from "../components/FontLoadingStrategy";
 import LayoutStabilityMonitor from "../components/LayoutStabilityMonitor";
+import { useParticleLoader } from "../hooks/useParticleLoader";
+import { useVideoModal } from "../hooks/useVideoModal";
+import { LINK_ATTRIBUTES, TECH_URLS, TECH_NAMES, VIDEO_CONFIG, SEO_CONFIG } from "../config/homePageConstants";
 import logo from "../../static/logo-2.svg";
 
 // Lazy load only the heaviest, non-critical components
@@ -30,102 +33,26 @@ const VideoModal = React.lazy(() =>
 );
 
 export default function Home() {
-	const [isMounted, setIsMounted] = React.useState(false);
-	const [isParticlesLoaded, setIsParticlesLoaded] = React.useState(false);
-	const [hasError, setHasError] = React.useState(false);
-	const [showParticles, setShowParticles] = React.useState(false);
-	const [isVideoModalOpen, setIsVideoModalOpen] = React.useState(false);
+	const {
+		isMounted,
+		isParticlesLoaded,
+		hasError,
+		showParticles,
+		particlesInit,
+		handleParticlesLoaded,
+		getParticleOptions,
+	} = useParticleLoader();
 
-	React.useEffect(() => {
-		// *Ensure we're in the browser environment
-		if (typeof window !== "undefined") {
-			setIsMounted(true);
-			// *Check if device is mobile (using 768px as breakpoint)
-			const isMobile = window.innerWidth < 768;
+	const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
 
-			// *Only load particles on desktop after user interaction or delay
-			if (!isMobile) {
-				// Wait for user interaction or 2 seconds, whichever comes first
-				let hasInteracted = false;
-
-				const handleInteraction = () => {
-					if (!hasInteracted) {
-						hasInteracted = true;
-						setShowParticles(true);
-					}
-				};
-
-				const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
-				events.forEach(event => {
-					document.addEventListener(event, handleInteraction, { once: true, passive: true });
-				});
-
-				// Fallback timer - load after 2 seconds if no interaction
-				const timer = setTimeout(() => {
-					if (!hasInteracted) {
-						setShowParticles(true);
-					}
-				}, 2000);
-
-				return () => {
-					clearTimeout(timer);
-					events.forEach(event => {
-						document.removeEventListener(event, handleInteraction);
-					});
-				};
-			}
-		}
-	}, []);
-
-	const LINK_TARGET = "_blank";
-	const LINK_REL = "noreferrer";
+	// Constants for backward compatibility with tsparticles
 	const BACKGROUND_COLOR = "#00474f";
-
-	const optionsTriangle = {
-		preset: "triangles",
-		particles: {
-			color: {
-				value: "#fff",
-			},
-			line_linked: {
-				color: "#006d75",
-				distance: 175,
-				enable: true,
-				opacity: 1,
-				width: 1,
-			},
-		},
-		detectRetina: true,
-		fpsLimit: 60,
-		fullScreen: {
-			zIndex: -1,
-		},
-		background: {
-			color: BACKGROUND_COLOR,
-		},
-	};
-
-	const particlesInit = React.useCallback(async (engine) => {
-		try {
-			const { loadTrianglesPreset } = await import("tsparticles-preset-triangles");
-			await loadTrianglesPreset(engine);
-		} catch (error) {
-			console.error("Failed to initialize particles:", error);
-			setHasError(true);
-		}
-	}, []);
-
-	const handleParticlesLoaded = React.useCallback(() => {
-		setIsParticlesLoaded(true);
-	}, []);
-
-	const techUrls = ["https://nextjs.org/", "https://claude.ai/", "https://developer.mozilla.org/en-US/docs/Web/API"];
 
 	// SSR-safe loading state
 	if (!isMounted) {
 		return (
 			<div className="App">
-				<div className="fixed inset-0" style={{ background: BACKGROUND_COLOR }} />
+				<div className="fixed inset-0 bg-background" />
 			</div>
 		);
 	}
@@ -144,19 +71,18 @@ export default function Home() {
 				</Suspense>
 
 				{showParticles && !hasError && (
-					<Suspense fallback={<div className="fixed inset-0" style={{ background: BACKGROUND_COLOR }} />}>
-						<Particles init={particlesInit} options={optionsTriangle} id="particles" loaded={handleParticlesLoaded} />
-						{!isParticlesLoaded && <div style={{ background: BACKGROUND_COLOR }} className="fixed inset-0 -z-10 transition-opacity duration-500" />}
+					<Suspense fallback={<div className="fixed inset-0 bg-background" />}>
+						<Particles init={particlesInit} options={getParticleOptions()} id="particles" loaded={handleParticlesLoaded} />
+						{!isParticlesLoaded && <div className="fixed inset-0 -z-10 transition-opacity duration-500 bg-background" />}
 					</Suspense>
 				)}
 
 				<Seo
-					description="Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics by up to 60%"
+					description={SEO_CONFIG.DESCRIPTION}
 					meta={[
 						{
 							name: "keywords",
-							content:
-								"software development, engineering, AI, design systems, front end development, web development, design technology, design systems engineering, design systems architecture",
+							content: SEO_CONFIG.KEYWORDS,
 						},
 						{
 							name: "robots",
@@ -249,8 +175,8 @@ export default function Home() {
 												Communication Arts Interactive Annual Award:{" "}
 												<a
 													href="https://www.commarts.com/project/22631/inside-your-scion"
-													target={LINK_TARGET}
-													rel={LINK_REL}
+													target={LINK_ATTRIBUTES.TARGET}
+													rel={LINK_ATTRIBUTES.REL}
 													aria-label="View Excellence in Interactive Design award on Communication Arts website (opens in new tab)"
 												>
 													Excellence in Interactive Design
@@ -273,7 +199,7 @@ export default function Home() {
 							<div className="w-full md:w-1/3 mb-4 md:mb-0">
 								<div className="mr-6 project-image-container">
 									<button
-										onClick={() => setIsVideoModalOpen(true)}
+										onClick={openVideoModal}
 										aria-label="Play Gusto project video"
 										className="relative block w-full h-full overflow-hidden rounded-lg border-none cursor-pointer group"
 									>
@@ -302,7 +228,7 @@ export default function Home() {
 							</div>
 
 							<div className="w-full md:w-2/3">
-								<OutboundLink href="https://gusto.com/" target={LINK_TARGET} rel={LINK_REL} aria-label="Visit Gusto website (opens in new tab)">
+								<OutboundLink href="https://gusto.com/" target={LINK_ATTRIBUTES.TARGET} rel={LINK_ATTRIBUTES.REL} aria-label="Visit Gusto website (opens in new tab)">
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">Gusto</div>
 								</OutboundLink>
 
@@ -310,8 +236,8 @@ export default function Home() {
 									I was hired by{" "}
 									<OutboundLink
 										href="https://www.deptagency.com/"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										className="text-primary hover:text-highlight"
 										aria-label="Visit DEPT Agency website (opens in new tab)"
 									>
@@ -320,8 +246,8 @@ export default function Home() {
 									to assist{" "}
 									<OutboundLink
 										href="https://gusto.com/"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										className="text-primary hover:text-highlight"
 										aria-label="Visit Gusto website (opens in new tab)"
 									>
@@ -341,7 +267,7 @@ export default function Home() {
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-1/3 mb-4 md:mb-0">
 								<div className="mr-6 project-image-container">
-									<a href="https://store.google.com/" target={LINK_TARGET} rel={LINK_REL} aria-label="Visit Google Store website (opens in new tab)" className="group block w-full h-full">
+									<a href="https://store.google.com/" target={LINK_ATTRIBUTES.TARGET} rel={LINK_ATTRIBUTES.REL} aria-label="Visit Google Store website (opens in new tab)" className="group block w-full h-full">
 										<StaticImage
 											src="../../static/google.webp"
 											alt="Google Store project showcase"
@@ -360,7 +286,7 @@ export default function Home() {
 							</div>
 
 							<div className="w-full md:w-2/3">
-								<a href="https://store.google.com" target={LINK_TARGET} rel={LINK_REL} aria-label="Visit Google Store website (opens in new tab)">
+								<a href="https://store.google.com" target={LINK_ATTRIBUTES.TARGET} rel={LINK_ATTRIBUTES.REL} aria-label="Visit Google Store website (opens in new tab)">
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">Google Store</div>
 								</a>
 								<p className="text-stable">
@@ -381,8 +307,8 @@ export default function Home() {
 								<div className="mr-6 project-image-container">
 									<a
 										href="https://www.odopod.com/case-studies/ps-vue"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										aria-label="View PlayStation Vue case study on Odopod website (opens in new tab)"
 										className="group block w-full h-full"
 									>
@@ -406,8 +332,8 @@ export default function Home() {
 							<div className="w-full md:w-2/3">
 								<OutboundLink
 									href="https://www.odopod.com/case-studies/ps-vue"
-									target={LINK_TARGET}
-									rel={LINK_REL}
+									target={LINK_ATTRIBUTES.TARGET}
+									rel={LINK_ATTRIBUTES.REL}
 									aria-label="View PlayStation Vue case study on Odopod website (opens in new tab)"
 								>
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">PlayStation Vue</div>
@@ -427,7 +353,7 @@ export default function Home() {
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-1/3">
 								<div className="mr-6 project-image-container">
-									<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL} aria-label="View Unknown Pleasures interactive visualization project (opens in new tab)" className="group block w-full h-full">
+									<a href="/unknown-pleasures" target={LINK_ATTRIBUTES.TARGET} rel={LINK_ATTRIBUTES.REL} aria-label="View Unknown Pleasures interactive visualization project (opens in new tab)" className="group block w-full h-full">
 										<StaticImage
 											src="../../static/unknown-pleasures.webp"
 											alt="Unknown Pleasures Joy Division album cover visualization"
@@ -446,15 +372,15 @@ export default function Home() {
 							</div>
 
 							<div className="w-full md:w-2/3">
-								<a href="/unknown-pleasures" target={LINK_TARGET} rel={LINK_REL} aria-label="View Unknown Pleasures interactive visualization project (opens in new tab)">
+								<a href="/unknown-pleasures" target={LINK_ATTRIBUTES.TARGET} rel={LINK_ATTRIBUTES.REL} aria-label="View Unknown Pleasures interactive visualization project (opens in new tab)">
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2 mt-4 md:mt-0">Unknown Pleasures</div>
 								</a>
 								<p className="text-stable">
 									In 1979{" "}
 									<a
 										href="https://en.wikipedia.org/wiki/Factory_Records"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										className="text-primary hover:text-highlight"
 										aria-label="Learn about Factory Records on Wikipedia (opens in new tab)"
 									>
@@ -463,8 +389,8 @@ export default function Home() {
 									released their 10th album{" "}
 									<a
 										href="https://en.wikipedia.org/wiki/Unknown_Pleasures"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										className="text-primary hover:text-highlight"
 										aria-label="Learn about Unknown Pleasures album on Wikipedia (opens in new tab)"
 									>
@@ -473,8 +399,8 @@ export default function Home() {
 									by Joy Division. The artwork is credited to both the band &{" "}
 									<a
 										href="https://en.wikipedia.org/wiki/Peter_Saville_(graphic_designer)"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										className="text-primary hover:text-highlight"
 										aria-label="Learn about Peter Saville graphic designer on Wikipedia (opens in new tab)"
 									>
@@ -483,8 +409,8 @@ export default function Home() {
 									The album cover uses an image of radio waves from pulsar{" "}
 									<a
 										href="https://en.wikipedia.org/wiki/CP_1919"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										className="text-primary hover:text-highlight"
 										aria-label="Learn about CP 1919 pulsar on Wikipedia (opens in new tab)"
 									>
@@ -499,8 +425,8 @@ export default function Home() {
 									before and hit walls. Recently I've started working on it again and with some help from{" "}
 									<a
 										href="https://www.anthropic.com/"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										className="text-primary hover:text-highlight"
 										aria-label="Visit Anthropic Claude AI website (opens in new tab)"
 									>
@@ -509,8 +435,8 @@ export default function Home() {
 									, a path was made.{" "}
 									<a
 										href="https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf"
-										target={LINK_TARGET}
-										rel={LINK_REL}
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
 										className="text-primary hover:text-highlight"
 										aria-label="Read blog post about AI creativity and Unknown Pleasures on Medium (opens in new tab)"
 									>
@@ -530,12 +456,12 @@ export default function Home() {
 
 							<p className="text-stable">
 								Angular, React, ReactNative, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, NX, Tailwind,{" "}
-								{["Next.js", "Claude AI", "Web APIs "].map((tech, i) => (
+								{TECH_NAMES.map((tech, i) => (
 									<React.Fragment key={tech}>
 										<OutboundLink
-											href={techUrls[i]}
-											target={LINK_TARGET}
-											rel={LINK_REL}
+											href={TECH_URLS[i]}
+											target={LINK_ATTRIBUTES.TARGET}
+											rel={LINK_ATTRIBUTES.REL}
 											className="text-primary hover:text-highlight"
 											aria-label={`Learn more about ${tech} (opens in new tab)`}
 										>
@@ -547,8 +473,8 @@ export default function Home() {
 								& a lot of 💖&nbsp;
 								<OutboundLink
 									href="https://en.wikipedia.org/wiki/The_Outsiders_(film)"
-									target={LINK_TARGET}
-									rel={LINK_REL}
+									target={LINK_ATTRIBUTES.TARGET}
+									rel={LINK_ATTRIBUTES.REL}
 									className="text-primary hover:text-highlight"
 									aria-label="Learn about The Outsiders film on Wikipedia (opens in new tab)"
 								>
@@ -563,9 +489,9 @@ export default function Home() {
 					<Suspense fallback={<div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"><div className="text-white">Loading...</div></div>}>
 						<VideoModal
 							isOpen={isVideoModalOpen}
-							onClose={() => setIsVideoModalOpen(false)}
-							videoUrl="https://player.vimeo.com/video/374826636"
-							title="Gusto Project Showcase"
+							onClose={closeVideoModal}
+							videoUrl={VIDEO_CONFIG.GUSTO_VIDEO_URL}
+							title={VIDEO_CONFIG.GUSTO_VIDEO_TITLE}
 						/>
 					</Suspense>
 				)}

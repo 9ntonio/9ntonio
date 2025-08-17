@@ -55,9 +55,9 @@ function validateFileContent(filePath, checks) {
 const htmlPath = path.join(__dirname, '../src/html.js');
 validateFileContent(htmlPath, [
   {
-    pattern: 'getCriticalCSS()',
+    pattern: 'Critical CSS inline',
     key: 'criticalCSS',
-    successMsg: 'Critical CSS is properly inlined via utility function',
+    successMsg: 'Critical CSS is properly inlined',
     failMsg: 'Critical CSS inlining not found'
   },
   {
@@ -74,16 +74,7 @@ validateFileContent(htmlPath, [
   }
 ]);
 
-// Check critical CSS centralization
-const criticalCSSPath = path.join(__dirname, '../src/utils/criticalCss.js');
-validateFileContent(criticalCSSPath, [
-  {
-    pattern: 'getCriticalCSS',
-    key: 'criticalCSSCentralized',
-    successMsg: 'Critical CSS is centralized in utility module',
-    failMsg: 'Critical CSS utility module not found'
-  }
-]);
+// Critical CSS is now inlined directly in html.js template
 
 // Check Gatsby config optimizations
 const configPath = path.join(__dirname, '../gatsby-config.js');
