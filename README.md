@@ -525,24 +525,6 @@ yarn build:legacy        # ES5 build only
 - **Cumulative Layout Shift**: < 0.1 (Good)
 - **Layout Stability**: Zero unexpected content jumps
 
-## 🔍 Development Monitoring
-
-### Real-time Performance Tracking
-
-When running in development mode (`yarn dev`), the application includes comprehensive monitoring:
-
-```javascript
-// Automatically included in development
-{
-	process.env.NODE_ENV === "development" && (
-		<>
-			<PerformanceMonitor />
-			<LayoutStabilityMonitor />
-		</>
-	);
-}
-```
-
 ### Console Logging
 
 - **Layout Shifts**: Real-time CLS detection with element details
