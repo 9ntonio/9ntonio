@@ -151,7 +151,7 @@ export default function Home() {
 											<li>CSS: SCSS, CSS-in-JS, Tailwind, Angular Material</li>
 											<li>Design Systems: Storybook, Style Dictionary</li>
 											<li>Version Control: Git, GitHub</li>
-											<li>CI/CD: GitHub Actions, Docker, AWS</li>
+											<li>CI/CD: GitHub Actions, Docker, AWS, NX</li>
 										</ul>
 									</div>
 								</div>
