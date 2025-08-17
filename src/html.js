@@ -20,12 +20,16 @@ export default function HTML(props) {
 				<link rel="dns-prefetch" href="https://www.google-analytics.com" />
 				<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-				{/* Preload critical font files to reduce FOUT */}
-				<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/fredoka/v16/X7n64b87HMOzCX2Z-2rKCg.woff2" crossOrigin="anonymous" />
-				<link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/fredoka/v16/X7n-4b87HMOzCX2Z-2rKCg.woff2" crossOrigin="anonymous" />
+				{/* Load Google Fonts CSS directly - more reliable than preloading individual font files */}
 
 				{/* Load Google Fonts CSS asynchronously to prevent render blocking */}
-				<link rel="preload" as="style" onLoad="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" />
+				<link
+					rel="preload"
+					as="style"
+					onLoad="this.onload=null;this.rel='stylesheet'"
+					href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap"
+					importance="high"
+				/>
 				<noscript>
 					<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" />
 				</noscript>

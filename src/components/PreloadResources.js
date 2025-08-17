@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback } from "react";
+import { browserOnly } from "../utils/ssrSafeHelpers";
 
 /**
  * Optimized resource preloading component

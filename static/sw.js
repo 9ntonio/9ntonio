@@ -1,6 +1,6 @@
 // Simple Service Worker for Performance Optimization
 const CACHE_NAME = "antonio-portfolio-v1";
-const STATIC_CACHE = ["/", "/styles.css", "/logo-2.svg", "/manifest.json"];
+const STATIC_CACHE = ["/"];
 
 // Install event - cache critical resources
 self.addEventListener("install", (event) => {

@@ -10,6 +10,8 @@ import AdaptiveImagePreloader from "../components/AdaptiveImagePreloader";
 import ConnectionAwareImageLoader from "../components/ConnectionAwareImageLoader";
 import { useParticleLoader } from "../hooks/useParticleLoader";
 import { useVideoModal } from "../hooks/useVideoModal";
+import { useHydrated } from "../utils/hydrationFix";
+import { suppressHydrationWarnings } from "../utils/ssrSafeHelpers";
 import { LINK_ATTRIBUTES, TECH_URLS, TECH_NAMES, VIDEO_CONFIG, SEO_CONFIG } from "../config/homePageConstants";
 import logo from "../../static/logo-2.svg";
 
@@ -26,11 +28,16 @@ const VideoModal = React.lazy(() => import(/* webpackChunkName: "video-modal" */
 
 export default function Home() {
 	const { isMounted, isParticlesLoaded, hasError, showParticles, particlesInit, handleParticlesLoaded, getParticleOptions } = useParticleLoader();
-
 	const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
+	const isHydrated = useHydrated();
 
-	// SSR-safe loading state
-	if (!isMounted) {
+	// Suppress hydration warnings in production
+	React.useEffect(() => {
+		suppressHydrationWarnings();
+	}, []);
+
+	// SSR-safe loading state - prevent hydration mismatches
+	if (!isMounted || !isHydrated) {
 		return (
 			<div className="App">
 				<div className="fixed inset-0 bg-background" />

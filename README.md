@@ -62,6 +62,7 @@ This portfolio demonstrates technical expertise through both content and impleme
 - **Lazy Loading**: React.lazy() for heavy components and core utilities with dedicated webpack chunks
 - **Bundle Analysis**: Custom script for monitoring JS bundle sizes
 - **Terser Minification**: Advanced JavaScript compression achieving 83.7% size reduction with aggressive optimization settings
+- **SSR-Safe Architecture**: Comprehensive SSR-safe utilities (`browserOnly`, `ClientOnly`, `useBrowserEffect`, `suppressHydrationWarnings`) prevent hydration mismatches, ensure stable server-side rendering, and provide production-optimized error handling
 
 ### Interactive Features
 
@@ -199,6 +200,7 @@ yarn verify-build            # Verify build integrity
 │   │   ├── VideoModal.js  # Accessible video modal with keyboard navigation
 │   │   ├── PerformanceMonitor.js  # Dev performance tracking
 │   │   ├── LayoutStabilityMonitor.js  # CLS and LCP monitoring
+│   │   ├── FontLoadingOptimizer.js    # SSR-safe font loading optimization
 │   │   └── PreloadResources.js    # Critical resource preloading and smart resource hints
 │   ├── pages/             # Gatsby page components
 │   │   ├── index.js       # Homepage (main portfolio)
@@ -207,6 +209,8 @@ yarn verify-build            # Verify build integrity
 │   ├── styles/            # CSS files
 │   │   ├── global.css     # Global styles with Tailwind
 │   │   └── critical.css   # Critical CSS for inlining
+│   ├── utils/             # Utility functions
+│   │   └── ssrSafeHelpers.js  # SSR-safe utilities for hydration stability
 │   └── html.js            # Custom HTML template with static favicon fallbacks
 ├── static/                # Static assets (copied to public)
 ├── scripts/               # Build and analysis scripts
@@ -243,6 +247,7 @@ This portfolio has been optimized for maximum performance:
 - **Advanced Minification**: Terser configuration with aggressive compression, console removal, and multi-pass optimization achieving 83.7% JavaScript size reduction
 - **Enhanced Tree Shaking**: Advanced webpack optimizations including `usedExports`, `sideEffects`, and `innerGraph` for maximum dead code elimination
 - **Runtime Optimization**: Smaller runtime chunks with deterministic module IDs for improved caching efficiency
+- **SSR Stability**: Enhanced SSR-safe utilities with hydration warning suppression prevent hydration mismatches, ensure consistent client-server rendering, and provide cleaner production logs
 
 ### Bundle Splitting Strategy
 
@@ -317,7 +322,7 @@ The deployment configuration includes comprehensive asset processing for maximum
 **Security Headers:**
 
 - **XSS Protection**: `X-XSS-Protection: 1; mode=block`
-- **Frame Options**: `X-Frame-Options: DENY`
+- **Frame Options**: `X-Frame-Options: SAMEORIGIN`
 - **Content Type**: `X-Content-Type-Options: nosniff`
 - **Referrer Policy**: `strict-origin-when-cross-origin`
 - **Permissions Policy**: Restricted camera, microphone, and geolocation access
@@ -344,6 +349,7 @@ The deployment configuration includes comprehensive asset processing for maximum
 - **Display Swap**: Fallback fonts shown immediately while custom fonts load to prevent FOIT
 - **Optimized Character Set**: Only loads characters actually used in the application
 - **Cross-Origin Configuration**: Proper CORS setup for font loading security
+- **SSR-Safe Implementation**: FontLoadingOptimizer uses `browserOnly` wrapper to prevent hydration mismatches during server-side rendering
 
 ### Layout Shift Prevention
 
