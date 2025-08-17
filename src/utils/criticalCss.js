@@ -55,16 +55,13 @@ const generateCriticalCSS = () => `
     .container { padding: 0; }
   }
 
-  /* Logo container - prevent CLS with explicit dimensions */
+  /* Logo container - prevent CLS */
   .logo-container {
     width: 100%;
     max-width: ${LOGO_DIMENSIONS.width}px;
     height: ${LOGO_DIMENSIONS.height}px;
     aspect-ratio: ${LOGO_DIMENSIONS.aspectRatio};
     display: block;
-    /* Prevent layout shift */
-    contain: layout style;
-    will-change: auto;
   }
 
   .logo-container img {
@@ -72,30 +69,20 @@ const generateCriticalCSS = () => `
     height: 100%;
     object-fit: contain;
     display: block;
-    /* Prevent image layout shifts */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
   }
 
-  /* Text sizing to prevent CLS with stable dimensions */
+  /* Text sizing to prevent CLS */
   .text-stable {
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin-bottom: 1rem;
     min-height: 1.75rem;
-    /* Prevent text layout shifts */
-    contain: layout;
-    font-kerning: none;
-    text-size-adjust: 100%;
   }
 
   .text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
     margin-bottom: 1rem;
-    contain: layout;
-    font-kerning: none;
-    text-size-adjust: 100%;
   }
 
   /* Circle containers - prevent shrinking */
@@ -111,32 +98,25 @@ const generateCriticalCSS = () => `
     margin-right: 1rem;
   }
 
-  /* Project image containers with fixed aspect ratios - prevent CLS */
+  /* Project image containers with fixed aspect ratios */
   .project-image-container {
     aspect-ratio: 3/2;
     width: 100%;
     overflow: hidden;
     border-radius: 0.5rem;
     position: relative;
-    /* Prevent layout shift during image loading */
-    contain: layout style;
-    background-color: ${COLORS.secondary};
   }
 
   .project-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Prevent image decode layout shifts */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
   }
 
-  /* Prevent layout shifts during loading with explicit dimensions */
+  /* Prevent layout shifts during loading */
   .gatsby-image-wrapper {
     width: 100% !important;
     height: 100% !important;
-    contain: layout style !important;
   }
 
   /* Image loading placeholder to prevent CLS */
@@ -167,7 +147,7 @@ const generateCriticalCSS = () => `
     visibility: hidden;
   }
 
-  .font-loaded .font-loading {
+  .fonts-loaded .font-loading {
     visibility: visible;
   }
 
@@ -209,18 +189,13 @@ const generateCriticalCSS = () => `
     z-index: 10;
   }
 
-  /* Critical layout styles with layout containment */
-  .flex { display: flex; contain: layout; }
+  /* Critical layout styles */
+  .flex { display: flex; }
   .flex-col { flex-direction: column; }
   .flex-row { flex-direction: row; }
   .flex-wrap { flex-wrap: wrap; }
   .items-center { align-items: center; }
   .justify-center { justify-content: center; }
-
-  /* Prevent layout shifts in flex containers */
-  .flex > * {
-    flex-shrink: 0;
-  }
   .mb-1 { margin-bottom: 0.25rem; }
   .mb-2 { margin-bottom: 0.5rem; }
   .mb-4 { margin-bottom: 1rem; }
