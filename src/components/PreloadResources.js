@@ -1,112 +1,136 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 
+/**
+ * Optimized resource preloading component
+ * Batches DOM operations and prevents memory leaks
+ */
 export default function PreloadResources() {
-	useEffect(() => {
-		if (typeof document !== "undefined") {
-			// Only preload the most critical above-the-fold image
-			const criticalImages = [
-				"/logo-2.svg" // Only preload logo, let Gusto image load naturally
-			];
+	const createResourceHint = useCallback((rel, href, options = {}) => {
+		const link = document.createElement("link");
+		link.rel = rel;
+		link.href = href;
 
-			criticalImages.forEach((src) => {
-				const link = document.createElement("link");
-				link.rel = "preload";
-				link.href = src;
-				link.as = "image";
-				link.importance = "high";
-				document.head.appendChild(link);
-			});
-
-			// Only preload the most critical font weight
-			const criticalFonts = [
-				"https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2" // Only Fredoka 400
-			];
-
-			criticalFonts.forEach((href) => {
-				const link = document.createElement("link");
-				link.rel = "preload";
-				link.href = href;
-				link.as = "font";
-				link.type = "font/woff2";
-				link.crossOrigin = "anonymous";
-				link.importance = "high";
-				document.head.appendChild(link);
-			});
-
-			// Load font CSS with optimized strategy - only essential weights
-			const fontPreload = document.createElement("link");
-			fontPreload.rel = "preload";
-			fontPreload.href = "https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap";
-			fontPreload.as = "style";
-			fontPreload.onload = function () {
-				this.onload = null;
-				this.rel = "stylesheet";
-			};
-			document.head.appendChild(fontPreload);
-
-			// Noscript fallback
-			const noscript = document.createElement("noscript");
-			const fontFallback = document.createElement("link");
-			fontFallback.rel = "stylesheet";
-			fontFallback.href = "https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap";
-			noscript.appendChild(fontFallback);
-			document.head.appendChild(noscript);
-
-			// DNS prefetch for external domains (only when needed)
-			const dnsPrefetches = [
-				"//fonts.googleapis.com",
-				"//fonts.gstatic.com",
-				"//www.google-analytics.com"
-			];
-
-			dnsPrefetches.forEach((domain) => {
-				const link = document.createElement("link");
-				link.rel = "dns-prefetch";
-				link.href = domain;
-				document.head.appendChild(link);
-			});
-
-			// Preconnect to critical origins
-			const preconnects = [
-				{ href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-				{ href: "https://fonts.googleapis.com", crossOrigin: false }
-			];
-
-			preconnects.forEach(({ href, crossOrigin }) => {
-				const link = document.createElement("link");
-				link.rel = "preconnect";
-				link.href = href;
-				if (crossOrigin) {
-					link.crossOrigin = "anonymous";
+		Object.entries(options).forEach(([key, value]) => {
+			if (value !== undefined && value !== null) {
+				if (key === 'crossOrigin') {
+					link.crossOrigin = value;
+				} else {
+					link[key] = value;
 				}
-				document.head.appendChild(link);
-			});
+			}
+		});
 
-			// Lazy load Vimeo resources only when video modal might be opened
-			const lazyLoadVimeoResources = () => {
-				const vimeoDomains = ["//vimeo.com", "//player.vimeo.com"];
-				vimeoDomains.forEach((domain) => {
-					const link = document.createElement("link");
-					link.rel = "dns-prefetch";
-					link.href = domain;
-					document.head.appendChild(link);
-				});
-			};
-
-			// Delay Vimeo resource loading until user interaction
-			const interactionEvents = ['mousedown', 'touchstart', 'keydown'];
-			const loadVimeoOnce = () => {
-				lazyLoadVimeoResources();
-				interactionEvents.forEach(event => {
-					document.removeEventListener(event, loadVimeoOnce, { passive: true });
-				});
-			};
-
-			interactionEvents.forEach(event => {
-				document.addEventListener(event, loadVimeoOnce, { passive: true });
-			});
-		}
+		return link;
 	}, []);
+
+	const batchAppendToHead = useCallback((elements) => {
+		const fragment = document.createDocumentFragment();
+		elements.forEach(element => fragment.appendChild(element));
+		document.head.appendChild(fragment);
+	}, []);
+
+	useEffect(() => {
+		if (typeof document === "undefined") return;
+
+		const resourceHints = [];
+
+		// Critical image preloads
+		const criticalImages = ["/logo-2.svg"];
+		criticalImages.forEach(src => {
+			resourceHints.push(createResourceHint("preload", src, {
+				as: "image",
+				importance: "high"
+			}));
+		});
+
+		// Critical font preloads
+		const criticalFonts = [
+			"https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2"
+		];
+		criticalFonts.forEach(href => {
+			resourceHints.push(createResourceHint("preload", href, {
+				as: "font",
+				type: "font/woff2",
+				crossOrigin: "anonymous",
+				importance: "high"
+			}));
+		});
+
+		// DNS prefetches
+		const dnsPrefetches = [
+			"//fonts.googleapis.com",
+			"//fonts.gstatic.com",
+			"//www.google-analytics.com"
+		];
+		dnsPrefetches.forEach(domain => {
+			resourceHints.push(createResourceHint("dns-prefetch", domain));
+		});
+
+		// Preconnects
+		const preconnects = [
+			{ href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+			{ href: "https://fonts.googleapis.com" }
+		];
+		preconnects.forEach(({ href, crossOrigin }) => {
+			resourceHints.push(createResourceHint("preconnect", href, { crossOrigin }));
+		});
+
+		// Batch append all resource hints
+		batchAppendToHead(resourceHints);
+
+		// Font CSS loading with error handling
+		const fontPreload = createResourceHint("preload",
+			"https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap",
+			{ as: "style" }
+		);
+
+		fontPreload.onload = function() {
+			this.onload = null; // Prevent memory leaks
+			this.rel = "stylesheet";
+		};
+
+		fontPreload.onerror = function() {
+			console.warn("Failed to load font CSS");
+		};
+
+		document.head.appendChild(fontPreload);
+
+		// Noscript fallback
+		const noscript = document.createElement("noscript");
+		const fontFallback = createResourceHint("stylesheet",
+			"https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap"
+		);
+		noscript.appendChild(fontFallback);
+		document.head.appendChild(noscript);
+
+		// Lazy load Vimeo resources with cleanup
+		const lazyLoadVimeoResources = () => {
+			const vimeoDomains = ["//vimeo.com", "//player.vimeo.com"];
+			const vimeoHints = vimeoDomains.map(domain =>
+				createResourceHint("dns-prefetch", domain)
+			);
+			batchAppendToHead(vimeoHints);
+		};
+
+		const interactionEvents = ['mousedown', 'touchstart', 'keydown'];
+		const loadVimeoOnce = () => {
+			lazyLoadVimeoResources();
+			cleanup();
+		};
+
+		const cleanup = () => {
+			interactionEvents.forEach(event => {
+				document.removeEventListener(event, loadVimeoOnce, { passive: true });
+			});
+		};
+
+		interactionEvents.forEach(event => {
+			document.addEventListener(event, loadVimeoOnce, { passive: true });
+		});
+
+		// Cleanup on unmount
+		return cleanup;
+	}, [createResourceHint, batchAppendToHead]);
 
 	return null;
 }

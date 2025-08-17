@@ -16,15 +16,6 @@ export default function HTML(props) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-        {/* Critical font preload - only the most essential */}
-        <link
-          rel="preload"
-          href="https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-
         {/* Critical CSS inline */}
         <style dangerouslySetInnerHTML={{
           __html: `
@@ -54,14 +45,6 @@ export default function HTML(props) {
             }
 
             /* Loading state */
-            .loading-placeholder {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              min-height: 100vh;
-              background: #00474f;
-            }
-
             .animate-pulse {
               animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
             }
@@ -73,24 +56,6 @@ export default function HTML(props) {
           `
         }} />
 
-        {/* Load non-critical CSS asynchronously */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              var link = document.createElement('link');
-              link.rel = 'stylesheet';
-              link.href = '/styles.css';
-              link.media = 'print';
-              link.onload = function() { this.media = 'all'; };
-              document.head.appendChild(link);
-            })();
-          `
-        }} />
-
-        <noscript>
-          <link rel="stylesheet" href="/styles.css" />
-        </noscript>
-
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -101,47 +66,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
 
-        {/* Prioritize critical scripts */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            // Modern browser detection
-            (function() {
-              var isModern = 'noModule' in HTMLScriptElement.prototype &&
-                           'import' in document.createElement('link') &&
-                           typeof Symbol !== 'undefined' && Symbol.iterator !== undefined &&
-                           typeof Promise !== 'undefined' && Object.assign !== undefined &&
-                           Array.from !== undefined &&
-                           typeof Map !== 'undefined' && typeof Set !== 'undefined';
-
-              window.__MODERN_BROWSER__ = isModern;
-              document.documentElement.className += isModern ? ' modern-js' : ' legacy-js';
-
-              if (typeof performance !== 'undefined' && performance.mark) {
-                performance.mark('modern-detection-complete');
-              }
-            })();
-          `
-        }} />
-
-        {/* Load scripts with priority */}
-        {props.postBodyComponents.map((component, index) => {
-          // Prioritize runtime and framework scripts
-          if (component.props?.src?.includes('runtime-') ||
-              component.props?.src?.includes('framework-')) {
-            return React.cloneElement(component, {
-              key: index,
-              async: false, // Load synchronously for critical scripts
-              defer: false
-            });
-          }
-
-          // Defer non-critical scripts
-          return React.cloneElement(component, {
-            key: index,
-            async: true,
-            defer: true
-          });
-        })}
+        {props.postBodyComponents}
       </body>
     </html>
   )

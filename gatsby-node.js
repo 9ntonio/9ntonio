@@ -69,6 +69,10 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 				usedExports: true,
 				sideEffects: false,
 				innerGraph: true,
+
+				// Better tree shaking for unused code elimination
+				providedExports: true,
+				mangleExports: true,
 			},
 
 			// Performance hints

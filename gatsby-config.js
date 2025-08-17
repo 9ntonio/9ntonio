@@ -30,17 +30,21 @@ module.exports = {
 					delayOnRouteUpdate: 0, // No delay on route updates
 					// Critical: Delay GA loading until after page is interactive
 					defer: true,
+					// Add these performance optimizations
+					async: true,
+					// Load GA only after user interaction
+					delayOnFirstInteraction: true,
 				},
 			},
 		},
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Fredoka:400,600`], // Only load essential weights initially
+				fonts: [`Fredoka:400,600&display=swap`], // Ensure font-display: swap
 				display: "swap",
 				preconnect: true,
 				crossOrigin: "anonymous",
-				preload: false, // Don't preload to reduce initial requests
+				preload: true, // Preload critical fonts for better performance
 				subsets: ['latin'],
 				// Only load characters we actually use for better performance
 				text: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!?:;()[]{}@#$%&*+-=<>/"\'',

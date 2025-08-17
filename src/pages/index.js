@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { OutboundLink } from "gatsby-plugin-gtag";
 import Seo from "../components/Seo";
 import ErrorBoundary from "../components/ErrorBoundary";
+import ResourceHints from "../components/ResourceHints";
 import logo from "../../static/logo-2.svg";
 
 // Lazy load only the heaviest, non-critical components
@@ -129,6 +130,7 @@ export default function Home() {
 
 	return (
 		<ErrorBoundary>
+			<ResourceHints />
 			<div className="font-fredoka text-textColor">
 				<Suspense fallback={null}>
 					<PreloadResources />

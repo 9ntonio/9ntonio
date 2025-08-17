@@ -44,7 +44,7 @@ This portfolio demonstrates technical expertise through both content and impleme
 
 - **Tailwind CSS 3.4.0**: Utility-first CSS framework
 - **PostCSS**: CSS processing with autoprefixer
-- **Google Fonts**: Fredoka font family with display swap
+- **Self-Hosted Fonts**: Fredoka font family with optimized self-hosting strategy and display swap
 - **Custom CSS**: Critical CSS inlining for performance
 
 ### SEO & Meta Management
@@ -229,7 +229,7 @@ This portfolio has been optimized for maximum performance:
 - **Lazy Loading**: Heavy components and core utilities load only when needed with dedicated webpack chunks
 - **Component-Level Optimization**: Core utilities (PreloadResources, PerformanceMonitor, ErrorBoundary, etc.) lazy-loaded to reduce initial bundle size
 - **Image Optimization**: WebP/AVIF formats with progressive loading, 75% quality compression, and metadata stripping for smaller file sizes
-- **Critical Resource Preloading**: Above-the-fold images (logo, hero images) and direct WOFF2 font file preloading for faster initial render
+- **Critical Resource Preloading**: Above-the-fold images (logo, hero images) and self-hosted font preloading for faster initial render
 - **Layout Shift Prevention**: Comprehensive CLS fixes with explicit dimensions and stable loading states
 - **Bundle Analysis**: Continuous monitoring of JavaScript bundle sizes with 250KB asset limits
 - **Critical CSS**: Inlined essential styles to prevent render blocking
@@ -332,12 +332,20 @@ The deployment configuration includes comprehensive asset processing for maximum
 - **Minimal UI Display**: Optimized for app-like experience when installed
 - **Icon Support**: Uses favicon.ico as the app icon for consistent branding
 
+### Font Loading Optimization
+
+- **Self-Hosted Strategy**: Fonts served locally instead of Google Fonts CDN for better performance and privacy
+- **Critical Font Preloading**: Essential font weights (400, 600) preloaded for immediate availability
+- **Display Swap**: Fallback fonts shown immediately while custom fonts load to prevent FOIT
+- **Optimized Character Set**: Only loads characters actually used in the application
+- **Cross-Origin Configuration**: Proper CORS setup for font loading security
+
 ### Layout Shift Prevention
 
 - **Explicit Dimensions**: All images and containers have stable dimensions using aspect-ratio CSS
 - **Consistent Aspect Ratios**: All project showcase sections use uniform 3:2 aspect ratio for visual harmony
 - **Stable Loading States**: Fallback components match exact dimensions of loaded content
-- **Font Loading Optimization**: Display swap strategy with fallback fonts to prevent FOIT
+- **Font Loading Optimization**: Self-hosted fonts with preloading and display swap strategy to prevent FOIT
 - **Real-time Monitoring**: Development tools track and log layout shifts for debugging
 - **Progressive Enhancement**: Graceful degradation ensures stability across all browsers
 
@@ -374,9 +382,9 @@ The deployment configuration includes comprehensive asset processing for maximum
 
 ### Typography
 
-- **Font Family**: Fredoka (Google Fonts)
+- **Font Family**: Fredoka (self-hosted for optimal performance)
 - **Weights**: 400, 600 (optimized for performance)
-- **Loading**: Display swap for performance
+- **Loading Strategy**: Self-hosted with preloading and display swap for maximum performance
 
 ### Responsive Breakpoints
 
