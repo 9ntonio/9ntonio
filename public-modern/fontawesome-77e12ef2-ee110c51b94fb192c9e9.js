@@ -1,3 +1,2234 @@
 /*! For license information please see fontawesome-77e12ef2-ee110c51b94fb192c9e9.js.LICENSE.txt */
-"use strict";(self.webpackChunkantonio_almena_portfolio=self.webpackChunkantonio_almena_portfolio||[]).push([[37],{5772:function(t,n,e){e.d(n,{g:function(){return He}});var a=e(8850),r=e(8484),i=e(8419),o=e(6481);e(2949),e(7354),e(6526);function s(t,n,e){return(n=function(t){var n=function(t,n){if("object"!=typeof t||!t)return t;var e=t[Symbol.toPrimitive];if(void 0!==e){var a=e.call(t,n||"default");if("object"!=typeof a)return a;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===n?String:Number)(t)}(t,"string");return"symbol"==typeof n?n:n+""}(n))in t?Object.defineProperty(t,n,{value:e,enumerable:!0,configurable:!0,writable:!0}):t[n]=e,t}function f(t,n){var e=Object.keys(t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(t);n&&(a=a.filter((function(n){return Object.getOwnPropertyDescriptor(t,n).enumerable}))),e.push.apply(e,a)}return e}function c(t){for(var n=1;n<arguments.length;n++){var e=null!=arguments[n]?arguments[n]:{};n%2?f(Object(e),!0).forEach((function(n){s(t,n,e[n])})):Object.getOwnPropertyDescriptors?Object.defineProperties(t,Object.getOwnPropertyDescriptors(e)):f(Object(e)).forEach((function(n){Object.defineProperty(t,n,Object.getOwnPropertyDescriptor(e,n))}))}return t}var l=function(){},u={},d={},m=null,p={mark:l,measure:l};try{"undefined"!=typeof window&&(u=window),"undefined"!=typeof document&&(d=document),"undefined"!=typeof MutationObserver&&(m=MutationObserver),"undefined"!=typeof performance&&(p=performance)}catch(Be){}var h=(u.navigator||{}).userAgent,g=void 0===h?"":h,v=u,b=d,y=m,x=p,k=(v.document,!!b.documentElement&&!!b.head&&"function"==typeof b.addEventListener&&"function"==typeof b.createElement),w=~g.indexOf("MSIE")||~g.indexOf("Trident/"),A={classic:{fa:"solid",fas:"solid","fa-solid":"solid",far:"regular","fa-regular":"regular",fal:"light","fa-light":"light",fat:"thin","fa-thin":"thin",fab:"brands","fa-brands":"brands"},duotone:{fa:"solid",fad:"solid","fa-solid":"solid","fa-duotone":"solid",fadr:"regular","fa-regular":"regular",fadl:"light","fa-light":"light",fadt:"thin","fa-thin":"thin"},sharp:{fa:"solid",fass:"solid","fa-solid":"solid",fasr:"regular","fa-regular":"regular",fasl:"light","fa-light":"light",fast:"thin","fa-thin":"thin"},"sharp-duotone":{fa:"solid",fasds:"solid","fa-solid":"solid",fasdr:"regular","fa-regular":"regular",fasdl:"light","fa-light":"light",fasdt:"thin","fa-thin":"thin"}},O=["fa-classic","fa-duotone","fa-sharp","fa-sharp-duotone"],P="classic",N="duotone",S=[P,N,"sharp","sharp-duotone"],j=new Map([["classic",{defaultShortPrefixId:"fas",defaultStyleId:"solid",styleIds:["solid","regular","light","thin","brands"],futureStyleIds:[],defaultFontWeight:900}],["sharp",{defaultShortPrefixId:"fass",defaultStyleId:"solid",styleIds:["solid","regular","light","thin"],futureStyleIds:[],defaultFontWeight:900}],["duotone",{defaultShortPrefixId:"fad",defaultStyleId:"solid",styleIds:["solid","regular","light","thin"],futureStyleIds:[],defaultFontWeight:900}],["sharp-duotone",{defaultShortPrefixId:"fasds",defaultStyleId:"solid",styleIds:["solid","regular","light","thin"],futureStyleIds:[],defaultFontWeight:900}]]),C=["fak","fa-kit","fakd","fa-kit-duotone"],E={fak:"kit","fa-kit":"kit"},I={fakd:"kit-duotone","fa-kit-duotone":"kit-duotone"},z=["fak","fakd"],M={kit:"fak"},F={"kit-duotone":"fakd"},D="duotone-group",L="swap-opacity",R="primary",T="secondary",Y=["fak","fa-kit","fakd","fa-kit-duotone"],W={classic:{fab:"fa-brands",fad:"fa-duotone",fal:"fa-light",far:"fa-regular",fas:"fa-solid",fat:"fa-thin"},duotone:{fadr:"fa-regular",fadl:"fa-light",fadt:"fa-thin"},sharp:{fass:"fa-solid",fasr:"fa-regular",fasl:"fa-light",fast:"fa-thin"},"sharp-duotone":{fasds:"fa-solid",fasdr:"fa-regular",fasdl:"fa-light",fasdt:"fa-thin"}},_=["fa","fas","far","fal","fat","fad","fadr","fadl","fadt","fab","fass","fasr","fasl","fast","fasds","fasdr","fasdl","fasdt"].concat(["fa-classic","fa-duotone","fa-sharp","fa-sharp-duotone"],["fa-solid","fa-regular","fa-light","fa-thin","fa-duotone","fa-brands"]),H=[1,2,3,4,5,6,7,8,9,10],U=H.concat([11,12,13,14,15,16,17,18,19,20]),B=[].concat((0,o.A)(Object.keys({classic:["fas","far","fal","fat","fad"],duotone:["fadr","fadl","fadt"],sharp:["fass","fasr","fasl","fast"],"sharp-duotone":["fasds","fasdr","fasdl","fasdt"]})),["solid","regular","light","thin","duotone","brands"],["2xs","xs","sm","lg","xl","2xl","beat","border","fade","beat-fade","bounce","flip-both","flip-horizontal","flip-vertical","flip","fw","inverse","layers-counter","layers-text","layers","li","pull-left","pull-right","pulse","rotate-180","rotate-270","rotate-90","rotate-by","shake","spin-pulse","spin-reverse","spin","stack-1x","stack-2x","stack","ul",D,L,R,T]).concat(H.map((function(t){return"".concat(t,"x")}))).concat(U.map((function(t){return"w-".concat(t)}))),X="___FONT_AWESOME___",q="svg-inline--fa",V="data-fa-i2svg",G="data-fa-pseudo-element",K="data-prefix",$="data-icon",J="fontawesome-i2svg",Q=["HTML","HEAD","STYLE","SCRIPT"],Z=function(){try{return!0}catch(t){return!1}}();function tt(t){return new Proxy(t,{get:function(t,n){return n in t?t[n]:t[P]}})}var nt=c({},A);nt[P]=c(c(c(c({},{"fa-duotone":"duotone"}),A[P]),E),I);var et=tt(nt),at=c({},{classic:{solid:"fas",regular:"far",light:"fal",thin:"fat",brands:"fab"},duotone:{solid:"fad",regular:"fadr",light:"fadl",thin:"fadt"},sharp:{solid:"fass",regular:"fasr",light:"fasl",thin:"fast"},"sharp-duotone":{solid:"fasds",regular:"fasdr",light:"fasdl",thin:"fasdt"}});at[P]=c(c(c(c({},{duotone:"fad"}),at[P]),M),F);var rt=tt(at),it=c({},W);it[P]=c(c({},it[P]),{fak:"fa-kit"});var ot=tt(it),st=c({},{classic:{"fa-brands":"fab","fa-duotone":"fad","fa-light":"fal","fa-regular":"far","fa-solid":"fas","fa-thin":"fat"},duotone:{"fa-regular":"fadr","fa-light":"fadl","fa-thin":"fadt"},sharp:{"fa-solid":"fass","fa-regular":"fasr","fa-light":"fasl","fa-thin":"fast"},"sharp-duotone":{"fa-solid":"fasds","fa-regular":"fasdr","fa-light":"fasdl","fa-thin":"fasdt"}});st[P]=c(c({},st[P]),{"fa-kit":"fak"});tt(st);var ft=/fa(s|r|l|t|d|dr|dl|dt|b|k|kd|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,ct="fa-layers-text",lt=/Font ?Awesome ?([56 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit)?.*/i,ut=(tt(c({},{classic:{900:"fas",400:"far",normal:"far",300:"fal",100:"fat"},duotone:{900:"fad",400:"fadr",300:"fadl",100:"fadt"},sharp:{900:"fass",400:"fasr",300:"fasl",100:"fast"},"sharp-duotone":{900:"fasds",400:"fasdr",300:"fasdl",100:"fasdt"}})),["class","data-prefix","data-icon","data-fa-transform","data-fa-mask"]),dt={GROUP:"duotone-group",SWAP_OPACITY:"swap-opacity",PRIMARY:"primary",SECONDARY:"secondary"},mt=[].concat(["kit"],(0,o.A)(B)),pt=v.FontAwesomeConfig||{};if(b&&"function"==typeof b.querySelector){[["data-family-prefix","familyPrefix"],["data-css-prefix","cssPrefix"],["data-family-default","familyDefault"],["data-style-default","styleDefault"],["data-replacement-class","replacementClass"],["data-auto-replace-svg","autoReplaceSvg"],["data-auto-add-css","autoAddCss"],["data-auto-a11y","autoA11y"],["data-search-pseudo-elements","searchPseudoElements"],["data-observe-mutations","observeMutations"],["data-mutate-approach","mutateApproach"],["data-keep-original-source","keepOriginalSource"],["data-measure-performance","measurePerformance"],["data-show-missing-icons","showMissingIcons"]].forEach((function(t){var n=(0,i.A)(t,2),e=n[0],a=n[1],r=function(t){return""===t||"false"!==t&&("true"===t||t)}(function(t){var n=b.querySelector("script["+t+"]");if(n)return n.getAttribute(t)}(e));null!=r&&(pt[a]=r)}))}var ht={styleDefault:"solid",familyDefault:P,cssPrefix:"fa",replacementClass:q,autoReplaceSvg:!0,autoAddCss:!0,autoA11y:!0,searchPseudoElements:!1,observeMutations:!0,mutateApproach:"async",keepOriginalSource:!0,measurePerformance:!1,showMissingIcons:!0};pt.familyPrefix&&(pt.cssPrefix=pt.familyPrefix);var gt=c(c({},ht),pt);gt.autoReplaceSvg||(gt.observeMutations=!1);var vt={};Object.keys(ht).forEach((function(t){Object.defineProperty(vt,t,{enumerable:!0,set:function(n){gt[t]=n,bt.forEach((function(t){return t(vt)}))},get:function(){return gt[t]}})})),Object.defineProperty(vt,"familyPrefix",{enumerable:!0,set:function(t){gt.cssPrefix=t,bt.forEach((function(t){return t(vt)}))},get:function(){return gt.cssPrefix}}),v.FontAwesomeConfig=vt;var bt=[];var yt=16,xt={size:16,x:0,y:0,rotate:0,flipX:!1,flipY:!1};function kt(){for(var t=12,n="";t-- >0;)n+="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"[62*Math.random()|0];return n}function wt(t){for(var n=[],e=(t||[]).length>>>0;e--;)n[e]=t[e];return n}function At(t){return t.classList?wt(t.classList):(t.getAttribute("class")||"").split(" ").filter((function(t){return t}))}function Ot(t){return"".concat(t).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/'/g,"&#39;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}function Pt(t){return Object.keys(t||{}).reduce((function(n,e){return n+"".concat(e,": ").concat(t[e].trim(),";")}),"")}function Nt(t){return t.size!==xt.size||t.x!==xt.x||t.y!==xt.y||t.rotate!==xt.rotate||t.flipX||t.flipY}function St(){var t="fa",n=q,e=vt.cssPrefix,a=vt.replacementClass,r=':root, :host {\n  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";\n  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";\n  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";\n  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";\n  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";\n  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";\n  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";\n  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";\n  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";\n  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";\n  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";\n  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";\n  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";\n  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";\n}\n\nsvg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {\n  overflow: visible;\n  box-sizing: content-box;\n}\n\n.svg-inline--fa {\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285705em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left {\n  margin-right: var(--fa-pull-margin, 0.3em);\n  width: auto;\n}\n.svg-inline--fa.fa-pull-right {\n  margin-left: var(--fa-pull-margin, 0.3em);\n  width: auto;\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  top: 0.25em;\n}\n.svg-inline--fa.fa-fw {\n  width: var(--fa-fw-width, 1.25em);\n}\n\n.fa-layers svg.svg-inline--fa {\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: 1em;\n}\n.fa-layers svg.svg-inline--fa {\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: 0.625em;\n  line-height: 0.1em;\n  vertical-align: 0.225em;\n}\n\n.fa-xs {\n  font-size: 0.75em;\n  line-height: 0.0833333337em;\n  vertical-align: 0.125em;\n}\n\n.fa-sm {\n  font-size: 0.875em;\n  line-height: 0.0714285718em;\n  vertical-align: 0.0535714295em;\n}\n\n.fa-lg {\n  font-size: 1.25em;\n  line-height: 0.05em;\n  vertical-align: -0.075em;\n}\n\n.fa-xl {\n  font-size: 1.5em;\n  line-height: 0.0416666682em;\n  vertical-align: -0.125em;\n}\n\n.fa-2xl {\n  font-size: 2em;\n  line-height: 0.03125em;\n  vertical-align: -0.1875em;\n}\n\n.fa-fw {\n  text-align: center;\n  width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-left: var(--fa-li-margin, 2.5em);\n  padding-left: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  left: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.08em);\n  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);\n}\n\n.fa-pull-left {\n  float: left;\n  margin-right: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right {\n  float: right;\n  margin-left: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n.fa-bounce,\n.fa-fade,\n.fa-beat-fade,\n.fa-flip,\n.fa-pulse,\n.fa-shake,\n.fa-spin,\n.fa-spin-pulse {\n    animation-delay: -1ms;\n    animation-duration: 1ms;\n    animation-iteration-count: 1;\n    transition-delay: 0s;\n    transition-duration: 0s;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.fa-stack {\n  display: inline-block;\n  vertical-align: middle;\n  height: 2em;\n  position: relative;\n  width: 2.5em;\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  position: absolute;\n  right: 0;\n  top: 0;\n  z-index: var(--fa-stack-z-index, auto);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  height: 1em;\n  width: 1.25em;\n}\n.svg-inline--fa.fa-stack-2x {\n  height: 2em;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.sr-only,\n.fa-sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n\n.sr-only-focusable:not(:focus),\n.fa-sr-only-focusable:not(:focus) {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}';if(e!==t||a!==n){var i=new RegExp("\\.".concat(t,"\\-"),"g"),o=new RegExp("\\--".concat(t,"\\-"),"g"),s=new RegExp("\\.".concat(n),"g");r=r.replace(i,".".concat(e,"-")).replace(o,"--".concat(e,"-")).replace(s,".".concat(a))}return r}var jt=!1;function Ct(){vt.autoAddCss&&!jt&&(!function(t){if(t&&k){var n=b.createElement("style");n.setAttribute("type","text/css"),n.innerHTML=t;for(var e=b.head.childNodes,a=null,r=e.length-1;r>-1;r--){var i=e[r],o=(i.tagName||"").toUpperCase();["STYLE","LINK"].indexOf(o)>-1&&(a=i)}b.head.insertBefore(n,a)}}(St()),jt=!0)}var Et={mixout:function(){return{dom:{css:St,insertCss:Ct}}},hooks:function(){return{beforeDOMElementCreation:function(){Ct()},beforeI2svg:function(){Ct()}}}},It=v||{};It[X]||(It[X]={}),It[X].styles||(It[X].styles={}),It[X].hooks||(It[X].hooks={}),It[X].shims||(It[X].shims=[]);var zt=It[X],Mt=[],Ft=function(){b.removeEventListener("DOMContentLoaded",Ft),Dt=1,Mt.map((function(t){return t()}))},Dt=!1;function Lt(t){var n=t.tag,e=t.attributes,a=void 0===e?{}:e,r=t.children,i=void 0===r?[]:r;return"string"==typeof t?Ot(t):"<".concat(n," ").concat(function(t){return Object.keys(t||{}).reduce((function(n,e){return n+"".concat(e,'="').concat(Ot(t[e]),'" ')}),"").trim()}(a),">").concat(i.map(Lt).join(""),"</").concat(n,">")}function Rt(t,n,e){if(t&&t[n]&&t[n][e])return{prefix:n,iconName:e,icon:t[n][e]}}k&&((Dt=(b.documentElement.doScroll?/^loaded|^c/:/^loaded|^i|^c/).test(b.readyState))||b.addEventListener("DOMContentLoaded",Ft));var Tt=function(t,n,e,a){var r,i,o,s=Object.keys(t),f=s.length,c=void 0!==a?function(t,n){return function(e,a,r,i){return t.call(n,e,a,r,i)}}(n,a):n;for(void 0===e?(r=1,o=t[s[0]]):(r=0,o=e);r<f;r++)o=c(o,t[i=s[r]],i,t);return o};function Yt(t){var n=function(t){for(var n=[],e=0,a=t.length;e<a;){var r=t.charCodeAt(e++);if(r>=55296&&r<=56319&&e<a){var i=t.charCodeAt(e++);56320==(64512&i)?n.push(((1023&r)<<10)+(1023&i)+65536):(n.push(r),e--)}else n.push(r)}return n}(t);return 1===n.length?n[0].toString(16):null}function Wt(t){return Object.keys(t).reduce((function(n,e){var a=t[e];return!!a.icon?n[a.iconName]=a.icon:n[e]=a,n}),{})}function _t(t,n){var e=(arguments.length>2&&void 0!==arguments[2]?arguments[2]:{}).skipHooks,a=void 0!==e&&e,r=Wt(n);"function"!=typeof zt.hooks.addPack||a?zt.styles[t]=c(c({},zt.styles[t]||{}),r):zt.hooks.addPack(t,Wt(n)),"fas"===t&&_t("fa",n)}var Ht=zt.styles,Ut=zt.shims,Bt=Object.keys(ot),Xt=Bt.reduce((function(t,n){return t[n]=Object.keys(ot[n]),t}),{}),qt=null,Vt={},Gt={},Kt={},$t={},Jt={};function Qt(t,n){var e,a=n.split("-"),r=a[0],i=a.slice(1).join("-");return r!==t||""===i||(e=i,~mt.indexOf(e))?null:i}var Zt,tn=function(){var t=function(t){return Tt(Ht,(function(n,e,a){return n[a]=Tt(e,t,{}),n}),{})};Vt=t((function(t,n,e){(n[3]&&(t[n[3]]=e),n[2])&&n[2].filter((function(t){return"number"==typeof t})).forEach((function(n){t[n.toString(16)]=e}));return t})),Gt=t((function(t,n,e){(t[e]=e,n[2])&&n[2].filter((function(t){return"string"==typeof t})).forEach((function(n){t[n]=e}));return t})),Jt=t((function(t,n,e){var a=n[2];return t[e]=e,a.forEach((function(n){t[n]=e})),t}));var n="far"in Ht||vt.autoFetchSvg,e=Tt(Ut,(function(t,e){var a=e[0],r=e[1],i=e[2];return"far"!==r||n||(r="fas"),"string"==typeof a&&(t.names[a]={prefix:r,iconName:i}),"number"==typeof a&&(t.unicodes[a.toString(16)]={prefix:r,iconName:i}),t}),{names:{},unicodes:{}});Kt=e.names,$t=e.unicodes,qt=on(vt.styleDefault,{family:vt.familyDefault})};function nn(t,n){return(Vt[t]||{})[n]}function en(t,n){return(Jt[t]||{})[n]}function an(t){return Kt[t]||{prefix:null,iconName:null}}function rn(){return qt}Zt=function(t){qt=on(t.styleDefault,{family:vt.familyDefault})},bt.push(Zt),tn();function on(t){var n=(arguments.length>1&&void 0!==arguments[1]?arguments[1]:{}).family,e=void 0===n?P:n,a=et[e][t];if(e===N&&!t)return"fad";var r=rt[e][t]||rt[e][a],i=t in zt.styles?t:null;return r||i||null}function sn(t){return t.sort().filter((function(t,n,e){return e.indexOf(t)===n}))}function fn(t){var n,e,a=(arguments.length>1&&void 0!==arguments[1]?arguments[1]:{}).skipLookups,r=void 0!==a&&a,o=null,s=_.concat(Y),f=sn(t.filter((function(t){return s.includes(t)}))),l=sn(t.filter((function(t){return!_.includes(t)}))),u=f.filter((function(t){return o=t,!O.includes(t)})),d=(0,i.A)(u,1)[0],m=void 0===d?null:d,p=function(t){var n=P,e=Bt.reduce((function(t,n){return t[n]="".concat(vt.cssPrefix,"-").concat(n),t}),{});return S.forEach((function(a){(t.includes(e[a])||t.some((function(t){return Xt[a].includes(t)})))&&(n=a)})),n}(f),h=c(c({},(n=[],e=null,l.forEach((function(t){var a=Qt(vt.cssPrefix,t);a?e=a:t&&n.push(t)})),{iconName:e,rest:n})),{},{prefix:on(m,{family:p})});return c(c(c({},h),function(t){var n=t.values,e=t.family,a=t.canonical,r=t.givenPrefix,i=void 0===r?"":r,o=t.styles,s=void 0===o?{}:o,f=t.config,c=void 0===f?{}:f,l=e===N,u=n.includes("fa-duotone")||n.includes("fad"),d="duotone"===c.familyDefault,m="fad"===a.prefix||"fa-duotone"===a.prefix;!l&&(u||d||m)&&(a.prefix="fad");(n.includes("fa-brands")||n.includes("fab"))&&(a.prefix="fab");if(!a.prefix&&cn.includes(e)){if(Object.keys(s).find((function(t){return ln.includes(t)}))||c.autoFetchSvg){var p=j.get(e).defaultShortPrefixId;a.prefix=p,a.iconName=en(a.prefix,a.iconName)||a.iconName}}"fa"!==a.prefix&&"fa"!==i||(a.prefix=rn()||"fas");return a}({values:t,family:p,styles:Ht,config:vt,canonical:h,givenPrefix:o})),function(t,n,e){var a=e.prefix,r=e.iconName;if(t||!a||!r)return{prefix:a,iconName:r};var i="fa"===n?an(r):{},o=en(a,r);r=i.iconName||o||r,"far"!==(a=i.prefix||a)||Ht.far||!Ht.fas||vt.autoFetchSvg||(a="fas");return{prefix:a,iconName:r}}(r,o,h))}var cn=S.filter((function(t){return t!==P||t!==N})),ln=Object.keys(W).filter((function(t){return t!==P})).map((function(t){return Object.keys(W[t])})).flat();var un=function(){return(0,r.A)((function t(){(0,a.A)(this,t),this.definitions={}}),[{key:"add",value:function(){for(var t=this,n=arguments.length,e=new Array(n),a=0;a<n;a++)e[a]=arguments[a];var r=e.reduce(this._pullDefinitions,{});Object.keys(r).forEach((function(n){t.definitions[n]=c(c({},t.definitions[n]||{}),r[n]),_t(n,r[n]);var e=ot[P][n];e&&_t(e,r[n]),tn()}))}},{key:"reset",value:function(){this.definitions={}}},{key:"_pullDefinitions",value:function(t,n){var e=n.prefix&&n.iconName&&n.icon?{0:n}:n;return Object.keys(e).map((function(n){var a=e[n],r=a.prefix,i=a.iconName,o=a.icon,s=o[2];t[r]||(t[r]={}),s.length>0&&s.forEach((function(n){"string"==typeof n&&(t[r][n]=o)})),t[r][i]=o})),t}}])}(),dn=[],mn={},pn={},hn=Object.keys(pn);function gn(t,n){for(var e=arguments.length,a=new Array(e>2?e-2:0),r=2;r<e;r++)a[r-2]=arguments[r];return(mn[t]||[]).forEach((function(t){n=t.apply(null,[n].concat(a))})),n}function vn(t){for(var n=arguments.length,e=new Array(n>1?n-1:0),a=1;a<n;a++)e[a-1]=arguments[a];(mn[t]||[]).forEach((function(t){t.apply(null,e)}))}function bn(){var t=arguments[0],n=Array.prototype.slice.call(arguments,1);return pn[t]?pn[t].apply(null,n):void 0}function yn(t){"fa"===t.prefix&&(t.prefix="fas");var n=t.iconName,e=t.prefix||rn();if(n)return n=en(e,n)||n,Rt(xn.definitions,e,n)||Rt(zt.styles,e,n)}var xn=new un,kn={i2svg:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return k?(vn("beforeI2svg",t),bn("pseudoElements2svg",t),bn("i2svg",t)):Promise.reject(new Error("Operation requires a DOM of some kind."))},watch:function(){var t,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},e=n.autoReplaceSvgRoot;!1===vt.autoReplaceSvg&&(vt.autoReplaceSvg=!0),vt.observeMutations=!0,t=function(){An({autoReplaceSvgRoot:e}),vn("watch",n)},k&&(Dt?setTimeout(t,0):Mt.push(t))}},wn={noAuto:function(){vt.autoReplaceSvg=!1,vt.observeMutations=!1,vn("noAuto")},config:vt,dom:kn,parse:{icon:function(t){if(null===t)return null;if("object"==typeof t&&t.prefix&&t.iconName)return{prefix:t.prefix,iconName:en(t.prefix,t.iconName)||t.iconName};if(Array.isArray(t)&&2===t.length){var n=0===t[1].indexOf("fa-")?t[1].slice(3):t[1],e=on(t[0]);return{prefix:e,iconName:en(e,n)||n}}if("string"==typeof t&&(t.indexOf("".concat(vt.cssPrefix,"-"))>-1||t.match(ft))){var a=fn(t.split(" "),{skipLookups:!0});return{prefix:a.prefix||rn(),iconName:en(a.prefix,a.iconName)||a.iconName}}if("string"==typeof t){var r=rn();return{prefix:r,iconName:en(r,t)||t}}}},library:xn,findIconDefinition:yn,toHtml:Lt},An=function(){var t=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).autoReplaceSvgRoot,n=void 0===t?b:t;(Object.keys(zt.styles).length>0||vt.autoFetchSvg)&&k&&vt.autoReplaceSvg&&wn.dom.i2svg({node:n})};function On(t,n){return Object.defineProperty(t,"abstract",{get:n}),Object.defineProperty(t,"html",{get:function(){return t.abstract.map((function(t){return Lt(t)}))}}),Object.defineProperty(t,"node",{get:function(){if(k){var n=b.createElement("div");return n.innerHTML=t.html,n.children}}}),t}function Pn(t){var n=t.icons,e=n.main,a=n.mask,r=t.prefix,i=t.iconName,o=t.transform,s=t.symbol,f=t.title,l=t.maskId,u=t.titleId,d=t.extra,m=t.watchable,p=void 0!==m&&m,h=a.found?a:e,g=h.width,v=h.height,b=z.includes(r),y=[vt.replacementClass,i?"".concat(vt.cssPrefix,"-").concat(i):""].filter((function(t){return-1===d.classes.indexOf(t)})).filter((function(t){return""!==t||!!t})).concat(d.classes).join(" "),x={children:[],attributes:c(c({},d.attributes),{},{"data-prefix":r,"data-icon":i,class:y,role:d.attributes.role||"img",xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 ".concat(g," ").concat(v)})},k=b&&!~d.classes.indexOf("fa-fw")?{width:"".concat(g/v*16*.0625,"em")}:{};p&&(x.attributes[V]=""),f&&(x.children.push({tag:"title",attributes:{id:x.attributes["aria-labelledby"]||"title-".concat(u||kt())},children:[f]}),delete x.attributes.title);var w=c(c({},x),{},{prefix:r,iconName:i,main:e,mask:a,maskId:l,transform:o,symbol:s,styles:c(c({},k),d.styles)}),A=a.found&&e.found?bn("generateAbstractMask",w)||{children:[],attributes:{}}:bn("generateAbstractIcon",w)||{children:[],attributes:{}},O=A.children,P=A.attributes;return w.children=O,w.attributes=P,s?function(t){var n=t.prefix,e=t.iconName,a=t.children,r=t.attributes,i=t.symbol,o=!0===i?"".concat(n,"-").concat(vt.cssPrefix,"-").concat(e):i;return[{tag:"svg",attributes:{style:"display: none;"},children:[{tag:"symbol",attributes:c(c({},r),{},{id:o}),children:a}]}]}(w):function(t){var n=t.children,e=t.main,a=t.mask,r=t.attributes,i=t.styles,o=t.transform;if(Nt(o)&&e.found&&!a.found){var s={x:e.width/e.height/2,y:.5};r.style=Pt(c(c({},i),{},{"transform-origin":"".concat(s.x+o.x/16,"em ").concat(s.y+o.y/16,"em")}))}return[{tag:"svg",attributes:r,children:n}]}(w)}function Nn(t){var n=t.content,e=t.width,a=t.height,r=t.transform,i=t.title,o=t.extra,s=t.watchable,f=void 0!==s&&s,l=c(c(c({},o.attributes),i?{title:i}:{}),{},{class:o.classes.join(" ")});f&&(l[V]="");var u=c({},o.styles);Nt(r)&&(u.transform=function(t){var n=t.transform,e=t.width,a=void 0===e?16:e,r=t.height,i=void 0===r?16:r,o=t.startCentered,s=void 0!==o&&o,f="";return f+=s&&w?"translate(".concat(n.x/yt-a/2,"em, ").concat(n.y/yt-i/2,"em) "):s?"translate(calc(-50% + ".concat(n.x/yt,"em), calc(-50% + ").concat(n.y/yt,"em)) "):"translate(".concat(n.x/yt,"em, ").concat(n.y/yt,"em) "),f+="scale(".concat(n.size/yt*(n.flipX?-1:1),", ").concat(n.size/yt*(n.flipY?-1:1),") "),f+"rotate(".concat(n.rotate,"deg) ")}({transform:r,startCentered:!0,width:e,height:a}),u["-webkit-transform"]=u.transform);var d=Pt(u);d.length>0&&(l.style=d);var m=[];return m.push({tag:"span",attributes:l,children:[n]}),i&&m.push({tag:"span",attributes:{class:"sr-only"},children:[i]}),m}var Sn=zt.styles;function jn(t){var n=t[0],e=t[1],a=t.slice(4),r=(0,i.A)(a,1)[0];return{found:!0,width:n,height:e,icon:Array.isArray(r)?{tag:"g",attributes:{class:"".concat(vt.cssPrefix,"-").concat(dt.GROUP)},children:[{tag:"path",attributes:{class:"".concat(vt.cssPrefix,"-").concat(dt.SECONDARY),fill:"currentColor",d:r[0]}},{tag:"path",attributes:{class:"".concat(vt.cssPrefix,"-").concat(dt.PRIMARY),fill:"currentColor",d:r[1]}}]}:{tag:"path",attributes:{fill:"currentColor",d:r}}}}var Cn={found:!1,width:512,height:512};function En(t,n){var e=n;return"fa"===n&&null!==vt.styleDefault&&(n=rn()),new Promise((function(a,r){if("fa"===e){var i=an(t)||{};t=i.iconName||t,n=i.prefix||n}if(t&&n&&Sn[n]&&Sn[n][t])return a(jn(Sn[n][t]));!function(t,n){Z||vt.showMissingIcons||!t||console.error('Icon with name "'.concat(t,'" and prefix "').concat(n,'" is missing.'))}(t,n),a(c(c({},Cn),{},{icon:vt.showMissingIcons&&t&&bn("missingIconAbstract")||{}}))}))}var In=function(){},zn=vt.measurePerformance&&x&&x.mark&&x.measure?x:{mark:In,measure:In},Mn='FA "6.7.2"',Fn=function(t){zn.mark("".concat(Mn," ").concat(t," ends")),zn.measure("".concat(Mn," ").concat(t),"".concat(Mn," ").concat(t," begins"),"".concat(Mn," ").concat(t," ends"))},Dn=function(t){return zn.mark("".concat(Mn," ").concat(t," begins")),function(){return Fn(t)}},Ln=function(){};function Rn(t){return"string"==typeof(t.getAttribute?t.getAttribute(V):null)}function Tn(t){return b.createElementNS("http://www.w3.org/2000/svg",t)}function Yn(t){return b.createElement(t)}function Wn(t){var n=(arguments.length>1&&void 0!==arguments[1]?arguments[1]:{}).ceFn,e=void 0===n?"svg"===t.tag?Tn:Yn:n;if("string"==typeof t)return b.createTextNode(t);var a=e(t.tag);return Object.keys(t.attributes||[]).forEach((function(n){a.setAttribute(n,t.attributes[n])})),(t.children||[]).forEach((function(t){a.appendChild(Wn(t,{ceFn:e}))})),a}var _n={replace:function(t){var n=t[0];if(n.parentNode)if(t[1].forEach((function(t){n.parentNode.insertBefore(Wn(t),n)})),null===n.getAttribute(V)&&vt.keepOriginalSource){var e=b.createComment(function(t){var n=" ".concat(t.outerHTML," ");return"".concat(n,"Font Awesome fontawesome.com ")}(n));n.parentNode.replaceChild(e,n)}else n.remove()},nest:function(t){var n=t[0],e=t[1];if(~At(n).indexOf(vt.replacementClass))return _n.replace(t);var a=new RegExp("".concat(vt.cssPrefix,"-.*"));if(delete e[0].attributes.id,e[0].attributes.class){var r=e[0].attributes.class.split(" ").reduce((function(t,n){return n===vt.replacementClass||n.match(a)?t.toSvg.push(n):t.toNode.push(n),t}),{toNode:[],toSvg:[]});e[0].attributes.class=r.toSvg.join(" "),0===r.toNode.length?n.removeAttribute("class"):n.setAttribute("class",r.toNode.join(" "))}var i=e.map((function(t){return Lt(t)})).join("\n");n.setAttribute(V,""),n.innerHTML=i}};function Hn(t){t()}function Un(t,n){var e="function"==typeof n?n:Ln;if(0===t.length)e();else{var a=Hn;"async"===vt.mutateApproach&&(a=v.requestAnimationFrame||Hn),a((function(){var n=!0===vt.autoReplaceSvg?_n.replace:_n[vt.autoReplaceSvg]||_n.replace,a=Dn("mutate");t.map(n),a(),e()}))}}var Bn=!1;function Xn(){Bn=!0}function qn(){Bn=!1}var Vn=null;function Gn(t){if(y&&vt.observeMutations){var n=t.treeCallback,e=void 0===n?Ln:n,a=t.nodeCallback,r=void 0===a?Ln:a,i=t.pseudoElementsCallback,o=void 0===i?Ln:i,s=t.observeMutationsRoot,f=void 0===s?b:s;Vn=new y((function(t){if(!Bn){var n=rn();wt(t).forEach((function(t){if("childList"===t.type&&t.addedNodes.length>0&&!Rn(t.addedNodes[0])&&(vt.searchPseudoElements&&o(t.target),e(t.target)),"attributes"===t.type&&t.target.parentNode&&vt.searchPseudoElements&&o(t.target.parentNode),"attributes"===t.type&&Rn(t.target)&&~ut.indexOf(t.attributeName))if("class"===t.attributeName&&function(t){var n=t.getAttribute?t.getAttribute(K):null,e=t.getAttribute?t.getAttribute($):null;return n&&e}(t.target)){var a=fn(At(t.target)),i=a.prefix,s=a.iconName;t.target.setAttribute(K,i||n),s&&t.target.setAttribute($,s)}else(f=t.target)&&f.classList&&f.classList.contains&&f.classList.contains(vt.replacementClass)&&r(t.target);var f}))}})),k&&Vn.observe(f,{childList:!0,attributes:!0,characterData:!0,subtree:!0})}}function Kn(t){var n,e,a=t.getAttribute("data-prefix"),r=t.getAttribute("data-icon"),i=void 0!==t.innerText?t.innerText.trim():"",o=fn(At(t));return o.prefix||(o.prefix=rn()),a&&r&&(o.prefix=a,o.iconName=r),o.iconName&&o.prefix||(o.prefix&&i.length>0&&(o.iconName=(n=o.prefix,e=t.innerText,(Gt[n]||{})[e]||nn(o.prefix,Yt(t.innerText)))),!o.iconName&&vt.autoFetchSvg&&t.firstChild&&t.firstChild.nodeType===Node.TEXT_NODE&&(o.iconName=t.firstChild.data)),o}function $n(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{styleParser:!0},e=Kn(t),a=e.iconName,r=e.prefix,i=e.rest,o=function(t){var n=wt(t.attributes).reduce((function(t,n){return"class"!==t.name&&"style"!==t.name&&(t[n.name]=n.value),t}),{}),e=t.getAttribute("title"),a=t.getAttribute("data-fa-title-id");return vt.autoA11y&&(e?n["aria-labelledby"]="".concat(vt.replacementClass,"-title-").concat(a||kt()):(n["aria-hidden"]="true",n.focusable="false")),n}(t),s=gn("parseNodeAttributes",{},t),f=n.styleParser?function(t){var n=t.getAttribute("style"),e=[];return n&&(e=n.split(";").reduce((function(t,n){var e=n.split(":"),a=e[0],r=e.slice(1);return a&&r.length>0&&(t[a]=r.join(":").trim()),t}),{})),e}(t):[];return c({iconName:a,title:t.getAttribute("title"),titleId:t.getAttribute("data-fa-title-id"),prefix:r,transform:xt,mask:{iconName:null,prefix:null,rest:[]},maskId:null,symbol:!1,extra:{classes:i,styles:f,attributes:o}},s)}var Jn=zt.styles;function Qn(t){var n="nest"===vt.autoReplaceSvg?$n(t,{styleParser:!1}):$n(t);return~n.extra.classes.indexOf(ct)?bn("generateLayersText",t,n):bn("generateSvgReplacementMutation",t,n)}function Zn(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;if(!k)return Promise.resolve();var e=b.documentElement.classList,a=function(t){return e.add("".concat(J,"-").concat(t))},r=function(t){return e.remove("".concat(J,"-").concat(t))},i=vt.autoFetchSvg?[].concat(C,(0,o.A)(_)):O.concat(Object.keys(Jn));i.includes("fa")||i.push("fa");var s=[".".concat(ct,":not([").concat(V,"])")].concat(i.map((function(t){return".".concat(t,":not([").concat(V,"])")}))).join(", ");if(0===s.length)return Promise.resolve();var f=[];try{f=wt(t.querySelectorAll(s))}catch(u){}if(!(f.length>0))return Promise.resolve();a("pending"),r("complete");var c=Dn("onTree"),l=f.reduce((function(t,n){try{var e=Qn(n);e&&t.push(e)}catch(u){Z||"MissingIcon"===u.name&&console.error(u)}return t}),[]);return new Promise((function(t,e){Promise.all(l).then((function(e){Un(e,(function(){a("active"),a("complete"),r("pending"),"function"==typeof n&&n(),c(),t()}))})).catch((function(t){c(),e(t)}))}))}function te(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null;Qn(t).then((function(t){t&&Un([t],n)}))}var ne=function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},e=n.transform,a=void 0===e?xt:e,r=n.symbol,i=void 0!==r&&r,o=n.mask,s=void 0===o?null:o,f=n.maskId,l=void 0===f?null:f,u=n.title,d=void 0===u?null:u,m=n.titleId,p=void 0===m?null:m,h=n.classes,g=void 0===h?[]:h,v=n.attributes,b=void 0===v?{}:v,y=n.styles,x=void 0===y?{}:y;if(t){var k=t.prefix,w=t.iconName,A=t.icon;return On(c({type:"icon"},t),(function(){return vn("beforeDOMElementCreation",{iconDefinition:t,params:n}),vt.autoA11y&&(d?b["aria-labelledby"]="".concat(vt.replacementClass,"-title-").concat(p||kt()):(b["aria-hidden"]="true",b.focusable="false")),Pn({icons:{main:jn(A),mask:s?jn(s.icon):{found:!1,width:null,height:null,icon:{}}},prefix:k,iconName:w,transform:c(c({},xt),a),symbol:i,title:d,maskId:l,titleId:p,extra:{attributes:b,styles:x,classes:g}})}))}},ee={mixout:function(){return{icon:(t=ne,function(n){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},a=(n||{}).icon?n:yn(n||{}),r=e.mask;return r&&(r=(r||{}).icon?r:yn(r||{})),t(a,c(c({},e),{},{mask:r}))})};var t},hooks:function(){return{mutationObserverCallbacks:function(t){return t.treeCallback=Zn,t.nodeCallback=te,t}}},provides:function(t){t.i2svg=function(t){var n=t.node,e=void 0===n?b:n,a=t.callback;return Zn(e,void 0===a?function(){}:a)},t.generateSvgReplacementMutation=function(t,n){var e=n.iconName,a=n.title,r=n.titleId,o=n.prefix,s=n.transform,f=n.symbol,c=n.mask,l=n.maskId,u=n.extra;return new Promise((function(n,d){Promise.all([En(e,o),c.iconName?En(c.iconName,c.prefix):Promise.resolve({found:!1,width:512,height:512,icon:{}})]).then((function(c){var d=(0,i.A)(c,2),m=d[0],p=d[1];n([t,Pn({icons:{main:m,mask:p},prefix:o,iconName:e,transform:s,symbol:f,maskId:l,title:a,titleId:r,extra:u,watchable:!0})])})).catch(d)}))},t.generateAbstractIcon=function(t){var n,e=t.children,a=t.attributes,r=t.main,i=t.transform,o=Pt(t.styles);return o.length>0&&(a.style=o),Nt(i)&&(n=bn("generateAbstractTransformGrouping",{main:r,transform:i,containerWidth:r.width,iconWidth:r.width})),e.push(n||r.icon),{children:e,attributes:a}}}},ae={mixout:function(){return{layer:function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},e=n.classes,a=void 0===e?[]:e;return On({type:"layer"},(function(){vn("beforeDOMElementCreation",{assembler:t,params:n});var e=[];return t((function(t){Array.isArray(t)?t.map((function(t){e=e.concat(t.abstract)})):e=e.concat(t.abstract)})),[{tag:"span",attributes:{class:["".concat(vt.cssPrefix,"-layers")].concat((0,o.A)(a)).join(" ")},children:e}]}))}}}},re={mixout:function(){return{counter:function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},e=n.title,a=void 0===e?null:e,r=n.classes,i=void 0===r?[]:r,s=n.attributes,f=void 0===s?{}:s,l=n.styles,u=void 0===l?{}:l;return On({type:"counter",content:t},(function(){return vn("beforeDOMElementCreation",{content:t,params:n}),function(t){var n=t.content,e=t.title,a=t.extra,r=c(c(c({},a.attributes),e?{title:e}:{}),{},{class:a.classes.join(" ")}),i=Pt(a.styles);i.length>0&&(r.style=i);var o=[];return o.push({tag:"span",attributes:r,children:[n]}),e&&o.push({tag:"span",attributes:{class:"sr-only"},children:[e]}),o}({content:t.toString(),title:a,extra:{attributes:f,styles:u,classes:["".concat(vt.cssPrefix,"-layers-counter")].concat((0,o.A)(i))}})}))}}}},ie={mixout:function(){return{text:function(t){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},e=n.transform,a=void 0===e?xt:e,r=n.title,i=void 0===r?null:r,s=n.classes,f=void 0===s?[]:s,l=n.attributes,u=void 0===l?{}:l,d=n.styles,m=void 0===d?{}:d;return On({type:"text",content:t},(function(){return vn("beforeDOMElementCreation",{content:t,params:n}),Nn({content:t,transform:c(c({},xt),a),title:i,extra:{attributes:u,styles:m,classes:["".concat(vt.cssPrefix,"-layers-text")].concat((0,o.A)(f))}})}))}}},provides:function(t){t.generateLayersText=function(t,n){var e=n.title,a=n.transform,r=n.extra,i=null,o=null;if(w){var s=parseInt(getComputedStyle(t).fontSize,10),f=t.getBoundingClientRect();i=f.width/s,o=f.height/s}return vt.autoA11y&&!e&&(r.attributes["aria-hidden"]="true"),Promise.resolve([t,Nn({content:t.innerHTML,width:i,height:o,transform:a,title:e,extra:r,watchable:!0})])}}},oe=new RegExp('"',"ug"),se=[1105920,1112319],fe=c(c(c(c({},{FontAwesome:{normal:"fas",400:"fas"}}),{"Font Awesome 6 Free":{900:"fas",400:"far"},"Font Awesome 6 Pro":{900:"fas",400:"far",normal:"far",300:"fal",100:"fat"},"Font Awesome 6 Brands":{400:"fab",normal:"fab"},"Font Awesome 6 Duotone":{900:"fad",400:"fadr",normal:"fadr",300:"fadl",100:"fadt"},"Font Awesome 6 Sharp":{900:"fass",400:"fasr",normal:"fasr",300:"fasl",100:"fast"},"Font Awesome 6 Sharp Duotone":{900:"fasds",400:"fasdr",normal:"fasdr",300:"fasdl",100:"fasdt"}}),{"Font Awesome 5 Free":{900:"fas",400:"far"},"Font Awesome 5 Pro":{900:"fas",400:"far",normal:"far",300:"fal"},"Font Awesome 5 Brands":{400:"fab",normal:"fab"},"Font Awesome 5 Duotone":{900:"fad"}}),{"Font Awesome Kit":{400:"fak",normal:"fak"},"Font Awesome Kit Duotone":{400:"fakd",normal:"fakd"}}),ce=Object.keys(fe).reduce((function(t,n){return t[n.toLowerCase()]=fe[n],t}),{}),le=Object.keys(ce).reduce((function(t,n){var e=ce[n];return t[n]=e[900]||(0,o.A)(Object.entries(e))[0][1],t}),{});function ue(t,n){var e="".concat("data-fa-pseudo-element-pending").concat(n.replace(":","-"));return new Promise((function(a,r){if(null!==t.getAttribute(e))return a();var i,o,s,f=wt(t.children).filter((function(t){return t.getAttribute(G)===n}))[0],l=v.getComputedStyle(t,n),u=l.getPropertyValue("font-family"),d=u.match(lt),m=l.getPropertyValue("font-weight"),p=l.getPropertyValue("content");if(f&&!d)return t.removeChild(f),a();if(d&&"none"!==p&&""!==p){var h=l.getPropertyValue("content"),g=function(t,n){var e=t.replace(/^['"]|['"]$/g,"").toLowerCase(),a=parseInt(n),r=isNaN(a)?"normal":a;return(ce[e]||{})[r]||le[e]}(u,m),y=function(t){var n,e,a,r,i,o=t.replace(oe,""),s=(e=0,r=(n=o).length,(i=n.charCodeAt(e))>=55296&&i<=56319&&r>e+1&&(a=n.charCodeAt(e+1))>=56320&&a<=57343?1024*(i-55296)+a-56320+65536:i),f=s>=se[0]&&s<=se[1],c=2===o.length&&o[0]===o[1];return{value:Yt(c?o[0]:o),isSecondary:f||c}}(h),x=y.value,k=y.isSecondary,w=d[0].startsWith("FontAwesome"),A=nn(g,x),O=A;if(w){var P=(o=$t[i=x],s=nn("fas",i),o||(s?{prefix:"fas",iconName:s}:null)||{prefix:null,iconName:null});P.iconName&&P.prefix&&(A=P.iconName,g=P.prefix)}if(!A||k||f&&f.getAttribute(K)===g&&f.getAttribute($)===O)a();else{t.setAttribute(e,O),f&&t.removeChild(f);var N={iconName:null,title:null,titleId:null,prefix:null,transform:xt,symbol:!1,mask:{iconName:null,prefix:null,rest:[]},maskId:null,extra:{classes:[],styles:{},attributes:{}}},S=N.extra;S.attributes[G]=n,En(A,g).then((function(r){var i=Pn(c(c({},N),{},{icons:{main:r,mask:{prefix:null,iconName:null,rest:[]}},prefix:g,iconName:O,extra:S,watchable:!0})),o=b.createElementNS("http://www.w3.org/2000/svg","svg");"::before"===n?t.insertBefore(o,t.firstChild):t.appendChild(o),o.outerHTML=i.map((function(t){return Lt(t)})).join("\n"),t.removeAttribute(e),a()})).catch(r)}}else a()}))}function de(t){return Promise.all([ue(t,"::before"),ue(t,"::after")])}function me(t){return!(t.parentNode===document.head||~Q.indexOf(t.tagName.toUpperCase())||t.getAttribute(G)||t.parentNode&&"svg"===t.parentNode.tagName)}function pe(t){if(k)return new Promise((function(n,e){var a=wt(t.querySelectorAll("*")).filter(me).map(de),r=Dn("searchPseudoElements");Xn(),Promise.all(a).then((function(){r(),qn(),n()})).catch((function(){r(),qn(),e()}))}))}var he={hooks:function(){return{mutationObserverCallbacks:function(t){return t.pseudoElementsCallback=pe,t}}},provides:function(t){t.pseudoElements2svg=function(t){var n=t.node,e=void 0===n?b:n;vt.searchPseudoElements&&pe(e)}}},ge=!1,ve=function(t){return t.toLowerCase().split(" ").reduce((function(t,n){var e=n.toLowerCase().split("-"),a=e[0],r=e.slice(1).join("-");if(a&&"h"===r)return t.flipX=!0,t;if(a&&"v"===r)return t.flipY=!0,t;if(r=parseFloat(r),isNaN(r))return t;switch(a){case"grow":t.size=t.size+r;break;case"shrink":t.size=t.size-r;break;case"left":t.x=t.x-r;break;case"right":t.x=t.x+r;break;case"up":t.y=t.y-r;break;case"down":t.y=t.y+r;break;case"rotate":t.rotate=t.rotate+r}return t}),{size:16,x:0,y:0,flipX:!1,flipY:!1,rotate:0})},be={mixout:function(){return{parse:{transform:function(t){return ve(t)}}}},hooks:function(){return{parseNodeAttributes:function(t,n){var e=n.getAttribute("data-fa-transform");return e&&(t.transform=ve(e)),t}}},provides:function(t){t.generateAbstractTransformGrouping=function(t){var n=t.main,e=t.transform,a=t.containerWidth,r=t.iconWidth,i={transform:"translate(".concat(a/2," 256)")},o="translate(".concat(32*e.x,", ").concat(32*e.y,") "),s="scale(".concat(e.size/16*(e.flipX?-1:1),", ").concat(e.size/16*(e.flipY?-1:1),") "),f="rotate(".concat(e.rotate," 0 0)"),l={outer:i,inner:{transform:"".concat(o," ").concat(s," ").concat(f)},path:{transform:"translate(".concat(r/2*-1," -256)")}};return{tag:"g",attributes:c({},l.outer),children:[{tag:"g",attributes:c({},l.inner),children:[{tag:n.icon.tag,children:n.icon.children,attributes:c(c({},n.icon.attributes),l.path)}]}]}}}},ye={x:0,y:0,width:"100%",height:"100%"};function xe(t){var n=!(arguments.length>1&&void 0!==arguments[1])||arguments[1];return t.attributes&&(t.attributes.fill||n)&&(t.attributes.fill="black"),t}var ke,we={hooks:function(){return{parseNodeAttributes:function(t,n){var e=n.getAttribute("data-fa-mask"),a=e?fn(e.split(" ").map((function(t){return t.trim()}))):{prefix:null,iconName:null,rest:[]};return a.prefix||(a.prefix=rn()),t.mask=a,t.maskId=n.getAttribute("data-fa-mask-id"),t}}},provides:function(t){t.generateAbstractMask=function(t){var n,e=t.children,a=t.attributes,r=t.main,i=t.mask,o=t.maskId,s=t.transform,f=r.width,l=r.icon,u=i.width,d=i.icon,m=function(t){var n=t.transform,e=t.containerWidth,a=t.iconWidth,r={transform:"translate(".concat(e/2," 256)")},i="translate(".concat(32*n.x,", ").concat(32*n.y,") "),o="scale(".concat(n.size/16*(n.flipX?-1:1),", ").concat(n.size/16*(n.flipY?-1:1),") "),s="rotate(".concat(n.rotate," 0 0)");return{outer:r,inner:{transform:"".concat(i," ").concat(o," ").concat(s)},path:{transform:"translate(".concat(a/2*-1," -256)")}}}({transform:s,containerWidth:u,iconWidth:f}),p={tag:"rect",attributes:c(c({},ye),{},{fill:"white"})},h=l.children?{children:l.children.map(xe)}:{},g={tag:"g",attributes:c({},m.inner),children:[xe(c({tag:l.tag,attributes:c(c({},l.attributes),m.path)},h))]},v={tag:"g",attributes:c({},m.outer),children:[g]},b="mask-".concat(o||kt()),y="clip-".concat(o||kt()),x={tag:"mask",attributes:c(c({},ye),{},{id:b,maskUnits:"userSpaceOnUse",maskContentUnits:"userSpaceOnUse"}),children:[p,v]},k={tag:"defs",children:[{tag:"clipPath",attributes:{id:y},children:(n=d,"g"===n.tag?n.children:[n])},x]};return e.push(k,{tag:"rect",attributes:c({fill:"currentColor","clip-path":"url(#".concat(y,")"),mask:"url(#".concat(b,")")},ye)}),{children:e,attributes:a}}}},Ae={provides:function(t){var n=!1;v.matchMedia&&(n=v.matchMedia("(prefers-reduced-motion: reduce)").matches),t.missingIconAbstract=function(){var t=[],e={fill:"currentColor"},a={attributeType:"XML",repeatCount:"indefinite",dur:"2s"};t.push({tag:"path",attributes:c(c({},e),{},{d:"M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"})});var r=c(c({},a),{},{attributeName:"opacity"}),i={tag:"circle",attributes:c(c({},e),{},{cx:"256",cy:"364",r:"28"}),children:[]};return n||i.children.push({tag:"animate",attributes:c(c({},a),{},{attributeName:"r",values:"28;14;28;28;14;28;"})},{tag:"animate",attributes:c(c({},r),{},{values:"1;0;1;1;0;1;"})}),t.push(i),t.push({tag:"path",attributes:c(c({},e),{},{opacity:"1",d:"M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z"}),children:n?[]:[{tag:"animate",attributes:c(c({},r),{},{values:"1;0;0;0;0;1;"})}]}),n||t.push({tag:"path",attributes:c(c({},e),{},{opacity:"0",d:"M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z"}),children:[{tag:"animate",attributes:c(c({},r),{},{values:"0;0;1;1;0;0;"})}]}),{tag:"g",attributes:{class:"missing"},children:t}}}};ke={mixoutsTo:wn}.mixoutsTo,dn=[Et,ee,ae,re,ie,he,{mixout:function(){return{dom:{unwatch:function(){Xn(),ge=!0}}}},hooks:function(){return{bootstrap:function(){Gn(gn("mutationObserverCallbacks",{}))},noAuto:function(){Vn&&Vn.disconnect()},watch:function(t){var n=t.observeMutationsRoot;ge?qn():Gn(gn("mutationObserverCallbacks",{observeMutationsRoot:n}))}}}},be,we,Ae,{hooks:function(){return{parseNodeAttributes:function(t,n){var e=n.getAttribute("data-fa-symbol"),a=null!==e&&(""===e||e);return t.symbol=a,t}}}}],mn={},Object.keys(pn).forEach((function(t){-1===hn.indexOf(t)&&delete pn[t]})),dn.forEach((function(t){var n=t.mixout?t.mixout():{};if(Object.keys(n).forEach((function(t){"function"==typeof n[t]&&(ke[t]=n[t]),"object"==typeof n[t]&&Object.keys(n[t]).forEach((function(e){ke[t]||(ke[t]={}),ke[t][e]=n[t][e]}))})),t.hooks){var e=t.hooks();Object.keys(e).forEach((function(t){mn[t]||(mn[t]=[]),mn[t].push(e[t])}))}t.provides&&t.provides(pn)}));var Oe=wn.parse,Pe=wn.icon,Ne=e(5983),Se=e.n(Ne),je=e(3746);function Ce(t,n){var e=Object.keys(t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(t);n&&(a=a.filter((function(n){return Object.getOwnPropertyDescriptor(t,n).enumerable}))),e.push.apply(e,a)}return e}function Ee(t){for(var n=1;n<arguments.length;n++){var e=null!=arguments[n]?arguments[n]:{};n%2?Ce(Object(e),!0).forEach((function(n){ze(t,n,e[n])})):Object.getOwnPropertyDescriptors?Object.defineProperties(t,Object.getOwnPropertyDescriptors(e)):Ce(Object(e)).forEach((function(n){Object.defineProperty(t,n,Object.getOwnPropertyDescriptor(e,n))}))}return t}function Ie(t){return Ie="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},Ie(t)}function ze(t,n,e){return n in t?Object.defineProperty(t,n,{value:e,enumerable:!0,configurable:!0,writable:!0}):t[n]=e,t}function Me(t,n){if(null==t)return{};var e,a,r=function(t,n){if(null==t)return{};var e,a,r={},i=Object.keys(t);for(a=0;a<i.length;a++)e=i[a],n.indexOf(e)>=0||(r[e]=t[e]);return r}(t,n);if(Object.getOwnPropertySymbols){var i=Object.getOwnPropertySymbols(t);for(a=0;a<i.length;a++)e=i[a],n.indexOf(e)>=0||Object.prototype.propertyIsEnumerable.call(t,e)&&(r[e]=t[e])}return r}function Fe(t){return function(t){if(Array.isArray(t))return De(t)}(t)||function(t){if("undefined"!=typeof Symbol&&null!=t[Symbol.iterator]||null!=t["@@iterator"])return Array.from(t)}(t)||function(t,n){if(!t)return;if("string"==typeof t)return De(t,n);var e=Object.prototype.toString.call(t).slice(8,-1);"Object"===e&&t.constructor&&(e=t.constructor.name);if("Map"===e||"Set"===e)return Array.from(t);if("Arguments"===e||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e))return De(t,n)}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function De(t,n){(null==n||n>t.length)&&(n=t.length);for(var e=0,a=new Array(n);e<n;e++)a[e]=t[e];return a}function Le(t){return function(t){return(t-=0)==t}(t)?t:(t=t.replace(/[\-_\s]+(.)?/g,(function(t,n){return n?n.toUpperCase():""}))).substr(0,1).toLowerCase()+t.substr(1)}var Re=["style"];var Te=!1;try{Te=!0}catch(Be){}function Ye(t){return t&&"object"===Ie(t)&&t.prefix&&t.iconName&&t.icon?t:Oe.icon?Oe.icon(t):null===t?null:t&&"object"===Ie(t)&&t.prefix&&t.iconName?t:Array.isArray(t)&&2===t.length?{prefix:t[0],iconName:t[1]}:"string"==typeof t?{prefix:"fas",iconName:t}:void 0}function We(t,n){return Array.isArray(n)&&n.length>0||!Array.isArray(n)&&n?ze({},t,n):{}}var _e={border:!1,className:"",mask:null,maskId:null,fixedWidth:!1,inverse:!1,flip:!1,icon:null,listItem:!1,pull:null,pulse:!1,rotation:null,size:null,spin:!1,spinPulse:!1,spinReverse:!1,beat:!1,fade:!1,beatFade:!1,bounce:!1,shake:!1,symbol:!1,title:"",titleId:null,transform:null,swapOpacity:!1},He=je.forwardRef((function(t,n){var e=Ee(Ee({},_e),t),a=e.icon,r=e.mask,i=e.symbol,o=e.className,s=e.title,f=e.titleId,c=e.maskId,l=Ye(a),u=We("classes",[].concat(Fe(function(t){var n,e=t.beat,a=t.fade,r=t.beatFade,i=t.bounce,o=t.shake,s=t.flash,f=t.spin,c=t.spinPulse,l=t.spinReverse,u=t.pulse,d=t.fixedWidth,m=t.inverse,p=t.border,h=t.listItem,g=t.flip,v=t.size,b=t.rotation,y=t.pull,x=(ze(n={"fa-beat":e,"fa-fade":a,"fa-beat-fade":r,"fa-bounce":i,"fa-shake":o,"fa-flash":s,"fa-spin":f,"fa-spin-reverse":l,"fa-spin-pulse":c,"fa-pulse":u,"fa-fw":d,"fa-inverse":m,"fa-border":p,"fa-li":h,"fa-flip":!0===g,"fa-flip-horizontal":"horizontal"===g||"both"===g,"fa-flip-vertical":"vertical"===g||"both"===g},"fa-".concat(v),null!=v),ze(n,"fa-rotate-".concat(b),null!=b&&0!==b),ze(n,"fa-pull-".concat(y),null!=y),ze(n,"fa-swap-opacity",t.swapOpacity),n);return Object.keys(x).map((function(t){return x[t]?t:null})).filter((function(t){return t}))}(e)),Fe((o||"").split(" ")))),d=We("transform","string"==typeof e.transform?Oe.transform(e.transform):e.transform),m=We("mask",Ye(r)),p=Pe(l,Ee(Ee(Ee(Ee({},u),d),m),{},{symbol:i,title:s,titleId:f,maskId:c}));if(!p)return function(){var t;!Te&&console&&"function"==typeof console.error&&(t=console).error.apply(t,arguments)}("Could not find icon",l),null;var h=p.abstract,g={ref:n};return Object.keys(e).forEach((function(t){_e.hasOwnProperty(t)||(g[t]=e[t])})),Ue(h[0],g)}));He.displayName="FontAwesomeIcon",He.propTypes={beat:Se().bool,border:Se().bool,beatFade:Se().bool,bounce:Se().bool,className:Se().string,fade:Se().bool,flash:Se().bool,mask:Se().oneOfType([Se().object,Se().array,Se().string]),maskId:Se().string,fixedWidth:Se().bool,inverse:Se().bool,flip:Se().oneOf([!0,!1,"horizontal","vertical","both"]),icon:Se().oneOfType([Se().object,Se().array,Se().string]),listItem:Se().bool,pull:Se().oneOf(["right","left"]),pulse:Se().bool,rotation:Se().oneOf([0,90,180,270]),shake:Se().bool,size:Se().oneOf(["2xs","xs","sm","lg","xl","2xl","1x","2x","3x","4x","5x","6x","7x","8x","9x","10x"]),spin:Se().bool,spinPulse:Se().bool,spinReverse:Se().bool,symbol:Se().oneOfType([Se().bool,Se().string]),title:Se().string,titleId:Se().string,transform:Se().oneOfType([Se().string,Se().object]),swapOpacity:Se().bool};var Ue=function t(n,e){var a=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};if("string"==typeof e)return e;var r=(e.children||[]).map((function(e){return t(n,e)})),i=Object.keys(e.attributes||{}).reduce((function(t,n){var a=e.attributes[n];switch(n){case"class":t.attrs.className=a,delete e.attributes.class;break;case"style":t.attrs.style=a.split(";").map((function(t){return t.trim()})).filter((function(t){return t})).reduce((function(t,n){var e,a=n.indexOf(":"),r=Le(n.slice(0,a)),i=n.slice(a+1).trim();return r.startsWith("webkit")?t[(e=r,e.charAt(0).toUpperCase()+e.slice(1))]=i:t[r]=i,t}),{});break;default:0===n.indexOf("aria-")||0===n.indexOf("data-")?t.attrs[n.toLowerCase()]=a:t.attrs[Le(n)]=a}return t}),{attrs:{}}),o=a.style,s=void 0===o?{}:o,f=Me(a,Re);return i.attrs.style=Ee(Ee({},i.attrs.style),s),n.apply(void 0,[e.tag,Ee(Ee({},i.attrs),f)].concat(Fe(r)))}.bind(null,je.createElement)}}]);
+"use strict";
+(self.webpackChunkantonio_almena_portfolio = self.webpackChunkantonio_almena_portfolio || []).push([
+	[37],
+	{
+		5772: function (t, n, e) {
+			e.d(n, {
+				g: function () {
+					return He;
+				},
+			});
+			var a = e(8850),
+				r = e(8484),
+				i = e(8419),
+				o = e(6481);
+			e(2949), e(7354), e(6526);
+			function s(t, n, e) {
+				return (
+					(n = (function (t) {
+						var n = (function (t, n) {
+							if ("object" != typeof t || !t) return t;
+							var e = t[Symbol.toPrimitive];
+							if (void 0 !== e) {
+								var a = e.call(t, n || "default");
+								if ("object" != typeof a) return a;
+								throw new TypeError("@@toPrimitive must return a primitive value.");
+							}
+							return ("string" === n ? String : Number)(t);
+						})(t, "string");
+						return "symbol" == typeof n ? n : n + "";
+					})(n)) in t
+						? Object.defineProperty(t, n, { value: e, enumerable: !0, configurable: !0, writable: !0 })
+						: (t[n] = e),
+					t
+				);
+			}
+			function f(t, n) {
+				var e = Object.keys(t);
+				if (Object.getOwnPropertySymbols) {
+					var a = Object.getOwnPropertySymbols(t);
+					n &&
+						(a = a.filter(function (n) {
+							return Object.getOwnPropertyDescriptor(t, n).enumerable;
+						})),
+						e.push.apply(e, a);
+				}
+				return e;
+			}
+			function c(t) {
+				for (var n = 1; n < arguments.length; n++) {
+					var e = null != arguments[n] ? arguments[n] : {};
+					n % 2
+						? f(Object(e), !0).forEach(function (n) {
+								s(t, n, e[n]);
+							})
+						: Object.getOwnPropertyDescriptors
+							? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+							: f(Object(e)).forEach(function (n) {
+									Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+								});
+				}
+				return t;
+			}
+			var l = function () {},
+				u = {},
+				d = {},
+				m = null,
+				p = { mark: l, measure: l };
+			try {
+				"undefined" != typeof window && (u = window),
+					"undefined" != typeof document && (d = document),
+					"undefined" != typeof MutationObserver && (m = MutationObserver),
+					"undefined" != typeof performance && (p = performance);
+			} catch (Be) {}
+			var h = (u.navigator || {}).userAgent,
+				g = void 0 === h ? "" : h,
+				v = u,
+				b = d,
+				y = m,
+				x = p,
+				k = (v.document, !!b.documentElement && !!b.head && "function" == typeof b.addEventListener && "function" == typeof b.createElement),
+				w = ~g.indexOf("MSIE") || ~g.indexOf("Trident/"),
+				A = {
+					classic: {
+						fa: "solid",
+						fas: "solid",
+						"fa-solid": "solid",
+						far: "regular",
+						"fa-regular": "regular",
+						fal: "light",
+						"fa-light": "light",
+						fat: "thin",
+						"fa-thin": "thin",
+						fab: "brands",
+						"fa-brands": "brands",
+					},
+					duotone: {
+						fa: "solid",
+						fad: "solid",
+						"fa-solid": "solid",
+						"fa-duotone": "solid",
+						fadr: "regular",
+						"fa-regular": "regular",
+						fadl: "light",
+						"fa-light": "light",
+						fadt: "thin",
+						"fa-thin": "thin",
+					},
+					sharp: { fa: "solid", fass: "solid", "fa-solid": "solid", fasr: "regular", "fa-regular": "regular", fasl: "light", "fa-light": "light", fast: "thin", "fa-thin": "thin" },
+					"sharp-duotone": { fa: "solid", fasds: "solid", "fa-solid": "solid", fasdr: "regular", "fa-regular": "regular", fasdl: "light", "fa-light": "light", fasdt: "thin", "fa-thin": "thin" },
+				},
+				O = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone"],
+				P = "classic",
+				N = "duotone",
+				S = [P, N, "sharp", "sharp-duotone"],
+				j = new Map([
+					["classic", { defaultShortPrefixId: "fas", defaultStyleId: "solid", styleIds: ["solid", "regular", "light", "thin", "brands"], futureStyleIds: [], defaultFontWeight: 900 }],
+					["sharp", { defaultShortPrefixId: "fass", defaultStyleId: "solid", styleIds: ["solid", "regular", "light", "thin"], futureStyleIds: [], defaultFontWeight: 900 }],
+					["duotone", { defaultShortPrefixId: "fad", defaultStyleId: "solid", styleIds: ["solid", "regular", "light", "thin"], futureStyleIds: [], defaultFontWeight: 900 }],
+					["sharp-duotone", { defaultShortPrefixId: "fasds", defaultStyleId: "solid", styleIds: ["solid", "regular", "light", "thin"], futureStyleIds: [], defaultFontWeight: 900 }],
+				]),
+				C = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
+				E = { fak: "kit", "fa-kit": "kit" },
+				I = { fakd: "kit-duotone", "fa-kit-duotone": "kit-duotone" },
+				z = ["fak", "fakd"],
+				M = { kit: "fak" },
+				F = { "kit-duotone": "fakd" },
+				D = "duotone-group",
+				L = "swap-opacity",
+				R = "primary",
+				T = "secondary",
+				Y = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
+				W = {
+					classic: { fab: "fa-brands", fad: "fa-duotone", fal: "fa-light", far: "fa-regular", fas: "fa-solid", fat: "fa-thin" },
+					duotone: { fadr: "fa-regular", fadl: "fa-light", fadt: "fa-thin" },
+					sharp: { fass: "fa-solid", fasr: "fa-regular", fasl: "fa-light", fast: "fa-thin" },
+					"sharp-duotone": { fasds: "fa-solid", fasdr: "fa-regular", fasdl: "fa-light", fasdt: "fa-thin" },
+				},
+				_ = ["fa", "fas", "far", "fal", "fat", "fad", "fadr", "fadl", "fadt", "fab", "fass", "fasr", "fasl", "fast", "fasds", "fasdr", "fasdl", "fasdt"].concat(
+					["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone"],
+					["fa-solid", "fa-regular", "fa-light", "fa-thin", "fa-duotone", "fa-brands"],
+				),
+				H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+				U = H.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
+				B = []
+					.concat(
+						(0, o.A)(
+							Object.keys({
+								classic: ["fas", "far", "fal", "fat", "fad"],
+								duotone: ["fadr", "fadl", "fadt"],
+								sharp: ["fass", "fasr", "fasl", "fast"],
+								"sharp-duotone": ["fasds", "fasdr", "fasdl", "fasdt"],
+							}),
+						),
+						["solid", "regular", "light", "thin", "duotone", "brands"],
+						[
+							"2xs",
+							"xs",
+							"sm",
+							"lg",
+							"xl",
+							"2xl",
+							"beat",
+							"border",
+							"fade",
+							"beat-fade",
+							"bounce",
+							"flip-both",
+							"flip-horizontal",
+							"flip-vertical",
+							"flip",
+							"fw",
+							"inverse",
+							"layers-counter",
+							"layers-text",
+							"layers",
+							"li",
+							"pull-left",
+							"pull-right",
+							"pulse",
+							"rotate-180",
+							"rotate-270",
+							"rotate-90",
+							"rotate-by",
+							"shake",
+							"spin-pulse",
+							"spin-reverse",
+							"spin",
+							"stack-1x",
+							"stack-2x",
+							"stack",
+							"ul",
+							D,
+							L,
+							R,
+							T,
+						],
+					)
+					.concat(
+						H.map(function (t) {
+							return "".concat(t, "x");
+						}),
+					)
+					.concat(
+						U.map(function (t) {
+							return "w-".concat(t);
+						}),
+					),
+				X = "___FONT_AWESOME___",
+				q = "svg-inline--fa",
+				V = "data-fa-i2svg",
+				G = "data-fa-pseudo-element",
+				K = "data-prefix",
+				$ = "data-icon",
+				J = "fontawesome-i2svg",
+				Q = ["HTML", "HEAD", "STYLE", "SCRIPT"],
+				Z = (function () {
+					try {
+						return !0;
+					} catch (t) {
+						return !1;
+					}
+				})();
+			function tt(t) {
+				return new Proxy(t, {
+					get: function (t, n) {
+						return n in t ? t[n] : t[P];
+					},
+				});
+			}
+			var nt = c({}, A);
+			nt[P] = c(c(c(c({}, { "fa-duotone": "duotone" }), A[P]), E), I);
+			var et = tt(nt),
+				at = c(
+					{},
+					{
+						classic: { solid: "fas", regular: "far", light: "fal", thin: "fat", brands: "fab" },
+						duotone: { solid: "fad", regular: "fadr", light: "fadl", thin: "fadt" },
+						sharp: { solid: "fass", regular: "fasr", light: "fasl", thin: "fast" },
+						"sharp-duotone": { solid: "fasds", regular: "fasdr", light: "fasdl", thin: "fasdt" },
+					},
+				);
+			at[P] = c(c(c(c({}, { duotone: "fad" }), at[P]), M), F);
+			var rt = tt(at),
+				it = c({}, W);
+			it[P] = c(c({}, it[P]), { fak: "fa-kit" });
+			var ot = tt(it),
+				st = c(
+					{},
+					{
+						classic: { "fa-brands": "fab", "fa-duotone": "fad", "fa-light": "fal", "fa-regular": "far", "fa-solid": "fas", "fa-thin": "fat" },
+						duotone: { "fa-regular": "fadr", "fa-light": "fadl", "fa-thin": "fadt" },
+						sharp: { "fa-solid": "fass", "fa-regular": "fasr", "fa-light": "fasl", "fa-thin": "fast" },
+						"sharp-duotone": { "fa-solid": "fasds", "fa-regular": "fasdr", "fa-light": "fasdl", "fa-thin": "fasdt" },
+					},
+				);
+			st[P] = c(c({}, st[P]), { "fa-kit": "fak" });
+			tt(st);
+			var ft = /fa(s|r|l|t|d|dr|dl|dt|b|k|kd|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,
+				ct = "fa-layers-text",
+				lt = /Font ?Awesome ?([56 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit)?.*/i,
+				ut =
+					(tt(
+						c(
+							{},
+							{
+								classic: { 900: "fas", 400: "far", normal: "far", 300: "fal", 100: "fat" },
+								duotone: { 900: "fad", 400: "fadr", 300: "fadl", 100: "fadt" },
+								sharp: { 900: "fass", 400: "fasr", 300: "fasl", 100: "fast" },
+								"sharp-duotone": { 900: "fasds", 400: "fasdr", 300: "fasdl", 100: "fasdt" },
+							},
+						),
+					),
+					["class", "data-prefix", "data-icon", "data-fa-transform", "data-fa-mask"]),
+				dt = { GROUP: "duotone-group", SWAP_OPACITY: "swap-opacity", PRIMARY: "primary", SECONDARY: "secondary" },
+				mt = [].concat(["kit"], (0, o.A)(B)),
+				pt = v.FontAwesomeConfig || {};
+			if (b && "function" == typeof b.querySelector) {
+				[
+					["data-family-prefix", "familyPrefix"],
+					["data-css-prefix", "cssPrefix"],
+					["data-family-default", "familyDefault"],
+					["data-style-default", "styleDefault"],
+					["data-replacement-class", "replacementClass"],
+					["data-auto-replace-svg", "autoReplaceSvg"],
+					["data-auto-add-css", "autoAddCss"],
+					["data-auto-a11y", "autoA11y"],
+					["data-search-pseudo-elements", "searchPseudoElements"],
+					["data-observe-mutations", "observeMutations"],
+					["data-mutate-approach", "mutateApproach"],
+					["data-keep-original-source", "keepOriginalSource"],
+					["data-measure-performance", "measurePerformance"],
+					["data-show-missing-icons", "showMissingIcons"],
+				].forEach(function (t) {
+					var n = (0, i.A)(t, 2),
+						e = n[0],
+						a = n[1],
+						r = (function (t) {
+							return "" === t || ("false" !== t && ("true" === t || t));
+						})(
+							(function (t) {
+								var n = b.querySelector("script[" + t + "]");
+								if (n) return n.getAttribute(t);
+							})(e),
+						);
+					null != r && (pt[a] = r);
+				});
+			}
+			var ht = {
+				styleDefault: "solid",
+				familyDefault: P,
+				cssPrefix: "fa",
+				replacementClass: q,
+				autoReplaceSvg: !0,
+				autoAddCss: !0,
+				autoA11y: !0,
+				searchPseudoElements: !1,
+				observeMutations: !0,
+				mutateApproach: "async",
+				keepOriginalSource: !0,
+				measurePerformance: !1,
+				showMissingIcons: !0,
+			};
+			pt.familyPrefix && (pt.cssPrefix = pt.familyPrefix);
+			var gt = c(c({}, ht), pt);
+			gt.autoReplaceSvg || (gt.observeMutations = !1);
+			var vt = {};
+			Object.keys(ht).forEach(function (t) {
+				Object.defineProperty(vt, t, {
+					enumerable: !0,
+					set: function (n) {
+						(gt[t] = n),
+							bt.forEach(function (t) {
+								return t(vt);
+							});
+					},
+					get: function () {
+						return gt[t];
+					},
+				});
+			}),
+				Object.defineProperty(vt, "familyPrefix", {
+					enumerable: !0,
+					set: function (t) {
+						(gt.cssPrefix = t),
+							bt.forEach(function (t) {
+								return t(vt);
+							});
+					},
+					get: function () {
+						return gt.cssPrefix;
+					},
+				}),
+				(v.FontAwesomeConfig = vt);
+			var bt = [];
+			var yt = 16,
+				xt = { size: 16, x: 0, y: 0, rotate: 0, flipX: !1, flipY: !1 };
+			function kt() {
+				for (var t = 12, n = ""; t-- > 0; ) n += "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"[(62 * Math.random()) | 0];
+				return n;
+			}
+			function wt(t) {
+				for (var n = [], e = (t || []).length >>> 0; e--; ) n[e] = t[e];
+				return n;
+			}
+			function At(t) {
+				return t.classList
+					? wt(t.classList)
+					: (t.getAttribute("class") || "").split(" ").filter(function (t) {
+							return t;
+						});
+			}
+			function Ot(t) {
+				return "".concat(t).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+			}
+			function Pt(t) {
+				return Object.keys(t || {}).reduce(function (n, e) {
+					return n + "".concat(e, ": ").concat(t[e].trim(), ";");
+				}, "");
+			}
+			function Nt(t) {
+				return t.size !== xt.size || t.x !== xt.x || t.y !== xt.y || t.rotate !== xt.rotate || t.flipX || t.flipY;
+			}
+			function St() {
+				var t = "fa",
+					n = q,
+					e = vt.cssPrefix,
+					a = vt.replacementClass,
+					r =
+						':root, :host {\n  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";\n  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";\n  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";\n  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";\n  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";\n  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";\n  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";\n  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";\n  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";\n  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";\n  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";\n  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";\n  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";\n  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";\n}\n\nsvg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {\n  overflow: visible;\n  box-sizing: content-box;\n}\n\n.svg-inline--fa {\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285705em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left {\n  margin-right: var(--fa-pull-margin, 0.3em);\n  width: auto;\n}\n.svg-inline--fa.fa-pull-right {\n  margin-left: var(--fa-pull-margin, 0.3em);\n  width: auto;\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  top: 0.25em;\n}\n.svg-inline--fa.fa-fw {\n  width: var(--fa-fw-width, 1.25em);\n}\n\n.fa-layers svg.svg-inline--fa {\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: 1em;\n}\n.fa-layers svg.svg-inline--fa {\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: 0.625em;\n  line-height: 0.1em;\n  vertical-align: 0.225em;\n}\n\n.fa-xs {\n  font-size: 0.75em;\n  line-height: 0.0833333337em;\n  vertical-align: 0.125em;\n}\n\n.fa-sm {\n  font-size: 0.875em;\n  line-height: 0.0714285718em;\n  vertical-align: 0.0535714295em;\n}\n\n.fa-lg {\n  font-size: 1.25em;\n  line-height: 0.05em;\n  vertical-align: -0.075em;\n}\n\n.fa-xl {\n  font-size: 1.5em;\n  line-height: 0.0416666682em;\n  vertical-align: -0.125em;\n}\n\n.fa-2xl {\n  font-size: 2em;\n  line-height: 0.03125em;\n  vertical-align: -0.1875em;\n}\n\n.fa-fw {\n  text-align: center;\n  width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-left: var(--fa-li-margin, 2.5em);\n  padding-left: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  left: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.08em);\n  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);\n}\n\n.fa-pull-left {\n  float: left;\n  margin-right: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right {\n  float: right;\n  margin-left: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n.fa-bounce,\n.fa-fade,\n.fa-beat-fade,\n.fa-flip,\n.fa-pulse,\n.fa-shake,\n.fa-spin,\n.fa-spin-pulse {\n    animation-delay: -1ms;\n    animation-duration: 1ms;\n    animation-iteration-count: 1;\n    transition-delay: 0s;\n    transition-duration: 0s;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.fa-stack {\n  display: inline-block;\n  vertical-align: middle;\n  height: 2em;\n  position: relative;\n  width: 2.5em;\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  position: absolute;\n  right: 0;\n  top: 0;\n  z-index: var(--fa-stack-z-index, auto);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  height: 1em;\n  width: 1.25em;\n}\n.svg-inline--fa.fa-stack-2x {\n  height: 2em;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.sr-only,\n.fa-sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n\n.sr-only-focusable:not(:focus),\n.fa-sr-only-focusable:not(:focus) {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}';
+				if (e !== t || a !== n) {
+					var i = new RegExp("\\.".concat(t, "\\-"), "g"),
+						o = new RegExp("\\--".concat(t, "\\-"), "g"),
+						s = new RegExp("\\.".concat(n), "g");
+					r = r.replace(i, ".".concat(e, "-")).replace(o, "--".concat(e, "-")).replace(s, ".".concat(a));
+				}
+				return r;
+			}
+			var jt = !1;
+			function Ct() {
+				vt.autoAddCss &&
+					!jt &&
+					(!(function (t) {
+						if (t && k) {
+							var n = b.createElement("style");
+							n.setAttribute("type", "text/css"), (n.innerHTML = t);
+							for (var e = b.head.childNodes, a = null, r = e.length - 1; r > -1; r--) {
+								var i = e[r],
+									o = (i.tagName || "").toUpperCase();
+								["STYLE", "LINK"].indexOf(o) > -1 && (a = i);
+							}
+							b.head.insertBefore(n, a);
+						}
+					})(St()),
+					(jt = !0));
+			}
+			var Et = {
+					mixout: function () {
+						return { dom: { css: St, insertCss: Ct } };
+					},
+					hooks: function () {
+						return {
+							beforeDOMElementCreation: function () {
+								Ct();
+							},
+							beforeI2svg: function () {
+								Ct();
+							},
+						};
+					},
+				},
+				It = v || {};
+			It[X] || (It[X] = {}), It[X].styles || (It[X].styles = {}), It[X].hooks || (It[X].hooks = {}), It[X].shims || (It[X].shims = []);
+			var zt = It[X],
+				Mt = [],
+				Ft = function () {
+					b.removeEventListener("DOMContentLoaded", Ft),
+						(Dt = 1),
+						Mt.map(function (t) {
+							return t();
+						});
+				},
+				Dt = !1;
+			function Lt(t) {
+				var n = t.tag,
+					e = t.attributes,
+					a = void 0 === e ? {} : e,
+					r = t.children,
+					i = void 0 === r ? [] : r;
+				return "string" == typeof t
+					? Ot(t)
+					: "<"
+							.concat(n, " ")
+							.concat(
+								(function (t) {
+									return Object.keys(t || {})
+										.reduce(function (n, e) {
+											return n + "".concat(e, '="').concat(Ot(t[e]), '" ');
+										}, "")
+										.trim();
+								})(a),
+								">",
+							)
+							.concat(i.map(Lt).join(""), "</")
+							.concat(n, ">");
+			}
+			function Rt(t, n, e) {
+				if (t && t[n] && t[n][e]) return { prefix: n, iconName: e, icon: t[n][e] };
+			}
+			k && ((Dt = (b.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(b.readyState)) || b.addEventListener("DOMContentLoaded", Ft));
+			var Tt = function (t, n, e, a) {
+				var r,
+					i,
+					o,
+					s = Object.keys(t),
+					f = s.length,
+					c =
+						void 0 !== a
+							? (function (t, n) {
+									return function (e, a, r, i) {
+										return t.call(n, e, a, r, i);
+									};
+								})(n, a)
+							: n;
+				for (void 0 === e ? ((r = 1), (o = t[s[0]])) : ((r = 0), (o = e)); r < f; r++) o = c(o, t[(i = s[r])], i, t);
+				return o;
+			};
+			function Yt(t) {
+				var n = (function (t) {
+					for (var n = [], e = 0, a = t.length; e < a; ) {
+						var r = t.charCodeAt(e++);
+						if (r >= 55296 && r <= 56319 && e < a) {
+							var i = t.charCodeAt(e++);
+							56320 == (64512 & i) ? n.push(((1023 & r) << 10) + (1023 & i) + 65536) : (n.push(r), e--);
+						} else n.push(r);
+					}
+					return n;
+				})(t);
+				return 1 === n.length ? n[0].toString(16) : null;
+			}
+			function Wt(t) {
+				return Object.keys(t).reduce(function (n, e) {
+					var a = t[e];
+					return !!a.icon ? (n[a.iconName] = a.icon) : (n[e] = a), n;
+				}, {});
+			}
+			function _t(t, n) {
+				var e = (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}).skipHooks,
+					a = void 0 !== e && e,
+					r = Wt(n);
+				"function" != typeof zt.hooks.addPack || a ? (zt.styles[t] = c(c({}, zt.styles[t] || {}), r)) : zt.hooks.addPack(t, Wt(n)), "fas" === t && _t("fa", n);
+			}
+			var Ht = zt.styles,
+				Ut = zt.shims,
+				Bt = Object.keys(ot),
+				Xt = Bt.reduce(function (t, n) {
+					return (t[n] = Object.keys(ot[n])), t;
+				}, {}),
+				qt = null,
+				Vt = {},
+				Gt = {},
+				Kt = {},
+				$t = {},
+				Jt = {};
+			function Qt(t, n) {
+				var e,
+					a = n.split("-"),
+					r = a[0],
+					i = a.slice(1).join("-");
+				return r !== t || "" === i || ((e = i), ~mt.indexOf(e)) ? null : i;
+			}
+			var Zt,
+				tn = function () {
+					var t = function (t) {
+						return Tt(
+							Ht,
+							function (n, e, a) {
+								return (n[a] = Tt(e, t, {})), n;
+							},
+							{},
+						);
+					};
+					(Vt = t(function (t, n, e) {
+						(n[3] && (t[n[3]] = e), n[2]) &&
+							n[2]
+								.filter(function (t) {
+									return "number" == typeof t;
+								})
+								.forEach(function (n) {
+									t[n.toString(16)] = e;
+								});
+						return t;
+					})),
+						(Gt = t(function (t, n, e) {
+							((t[e] = e), n[2]) &&
+								n[2]
+									.filter(function (t) {
+										return "string" == typeof t;
+									})
+									.forEach(function (n) {
+										t[n] = e;
+									});
+							return t;
+						})),
+						(Jt = t(function (t, n, e) {
+							var a = n[2];
+							return (
+								(t[e] = e),
+								a.forEach(function (n) {
+									t[n] = e;
+								}),
+								t
+							);
+						}));
+					var n = "far" in Ht || vt.autoFetchSvg,
+						e = Tt(
+							Ut,
+							function (t, e) {
+								var a = e[0],
+									r = e[1],
+									i = e[2];
+								return (
+									"far" !== r || n || (r = "fas"),
+									"string" == typeof a && (t.names[a] = { prefix: r, iconName: i }),
+									"number" == typeof a && (t.unicodes[a.toString(16)] = { prefix: r, iconName: i }),
+									t
+								);
+							},
+							{ names: {}, unicodes: {} },
+						);
+					(Kt = e.names), ($t = e.unicodes), (qt = on(vt.styleDefault, { family: vt.familyDefault }));
+				};
+			function nn(t, n) {
+				return (Vt[t] || {})[n];
+			}
+			function en(t, n) {
+				return (Jt[t] || {})[n];
+			}
+			function an(t) {
+				return Kt[t] || { prefix: null, iconName: null };
+			}
+			function rn() {
+				return qt;
+			}
+			(Zt = function (t) {
+				qt = on(t.styleDefault, { family: vt.familyDefault });
+			}),
+				bt.push(Zt),
+				tn();
+			function on(t) {
+				var n = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).family,
+					e = void 0 === n ? P : n,
+					a = et[e][t];
+				if (e === N && !t) return "fad";
+				var r = rt[e][t] || rt[e][a],
+					i = t in zt.styles ? t : null;
+				return r || i || null;
+			}
+			function sn(t) {
+				return t.sort().filter(function (t, n, e) {
+					return e.indexOf(t) === n;
+				});
+			}
+			function fn(t) {
+				var n,
+					e,
+					a = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).skipLookups,
+					r = void 0 !== a && a,
+					o = null,
+					s = _.concat(Y),
+					f = sn(
+						t.filter(function (t) {
+							return s.includes(t);
+						}),
+					),
+					l = sn(
+						t.filter(function (t) {
+							return !_.includes(t);
+						}),
+					),
+					u = f.filter(function (t) {
+						return (o = t), !O.includes(t);
+					}),
+					d = (0, i.A)(u, 1)[0],
+					m = void 0 === d ? null : d,
+					p = (function (t) {
+						var n = P,
+							e = Bt.reduce(function (t, n) {
+								return (t[n] = "".concat(vt.cssPrefix, "-").concat(n)), t;
+							}, {});
+						return (
+							S.forEach(function (a) {
+								(t.includes(e[a]) ||
+									t.some(function (t) {
+										return Xt[a].includes(t);
+									})) &&
+									(n = a);
+							}),
+							n
+						);
+					})(f),
+					h = c(
+						c(
+							{},
+							((n = []),
+							(e = null),
+							l.forEach(function (t) {
+								var a = Qt(vt.cssPrefix, t);
+								a ? (e = a) : t && n.push(t);
+							}),
+							{ iconName: e, rest: n }),
+						),
+						{},
+						{ prefix: on(m, { family: p }) },
+					);
+				return c(
+					c(
+						c({}, h),
+						(function (t) {
+							var n = t.values,
+								e = t.family,
+								a = t.canonical,
+								r = t.givenPrefix,
+								i = void 0 === r ? "" : r,
+								o = t.styles,
+								s = void 0 === o ? {} : o,
+								f = t.config,
+								c = void 0 === f ? {} : f,
+								l = e === N,
+								u = n.includes("fa-duotone") || n.includes("fad"),
+								d = "duotone" === c.familyDefault,
+								m = "fad" === a.prefix || "fa-duotone" === a.prefix;
+							!l && (u || d || m) && (a.prefix = "fad");
+							(n.includes("fa-brands") || n.includes("fab")) && (a.prefix = "fab");
+							if (!a.prefix && cn.includes(e)) {
+								if (
+									Object.keys(s).find(function (t) {
+										return ln.includes(t);
+									}) ||
+									c.autoFetchSvg
+								) {
+									var p = j.get(e).defaultShortPrefixId;
+									(a.prefix = p), (a.iconName = en(a.prefix, a.iconName) || a.iconName);
+								}
+							}
+							("fa" !== a.prefix && "fa" !== i) || (a.prefix = rn() || "fas");
+							return a;
+						})({ values: t, family: p, styles: Ht, config: vt, canonical: h, givenPrefix: o }),
+					),
+					(function (t, n, e) {
+						var a = e.prefix,
+							r = e.iconName;
+						if (t || !a || !r) return { prefix: a, iconName: r };
+						var i = "fa" === n ? an(r) : {},
+							o = en(a, r);
+						(r = i.iconName || o || r), "far" !== (a = i.prefix || a) || Ht.far || !Ht.fas || vt.autoFetchSvg || (a = "fas");
+						return { prefix: a, iconName: r };
+					})(r, o, h),
+				);
+			}
+			var cn = S.filter(function (t) {
+					return t !== P || t !== N;
+				}),
+				ln = Object.keys(W)
+					.filter(function (t) {
+						return t !== P;
+					})
+					.map(function (t) {
+						return Object.keys(W[t]);
+					})
+					.flat();
+			var un = (function () {
+					return (0, r.A)(
+						function t() {
+							(0, a.A)(this, t), (this.definitions = {});
+						},
+						[
+							{
+								key: "add",
+								value: function () {
+									for (var t = this, n = arguments.length, e = new Array(n), a = 0; a < n; a++) e[a] = arguments[a];
+									var r = e.reduce(this._pullDefinitions, {});
+									Object.keys(r).forEach(function (n) {
+										(t.definitions[n] = c(c({}, t.definitions[n] || {}), r[n])), _t(n, r[n]);
+										var e = ot[P][n];
+										e && _t(e, r[n]), tn();
+									});
+								},
+							},
+							{
+								key: "reset",
+								value: function () {
+									this.definitions = {};
+								},
+							},
+							{
+								key: "_pullDefinitions",
+								value: function (t, n) {
+									var e = n.prefix && n.iconName && n.icon ? { 0: n } : n;
+									return (
+										Object.keys(e).map(function (n) {
+											var a = e[n],
+												r = a.prefix,
+												i = a.iconName,
+												o = a.icon,
+												s = o[2];
+											t[r] || (t[r] = {}),
+												s.length > 0 &&
+													s.forEach(function (n) {
+														"string" == typeof n && (t[r][n] = o);
+													}),
+												(t[r][i] = o);
+										}),
+										t
+									);
+								},
+							},
+						],
+					);
+				})(),
+				dn = [],
+				mn = {},
+				pn = {},
+				hn = Object.keys(pn);
+			function gn(t, n) {
+				for (var e = arguments.length, a = new Array(e > 2 ? e - 2 : 0), r = 2; r < e; r++) a[r - 2] = arguments[r];
+				return (
+					(mn[t] || []).forEach(function (t) {
+						n = t.apply(null, [n].concat(a));
+					}),
+					n
+				);
+			}
+			function vn(t) {
+				for (var n = arguments.length, e = new Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++) e[a - 1] = arguments[a];
+				(mn[t] || []).forEach(function (t) {
+					t.apply(null, e);
+				});
+			}
+			function bn() {
+				var t = arguments[0],
+					n = Array.prototype.slice.call(arguments, 1);
+				return pn[t] ? pn[t].apply(null, n) : void 0;
+			}
+			function yn(t) {
+				"fa" === t.prefix && (t.prefix = "fas");
+				var n = t.iconName,
+					e = t.prefix || rn();
+				if (n) return (n = en(e, n) || n), Rt(xn.definitions, e, n) || Rt(zt.styles, e, n);
+			}
+			var xn = new un(),
+				kn = {
+					i2svg: function () {
+						var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+						return k ? (vn("beforeI2svg", t), bn("pseudoElements2svg", t), bn("i2svg", t)) : Promise.reject(new Error("Operation requires a DOM of some kind."));
+					},
+					watch: function () {
+						var t,
+							n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+							e = n.autoReplaceSvgRoot;
+						!1 === vt.autoReplaceSvg && (vt.autoReplaceSvg = !0),
+							(vt.observeMutations = !0),
+							(t = function () {
+								An({ autoReplaceSvgRoot: e }), vn("watch", n);
+							}),
+							k && (Dt ? setTimeout(t, 0) : Mt.push(t));
+					},
+				},
+				wn = {
+					noAuto: function () {
+						(vt.autoReplaceSvg = !1), (vt.observeMutations = !1), vn("noAuto");
+					},
+					config: vt,
+					dom: kn,
+					parse: {
+						icon: function (t) {
+							if (null === t) return null;
+							if ("object" == typeof t && t.prefix && t.iconName) return { prefix: t.prefix, iconName: en(t.prefix, t.iconName) || t.iconName };
+							if (Array.isArray(t) && 2 === t.length) {
+								var n = 0 === t[1].indexOf("fa-") ? t[1].slice(3) : t[1],
+									e = on(t[0]);
+								return { prefix: e, iconName: en(e, n) || n };
+							}
+							if ("string" == typeof t && (t.indexOf("".concat(vt.cssPrefix, "-")) > -1 || t.match(ft))) {
+								var a = fn(t.split(" "), { skipLookups: !0 });
+								return { prefix: a.prefix || rn(), iconName: en(a.prefix, a.iconName) || a.iconName };
+							}
+							if ("string" == typeof t) {
+								var r = rn();
+								return { prefix: r, iconName: en(r, t) || t };
+							}
+						},
+					},
+					library: xn,
+					findIconDefinition: yn,
+					toHtml: Lt,
+				},
+				An = function () {
+					var t = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).autoReplaceSvgRoot,
+						n = void 0 === t ? b : t;
+					(Object.keys(zt.styles).length > 0 || vt.autoFetchSvg) && k && vt.autoReplaceSvg && wn.dom.i2svg({ node: n });
+				};
+			function On(t, n) {
+				return (
+					Object.defineProperty(t, "abstract", { get: n }),
+					Object.defineProperty(t, "html", {
+						get: function () {
+							return t.abstract.map(function (t) {
+								return Lt(t);
+							});
+						},
+					}),
+					Object.defineProperty(t, "node", {
+						get: function () {
+							if (k) {
+								var n = b.createElement("div");
+								return (n.innerHTML = t.html), n.children;
+							}
+						},
+					}),
+					t
+				);
+			}
+			function Pn(t) {
+				var n = t.icons,
+					e = n.main,
+					a = n.mask,
+					r = t.prefix,
+					i = t.iconName,
+					o = t.transform,
+					s = t.symbol,
+					f = t.title,
+					l = t.maskId,
+					u = t.titleId,
+					d = t.extra,
+					m = t.watchable,
+					p = void 0 !== m && m,
+					h = a.found ? a : e,
+					g = h.width,
+					v = h.height,
+					b = z.includes(r),
+					y = [vt.replacementClass, i ? "".concat(vt.cssPrefix, "-").concat(i) : ""]
+						.filter(function (t) {
+							return -1 === d.classes.indexOf(t);
+						})
+						.filter(function (t) {
+							return "" !== t || !!t;
+						})
+						.concat(d.classes)
+						.join(" "),
+					x = {
+						children: [],
+						attributes: c(
+							c({}, d.attributes),
+							{},
+							{ "data-prefix": r, "data-icon": i, class: y, role: d.attributes.role || "img", xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 ".concat(g, " ").concat(v) },
+						),
+					},
+					k = b && !~d.classes.indexOf("fa-fw") ? { width: "".concat((g / v) * 16 * 0.0625, "em") } : {};
+				p && (x.attributes[V] = ""),
+					f && (x.children.push({ tag: "title", attributes: { id: x.attributes["aria-labelledby"] || "title-".concat(u || kt()) }, children: [f] }), delete x.attributes.title);
+				var w = c(c({}, x), {}, { prefix: r, iconName: i, main: e, mask: a, maskId: l, transform: o, symbol: s, styles: c(c({}, k), d.styles) }),
+					A = a.found && e.found ? bn("generateAbstractMask", w) || { children: [], attributes: {} } : bn("generateAbstractIcon", w) || { children: [], attributes: {} },
+					O = A.children,
+					P = A.attributes;
+				return (
+					(w.children = O),
+					(w.attributes = P),
+					s
+						? (function (t) {
+								var n = t.prefix,
+									e = t.iconName,
+									a = t.children,
+									r = t.attributes,
+									i = t.symbol,
+									o = !0 === i ? "".concat(n, "-").concat(vt.cssPrefix, "-").concat(e) : i;
+								return [{ tag: "svg", attributes: { style: "display: none;" }, children: [{ tag: "symbol", attributes: c(c({}, r), {}, { id: o }), children: a }] }];
+							})(w)
+						: (function (t) {
+								var n = t.children,
+									e = t.main,
+									a = t.mask,
+									r = t.attributes,
+									i = t.styles,
+									o = t.transform;
+								if (Nt(o) && e.found && !a.found) {
+									var s = { x: e.width / e.height / 2, y: 0.5 };
+									r.style = Pt(c(c({}, i), {}, { "transform-origin": "".concat(s.x + o.x / 16, "em ").concat(s.y + o.y / 16, "em") }));
+								}
+								return [{ tag: "svg", attributes: r, children: n }];
+							})(w)
+				);
+			}
+			function Nn(t) {
+				var n = t.content,
+					e = t.width,
+					a = t.height,
+					r = t.transform,
+					i = t.title,
+					o = t.extra,
+					s = t.watchable,
+					f = void 0 !== s && s,
+					l = c(c(c({}, o.attributes), i ? { title: i } : {}), {}, { class: o.classes.join(" ") });
+				f && (l[V] = "");
+				var u = c({}, o.styles);
+				Nt(r) &&
+					((u.transform = (function (t) {
+						var n = t.transform,
+							e = t.width,
+							a = void 0 === e ? 16 : e,
+							r = t.height,
+							i = void 0 === r ? 16 : r,
+							o = t.startCentered,
+							s = void 0 !== o && o,
+							f = "";
+						return (
+							(f +=
+								s && w
+									? "translate(".concat(n.x / yt - a / 2, "em, ").concat(n.y / yt - i / 2, "em) ")
+									: s
+										? "translate(calc(-50% + ".concat(n.x / yt, "em), calc(-50% + ").concat(n.y / yt, "em)) ")
+										: "translate(".concat(n.x / yt, "em, ").concat(n.y / yt, "em) ")),
+							(f += "scale(".concat((n.size / yt) * (n.flipX ? -1 : 1), ", ").concat((n.size / yt) * (n.flipY ? -1 : 1), ") ")),
+							f + "rotate(".concat(n.rotate, "deg) ")
+						);
+					})({ transform: r, startCentered: !0, width: e, height: a })),
+					(u["-webkit-transform"] = u.transform));
+				var d = Pt(u);
+				d.length > 0 && (l.style = d);
+				var m = [];
+				return m.push({ tag: "span", attributes: l, children: [n] }), i && m.push({ tag: "span", attributes: { class: "sr-only" }, children: [i] }), m;
+			}
+			var Sn = zt.styles;
+			function jn(t) {
+				var n = t[0],
+					e = t[1],
+					a = t.slice(4),
+					r = (0, i.A)(a, 1)[0];
+				return {
+					found: !0,
+					width: n,
+					height: e,
+					icon: Array.isArray(r)
+						? {
+								tag: "g",
+								attributes: { class: "".concat(vt.cssPrefix, "-").concat(dt.GROUP) },
+								children: [
+									{ tag: "path", attributes: { class: "".concat(vt.cssPrefix, "-").concat(dt.SECONDARY), fill: "currentColor", d: r[0] } },
+									{ tag: "path", attributes: { class: "".concat(vt.cssPrefix, "-").concat(dt.PRIMARY), fill: "currentColor", d: r[1] } },
+								],
+							}
+						: { tag: "path", attributes: { fill: "currentColor", d: r } },
+				};
+			}
+			var Cn = { found: !1, width: 512, height: 512 };
+			function En(t, n) {
+				var e = n;
+				return (
+					"fa" === n && null !== vt.styleDefault && (n = rn()),
+					new Promise(function (a, r) {
+						if ("fa" === e) {
+							var i = an(t) || {};
+							(t = i.iconName || t), (n = i.prefix || n);
+						}
+						if (t && n && Sn[n] && Sn[n][t]) return a(jn(Sn[n][t]));
+						!(function (t, n) {
+							Z || vt.showMissingIcons || !t || console.error('Icon with name "'.concat(t, '" and prefix "').concat(n, '" is missing.'));
+						})(t, n),
+							a(c(c({}, Cn), {}, { icon: (vt.showMissingIcons && t && bn("missingIconAbstract")) || {} }));
+					})
+				);
+			}
+			var In = function () {},
+				zn = vt.measurePerformance && x && x.mark && x.measure ? x : { mark: In, measure: In },
+				Mn = 'FA "6.7.2"',
+				Fn = function (t) {
+					zn.mark("".concat(Mn, " ").concat(t, " ends")), zn.measure("".concat(Mn, " ").concat(t), "".concat(Mn, " ").concat(t, " begins"), "".concat(Mn, " ").concat(t, " ends"));
+				},
+				Dn = function (t) {
+					return (
+						zn.mark("".concat(Mn, " ").concat(t, " begins")),
+						function () {
+							return Fn(t);
+						}
+					);
+				},
+				Ln = function () {};
+			function Rn(t) {
+				return "string" == typeof (t.getAttribute ? t.getAttribute(V) : null);
+			}
+			function Tn(t) {
+				return b.createElementNS("http://www.w3.org/2000/svg", t);
+			}
+			function Yn(t) {
+				return b.createElement(t);
+			}
+			function Wn(t) {
+				var n = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).ceFn,
+					e = void 0 === n ? ("svg" === t.tag ? Tn : Yn) : n;
+				if ("string" == typeof t) return b.createTextNode(t);
+				var a = e(t.tag);
+				return (
+					Object.keys(t.attributes || []).forEach(function (n) {
+						a.setAttribute(n, t.attributes[n]);
+					}),
+					(t.children || []).forEach(function (t) {
+						a.appendChild(Wn(t, { ceFn: e }));
+					}),
+					a
+				);
+			}
+			var _n = {
+				replace: function (t) {
+					var n = t[0];
+					if (n.parentNode)
+						if (
+							(t[1].forEach(function (t) {
+								n.parentNode.insertBefore(Wn(t), n);
+							}),
+							null === n.getAttribute(V) && vt.keepOriginalSource)
+						) {
+							var e = b.createComment(
+								(function (t) {
+									var n = " ".concat(t.outerHTML, " ");
+									return "".concat(n, "Font Awesome fontawesome.com ");
+								})(n),
+							);
+							n.parentNode.replaceChild(e, n);
+						} else n.remove();
+				},
+				nest: function (t) {
+					var n = t[0],
+						e = t[1];
+					if (~At(n).indexOf(vt.replacementClass)) return _n.replace(t);
+					var a = new RegExp("".concat(vt.cssPrefix, "-.*"));
+					if ((delete e[0].attributes.id, e[0].attributes.class)) {
+						var r = e[0].attributes.class.split(" ").reduce(
+							function (t, n) {
+								return n === vt.replacementClass || n.match(a) ? t.toSvg.push(n) : t.toNode.push(n), t;
+							},
+							{ toNode: [], toSvg: [] },
+						);
+						(e[0].attributes.class = r.toSvg.join(" ")), 0 === r.toNode.length ? n.removeAttribute("class") : n.setAttribute("class", r.toNode.join(" "));
+					}
+					var i = e
+						.map(function (t) {
+							return Lt(t);
+						})
+						.join("\n");
+					n.setAttribute(V, ""), (n.innerHTML = i);
+				},
+			};
+			function Hn(t) {
+				t();
+			}
+			function Un(t, n) {
+				var e = "function" == typeof n ? n : Ln;
+				if (0 === t.length) e();
+				else {
+					var a = Hn;
+					"async" === vt.mutateApproach && (a = v.requestAnimationFrame || Hn),
+						a(function () {
+							var n = !0 === vt.autoReplaceSvg ? _n.replace : _n[vt.autoReplaceSvg] || _n.replace,
+								a = Dn("mutate");
+							t.map(n), a(), e();
+						});
+				}
+			}
+			var Bn = !1;
+			function Xn() {
+				Bn = !0;
+			}
+			function qn() {
+				Bn = !1;
+			}
+			var Vn = null;
+			function Gn(t) {
+				if (y && vt.observeMutations) {
+					var n = t.treeCallback,
+						e = void 0 === n ? Ln : n,
+						a = t.nodeCallback,
+						r = void 0 === a ? Ln : a,
+						i = t.pseudoElementsCallback,
+						o = void 0 === i ? Ln : i,
+						s = t.observeMutationsRoot,
+						f = void 0 === s ? b : s;
+					(Vn = new y(function (t) {
+						if (!Bn) {
+							var n = rn();
+							wt(t).forEach(function (t) {
+								if (
+									("childList" === t.type && t.addedNodes.length > 0 && !Rn(t.addedNodes[0]) && (vt.searchPseudoElements && o(t.target), e(t.target)),
+									"attributes" === t.type && t.target.parentNode && vt.searchPseudoElements && o(t.target.parentNode),
+									"attributes" === t.type && Rn(t.target) && ~ut.indexOf(t.attributeName))
+								)
+									if (
+										"class" === t.attributeName &&
+										(function (t) {
+											var n = t.getAttribute ? t.getAttribute(K) : null,
+												e = t.getAttribute ? t.getAttribute($) : null;
+											return n && e;
+										})(t.target)
+									) {
+										var a = fn(At(t.target)),
+											i = a.prefix,
+											s = a.iconName;
+										t.target.setAttribute(K, i || n), s && t.target.setAttribute($, s);
+									} else (f = t.target) && f.classList && f.classList.contains && f.classList.contains(vt.replacementClass) && r(t.target);
+								var f;
+							});
+						}
+					})),
+						k && Vn.observe(f, { childList: !0, attributes: !0, characterData: !0, subtree: !0 });
+				}
+			}
+			function Kn(t) {
+				var n,
+					e,
+					a = t.getAttribute("data-prefix"),
+					r = t.getAttribute("data-icon"),
+					i = void 0 !== t.innerText ? t.innerText.trim() : "",
+					o = fn(At(t));
+				return (
+					o.prefix || (o.prefix = rn()),
+					a && r && ((o.prefix = a), (o.iconName = r)),
+					(o.iconName && o.prefix) ||
+						(o.prefix && i.length > 0 && (o.iconName = ((n = o.prefix), (e = t.innerText), (Gt[n] || {})[e] || nn(o.prefix, Yt(t.innerText)))),
+						!o.iconName && vt.autoFetchSvg && t.firstChild && t.firstChild.nodeType === Node.TEXT_NODE && (o.iconName = t.firstChild.data)),
+					o
+				);
+			}
+			function $n(t) {
+				var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { styleParser: !0 },
+					e = Kn(t),
+					a = e.iconName,
+					r = e.prefix,
+					i = e.rest,
+					o = (function (t) {
+						var n = wt(t.attributes).reduce(function (t, n) {
+								return "class" !== t.name && "style" !== t.name && (t[n.name] = n.value), t;
+							}, {}),
+							e = t.getAttribute("title"),
+							a = t.getAttribute("data-fa-title-id");
+						return vt.autoA11y && (e ? (n["aria-labelledby"] = "".concat(vt.replacementClass, "-title-").concat(a || kt())) : ((n["aria-hidden"] = "true"), (n.focusable = "false"))), n;
+					})(t),
+					s = gn("parseNodeAttributes", {}, t),
+					f = n.styleParser
+						? (function (t) {
+								var n = t.getAttribute("style"),
+									e = [];
+								return (
+									n &&
+										(e = n.split(";").reduce(function (t, n) {
+											var e = n.split(":"),
+												a = e[0],
+												r = e.slice(1);
+											return a && r.length > 0 && (t[a] = r.join(":").trim()), t;
+										}, {})),
+									e
+								);
+							})(t)
+						: [];
+				return c(
+					{
+						iconName: a,
+						title: t.getAttribute("title"),
+						titleId: t.getAttribute("data-fa-title-id"),
+						prefix: r,
+						transform: xt,
+						mask: { iconName: null, prefix: null, rest: [] },
+						maskId: null,
+						symbol: !1,
+						extra: { classes: i, styles: f, attributes: o },
+					},
+					s,
+				);
+			}
+			var Jn = zt.styles;
+			function Qn(t) {
+				var n = "nest" === vt.autoReplaceSvg ? $n(t, { styleParser: !1 }) : $n(t);
+				return ~n.extra.classes.indexOf(ct) ? bn("generateLayersText", t, n) : bn("generateSvgReplacementMutation", t, n);
+			}
+			function Zn(t) {
+				var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+				if (!k) return Promise.resolve();
+				var e = b.documentElement.classList,
+					a = function (t) {
+						return e.add("".concat(J, "-").concat(t));
+					},
+					r = function (t) {
+						return e.remove("".concat(J, "-").concat(t));
+					},
+					i = vt.autoFetchSvg ? [].concat(C, (0, o.A)(_)) : O.concat(Object.keys(Jn));
+				i.includes("fa") || i.push("fa");
+				var s = [".".concat(ct, ":not([").concat(V, "])")]
+					.concat(
+						i.map(function (t) {
+							return ".".concat(t, ":not([").concat(V, "])");
+						}),
+					)
+					.join(", ");
+				if (0 === s.length) return Promise.resolve();
+				var f = [];
+				try {
+					f = wt(t.querySelectorAll(s));
+				} catch (u) {}
+				if (!(f.length > 0)) return Promise.resolve();
+				a("pending"), r("complete");
+				var c = Dn("onTree"),
+					l = f.reduce(function (t, n) {
+						try {
+							var e = Qn(n);
+							e && t.push(e);
+						} catch (u) {
+							Z || ("MissingIcon" === u.name && console.error(u));
+						}
+						return t;
+					}, []);
+				return new Promise(function (t, e) {
+					Promise.all(l)
+						.then(function (e) {
+							Un(e, function () {
+								a("active"), a("complete"), r("pending"), "function" == typeof n && n(), c(), t();
+							});
+						})
+						.catch(function (t) {
+							c(), e(t);
+						});
+				});
+			}
+			function te(t) {
+				var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+				Qn(t).then(function (t) {
+					t && Un([t], n);
+				});
+			}
+			var ne = function (t) {
+					var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+						e = n.transform,
+						a = void 0 === e ? xt : e,
+						r = n.symbol,
+						i = void 0 !== r && r,
+						o = n.mask,
+						s = void 0 === o ? null : o,
+						f = n.maskId,
+						l = void 0 === f ? null : f,
+						u = n.title,
+						d = void 0 === u ? null : u,
+						m = n.titleId,
+						p = void 0 === m ? null : m,
+						h = n.classes,
+						g = void 0 === h ? [] : h,
+						v = n.attributes,
+						b = void 0 === v ? {} : v,
+						y = n.styles,
+						x = void 0 === y ? {} : y;
+					if (t) {
+						var k = t.prefix,
+							w = t.iconName,
+							A = t.icon;
+						return On(c({ type: "icon" }, t), function () {
+							return (
+								vn("beforeDOMElementCreation", { iconDefinition: t, params: n }),
+								vt.autoA11y && (d ? (b["aria-labelledby"] = "".concat(vt.replacementClass, "-title-").concat(p || kt())) : ((b["aria-hidden"] = "true"), (b.focusable = "false"))),
+								Pn({
+									icons: { main: jn(A), mask: s ? jn(s.icon) : { found: !1, width: null, height: null, icon: {} } },
+									prefix: k,
+									iconName: w,
+									transform: c(c({}, xt), a),
+									symbol: i,
+									title: d,
+									maskId: l,
+									titleId: p,
+									extra: { attributes: b, styles: x, classes: g },
+								})
+							);
+						});
+					}
+				},
+				ee = {
+					mixout: function () {
+						return {
+							icon:
+								((t = ne),
+								function (n) {
+									var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+										a = (n || {}).icon ? n : yn(n || {}),
+										r = e.mask;
+									return r && (r = (r || {}).icon ? r : yn(r || {})), t(a, c(c({}, e), {}, { mask: r }));
+								}),
+						};
+						var t;
+					},
+					hooks: function () {
+						return {
+							mutationObserverCallbacks: function (t) {
+								return (t.treeCallback = Zn), (t.nodeCallback = te), t;
+							},
+						};
+					},
+					provides: function (t) {
+						(t.i2svg = function (t) {
+							var n = t.node,
+								e = void 0 === n ? b : n,
+								a = t.callback;
+							return Zn(e, void 0 === a ? function () {} : a);
+						}),
+							(t.generateSvgReplacementMutation = function (t, n) {
+								var e = n.iconName,
+									a = n.title,
+									r = n.titleId,
+									o = n.prefix,
+									s = n.transform,
+									f = n.symbol,
+									c = n.mask,
+									l = n.maskId,
+									u = n.extra;
+								return new Promise(function (n, d) {
+									Promise.all([En(e, o), c.iconName ? En(c.iconName, c.prefix) : Promise.resolve({ found: !1, width: 512, height: 512, icon: {} })])
+										.then(function (c) {
+											var d = (0, i.A)(c, 2),
+												m = d[0],
+												p = d[1];
+											n([t, Pn({ icons: { main: m, mask: p }, prefix: o, iconName: e, transform: s, symbol: f, maskId: l, title: a, titleId: r, extra: u, watchable: !0 })]);
+										})
+										.catch(d);
+								});
+							}),
+							(t.generateAbstractIcon = function (t) {
+								var n,
+									e = t.children,
+									a = t.attributes,
+									r = t.main,
+									i = t.transform,
+									o = Pt(t.styles);
+								return (
+									o.length > 0 && (a.style = o),
+									Nt(i) && (n = bn("generateAbstractTransformGrouping", { main: r, transform: i, containerWidth: r.width, iconWidth: r.width })),
+									e.push(n || r.icon),
+									{ children: e, attributes: a }
+								);
+							});
+					},
+				},
+				ae = {
+					mixout: function () {
+						return {
+							layer: function (t) {
+								var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+									e = n.classes,
+									a = void 0 === e ? [] : e;
+								return On({ type: "layer" }, function () {
+									vn("beforeDOMElementCreation", { assembler: t, params: n });
+									var e = [];
+									return (
+										t(function (t) {
+											Array.isArray(t)
+												? t.map(function (t) {
+														e = e.concat(t.abstract);
+													})
+												: (e = e.concat(t.abstract));
+										}),
+										[{ tag: "span", attributes: { class: ["".concat(vt.cssPrefix, "-layers")].concat((0, o.A)(a)).join(" ") }, children: e }]
+									);
+								});
+							},
+						};
+					},
+				},
+				re = {
+					mixout: function () {
+						return {
+							counter: function (t) {
+								var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+									e = n.title,
+									a = void 0 === e ? null : e,
+									r = n.classes,
+									i = void 0 === r ? [] : r,
+									s = n.attributes,
+									f = void 0 === s ? {} : s,
+									l = n.styles,
+									u = void 0 === l ? {} : l;
+								return On({ type: "counter", content: t }, function () {
+									return (
+										vn("beforeDOMElementCreation", { content: t, params: n }),
+										(function (t) {
+											var n = t.content,
+												e = t.title,
+												a = t.extra,
+												r = c(c(c({}, a.attributes), e ? { title: e } : {}), {}, { class: a.classes.join(" ") }),
+												i = Pt(a.styles);
+											i.length > 0 && (r.style = i);
+											var o = [];
+											return o.push({ tag: "span", attributes: r, children: [n] }), e && o.push({ tag: "span", attributes: { class: "sr-only" }, children: [e] }), o;
+										})({ content: t.toString(), title: a, extra: { attributes: f, styles: u, classes: ["".concat(vt.cssPrefix, "-layers-counter")].concat((0, o.A)(i)) } })
+									);
+								});
+							},
+						};
+					},
+				},
+				ie = {
+					mixout: function () {
+						return {
+							text: function (t) {
+								var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+									e = n.transform,
+									a = void 0 === e ? xt : e,
+									r = n.title,
+									i = void 0 === r ? null : r,
+									s = n.classes,
+									f = void 0 === s ? [] : s,
+									l = n.attributes,
+									u = void 0 === l ? {} : l,
+									d = n.styles,
+									m = void 0 === d ? {} : d;
+								return On({ type: "text", content: t }, function () {
+									return (
+										vn("beforeDOMElementCreation", { content: t, params: n }),
+										Nn({ content: t, transform: c(c({}, xt), a), title: i, extra: { attributes: u, styles: m, classes: ["".concat(vt.cssPrefix, "-layers-text")].concat((0, o.A)(f)) } })
+									);
+								});
+							},
+						};
+					},
+					provides: function (t) {
+						t.generateLayersText = function (t, n) {
+							var e = n.title,
+								a = n.transform,
+								r = n.extra,
+								i = null,
+								o = null;
+							if (w) {
+								var s = parseInt(getComputedStyle(t).fontSize, 10),
+									f = t.getBoundingClientRect();
+								(i = f.width / s), (o = f.height / s);
+							}
+							return (
+								vt.autoA11y && !e && (r.attributes["aria-hidden"] = "true"), Promise.resolve([t, Nn({ content: t.innerHTML, width: i, height: o, transform: a, title: e, extra: r, watchable: !0 })])
+							);
+						};
+					},
+				},
+				oe = new RegExp('"', "ug"),
+				se = [1105920, 1112319],
+				fe = c(
+					c(
+						c(c({}, { FontAwesome: { normal: "fas", 400: "fas" } }), {
+							"Font Awesome 6 Free": { 900: "fas", 400: "far" },
+							"Font Awesome 6 Pro": { 900: "fas", 400: "far", normal: "far", 300: "fal", 100: "fat" },
+							"Font Awesome 6 Brands": { 400: "fab", normal: "fab" },
+							"Font Awesome 6 Duotone": { 900: "fad", 400: "fadr", normal: "fadr", 300: "fadl", 100: "fadt" },
+							"Font Awesome 6 Sharp": { 900: "fass", 400: "fasr", normal: "fasr", 300: "fasl", 100: "fast" },
+							"Font Awesome 6 Sharp Duotone": { 900: "fasds", 400: "fasdr", normal: "fasdr", 300: "fasdl", 100: "fasdt" },
+						}),
+						{
+							"Font Awesome 5 Free": { 900: "fas", 400: "far" },
+							"Font Awesome 5 Pro": { 900: "fas", 400: "far", normal: "far", 300: "fal" },
+							"Font Awesome 5 Brands": { 400: "fab", normal: "fab" },
+							"Font Awesome 5 Duotone": { 900: "fad" },
+						},
+					),
+					{ "Font Awesome Kit": { 400: "fak", normal: "fak" }, "Font Awesome Kit Duotone": { 400: "fakd", normal: "fakd" } },
+				),
+				ce = Object.keys(fe).reduce(function (t, n) {
+					return (t[n.toLowerCase()] = fe[n]), t;
+				}, {}),
+				le = Object.keys(ce).reduce(function (t, n) {
+					var e = ce[n];
+					return (t[n] = e[900] || (0, o.A)(Object.entries(e))[0][1]), t;
+				}, {});
+			function ue(t, n) {
+				var e = "".concat("data-fa-pseudo-element-pending").concat(n.replace(":", "-"));
+				return new Promise(function (a, r) {
+					if (null !== t.getAttribute(e)) return a();
+					var i,
+						o,
+						s,
+						f = wt(t.children).filter(function (t) {
+							return t.getAttribute(G) === n;
+						})[0],
+						l = v.getComputedStyle(t, n),
+						u = l.getPropertyValue("font-family"),
+						d = u.match(lt),
+						m = l.getPropertyValue("font-weight"),
+						p = l.getPropertyValue("content");
+					if (f && !d) return t.removeChild(f), a();
+					if (d && "none" !== p && "" !== p) {
+						var h = l.getPropertyValue("content"),
+							g = (function (t, n) {
+								var e = t.replace(/^['"]|['"]$/g, "").toLowerCase(),
+									a = parseInt(n),
+									r = isNaN(a) ? "normal" : a;
+								return (ce[e] || {})[r] || le[e];
+							})(u, m),
+							y = (function (t) {
+								var n,
+									e,
+									a,
+									r,
+									i,
+									o = t.replace(oe, ""),
+									s =
+										((e = 0),
+										(r = (n = o).length),
+										(i = n.charCodeAt(e)) >= 55296 && i <= 56319 && r > e + 1 && (a = n.charCodeAt(e + 1)) >= 56320 && a <= 57343 ? 1024 * (i - 55296) + a - 56320 + 65536 : i),
+									f = s >= se[0] && s <= se[1],
+									c = 2 === o.length && o[0] === o[1];
+								return { value: Yt(c ? o[0] : o), isSecondary: f || c };
+							})(h),
+							x = y.value,
+							k = y.isSecondary,
+							w = d[0].startsWith("FontAwesome"),
+							A = nn(g, x),
+							O = A;
+						if (w) {
+							var P = ((o = $t[(i = x)]), (s = nn("fas", i)), o || (s ? { prefix: "fas", iconName: s } : null) || { prefix: null, iconName: null });
+							P.iconName && P.prefix && ((A = P.iconName), (g = P.prefix));
+						}
+						if (!A || k || (f && f.getAttribute(K) === g && f.getAttribute($) === O)) a();
+						else {
+							t.setAttribute(e, O), f && t.removeChild(f);
+							var N = {
+									iconName: null,
+									title: null,
+									titleId: null,
+									prefix: null,
+									transform: xt,
+									symbol: !1,
+									mask: { iconName: null, prefix: null, rest: [] },
+									maskId: null,
+									extra: { classes: [], styles: {}, attributes: {} },
+								},
+								S = N.extra;
+							(S.attributes[G] = n),
+								En(A, g)
+									.then(function (r) {
+										var i = Pn(c(c({}, N), {}, { icons: { main: r, mask: { prefix: null, iconName: null, rest: [] } }, prefix: g, iconName: O, extra: S, watchable: !0 })),
+											o = b.createElementNS("http://www.w3.org/2000/svg", "svg");
+										"::before" === n ? t.insertBefore(o, t.firstChild) : t.appendChild(o),
+											(o.outerHTML = i
+												.map(function (t) {
+													return Lt(t);
+												})
+												.join("\n")),
+											t.removeAttribute(e),
+											a();
+									})
+									.catch(r);
+						}
+					} else a();
+				});
+			}
+			function de(t) {
+				return Promise.all([ue(t, "::before"), ue(t, "::after")]);
+			}
+			function me(t) {
+				return !(t.parentNode === document.head || ~Q.indexOf(t.tagName.toUpperCase()) || t.getAttribute(G) || (t.parentNode && "svg" === t.parentNode.tagName));
+			}
+			function pe(t) {
+				if (k)
+					return new Promise(function (n, e) {
+						var a = wt(t.querySelectorAll("*")).filter(me).map(de),
+							r = Dn("searchPseudoElements");
+						Xn(),
+							Promise.all(a)
+								.then(function () {
+									r(), qn(), n();
+								})
+								.catch(function () {
+									r(), qn(), e();
+								});
+					});
+			}
+			var he = {
+					hooks: function () {
+						return {
+							mutationObserverCallbacks: function (t) {
+								return (t.pseudoElementsCallback = pe), t;
+							},
+						};
+					},
+					provides: function (t) {
+						t.pseudoElements2svg = function (t) {
+							var n = t.node,
+								e = void 0 === n ? b : n;
+							vt.searchPseudoElements && pe(e);
+						};
+					},
+				},
+				ge = !1,
+				ve = function (t) {
+					return t
+						.toLowerCase()
+						.split(" ")
+						.reduce(
+							function (t, n) {
+								var e = n.toLowerCase().split("-"),
+									a = e[0],
+									r = e.slice(1).join("-");
+								if (a && "h" === r) return (t.flipX = !0), t;
+								if (a && "v" === r) return (t.flipY = !0), t;
+								if (((r = parseFloat(r)), isNaN(r))) return t;
+								switch (a) {
+									case "grow":
+										t.size = t.size + r;
+										break;
+									case "shrink":
+										t.size = t.size - r;
+										break;
+									case "left":
+										t.x = t.x - r;
+										break;
+									case "right":
+										t.x = t.x + r;
+										break;
+									case "up":
+										t.y = t.y - r;
+										break;
+									case "down":
+										t.y = t.y + r;
+										break;
+									case "rotate":
+										t.rotate = t.rotate + r;
+								}
+								return t;
+							},
+							{ size: 16, x: 0, y: 0, flipX: !1, flipY: !1, rotate: 0 },
+						);
+				},
+				be = {
+					mixout: function () {
+						return {
+							parse: {
+								transform: function (t) {
+									return ve(t);
+								},
+							},
+						};
+					},
+					hooks: function () {
+						return {
+							parseNodeAttributes: function (t, n) {
+								var e = n.getAttribute("data-fa-transform");
+								return e && (t.transform = ve(e)), t;
+							},
+						};
+					},
+					provides: function (t) {
+						t.generateAbstractTransformGrouping = function (t) {
+							var n = t.main,
+								e = t.transform,
+								a = t.containerWidth,
+								r = t.iconWidth,
+								i = { transform: "translate(".concat(a / 2, " 256)") },
+								o = "translate(".concat(32 * e.x, ", ").concat(32 * e.y, ") "),
+								s = "scale(".concat((e.size / 16) * (e.flipX ? -1 : 1), ", ").concat((e.size / 16) * (e.flipY ? -1 : 1), ") "),
+								f = "rotate(".concat(e.rotate, " 0 0)"),
+								l = { outer: i, inner: { transform: "".concat(o, " ").concat(s, " ").concat(f) }, path: { transform: "translate(".concat((r / 2) * -1, " -256)") } };
+							return {
+								tag: "g",
+								attributes: c({}, l.outer),
+								children: [{ tag: "g", attributes: c({}, l.inner), children: [{ tag: n.icon.tag, children: n.icon.children, attributes: c(c({}, n.icon.attributes), l.path) }] }],
+							};
+						};
+					},
+				},
+				ye = { x: 0, y: 0, width: "100%", height: "100%" };
+			function xe(t) {
+				var n = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+				return t.attributes && (t.attributes.fill || n) && (t.attributes.fill = "black"), t;
+			}
+			var ke,
+				we = {
+					hooks: function () {
+						return {
+							parseNodeAttributes: function (t, n) {
+								var e = n.getAttribute("data-fa-mask"),
+									a = e
+										? fn(
+												e.split(" ").map(function (t) {
+													return t.trim();
+												}),
+											)
+										: { prefix: null, iconName: null, rest: [] };
+								return a.prefix || (a.prefix = rn()), (t.mask = a), (t.maskId = n.getAttribute("data-fa-mask-id")), t;
+							},
+						};
+					},
+					provides: function (t) {
+						t.generateAbstractMask = function (t) {
+							var n,
+								e = t.children,
+								a = t.attributes,
+								r = t.main,
+								i = t.mask,
+								o = t.maskId,
+								s = t.transform,
+								f = r.width,
+								l = r.icon,
+								u = i.width,
+								d = i.icon,
+								m = (function (t) {
+									var n = t.transform,
+										e = t.containerWidth,
+										a = t.iconWidth,
+										r = { transform: "translate(".concat(e / 2, " 256)") },
+										i = "translate(".concat(32 * n.x, ", ").concat(32 * n.y, ") "),
+										o = "scale(".concat((n.size / 16) * (n.flipX ? -1 : 1), ", ").concat((n.size / 16) * (n.flipY ? -1 : 1), ") "),
+										s = "rotate(".concat(n.rotate, " 0 0)");
+									return { outer: r, inner: { transform: "".concat(i, " ").concat(o, " ").concat(s) }, path: { transform: "translate(".concat((a / 2) * -1, " -256)") } };
+								})({ transform: s, containerWidth: u, iconWidth: f }),
+								p = { tag: "rect", attributes: c(c({}, ye), {}, { fill: "white" }) },
+								h = l.children ? { children: l.children.map(xe) } : {},
+								g = { tag: "g", attributes: c({}, m.inner), children: [xe(c({ tag: l.tag, attributes: c(c({}, l.attributes), m.path) }, h))] },
+								v = { tag: "g", attributes: c({}, m.outer), children: [g] },
+								b = "mask-".concat(o || kt()),
+								y = "clip-".concat(o || kt()),
+								x = { tag: "mask", attributes: c(c({}, ye), {}, { id: b, maskUnits: "userSpaceOnUse", maskContentUnits: "userSpaceOnUse" }), children: [p, v] },
+								k = { tag: "defs", children: [{ tag: "clipPath", attributes: { id: y }, children: ((n = d), "g" === n.tag ? n.children : [n]) }, x] };
+							return e.push(k, { tag: "rect", attributes: c({ fill: "currentColor", "clip-path": "url(#".concat(y, ")"), mask: "url(#".concat(b, ")") }, ye) }), { children: e, attributes: a };
+						};
+					},
+				},
+				Ae = {
+					provides: function (t) {
+						var n = !1;
+						v.matchMedia && (n = v.matchMedia("(prefers-reduced-motion: reduce)").matches),
+							(t.missingIconAbstract = function () {
+								var t = [],
+									e = { fill: "currentColor" },
+									a = { attributeType: "XML", repeatCount: "indefinite", dur: "2s" };
+								t.push({
+									tag: "path",
+									attributes: c(
+										c({}, e),
+										{},
+										{
+											d: "M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z",
+										},
+									),
+								});
+								var r = c(c({}, a), {}, { attributeName: "opacity" }),
+									i = { tag: "circle", attributes: c(c({}, e), {}, { cx: "256", cy: "364", r: "28" }), children: [] };
+								return (
+									n ||
+										i.children.push(
+											{ tag: "animate", attributes: c(c({}, a), {}, { attributeName: "r", values: "28;14;28;28;14;28;" }) },
+											{ tag: "animate", attributes: c(c({}, r), {}, { values: "1;0;1;1;0;1;" }) },
+										),
+									t.push(i),
+									t.push({
+										tag: "path",
+										attributes: c(
+											c({}, e),
+											{},
+											{
+												opacity: "1",
+												d: "M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z",
+											},
+										),
+										children: n ? [] : [{ tag: "animate", attributes: c(c({}, r), {}, { values: "1;0;0;0;0;1;" }) }],
+									}),
+									n ||
+										t.push({
+											tag: "path",
+											attributes: c(
+												c({}, e),
+												{},
+												{ opacity: "0", d: "M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z" },
+											),
+											children: [{ tag: "animate", attributes: c(c({}, r), {}, { values: "0;0;1;1;0;0;" }) }],
+										}),
+									{ tag: "g", attributes: { class: "missing" }, children: t }
+								);
+							});
+					},
+				};
+			(ke = { mixoutsTo: wn }.mixoutsTo),
+				(dn = [
+					Et,
+					ee,
+					ae,
+					re,
+					ie,
+					he,
+					{
+						mixout: function () {
+							return {
+								dom: {
+									unwatch: function () {
+										Xn(), (ge = !0);
+									},
+								},
+							};
+						},
+						hooks: function () {
+							return {
+								bootstrap: function () {
+									Gn(gn("mutationObserverCallbacks", {}));
+								},
+								noAuto: function () {
+									Vn && Vn.disconnect();
+								},
+								watch: function (t) {
+									var n = t.observeMutationsRoot;
+									ge ? qn() : Gn(gn("mutationObserverCallbacks", { observeMutationsRoot: n }));
+								},
+							};
+						},
+					},
+					be,
+					we,
+					Ae,
+					{
+						hooks: function () {
+							return {
+								parseNodeAttributes: function (t, n) {
+									var e = n.getAttribute("data-fa-symbol"),
+										a = null !== e && ("" === e || e);
+									return (t.symbol = a), t;
+								},
+							};
+						},
+					},
+				]),
+				(mn = {}),
+				Object.keys(pn).forEach(function (t) {
+					-1 === hn.indexOf(t) && delete pn[t];
+				}),
+				dn.forEach(function (t) {
+					var n = t.mixout ? t.mixout() : {};
+					if (
+						(Object.keys(n).forEach(function (t) {
+							"function" == typeof n[t] && (ke[t] = n[t]),
+								"object" == typeof n[t] &&
+									Object.keys(n[t]).forEach(function (e) {
+										ke[t] || (ke[t] = {}), (ke[t][e] = n[t][e]);
+									});
+						}),
+						t.hooks)
+					) {
+						var e = t.hooks();
+						Object.keys(e).forEach(function (t) {
+							mn[t] || (mn[t] = []), mn[t].push(e[t]);
+						});
+					}
+					t.provides && t.provides(pn);
+				});
+			var Oe = wn.parse,
+				Pe = wn.icon,
+				Ne = e(5983),
+				Se = e.n(Ne),
+				je = e(3746);
+			function Ce(t, n) {
+				var e = Object.keys(t);
+				if (Object.getOwnPropertySymbols) {
+					var a = Object.getOwnPropertySymbols(t);
+					n &&
+						(a = a.filter(function (n) {
+							return Object.getOwnPropertyDescriptor(t, n).enumerable;
+						})),
+						e.push.apply(e, a);
+				}
+				return e;
+			}
+			function Ee(t) {
+				for (var n = 1; n < arguments.length; n++) {
+					var e = null != arguments[n] ? arguments[n] : {};
+					n % 2
+						? Ce(Object(e), !0).forEach(function (n) {
+								ze(t, n, e[n]);
+							})
+						: Object.getOwnPropertyDescriptors
+							? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+							: Ce(Object(e)).forEach(function (n) {
+									Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+								});
+				}
+				return t;
+			}
+			function Ie(t) {
+				return (
+					(Ie =
+						"function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+							? function (t) {
+									return typeof t;
+								}
+							: function (t) {
+									return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
+								}),
+					Ie(t)
+				);
+			}
+			function ze(t, n, e) {
+				return n in t ? Object.defineProperty(t, n, { value: e, enumerable: !0, configurable: !0, writable: !0 }) : (t[n] = e), t;
+			}
+			function Me(t, n) {
+				if (null == t) return {};
+				var e,
+					a,
+					r = (function (t, n) {
+						if (null == t) return {};
+						var e,
+							a,
+							r = {},
+							i = Object.keys(t);
+						for (a = 0; a < i.length; a++) (e = i[a]), n.indexOf(e) >= 0 || (r[e] = t[e]);
+						return r;
+					})(t, n);
+				if (Object.getOwnPropertySymbols) {
+					var i = Object.getOwnPropertySymbols(t);
+					for (a = 0; a < i.length; a++) (e = i[a]), n.indexOf(e) >= 0 || (Object.prototype.propertyIsEnumerable.call(t, e) && (r[e] = t[e]));
+				}
+				return r;
+			}
+			function Fe(t) {
+				return (
+					(function (t) {
+						if (Array.isArray(t)) return De(t);
+					})(t) ||
+					(function (t) {
+						if (("undefined" != typeof Symbol && null != t[Symbol.iterator]) || null != t["@@iterator"]) return Array.from(t);
+					})(t) ||
+					(function (t, n) {
+						if (!t) return;
+						if ("string" == typeof t) return De(t, n);
+						var e = Object.prototype.toString.call(t).slice(8, -1);
+						"Object" === e && t.constructor && (e = t.constructor.name);
+						if ("Map" === e || "Set" === e) return Array.from(t);
+						if ("Arguments" === e || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e)) return De(t, n);
+					})(t) ||
+					(function () {
+						throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+					})()
+				);
+			}
+			function De(t, n) {
+				(null == n || n > t.length) && (n = t.length);
+				for (var e = 0, a = new Array(n); e < n; e++) a[e] = t[e];
+				return a;
+			}
+			function Le(t) {
+				return (function (t) {
+					return (t -= 0) == t;
+				})(t)
+					? t
+					: (t = t.replace(/[\-_\s]+(.)?/g, function (t, n) {
+							return n ? n.toUpperCase() : "";
+						}))
+							.substr(0, 1)
+							.toLowerCase() + t.substr(1);
+			}
+			var Re = ["style"];
+			var Te = !1;
+			try {
+				Te = !0;
+			} catch (Be) {}
+			function Ye(t) {
+				return t && "object" === Ie(t) && t.prefix && t.iconName && t.icon
+					? t
+					: Oe.icon
+						? Oe.icon(t)
+						: null === t
+							? null
+							: t && "object" === Ie(t) && t.prefix && t.iconName
+								? t
+								: Array.isArray(t) && 2 === t.length
+									? { prefix: t[0], iconName: t[1] }
+									: "string" == typeof t
+										? { prefix: "fas", iconName: t }
+										: void 0;
+			}
+			function We(t, n) {
+				return (Array.isArray(n) && n.length > 0) || (!Array.isArray(n) && n) ? ze({}, t, n) : {};
+			}
+			var _e = {
+					border: !1,
+					className: "",
+					mask: null,
+					maskId: null,
+					fixedWidth: !1,
+					inverse: !1,
+					flip: !1,
+					icon: null,
+					listItem: !1,
+					pull: null,
+					pulse: !1,
+					rotation: null,
+					size: null,
+					spin: !1,
+					spinPulse: !1,
+					spinReverse: !1,
+					beat: !1,
+					fade: !1,
+					beatFade: !1,
+					bounce: !1,
+					shake: !1,
+					symbol: !1,
+					title: "",
+					titleId: null,
+					transform: null,
+					swapOpacity: !1,
+				},
+				He = je.forwardRef(function (t, n) {
+					var e = Ee(Ee({}, _e), t),
+						a = e.icon,
+						r = e.mask,
+						i = e.symbol,
+						o = e.className,
+						s = e.title,
+						f = e.titleId,
+						c = e.maskId,
+						l = Ye(a),
+						u = We(
+							"classes",
+							[].concat(
+								Fe(
+									(function (t) {
+										var n,
+											e = t.beat,
+											a = t.fade,
+											r = t.beatFade,
+											i = t.bounce,
+											o = t.shake,
+											s = t.flash,
+											f = t.spin,
+											c = t.spinPulse,
+											l = t.spinReverse,
+											u = t.pulse,
+											d = t.fixedWidth,
+											m = t.inverse,
+											p = t.border,
+											h = t.listItem,
+											g = t.flip,
+											v = t.size,
+											b = t.rotation,
+											y = t.pull,
+											x =
+												(ze(
+													(n = {
+														"fa-beat": e,
+														"fa-fade": a,
+														"fa-beat-fade": r,
+														"fa-bounce": i,
+														"fa-shake": o,
+														"fa-flash": s,
+														"fa-spin": f,
+														"fa-spin-reverse": l,
+														"fa-spin-pulse": c,
+														"fa-pulse": u,
+														"fa-fw": d,
+														"fa-inverse": m,
+														"fa-border": p,
+														"fa-li": h,
+														"fa-flip": !0 === g,
+														"fa-flip-horizontal": "horizontal" === g || "both" === g,
+														"fa-flip-vertical": "vertical" === g || "both" === g,
+													}),
+													"fa-".concat(v),
+													null != v,
+												),
+												ze(n, "fa-rotate-".concat(b), null != b && 0 !== b),
+												ze(n, "fa-pull-".concat(y), null != y),
+												ze(n, "fa-swap-opacity", t.swapOpacity),
+												n);
+										return Object.keys(x)
+											.map(function (t) {
+												return x[t] ? t : null;
+											})
+											.filter(function (t) {
+												return t;
+											});
+									})(e),
+								),
+								Fe((o || "").split(" ")),
+							),
+						),
+						d = We("transform", "string" == typeof e.transform ? Oe.transform(e.transform) : e.transform),
+						m = We("mask", Ye(r)),
+						p = Pe(l, Ee(Ee(Ee(Ee({}, u), d), m), {}, { symbol: i, title: s, titleId: f, maskId: c }));
+					if (!p)
+						return (
+							(function () {
+								var t;
+								!Te && console && "function" == typeof console.error && (t = console).error.apply(t, arguments);
+							})("Could not find icon", l),
+							null
+						);
+					var h = p.abstract,
+						g = { ref: n };
+					return (
+						Object.keys(e).forEach(function (t) {
+							_e.hasOwnProperty(t) || (g[t] = e[t]);
+						}),
+						Ue(h[0], g)
+					);
+				});
+			(He.displayName = "FontAwesomeIcon"),
+				(He.propTypes = {
+					beat: Se().bool,
+					border: Se().bool,
+					beatFade: Se().bool,
+					bounce: Se().bool,
+					className: Se().string,
+					fade: Se().bool,
+					flash: Se().bool,
+					mask: Se().oneOfType([Se().object, Se().array, Se().string]),
+					maskId: Se().string,
+					fixedWidth: Se().bool,
+					inverse: Se().bool,
+					flip: Se().oneOf([!0, !1, "horizontal", "vertical", "both"]),
+					icon: Se().oneOfType([Se().object, Se().array, Se().string]),
+					listItem: Se().bool,
+					pull: Se().oneOf(["right", "left"]),
+					pulse: Se().bool,
+					rotation: Se().oneOf([0, 90, 180, 270]),
+					shake: Se().bool,
+					size: Se().oneOf(["2xs", "xs", "sm", "lg", "xl", "2xl", "1x", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"]),
+					spin: Se().bool,
+					spinPulse: Se().bool,
+					spinReverse: Se().bool,
+					symbol: Se().oneOfType([Se().bool, Se().string]),
+					title: Se().string,
+					titleId: Se().string,
+					transform: Se().oneOfType([Se().string, Se().object]),
+					swapOpacity: Se().bool,
+				});
+			var Ue = function t(n, e) {
+				var a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+				if ("string" == typeof e) return e;
+				var r = (e.children || []).map(function (e) {
+						return t(n, e);
+					}),
+					i = Object.keys(e.attributes || {}).reduce(
+						function (t, n) {
+							var a = e.attributes[n];
+							switch (n) {
+								case "class":
+									(t.attrs.className = a), delete e.attributes.class;
+									break;
+								case "style":
+									t.attrs.style = a
+										.split(";")
+										.map(function (t) {
+											return t.trim();
+										})
+										.filter(function (t) {
+											return t;
+										})
+										.reduce(function (t, n) {
+											var e,
+												a = n.indexOf(":"),
+												r = Le(n.slice(0, a)),
+												i = n.slice(a + 1).trim();
+											return r.startsWith("webkit") ? (t[((e = r), e.charAt(0).toUpperCase() + e.slice(1))] = i) : (t[r] = i), t;
+										}, {});
+									break;
+								default:
+									0 === n.indexOf("aria-") || 0 === n.indexOf("data-") ? (t.attrs[n.toLowerCase()] = a) : (t.attrs[Le(n)] = a);
+							}
+							return t;
+						},
+						{ attrs: {} },
+					),
+					o = a.style,
+					s = void 0 === o ? {} : o,
+					f = Me(a, Re);
+				return (i.attrs.style = Ee(Ee({}, i.attrs.style), s)), n.apply(void 0, [e.tag, Ee(Ee({}, i.attrs), f)].concat(Fe(r)));
+			}.bind(null, je.createElement);
+		},
+	},
+]);
 //# sourceMappingURL=fontawesome-77e12ef2-ee110c51b94fb192c9e9.js.map

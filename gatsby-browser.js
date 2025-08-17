@@ -5,7 +5,7 @@ import "./src/styles/global.css";
 // Service Worker Registration and CSS loading optimization
 export const onClientEntry = () => {
 	// Register service worker with performance optimization
-	if ("serviceWorker" in navigator && process.env.NODE_ENV === 'production') {
+	if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
 		// Delay service worker registration to not block initial page load
 		setTimeout(() => {
 			navigator.serviceWorker

@@ -1,9 +1,14 @@
 {
-  "name": "gatsby-plugin-critical-css",
-  "version": "1.0.0",
-  "description": "Lightweight critical CSS plugin for Gatsby",
-  "main": "index.js",
-  "keywords": ["gatsby", "gatsby-plugin", "critical-css", "performance"],
-  "author": "Antonio Almena",
-  "license": "MIT"
+	"name": "gatsby-plugin-critical-css",
+	"version": "1.0.0",
+	"description": "Lightweight critical CSS plugin for Gatsby",
+	"main": "index.js",
+	"keywords": [
+		"gatsby",
+		"gatsby-plugin",
+		"critical-css",
+		"performance"
+	],
+	"author": "Antonio Almena",
+	"license": "MIT"
 }

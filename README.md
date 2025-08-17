@@ -114,21 +114,23 @@ yarn dev
 The project uses a two-layer approach for dependency management:
 
 **Package Extensions (.yarnrc.yml):**
+
 ```yaml
 packageExtensions:
-    react-server-dom-webpack@*:
-        peerDependencies:
-            react: "^18.0.0"
-            react-dom: "^18.0.0"
+  react-server-dom-webpack@*:
+    peerDependencies:
+      react: "^18.0.0"
+      react-dom: "^18.0.0"
 ```
 
 **Version Resolutions (package.json):**
+
 ```json
 {
-  "resolutions": {
-    "react-server-dom-webpack/react": "18.3.1",
-    "react-server-dom-webpack/react-dom": "18.3.1"
-  }
+	"resolutions": {
+		"react-server-dom-webpack/react": "18.3.1",
+		"react-server-dom-webpack/react-dom": "18.3.1"
+	}
 }
 ```
 
@@ -246,13 +248,13 @@ This portfolio has been optimized for maximum performance:
 
 - **Vendor Chunk**: Separate chunk for node_modules
 - **Library Chunks**: Dedicated chunks for heavy libraries:
-    - FontAwesome icons
-    - Particles.js
-    - ReactPlayer
+  - FontAwesome icons
+  - Particles.js
+  - ReactPlayer
 - **Core Utility Chunks**: Dedicated chunks for performance and utility components:
-    - PreloadResources, ThirdPartyScriptLoader
-    - PerformanceMonitor, LayoutStabilityMonitor
-    - ErrorBoundary, CriticalCSSLoader, FontLoadingOptimizer
+  - PreloadResources, ThirdPartyScriptLoader
+  - PerformanceMonitor, LayoutStabilityMonitor
+  - ErrorBoundary, CriticalCSSLoader, FontLoadingOptimizer
 - **Better Caching**: Users only re-download changed chunks
 - **Advanced Tree Shaking**: Enhanced dead code elimination with `usedExports`, `sideEffects`, and `innerGraph` optimizations
 - **Performance Monitoring**: Build-time asset size limits (250KB) with production warnings for oversized bundles
@@ -299,18 +301,21 @@ The project uses a highly optimized Terser configuration achieving **83.7% JavaS
 The deployment configuration includes comprehensive asset processing for maximum performance:
 
 **Build Processing Settings:**
+
 - **CSS Optimization**: Automatic bundling and minification of stylesheets
 - **JavaScript Optimization**: Bundle consolidation and minification
 - **HTML Processing**: Pretty URLs and optimization
 - **Image Compression**: Automatic image optimization during build
 
 **Advanced Caching Strategy:**
+
 - **Immutable Assets**: 1-year cache for CSS, JS, fonts, and images (`max-age=31536000, immutable`)
 - **Content Compression**: Brotli and Gzip compression for CSS/JS assets
 - **Dynamic Content**: Short cache for HTML files to ensure content freshness
 - **Service Worker**: No-cache policy for proper update handling
 
 **Security Headers:**
+
 - **XSS Protection**: `X-XSS-Protection: 1; mode=block`
 - **Frame Options**: `X-Frame-Options: DENY`
 - **Content Type**: `X-Content-Type-Options: nosniff`
@@ -428,10 +433,10 @@ The project uses the official Gatsby 5 adapter for optimized Netlify deployments
 ```javascript
 // gatsby-config.js
 module.exports = {
-  adapter: require("gatsby-adapter-netlify").default({
-    excludeDatastoreFromEngineFunction: false,
-  }),
-  // ... rest of configuration
+	adapter: require("gatsby-adapter-netlify").default({
+		excludeDatastoreFromEngineFunction: false,
+	}),
+	// ... rest of configuration
 };
 ```
 
@@ -445,6 +450,7 @@ module.exports = {
 - **Future-Proof**: Official Gatsby 5+ deployment strategy
 
 **Configuration Options:**
+
 - `excludeDatastoreFromEngineFunction: false` - Enables datastore integration with Netlify's engine functions for enhanced performance
 
 ### Netlify Configuration
@@ -466,31 +472,37 @@ module.exports = {
 ### Build Process
 
 **Development Build:**
+
 ```bash
 yarn build  # Full build with bundle analysis for development
 ```
 
 **Production Deployment:**
+
 ```bash
 yarn clean && yarn build:production  # Optimized production build
 ```
 
 **Differential Serving Build:**
+
 ```bash
 yarn build:differential  # Build both modern and legacy bundles
 ```
 
 **Individual Build Targets:**
+
 ```bash
 yarn build:modern        # ES2020+ build only
 yarn build:legacy        # ES5 build only
 ```
 
 **Environment Variables:**
+
 - `GATSBY_MODERN_BUILD=true` - Build modern ES2020+ bundle
 - `GATSBY_MODERN_BUILD=false` - Build legacy ES5 bundle
 
 **Differential Build Pipeline:**
+
 1. **Cache Cleaning**: `yarn clean` ensures fresh builds without stale cache
 2. **Modern Build**: `yarn build:modern` creates ES2020+ bundle in `public-modern/`
 3. **Legacy Build**: `yarn build:legacy` creates ES5 bundle in `public-legacy/`

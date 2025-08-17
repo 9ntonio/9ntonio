@@ -8,41 +8,41 @@ export const IMAGE_CACHE_CONFIG = {
 	critical: {
 		maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
 		maxEntries: 10,
-		strategy: 'CacheFirst'
+		strategy: "CacheFirst",
 	},
 	// Regular images - cache with network fallback
 	regular: {
 		maxAge: 3 * 24 * 60 * 60 * 1000, // 3 days
 		maxEntries: 50,
-		strategy: 'StaleWhileRevalidate'
+		strategy: "StaleWhileRevalidate",
 	},
 	// Low priority images - cache only if space available
 	lowPriority: {
 		maxAge: 1 * 24 * 60 * 60 * 1000, // 1 day
 		maxEntries: 20,
-		strategy: 'NetworkFirst'
-	}
+		strategy: "NetworkFirst",
+	},
 };
 
 /**
  * Check if image should be cached based on connection and size
  */
 export const shouldCacheImage = (imageUrl, connectionInfo = {}) => {
-	const { saveData = false, effectiveType = '4g', downlink = 10 } = connectionInfo;
+	const { saveData = false, effectiveType = "4g", downlink = 10 } = connectionInfo;
 
 	// Always cache critical images
-	if (imageUrl.includes('logo') || imageUrl.includes('gusto')) {
+	if (imageUrl.includes("logo") || imageUrl.includes("gusto")) {
 		return true;
 	}
 
 	// Don't cache large images on slow connections
-	if ((effectiveType === 'slow-2g' || effectiveType === '2g' || downlink < 1.5) && !saveData) {
+	if ((effectiveType === "slow-2g" || effectiveType === "2g" || downlink < 1.5) && !saveData) {
 		return false;
 	}
 
 	// Cache selectively on data saver mode
 	if (saveData) {
-		return imageUrl.includes('logo') || imageUrl.includes('favicon');
+		return imageUrl.includes("logo") || imageUrl.includes("favicon");
 	}
 
 	return true;
@@ -52,15 +52,15 @@ export const shouldCacheImage = (imageUrl, connectionInfo = {}) => {
  * Get cache strategy based on image priority and connection
  */
 export const getCacheStrategy = (imageUrl, connectionInfo = {}) => {
-	const { saveData = false, effectiveType = '4g' } = connectionInfo;
+	const { saveData = false, effectiveType = "4g" } = connectionInfo;
 
 	// Critical images
-	if (imageUrl.includes('logo') || imageUrl.includes('gusto')) {
+	if (imageUrl.includes("logo") || imageUrl.includes("gusto")) {
 		return IMAGE_CACHE_CONFIG.critical;
 	}
 
 	// Low priority on slow connections
-	if (effectiveType === 'slow-2g' || effectiveType === '2g' || saveData) {
+	if (effectiveType === "slow-2g" || effectiveType === "2g" || saveData) {
 		return IMAGE_CACHE_CONFIG.lowPriority;
 	}
 
@@ -72,13 +72,13 @@ export const getCacheStrategy = (imageUrl, connectionInfo = {}) => {
  * Preload and cache critical images
  */
 export const preloadAndCacheImages = async (imageUrls, connectionInfo = {}) => {
-	if (!('caches' in window)) {
-		console.log('Cache API not supported');
+	if (!("caches" in window)) {
+		console.log("Cache API not supported");
 		return;
 	}
 
 	try {
-		const cache = await caches.open('images-v1');
+		const cache = await caches.open("images-v1");
 
 		for (const imageUrl of imageUrls) {
 			if (shouldCacheImage(imageUrl, connectionInfo)) {
@@ -98,7 +98,7 @@ export const preloadAndCacheImages = async (imageUrls, connectionInfo = {}) => {
 			}
 		}
 	} catch (error) {
-		console.warn('Failed to access cache:', error);
+		console.warn("Failed to access cache:", error);
 	}
 };
 
@@ -106,24 +106,24 @@ export const preloadAndCacheImages = async (imageUrls, connectionInfo = {}) => {
  * Clean up old cached images based on connection
  */
 export const cleanupImageCache = async (connectionInfo = {}) => {
-	if (!('caches' in window)) return;
+	if (!("caches" in window)) return;
 
-	const { saveData = false, effectiveType = '4g' } = connectionInfo;
+	const { saveData = false, effectiveType = "4g" } = connectionInfo;
 
 	// More aggressive cleanup on slow connections or data saver mode
-	if (saveData || effectiveType === 'slow-2g' || effectiveType === '2g') {
+	if (saveData || effectiveType === "slow-2g" || effectiveType === "2g") {
 		try {
-			const cache = await caches.open('images-v1');
+			const cache = await caches.open("images-v1");
 			const requests = await cache.keys();
 
 			// Keep only critical images
 			for (const request of requests) {
-				if (!request.url.includes('logo') && !request.url.includes('favicon')) {
+				if (!request.url.includes("logo") && !request.url.includes("favicon")) {
 					await cache.delete(request);
 				}
 			}
 		} catch (error) {
-			console.warn('Failed to cleanup cache:', error);
+			console.warn("Failed to cleanup cache:", error);
 		}
 	}
 };
@@ -132,12 +132,12 @@ export const cleanupImageCache = async (connectionInfo = {}) => {
  * Get cached image or fetch with appropriate quality
  */
 export const getCachedOrFetchImage = async (imageUrl, quality = 75, connectionInfo = {}) => {
-	if (!('caches' in window)) {
+	if (!("caches" in window)) {
 		return fetch(imageUrl);
 	}
 
 	try {
-		const cache = await caches.open('images-v1');
+		const cache = await caches.open("images-v1");
 		const cachedResponse = await cache.match(imageUrl);
 
 		if (cachedResponse) {
@@ -145,12 +145,12 @@ export const getCachedOrFetchImage = async (imageUrl, quality = 75, connectionIn
 		}
 
 		// Fetch with appropriate quality based on connection
-		const { saveData = false, effectiveType = '4g' } = connectionInfo;
+		const { saveData = false, effectiveType = "4g" } = connectionInfo;
 		let adjustedQuality = quality;
 
 		if (saveData) adjustedQuality = Math.min(quality, 50);
-		else if (effectiveType === '2g') adjustedQuality = Math.min(quality, 55);
-		else if (effectiveType === '3g') adjustedQuality = Math.min(quality, 65);
+		else if (effectiveType === "2g") adjustedQuality = Math.min(quality, 55);
+		else if (effectiveType === "3g") adjustedQuality = Math.min(quality, 65);
 
 		// For now, just fetch the original (Gatsby handles quality optimization)
 		const response = await fetch(imageUrl);
@@ -161,7 +161,7 @@ export const getCachedOrFetchImage = async (imageUrl, quality = 75, connectionIn
 
 		return response;
 	} catch (error) {
-		console.warn('Cache operation failed, falling back to network:', error);
+		console.warn("Cache operation failed, falling back to network:", error);
 		return fetch(imageUrl);
 	}
 };

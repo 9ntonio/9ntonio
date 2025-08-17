@@ -64,21 +64,25 @@ module.exports = {
 				display: `minimal-ui`,
 				icon: `static/favicon.ico`,
 				// Add PWA features
-				cache_busting_mode: 'none',
+				cache_busting_mode: "none",
 				include_favicon: true,
 				legacy: true,
 				theme_color_in_head: false,
 			},
 		},
 		// Only include bundle analyzer in development
-		...(process.env.NODE_ENV === 'development' ? [{
-			resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
-			options: {
-				devMode: true,
-				analyzerMode: 'server',
-				analyzerPort: 3001,
-			},
-		}] : []),
+		...(process.env.NODE_ENV === "development"
+			? [
+					{
+						resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+						options: {
+							devMode: true,
+							analyzerMode: "server",
+							analyzerPort: 3001,
+						},
+					},
+				]
+			: []),
 		{
 			resolve: `gatsby-plugin-minify`,
 			options: {
@@ -101,12 +105,12 @@ module.exports = {
 		`gatsby-plugin-sitemap`,
 		// Add robots.txt
 		{
-			resolve: 'gatsby-plugin-robots-txt',
+			resolve: "gatsby-plugin-robots-txt",
 			options: {
-				host: 'https://antonio.almena.io',
-				sitemap: 'https://antonio.almena.io/sitemap-index.xml',
-				policy: [{ userAgent: '*', allow: '/' }]
-			}
+				host: "https://antonio.almena.io",
+				sitemap: "https://antonio.almena.io/sitemap-index.xml",
+				policy: [{ userAgent: "*", allow: "/" }],
+			},
 		},
 	],
 	trailingSlash: "always",

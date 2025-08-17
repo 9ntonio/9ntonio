@@ -3,7 +3,7 @@
  * Centralized critical CSS to prevent duplication between html.js and global.css
  */
 
-import { COLORS, LOGO_DIMENSIONS, CIRCLE_SIZE, FONT_FAMILIES } from './designTokens';
+import { COLORS, LOGO_DIMENSIONS, CIRCLE_SIZE, FONT_FAMILIES } from "./designTokens";
 
 /**
  * Generate critical CSS with design tokens
@@ -208,6 +208,8 @@ const generateCriticalCSS = () => `
     .md\\:flex-row { flex-direction: row; }
     .md\\:items-center { align-items: center; }
     .md\\:mb-0 { margin-bottom: 0; }
+    .md\\:mr-6 { margin-right: 1.5rem; }
+    .md\\:pr-6 { padding-right: 1.5rem; }
     .md\\:mt-0 { margin-top: 0; }
     .md\\:mt-6 { margin-top: 1.5rem; }
     .md\\:block { display: block; }
@@ -219,12 +221,12 @@ const generateCriticalCSS = () => `
  * @returns {string} Critical CSS string
  */
 export const getCriticalCSS = () => {
-  try {
-    return generateCriticalCSS();
-  } catch (error) {
-    console.error('Error generating critical CSS:', error);
-    // Return minimal fallback CSS to prevent complete styling failure
-    return `
+	try {
+		return generateCriticalCSS();
+	} catch (error) {
+		console.error("Error generating critical CSS:", error);
+		// Return minimal fallback CSS to prevent complete styling failure
+		return `
       * { box-sizing: border-box; }
       body {
         margin: 0;
@@ -233,5 +235,5 @@ export const getCriticalCSS = () => {
         color: #fff;
       }
     `;
-  }
+	}
 };

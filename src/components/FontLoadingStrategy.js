@@ -24,22 +24,24 @@ export default function FontLoadingStrategy() {
 				document.documentElement.classList.add("font-fallback");
 			}, 2000); // 2 second timeout
 
-			document.fonts.ready.then(() => {
-				clearTimeout(fontLoadTimeout);
-				console.log("✅ Fonts loaded successfully");
-			}).catch((error) => {
-				clearTimeout(fontLoadTimeout);
-				console.warn("Font loading error:", error);
-				document.documentElement.classList.add("font-fallback");
-			});
+			document.fonts.ready
+				.then(() => {
+					clearTimeout(fontLoadTimeout);
+					console.log("✅ Fonts loaded successfully");
+				})
+				.catch((error) => {
+					clearTimeout(fontLoadTimeout);
+					console.warn("Font loading error:", error);
+					document.documentElement.classList.add("font-fallback");
+				});
 
 			// Listen for font load events
-			document.fonts.addEventListener('loadingdone', (event) => {
+			document.fonts.addEventListener("loadingdone", (event) => {
 				clearTimeout(fontLoadTimeout);
 				console.log(`✅ ${event.fontfaces.length} fonts loaded`);
 			});
 
-			document.fonts.addEventListener('loadingerror', (event) => {
+			document.fonts.addEventListener("loadingerror", (event) => {
 				clearTimeout(fontLoadTimeout);
 				console.warn("Font loading error event:", event);
 				document.documentElement.classList.add("font-fallback");
@@ -49,15 +51,12 @@ export default function FontLoadingStrategy() {
 		// Preload next critical resources after font loading
 		const preloadCriticalResources = () => {
 			// Preload critical images
-			const criticalImages = [
-				'/gusto.webp',
-				'/google.webp'
-			];
+			const criticalImages = ["/gusto.webp", "/google.webp"];
 
-			criticalImages.forEach(src => {
-				const link = document.createElement('link');
-				link.rel = 'preload';
-				link.as = 'image';
+			criticalImages.forEach((src) => {
+				const link = document.createElement("link");
+				link.rel = "preload";
+				link.as = "image";
 				link.href = src;
 				document.head.appendChild(link);
 			});
@@ -65,7 +64,6 @@ export default function FontLoadingStrategy() {
 
 		// Delay resource preloading to not interfere with font loading
 		setTimeout(preloadCriticalResources, 1000);
-
 	}, []);
 
 	return null;

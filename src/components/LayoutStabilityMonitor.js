@@ -45,15 +45,15 @@ const useCLSMonitor = () => {
 		const reportFinalCLS = () => {
 			console.log(`Final CLS score: ${clsDataRef.current.value.toFixed(4)}`, {
 				totalShifts: clsDataRef.current.entries.length,
-				entries: clsDataRef.current.entries
+				entries: clsDataRef.current.entries,
 			});
 		};
 
-		window.addEventListener('beforeunload', reportFinalCLS);
+		window.addEventListener("beforeunload", reportFinalCLS);
 
 		return () => {
 			observer.disconnect();
-			window.removeEventListener('beforeunload', reportFinalCLS);
+			window.removeEventListener("beforeunload", reportFinalCLS);
 		};
 	}, []);
 };
@@ -90,30 +90,30 @@ const useLCPMonitor = () => {
 // Custom hook for font loading monitoring
 const useFontLoadingMonitor = () => {
 	useEffect(() => {
-		if (typeof window === "undefined" || !('fonts' in document)) return;
+		if (typeof window === "undefined" || !("fonts" in document)) return;
 
 		const handleFontLoadingDone = (event) => {
-			console.log('Font loading completed:', {
+			console.log("Font loading completed:", {
 				loadedFonts: event.fontfaces.length,
-				fonts: event.fontfaces.map(font => ({
+				fonts: event.fontfaces.map((font) => ({
 					family: font.family,
 					status: font.status,
 					weight: font.weight,
-					style: font.style
-				}))
+					style: font.style,
+				})),
 			});
 		};
 
 		const handleFontLoadingError = (event) => {
-			console.error('Font loading error:', event);
+			console.error("Font loading error:", event);
 		};
 
-		document.fonts.addEventListener('loadingdone', handleFontLoadingDone);
-		document.fonts.addEventListener('loadingerror', handleFontLoadingError);
+		document.fonts.addEventListener("loadingdone", handleFontLoadingDone);
+		document.fonts.addEventListener("loadingerror", handleFontLoadingError);
 
 		return () => {
-			document.fonts.removeEventListener('loadingdone', handleFontLoadingDone);
-			document.fonts.removeEventListener('loadingerror', handleFontLoadingError);
+			document.fonts.removeEventListener("loadingdone", handleFontLoadingDone);
+			document.fonts.removeEventListener("loadingerror", handleFontLoadingError);
 		};
 	}, []);
 };

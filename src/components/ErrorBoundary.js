@@ -8,7 +8,7 @@ class ErrorBoundary extends React.Component {
 			hasError: false,
 			error: null,
 			errorInfo: null,
-			retryCount: 0
+			retryCount: 0,
 		};
 	}
 
@@ -38,7 +38,7 @@ class ErrorBoundary extends React.Component {
 				hasError: false,
 				error: null,
 				errorInfo: null,
-				retryCount: retryCount + 1
+				retryCount: retryCount + 1,
 			});
 		} else {
 			// Force page reload after max retries
@@ -58,15 +58,11 @@ class ErrorBoundary extends React.Component {
 				<div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
 					<div className="text-center max-w-md mx-auto p-6">
 						<h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-						<p className="text-gray-300 mb-4">
-							We're sorry, but there was an error loading this page.
-						</p>
+						<p className="text-gray-300 mb-4">We're sorry, but there was an error loading this page.</p>
 
 						{process.env.NODE_ENV === "development" && this.state.error && (
 							<details className="mb-4 text-left">
-								<summary className="cursor-pointer text-red-400 mb-2">
-									Error Details (Development)
-								</summary>
+								<summary className="cursor-pointer text-red-400 mb-2">Error Details (Development)</summary>
 								<pre className="text-xs bg-gray-800 p-2 rounded overflow-auto">
 									{this.state.error.toString()}
 									{this.state.errorInfo?.componentStack}
@@ -75,16 +71,10 @@ class ErrorBoundary extends React.Component {
 						)}
 
 						<div className="space-x-2">
-							<button
-								className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition-colors"
-								onClick={this.handleRetry}
-							>
-								{this.state.retryCount > 0 ? `Retry (${this.state.retryCount}/3)` : 'Try Again'}
+							<button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition-colors" onClick={this.handleRetry}>
+								{this.state.retryCount > 0 ? `Retry (${this.state.retryCount}/3)` : "Try Again"}
 							</button>
-							<button
-								className="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded transition-colors"
-								onClick={() => window.location.reload()}
-							>
+							<button className="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded transition-colors" onClick={() => window.location.reload()}>
 								Reload Page
 							</button>
 						</div>

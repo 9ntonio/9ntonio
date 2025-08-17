@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { shouldPreloadImage, CRITICAL_IMAGES, getOptimalImageSettings } from '../utils/imageOptimization';
+import { useEffect } from "react";
+import { shouldPreloadImage, CRITICAL_IMAGES, getOptimalImageSettings } from "../utils/imageOptimization";
 
 /**
  * AdaptiveImagePreloader - Intelligently preloads images based on:
@@ -14,14 +14,14 @@ const AdaptiveImagePreloader = () => {
 			// Check network conditions
 			const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 			const connectionInfo = {
-				effectiveType: connection?.effectiveType || '4g',
+				effectiveType: connection?.effectiveType || "4g",
 				saveData: connection?.saveData || false,
-				downlink: connection?.downlink || 10
+				downlink: connection?.downlink || 10,
 			};
 
 			// Skip preloading if conditions aren't favorable
-			if (!shouldPreloadImage(connectionInfo, 'high')) {
-				console.log('Skipping image preload due to connection conditions');
+			if (!shouldPreloadImage(connectionInfo, "high")) {
+				console.log("Skipping image preload due to connection conditions");
 				return;
 			}
 
@@ -31,16 +31,16 @@ const AdaptiveImagePreloader = () => {
 			// Define critical images with priorities
 			const criticalImageConfigs = [
 				{
-					src: '/gusto.webp',
-					priority: 'high',
-					width: 400
+					src: "/gusto.webp",
+					priority: "high",
+					width: 400,
 				},
 				{
-					src: '/logo-2.svg',
-					priority: 'high',
+					src: "/logo-2.svg",
+					priority: "high",
 					width: 510,
-					type: 'image/svg+xml'
-				}
+					type: "image/svg+xml",
+				},
 			];
 
 			criticalImageConfigs.forEach((imageConfig, index) => {
@@ -51,22 +51,22 @@ const AdaptiveImagePreloader = () => {
 
 				// Stagger preloading to avoid overwhelming the connection
 				setTimeout(() => {
-					const link = document.createElement('link');
-					link.rel = 'preload';
-					link.as = 'image';
+					const link = document.createElement("link");
+					link.rel = "preload";
+					link.as = "image";
 					link.href = imageConfig.src;
-					link.type = imageConfig.type || 'image/webp';
+					link.type = imageConfig.type || "image/webp";
 
 					// Add responsive image hints
-					link.setAttribute('imagesizes', `${imageConfig.width}px`);
+					link.setAttribute("imagesizes", `${imageConfig.width}px`);
 
 					// Set priority
-					if (imageConfig.priority === 'high') {
-						link.setAttribute('fetchpriority', 'high');
+					if (imageConfig.priority === "high") {
+						link.setAttribute("fetchpriority", "high");
 					}
 
 					// Add crossorigin for external images
-					link.crossOrigin = 'anonymous';
+					link.crossOrigin = "anonymous";
 
 					document.head.appendChild(link);
 				}, index * 150); // Stagger by 150ms to be gentler on connection
@@ -79,11 +79,11 @@ const AdaptiveImagePreloader = () => {
 			setTimeout(preloadCriticalImages, 500);
 		};
 
-		if (document.readyState === 'complete') {
+		if (document.readyState === "complete") {
 			initPreload();
 		} else {
-			window.addEventListener('load', initPreload);
-			return () => window.removeEventListener('load', initPreload);
+			window.addEventListener("load", initPreload);
+			return () => window.removeEventListener("load", initPreload);
 		}
 	}, []);
 

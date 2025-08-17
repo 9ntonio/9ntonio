@@ -27,9 +27,7 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 
 			const handleTabTrap = (e) => {
 				if (e.key === "Tab") {
-					const focusableElements = modalRef.current?.querySelectorAll(
-						'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-					);
+					const focusableElements = modalRef.current?.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
 
 					if (focusableElements?.length) {
 						const firstElement = focusableElements[0];
@@ -65,19 +63,9 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 	if (!isOpen) return null;
 
 	return (
-		<div
-			className="fixed inset-0 z-50 flex items-center justify-center"
-			role="dialog"
-			aria-modal="true"
-			aria-labelledby="video-modal-title"
-			ref={modalRef}
-		>
+		<div className="fixed inset-0 z-50 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="video-modal-title" ref={modalRef}>
 			{/* Backdrop */}
-			<div
-				className="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-sm"
-				onClick={onClose}
-				aria-hidden="true"
-			/>
+			<div className="absolute inset-0 bg-black bg-opacity-75 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
 
 			{/* Modal Content */}
 			<div className="relative w-full max-w-4xl mx-4 bg-black rounded-lg overflow-hidden shadow-2xl">
@@ -93,15 +81,7 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 					className="absolute top-4 right-4 z-10 w-8 h-8 bg-black bg-opacity-50 hover:bg-opacity-75 focus:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded-full flex items-center justify-center text-white transition-all duration-200"
 					aria-label={`Close ${title} video modal`}
 				>
-					<svg
-						width="16"
-						height="16"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						strokeWidth="2"
-						aria-hidden="true"
-					>
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
 						<line x1="18" y1="6" x2="6" y2="18"></line>
 						<line x1="6" y1="6" x2="18" y2="18"></line>
 					</svg>

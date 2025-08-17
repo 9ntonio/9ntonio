@@ -14,36 +14,18 @@ import { LINK_ATTRIBUTES, TECH_URLS, TECH_NAMES, VIDEO_CONFIG, SEO_CONFIG } from
 import logo from "../../static/logo-2.svg";
 
 // Lazy load only the heaviest, non-critical components
-const PreloadResources = React.lazy(() =>
-	import(/* webpackChunkName: "preload-resources" */ "../components/PreloadResources")
-);
-const ThirdPartyScriptLoader = React.lazy(() =>
-	import(/* webpackChunkName: "third-party-scripts" */ "../components/ThirdPartyScriptLoader")
-);
+const PreloadResources = React.lazy(() => import(/* webpackChunkName: "preload-resources" */ "../components/PreloadResources"));
+const ThirdPartyScriptLoader = React.lazy(() => import(/* webpackChunkName: "third-party-scripts" */ "../components/ThirdPartyScriptLoader"));
 
 // *Lazy load heavy components only when needed - with better chunking
-const Particles = React.lazy(() =>
-	import(/* webpackChunkName: "particles" */ "react-tsparticles")
-);
-const FontAwesome = React.lazy(() =>
-	import(/* webpackChunkName: "fontawesome" */ "../components/FontAwesome")
-);
+const Particles = React.lazy(() => import(/* webpackChunkName: "particles" */ "react-tsparticles"));
+const FontAwesome = React.lazy(() => import(/* webpackChunkName: "fontawesome" */ "../components/FontAwesome"));
 
 // Lazy load video modal only when needed
-const VideoModal = React.lazy(() =>
-	import(/* webpackChunkName: "video-modal" */ "../components/VideoModal")
-);
+const VideoModal = React.lazy(() => import(/* webpackChunkName: "video-modal" */ "../components/VideoModal"));
 
 export default function Home() {
-	const {
-		isMounted,
-		isParticlesLoaded,
-		hasError,
-		showParticles,
-		particlesInit,
-		handleParticlesLoaded,
-		getParticleOptions,
-	} = useParticleLoader();
+	const { isMounted, isParticlesLoaded, hasError, showParticles, particlesInit, handleParticlesLoaded, getParticleOptions } = useParticleLoader();
 
 	const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
 
@@ -62,7 +44,7 @@ export default function Home() {
 			<FontLoadingStrategy />
 			<AdaptiveImagePreloader />
 			<ConnectionAwareImageLoader />
-			{process.env.NODE_ENV === 'development' && <LayoutStabilityMonitor />}
+			{process.env.NODE_ENV === "development" && <LayoutStabilityMonitor />}
 			<div className="font-fredoka text-textColor">
 				<Suspense fallback={null}>
 					<PreloadResources />
@@ -124,9 +106,9 @@ export default function Home() {
 
 						<div className="font-loading">
 							<p className="text-stable">
-								Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing
-								scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated
-								testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics by up to 60%.
+								Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable
+								component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record
+								of reducing development time through reusable patterns and improving application performance metrics by up to 60%.
 							</p>
 
 							<p className="text-stable mb-6">
@@ -197,13 +179,9 @@ export default function Home() {
 				<section>
 					<div className="container mb-12">
 						<div className="flex flex-wrap">
-							<div className="w-full md:w-1/3 mb-4 md:mb-0">
-								<div className="mr-6 project-image-container">
-									<button
-										onClick={openVideoModal}
-										aria-label="Play Gusto project video"
-										className="relative block w-full h-full overflow-hidden rounded-lg border-none cursor-pointer group"
-									>
+							<div className="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+								<div className="project-image-container">
+									<button onClick={openVideoModal} aria-label="Play Gusto project video" className="relative block w-full h-full overflow-hidden rounded-lg border-none cursor-pointer group">
 										<StaticImage
 											src="../../static/gusto.webp"
 											alt="Gusto project video thumbnail"
@@ -254,9 +232,9 @@ export default function Home() {
 									>
 										Gusto
 									</OutboundLink>{" "}
-									with their brand refresh. Gusto is a large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed
-									a team of 6 software & QA engineers. While working out of the Gusto offices, I collaborated with Brand Studio, Marketing & Product teams. Together we were able to
-									deliver over +100 pages on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
+									with their brand refresh. Gusto is a large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a team of 6
+									software & QA engineers. While working out of the Gusto offices, I collaborated with Brand Studio, Marketing & Product teams. Together we were able to deliver over +100 pages on time
+									with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
 								</p>
 							</div>
 						</div>
@@ -266,9 +244,15 @@ export default function Home() {
 				<section>
 					<div className="container mb-12">
 						<div className="flex flex-wrap">
-							<div className="w-full md:w-1/3 mb-4 md:mb-0">
-								<div className="mr-6 project-image-container">
-									<a href="https://store.google.com/" target={LINK_ATTRIBUTES.TARGET} rel={LINK_ATTRIBUTES.REL} aria-label="Visit Google Store website (opens in new tab)" className="group block w-full h-full">
+							<div className="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+								<div className="project-image-container">
+									<a
+										href="https://store.google.com/"
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
+										aria-label="Visit Google Store website (opens in new tab)"
+										className="group block w-full h-full"
+									>
 										<StaticImage
 											src="../../static/google.webp"
 											alt="Google Store project showcase"
@@ -291,10 +275,10 @@ export default function Home() {
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">Google Store</div>
 								</a>
 								<p className="text-stable">
-									Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal
-									is to keep users' front of mind and seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's
-									engineers to meet their technical & testing requirements. The engineers & I created various proof of concepts & prototypes that were tied to a suite of unit tests.
-									This allowed us to test our architecture prior to kickoff and assisted in creating a seamless delivery process.
+									Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal is to keep users'
+									front of mind and seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's engineers to meet their technical &
+									testing requirements. The engineers & I created various proof of concepts & prototypes that were tied to a suite of unit tests. This allowed us to test our architecture prior to
+									kickoff and assisted in creating a seamless delivery process.
 								</p>
 							</div>
 						</div>
@@ -304,8 +288,8 @@ export default function Home() {
 				<section>
 					<div className="container mb-12">
 						<div className="flex flex-wrap">
-							<div className="w-full md:w-1/3 mb-4 md:mb-0">
-								<div className="mr-6 project-image-container">
+							<div className="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
+								<div className="project-image-container">
 									<a
 										href="https://www.odopod.com/case-studies/ps-vue"
 										target={LINK_ATTRIBUTES.TARGET}
@@ -340,9 +324,9 @@ export default function Home() {
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">PlayStation Vue</div>
 								</OutboundLink>
 								<p className="text-stable">
-									The Odopod team and I built the iOS application for Sony's streaming service Vue. The application included live TV, DVR, and VOD features via a 3rd party content
-									delivery service. As the Technical Director, I worked with Sony on the iOS and Chromecast builds while also managing both internal & external engineering teams. I
-									also assisted various design & engineering vendors by on-boarding them into the product's vast ecosystem.
+									The Odopod team and I built the iOS application for Sony's streaming service Vue. The application included live TV, DVR, and VOD features via a 3rd party content delivery service. As
+									the Technical Director, I worked with Sony on the iOS and Chromecast builds while also managing both internal & external engineering teams. I also assisted various design &
+									engineering vendors by on-boarding them into the product's vast ecosystem.
 								</p>
 							</div>
 						</div>
@@ -352,9 +336,15 @@ export default function Home() {
 				<section>
 					<div className="container mb-12">
 						<div className="flex flex-wrap">
-							<div className="w-full md:w-1/3">
-								<div className="mr-6 project-image-container">
-									<a href="/unknown-pleasures" target={LINK_ATTRIBUTES.TARGET} rel={LINK_ATTRIBUTES.REL} aria-label="View Unknown Pleasures interactive visualization project (opens in new tab)" className="group block w-full h-full">
+							<div className="w-full md:w-1/3 md:pr-6">
+								<div className="project-image-container">
+									<a
+										href="/unknown-pleasures"
+										target={LINK_ATTRIBUTES.TARGET}
+										rel={LINK_ATTRIBUTES.REL}
+										aria-label="View Unknown Pleasures interactive visualization project (opens in new tab)"
+										className="group block w-full h-full"
+									>
 										<StaticImage
 											src="../../static/unknown-pleasures.webp"
 											alt="Unknown Pleasures Joy Division album cover visualization"
@@ -417,13 +407,12 @@ export default function Home() {
 									>
 										CP 1919
 									</a>
-									. The background is black (instead of white) because Peter Saville said "I was convinced that it was just sexier in black". It is considered one of "the best albums
-									of all time".
+									. The background is black (instead of white) because Peter Saville said "I was convinced that it was just sexier in black". It is considered one of "the best albums of all time".
 								</p>
 
 								<p className="text-stable">
-									I'm obsessed with this album. So much so that for some time I've been trying to make an app that would use the album song's as the data for the waveform. I've tried
-									before and hit walls. Recently I've started working on it again and with some help from{" "}
+									I'm obsessed with this album. So much so that for some time I've been trying to make an app that would use the album song's as the data for the waveform. I've tried before and hit
+									walls. Recently I've started working on it again and with some help from{" "}
 									<a
 										href="https://www.anthropic.com/"
 										target={LINK_ATTRIBUTES.TARGET}
@@ -487,13 +476,14 @@ export default function Home() {
 				</section>
 
 				{isVideoModalOpen && (
-					<Suspense fallback={<div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"><div className="text-white">Loading...</div></div>}>
-						<VideoModal
-							isOpen={isVideoModalOpen}
-							onClose={closeVideoModal}
-							videoUrl={VIDEO_CONFIG.GUSTO_VIDEO_URL}
-							title={VIDEO_CONFIG.GUSTO_VIDEO_TITLE}
-						/>
+					<Suspense
+						fallback={
+							<div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+								<div className="text-white">Loading...</div>
+							</div>
+						}
+					>
+						<VideoModal isOpen={isVideoModalOpen} onClose={closeVideoModal} videoUrl={VIDEO_CONFIG.GUSTO_VIDEO_URL} title={VIDEO_CONFIG.GUSTO_VIDEO_TITLE} />
 					</Suspense>
 				)}
 			</div>

@@ -16,13 +16,13 @@ export default function ThirdPartyScriptLoader() {
 		};
 
 		// Listen for various user interaction events
-		const interactionEvents = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+		const interactionEvents = ["mousedown", "mousemove", "keypress", "scroll", "touchstart"];
 
 		const addInteractionListeners = () => {
-			interactionEvents.forEach(event => {
+			interactionEvents.forEach((event) => {
 				document.addEventListener(event, handleUserInteraction, {
 					passive: true,
-					once: true
+					once: true,
 				});
 			});
 		};
@@ -37,7 +37,7 @@ export default function ThirdPartyScriptLoader() {
 
 		return () => {
 			clearTimeout(fallbackTimer);
-			interactionEvents.forEach(event => {
+			interactionEvents.forEach((event) => {
 				document.removeEventListener(event, handleUserInteraction);
 			});
 		};
@@ -49,25 +49,21 @@ export default function ThirdPartyScriptLoader() {
 		// Load Google Analytics after user interaction
 		if (window.gtag) {
 			// Send initial page view after GA is loaded
-			window.gtag('config', 'G-640WERC942', {
+			window.gtag("config", "G-640WERC942", {
 				page_title: document.title,
 				page_location: window.location.href,
 			});
 		}
 
 		// Preconnect to additional third-party domains after interaction
-		const additionalPreconnects = [
-			'https://www.google-analytics.com',
-			'https://www.googletagmanager.com'
-		];
+		const additionalPreconnects = ["https://www.google-analytics.com", "https://www.googletagmanager.com"];
 
-		additionalPreconnects.forEach(href => {
-			const link = document.createElement('link');
-			link.rel = 'preconnect';
+		additionalPreconnects.forEach((href) => {
+			const link = document.createElement("link");
+			link.rel = "preconnect";
 			link.href = href;
 			document.head.appendChild(link);
 		});
-
 	}, [hasUserInteracted]);
 
 	return null;

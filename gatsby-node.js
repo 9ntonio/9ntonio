@@ -4,13 +4,7 @@ const fs = require("fs-extra");
 const TerserPlugin = require("terser-webpack-plugin");
 
 // Import modern build utilities
-const {
-  isModernBuild,
-  getTerserOptions,
-  getSplitChunksConfig,
-  getOutputEnvironment,
-  logBuildInfo,
-} = require("./src/utils/modernBuildUtils");
+const { isModernBuild, getTerserOptions, getSplitChunksConfig, getOutputEnvironment, logBuildInfo } = require("./src/utils/modernBuildUtils");
 
 /**
  * Webpack configuration for modern JavaScript builds with differential serving
@@ -56,9 +50,9 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 							parse: { ecma: 2022 },
 							compress: {
 								ecma: 2022,
-								drop_console: process.env.NODE_ENV === 'production',
+								drop_console: process.env.NODE_ENV === "production",
 								drop_debugger: true,
-								pure_funcs: ['console.log', 'console.info', 'console.debug'],
+								pure_funcs: ["console.log", "console.info", "console.debug"],
 								passes: 2,
 							},
 							mangle: { safari10: false },
@@ -66,7 +60,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 						},
 						parallel: true,
 						extractComments: false,
-					})
+					}),
 				],
 				splitChunks: {
 					chunks: "all",
@@ -115,7 +109,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 			performance: {
 				maxAssetSize: 250000,
 				maxEntrypointSize: 250000,
-				hints: process.env.NODE_ENV === 'production' ? 'warning' : false,
+				hints: process.env.NODE_ENV === "production" ? "warning" : false,
 			},
 		};
 

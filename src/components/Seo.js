@@ -48,18 +48,15 @@ function Seo({ description = "", meta = [], Sitetitle = "Antonio Almena" }) {
 		// Only add image tags if we have valid URLs
 		if (siteUrl && imageSEO) {
 			const imageUrl = `${siteUrl}${imageSEO}`;
-			baseTags.push(
-				{ property: "og:image", content: imageUrl },
-				{ name: "twitter:image", content: imageUrl }
-			);
+			baseTags.push({ property: "og:image", content: imageUrl }, { name: "twitter:image", content: imageUrl });
 		}
 
-		return baseTags.filter(tag => tag.content);
+		return baseTags.filter((tag) => tag.content);
 	}, [metaDescription, siteUrl, fullTitle, imageSEO, author]);
 
 	// Merge and validate meta tags
 	const allMeta = React.useMemo(() => {
-		const userMeta = Array.isArray(meta) ? meta.filter(tag => tag?.content) : [];
+		const userMeta = Array.isArray(meta) ? meta.filter((tag) => tag?.content) : [];
 		return [...defaultMeta, ...userMeta];
 	}, [defaultMeta, meta]);
 

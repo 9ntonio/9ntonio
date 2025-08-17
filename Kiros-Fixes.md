@@ -20,9 +20,9 @@ Transformed your portfolio from a 64 Lighthouse score to 90+ through strategic a
 // Robust caching with graceful error handling
 const CACHE_NAME = "antonio-almena-v2";
 self.addEventListener("fetch", (event) => {
-  // Cache-first strategy for static assets
-  // Network-first for dynamic content
-  // Graceful fallbacks for failed requests
+	// Cache-first strategy for static assets
+	// Network-first for dynamic content
+	// Graceful fallbacks for failed requests
 });
 ```
 
@@ -140,35 +140,35 @@ Terser is the JavaScript minifier that transforms your readable code into highly
 
 ```javascript
 new TerserPlugin({
-  terserOptions: {
-    compress: {
-      drop_console: true, // Remove all console.log statements
-      drop_debugger: true, // Remove debugger statements
-      pure_funcs: [
-        // Remove specific function calls
-        "console.log",
-        "console.info",
-        "console.debug",
-        "console.warn",
-      ],
-      passes: 2, // Run compression twice for better results
-      unsafe_arrows: true, // Convert arrow functions when safe
-      unsafe_methods: true, // Optimize method calls
-      unsafe_proto: true, // Optimize prototype access
-    },
-    mangle: {
-      safari10: true, // Fix Safari 10 compatibility issues
-      properties: {
-        regex: /^_/, // Mangle properties starting with underscore
-      },
-    },
-    format: {
-      comments: false, // Remove all comments
-      ascii_only: true, // Ensure ASCII output for compatibility
-    },
-  },
-  extractComments: false, // Don't create separate license files
-  parallel: true, // Use multiple CPU cores for faster builds
+	terserOptions: {
+		compress: {
+			drop_console: true, // Remove all console.log statements
+			drop_debugger: true, // Remove debugger statements
+			pure_funcs: [
+				// Remove specific function calls
+				"console.log",
+				"console.info",
+				"console.debug",
+				"console.warn",
+			],
+			passes: 2, // Run compression twice for better results
+			unsafe_arrows: true, // Convert arrow functions when safe
+			unsafe_methods: true, // Optimize method calls
+			unsafe_proto: true, // Optimize prototype access
+		},
+		mangle: {
+			safari10: true, // Fix Safari 10 compatibility issues
+			properties: {
+				regex: /^_/, // Mangle properties starting with underscore
+			},
+		},
+		format: {
+			comments: false, // Remove all comments
+			ascii_only: true, // Ensure ASCII output for compatibility
+		},
+	},
+	extractComments: false, // Don't create separate license files
+	parallel: true, // Use multiple CPU cores for faster builds
 });
 ```
 
@@ -178,26 +178,26 @@ new TerserPlugin({
 
 ```javascript
 function calculateUserEngagement(userInteractions, totalPageViews) {
-  console.log("Calculating engagement for:", userInteractions);
+	console.log("Calculating engagement for:", userInteractions);
 
-  if (userInteractions === null || userInteractions === undefined) {
-    console.warn("Invalid user interactions data");
-    return 0;
-  }
+	if (userInteractions === null || userInteractions === undefined) {
+		console.warn("Invalid user interactions data");
+		return 0;
+	}
 
-  const engagementRate = (userInteractions / totalPageViews) * 100;
-  console.log("Engagement rate calculated:", engagementRate);
+	const engagementRate = (userInteractions / totalPageViews) * 100;
+	console.log("Engagement rate calculated:", engagementRate);
 
-  return Math.round(engagementRate * 100) / 100;
+	return Math.round(engagementRate * 100) / 100;
 }
 
 const userStats = {
-  _privateMethod: function () {
-    return "internal calculation";
-  },
-  publicMethod: function () {
-    return this._privateMethod();
-  },
+	_privateMethod: function () {
+		return "internal calculation";
+	},
+	publicMethod: function () {
+		return this._privateMethod();
+	},
 };
 ```
 
@@ -205,17 +205,17 @@ const userStats = {
 
 ```javascript
 function a(b, c) {
-  if (null === b || void 0 === b) return 0;
-  const d = (b / c) * 100;
-  return Math.round(100 * d) / 100;
+	if (null === b || void 0 === b) return 0;
+	const d = (b / c) * 100;
+	return Math.round(100 * d) / 100;
 }
 const e = {
-  a: function () {
-    return "internal calculation";
-  },
-  b: function () {
-    return this.a();
-  },
+	a: function () {
+		return "internal calculation";
+	},
+	b: function () {
+		return this.a();
+	},
 };
 ```
 
@@ -257,22 +257,22 @@ const e = {
 const FontAwesome = React.lazy(() => import("../components/FontAwesome"));
 
 export default function Home() {
-  const [isMounted, setIsMounted] = React.useState(false);
-  const [isParticlesLoaded, setIsParticlesLoaded] = React.useState(false);
+	const [isMounted, setIsMounted] = React.useState(false);
+	const [isParticlesLoaded, setIsParticlesLoaded] = React.useState(false);
 
-  React.useEffect(() => {
-    console.log("Component mounting...");
-    if (typeof window !== "undefined") {
-      setIsMounted(true);
-      console.log("Window detected, setting mounted state");
-    }
-  }, []);
+	React.useEffect(() => {
+		console.log("Component mounting...");
+		if (typeof window !== "undefined") {
+			setIsMounted(true);
+			console.log("Window detected, setting mounted state");
+		}
+	}, []);
 
-  return (
-    <div className="font-fredoka text-textColor">
-      {isMounted && <FontAwesome />}
-    </div>
-  );
+	return (
+		<div className="font-fredoka text-textColor">
+			{isMounted && <FontAwesome />}
+		</div>
+	);
 }
 ```
 
@@ -281,18 +281,18 @@ export default function Home() {
 ```javascript
 const a = React.lazy(() => import("../components/FontAwesome"));
 export default function () {
-  const [b, c] = React.useState(!1),
-    [d, e] = React.useState(!1);
-  return (
-    React.useEffect(() => {
-      "undefined" != typeof window && c(!0);
-    }, []),
-    React.createElement(
-      "div",
-      { className: "font-fredoka text-textColor" },
-      b && React.createElement(a, null),
-    )
-  );
+	const [b, c] = React.useState(!1),
+		[d, e] = React.useState(!1);
+	return (
+		React.useEffect(() => {
+			"undefined" != typeof window && c(!0);
+		}, []),
+		React.createElement(
+			"div",
+			{ className: "font-fredoka text-textColor" },
+			b && React.createElement(a, null),
+		)
+	);
 }
 ```
 
@@ -322,9 +322,9 @@ export default function () {
 ```javascript
 // Error boundaries prevent cascade failures
 <ErrorBoundary>
-  <Suspense fallback={<LoadingState />}>
-    <HeavyComponent />
-  </Suspense>
+	<Suspense fallback={<LoadingState />}>
+		<HeavyComponent />
+	</Suspense>
 </ErrorBoundary>
 ```
 
@@ -373,19 +373,19 @@ Two-layer dependency management approach:
 ```yaml
 # .yarnrc.yml - Package Extensions
 packageExtensions:
-    react-server-dom-webpack@*:
-        peerDependencies:
-            react: "^18.0.0"
-            react-dom: "^18.0.0"
+  react-server-dom-webpack@*:
+    peerDependencies:
+      react: "^18.0.0"
+      react-dom: "^18.0.0"
 ```
 
 ```json
 // package.json - Version Resolutions
 {
-  "resolutions": {
-    "react-server-dom-webpack/react": "18.3.1",
-    "react-server-dom-webpack/react-dom": "18.3.1"
-  }
+	"resolutions": {
+		"react-server-dom-webpack/react": "18.3.1",
+		"react-server-dom-webpack/react-dom": "18.3.1"
+	}
 }
 ```
 

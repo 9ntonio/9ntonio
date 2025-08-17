@@ -148,7 +148,7 @@ module.exports = {
 						url: path,
 						changefreq: `monthly`,
 						priority: path === "/" ? 1.0 : 0.7,
-					}
+					};
 				},
 			},
 		},
@@ -163,5 +163,5 @@ module.exports = {
 	// Configure modern JavaScript builds - reduces legacy JS significantly
 	polyfill: false, // Disable polyfills for modern browsers
 	// Enable modern ES2022+ features
-	jsxRuntime: "automatic"
+	jsxRuntime: "automatic",
 };

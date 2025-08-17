@@ -24,7 +24,7 @@ module.exports = {
 					"Roboto",
 					"Helvetica Neue",
 					"Arial",
-					"sans-serif"
+					"sans-serif",
 				],
 			},
 		},

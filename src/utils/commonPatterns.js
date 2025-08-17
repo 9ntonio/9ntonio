@@ -10,12 +10,12 @@
  * @returns {Object} - Props object for external links
  */
 export function createExternalLinkProps(href, ariaLabel) {
-  return {
-    href,
-    target: "_blank",
-    rel: "noreferrer",
-    "aria-label": ariaLabel,
-  };
+	return {
+		href,
+		target: "_blank",
+		rel: "noreferrer",
+		"aria-label": ariaLabel,
+	};
 }
 
 /**
@@ -25,15 +25,15 @@ export function createExternalLinkProps(href, ariaLabel) {
  * @returns {Function} - Debounced function
  */
 export function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
+	let timeout;
+	return function executedFunction(...args) {
+		const later = () => {
+			clearTimeout(timeout);
+			func(...args);
+		};
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+	};
 }
 
 /**
@@ -43,14 +43,14 @@ export function debounce(func, wait) {
  * @returns {Function} - Throttled function
  */
 export function throttle(func, limit) {
-  let inThrottle;
-  return function executedFunction(...args) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  };
+	let inThrottle;
+	return function executedFunction(...args) {
+		if (!inThrottle) {
+			func.apply(this, args);
+			inThrottle = true;
+			setTimeout(() => (inThrottle = false), limit);
+		}
+	};
 }
 
 /**
@@ -58,7 +58,7 @@ export function throttle(func, limit) {
  * @returns {boolean} - True if running in browser
  */
 export function isBrowser() {
-  return typeof window !== "undefined";
+	return typeof window !== "undefined";
 }
 
 /**
@@ -67,7 +67,7 @@ export function isBrowser() {
  * @returns {boolean} - True if mobile device
  */
 export function isMobile(breakpoint = 768) {
-  return isBrowser() && window.innerWidth < breakpoint;
+	return isBrowser() && window.innerWidth < breakpoint;
 }
 
 /**
@@ -77,20 +77,20 @@ export function isMobile(breakpoint = 768) {
  * @returns {any} - Stored value or null
  */
 export function safeLocalStorage(key, value) {
-  if (!isBrowser()) return null;
+	if (!isBrowser()) return null;
 
-  try {
-    if (value !== undefined) {
-      localStorage.setItem(key, JSON.stringify(value));
-      return value;
-    } else {
-      const item = localStorage.getItem(key);
-      return item ? JSON.parse(item) : null;
-    }
-  } catch (error) {
-    console.warn(`localStorage operation failed for key "${key}":`, error);
-    return null;
-  }
+	try {
+		if (value !== undefined) {
+			localStorage.setItem(key, JSON.stringify(value));
+			return value;
+		} else {
+			const item = localStorage.getItem(key);
+			return item ? JSON.parse(item) : null;
+		}
+	} catch (error) {
+		console.warn(`localStorage operation failed for key "${key}":`, error);
+		return null;
+	}
 }
 
 /**
@@ -98,9 +98,9 @@ export function safeLocalStorage(key, value) {
  * @param {string} name - Mark name
  */
 export function performanceMark(name) {
-  if (isBrowser() && 'performance' in window && performance.mark) {
-    performance.mark(name);
-  }
+	if (isBrowser() && "performance" in window && performance.mark) {
+		performance.mark(name);
+	}
 }
 
 /**
@@ -110,13 +110,13 @@ export function performanceMark(name) {
  * @param {string} endMark - End mark name
  */
 export function performanceMeasure(name, startMark, endMark) {
-  if (isBrowser() && 'performance' in window && performance.measure) {
-    try {
-      performance.measure(name, startMark, endMark);
-    } catch (error) {
-      console.warn(`Performance measure failed: ${name}`, error);
-    }
-  }
+	if (isBrowser() && "performance" in window && performance.measure) {
+		try {
+			performance.measure(name, startMark, endMark);
+		} catch (error) {
+			console.warn(`Performance measure failed: ${name}`, error);
+		}
+	}
 }
 
 /**
@@ -126,15 +126,20 @@ export function performanceMeasure(name, startMark, endMark) {
  * @returns {React.Component} - Lazy loaded component
  */
 export function createLazyComponent(importFunc, chunkName) {
-  return React.lazy(() =>
-    importFunc().catch(error => {
-      console.error(`Failed to load component chunk: ${chunkName}`, error);
-      // Return a fallback component
-      return {
-        default: () => React.createElement('div', {
-          className: 'text-red-500 p-4'
-        }, `Failed to load ${chunkName}`)
-      };
-    })
-  );
+	return React.lazy(() =>
+		importFunc().catch((error) => {
+			console.error(`Failed to load component chunk: ${chunkName}`, error);
+			// Return a fallback component
+			return {
+				default: () =>
+					React.createElement(
+						"div",
+						{
+							className: "text-red-500 p-4",
+						},
+						`Failed to load ${chunkName}`,
+					),
+			};
+		}),
+	);
 }
