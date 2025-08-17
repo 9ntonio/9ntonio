@@ -1793,29 +1793,21 @@ type SiteFilterInput = {
 };
 
 type SiteFlags = {
-  readonly DEV_SSR: Maybe<Scalars['Boolean']>;
-  readonly FAST_DEV: Maybe<Scalars['Boolean']>;
   readonly PARALLEL_SOURCING: Maybe<Scalars['Boolean']>;
   readonly PRESERVE_FILE_DOWNLOAD_CACHE: Maybe<Scalars['Boolean']>;
 };
 
 type SiteFlagsFieldSelector = {
-  readonly DEV_SSR: InputMaybe<FieldSelectorEnum>;
-  readonly FAST_DEV: InputMaybe<FieldSelectorEnum>;
   readonly PARALLEL_SOURCING: InputMaybe<FieldSelectorEnum>;
   readonly PRESERVE_FILE_DOWNLOAD_CACHE: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteFlagsFilterInput = {
-  readonly DEV_SSR: InputMaybe<BooleanQueryOperatorInput>;
-  readonly FAST_DEV: InputMaybe<BooleanQueryOperatorInput>;
   readonly PARALLEL_SOURCING: InputMaybe<BooleanQueryOperatorInput>;
   readonly PRESERVE_FILE_DOWNLOAD_CACHE: InputMaybe<BooleanQueryOperatorInput>;
 };
 
 type SiteFlagsSortInput = {
-  readonly DEV_SSR: InputMaybe<SortOrderEnum>;
-  readonly FAST_DEV: InputMaybe<SortOrderEnum>;
   readonly PARALLEL_SOURCING: InputMaybe<SortOrderEnum>;
   readonly PRESERVE_FILE_DOWNLOAD_CACHE: InputMaybe<SortOrderEnum>;
 };

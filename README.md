@@ -144,6 +144,7 @@ yarn clean        # Clean Gatsby cache
 ```bash
 yarn build                    # Full production build with analysis
 yarn build:production         # Production build without analysis
+yarn build:differential       # Build both modern and legacy bundles
 yarn serve                    # Serve built site locally
 ```
 
@@ -448,11 +449,28 @@ yarn build  # Full build with bundle analysis for development
 yarn clean && yarn build:production  # Optimized production build
 ```
 
-**Build Steps:**
+**Differential Serving Build:**
+```bash
+yarn build:differential  # Build both modern and legacy bundles
+```
+
+**Individual Build Targets:**
+```bash
+yarn build:modern        # ES2020+ build only
+yarn build:legacy        # ES5 build only
+```
+
+**Environment Variables:**
+- `GATSBY_MODERN_BUILD=true` - Build modern ES2020+ bundle
+- `GATSBY_MODERN_BUILD=false` - Build legacy ES5 bundle
+
+**Differential Build Pipeline:**
 1. **Cache Cleaning**: `yarn clean` ensures fresh builds without stale cache
-2. **Production Build**: `yarn build:production` with optimized settings (no bundle analysis)
-3. **Post-build**: Copy unknown-pleasures static files and verify integrity
-4. **Deployment**: Netlify processes and optimizes assets
+2. **Modern Build**: `yarn build:modern` creates ES2020+ bundle in `public-modern/`
+3. **Legacy Build**: `yarn build:legacy` creates ES5 bundle in `public-legacy/`
+4. **Build Processing**: `differential-build-processor.js` merges builds with browser detection
+5. **Post-build**: Copy unknown-pleasures static files and verify integrity
+6. **Deployment**: Netlify processes and optimized assets with differential serving support
 
 ## 🎯 Performance Targets
 
@@ -527,6 +545,7 @@ Read about the AI-assisted development process: [Unknown Pleasures in a Brave Ne
 - **[ACCESSIBILITY_GUIDE.md](./ACCESSIBILITY_GUIDE.md)**: Comprehensive accessibility implementation guide
 - **[MINIFICATION_GUIDE.md](./MINIFICATION_GUIDE.md)**: JavaScript minification and optimization details
 - **[TERSER_OPTIMIZATION_GUIDE.md](./TERSER_OPTIMIZATION_GUIDE.md)**: Advanced Terser configuration achieving 83.7% compression
+- **[MODERN_BUILD_IMPLEMENTATION.md](./MODERN_BUILD_IMPLEMENTATION.md)**: Differential serving architecture and implementation details
 - **[LAYOUT_SHIFT_GUIDE.md](./LAYOUT_SHIFT_GUIDE.md)**: Cumulative Layout Shift prevention and monitoring
 - **[ERROR_HANDLING_GUIDE.md](./ERROR_HANDLING_GUIDE.md)**: Error boundaries and direct DOM SEO management
 - **[VIDEO_MODAL_IMPLEMENTATION.md](./VIDEO_MODAL_IMPLEMENTATION.md)**: Accessible video modal component with keyboard navigation
