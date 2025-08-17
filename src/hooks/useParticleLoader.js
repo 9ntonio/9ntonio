@@ -15,6 +15,7 @@ export const useParticleLoader = () => {
 	const [isParticlesLoaded, setIsParticlesLoaded] = useState(false);
 	const [hasError, setHasError] = useState(false);
 	const [showParticles, setShowParticles] = useState(false);
+	const [fadeInParticles, setFadeInParticles] = useState(false);
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
@@ -63,6 +64,8 @@ export const useParticleLoader = () => {
 
 	const handleParticlesLoaded = useCallback(() => {
 		setIsParticlesLoaded(true);
+		// Slight delay for smoother fade-in
+		setTimeout(() => setFadeInParticles(true), 100);
 	}, []);
 
 	const getParticleOptions = useCallback(() => {
@@ -74,6 +77,7 @@ export const useParticleLoader = () => {
 		isParticlesLoaded,
 		hasError,
 		showParticles,
+		fadeInParticles,
 		particlesInit,
 		handleParticlesLoaded,
 		getParticleOptions,

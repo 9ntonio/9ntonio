@@ -19,7 +19,7 @@ import logo from "../../static/logo-2.svg";
 const PreloadResources = React.lazy(() => import(/* webpackChunkName: "preload-resources" */ "../components/PreloadResources"));
 const ThirdPartyScriptLoader = React.lazy(() => import(/* webpackChunkName: "third-party-scripts" */ "../components/ThirdPartyScriptLoader"));
 
-// *Lazy load heavy components only when needed - with better chunking
+// Lazy load heavy components only when needed - with better chunking
 const Particles = React.lazy(() => import(/* webpackChunkName: "particles" */ "react-tsparticles"));
 const FontAwesome = React.lazy(() => import(/* webpackChunkName: "fontawesome" */ "../components/FontAwesome"));
 
@@ -27,7 +27,7 @@ const FontAwesome = React.lazy(() => import(/* webpackChunkName: "fontawesome" *
 const VideoModal = React.lazy(() => import(/* webpackChunkName: "video-modal" */ "../components/VideoModal"));
 
 export default function Home() {
-	const { isMounted, isParticlesLoaded, hasError, showParticles, particlesInit, handleParticlesLoaded, getParticleOptions } = useParticleLoader();
+	const { isMounted, isParticlesLoaded, hasError, showParticles, fadeInParticles, particlesInit, handleParticlesLoaded, getParticleOptions } = useParticleLoader();
 	const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
 	const isHydrated = useHydrated();
 
@@ -51,18 +51,23 @@ export default function Home() {
 			<FontLoadingStrategy />
 			<AdaptiveImagePreloader />
 			<ConnectionAwareImageLoader />
+
 			{process.env.NODE_ENV === "development" && <LayoutStabilityMonitor />}
-			<div className="font-fredoka text-textColor">
+
+			<div className="font-fredoka text-primary">
 				<Suspense fallback={null}>
 					<PreloadResources />
 				</Suspense>
+
 				<Suspense fallback={null}>
 					<ThirdPartyScriptLoader />
 				</Suspense>
 
 				{showParticles && !hasError && (
 					<Suspense fallback={<div className="fixed inset-0 bg-background" />}>
-						<Particles init={particlesInit} options={getParticleOptions()} id="particles" loaded={handleParticlesLoaded} />
+						<div className={`fixed inset-0 transition-opacity duration-1000 ease-out -z-10 ${fadeInParticles ? 'opacity-100' : 'opacity-0'}`}>
+							<Particles init={particlesInit} options={getParticleOptions()} id="particles" loaded={handleParticlesLoaded} />
+						</div>
 						{!isParticlesLoaded && <div className="fixed inset-0 -z-10 transition-opacity duration-500 bg-background" />}
 					</Suspense>
 				)}
@@ -83,7 +88,7 @@ export default function Home() {
 
 				<section className="mt-4">
 					<div className="container">
-						<div className="header-container flex flex-col md:flex-row md:items-center mb-4">
+						<div className="header-container flex flex-col md:flex-row md:items-center mb-0">
 							<div className="logo-container mb-1">
 								<img
 									src={logo}
@@ -113,9 +118,7 @@ export default function Home() {
 
 						<div className="font-loading">
 							<p className="text-stable">
-								Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable
-								component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record
-								of reducing development time through reusable patterns and improving application performance metrics by up to 60%.
+								Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record of reducing development time through reusable patterns & improving application performance metrics.
 							</p>
 
 							<p className="text-stable mb-6">
@@ -132,7 +135,7 @@ export default function Home() {
 											<li>Frontend: React, Angular, TypeScript, Next.js, iOS, Android, JavaScript (ES6+) & Blazor</li>
 											<li>Backend: C#, .NET, Node</li>
 											<li>State Management: NgRx, Redux, Angular Signals</li>
-											<li>Testing: Jest, Playwright, Jasmine, Karma</li>
+											<li>Testing: Jest, Playwright, Jasmine</li>
 											<li>Build Tools: Vite, Esbuild, Webpack, Angular CLI, NX</li>
 											<li>Automated component accessibility testing using AI</li>
 											<li>Architected AI-powered design system compiler reducing creation time by ~50%</li>
@@ -148,7 +151,7 @@ export default function Home() {
 											<li>CSS: SCSS, CSS-in-JS, Tailwind, Angular Material</li>
 											<li>Design Systems: Storybook, Style Dictionary</li>
 											<li>Version Control: Git, GitHub</li>
-											<li>CI/CD: Jenkins, GitHub Actions</li>
+											<li>CI/CD: GitHub Actions, Docker, AWS</li>
 										</ul>
 									</div>
 								</div>
@@ -240,9 +243,7 @@ export default function Home() {
 									>
 										Gusto
 									</OutboundLink>{" "}
-									with their brand refresh. Gusto is a large SaaS startup whose focus is in providing HR and accounting services to small business owners. As lead engineer, I managed a team of 6
-									software & QA engineers. While working out of the Gusto offices, I collaborated with Brand Studio, Marketing & Product teams. Together we were able to deliver over +100 pages on time
-									with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
+									with their brand refresh. Gusto is a large SaaS startup whose focus is in providing HR & accounting services to small business owners. As lead front end engineer, I managed a team of 6 software & QA engineers. While working out of the Gusto offices, I collaborated with Brand Studio, Marketing, Product & Growth teams. Together we were able to deliver over +100 pages on time with what was noted to be the "smoothest brand launch" anyone had seen 🎉.
 								</p>
 							</div>
 						</div>
@@ -284,10 +285,7 @@ export default function Home() {
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">Google Store</div>
 								</a>
 								<p className="text-stable">
-									Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal is to keep users'
-									front of mind and seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's engineers to meet their technical &
-									testing requirements. The engineers & I created various proof of concepts & prototypes that were tied to a suite of unit tests. This allowed us to test our architecture prior to
-									kickoff and assisted in creating a seamless delivery process.
+									Odopod was a mid-sized digital design agency that specialized in Human Centric Design. HCD is a problem-solving technique that puts people at the center. The goal is to keep users' front of mind & seek solutions that create intuitive & accessible products. As the Technical Director on this project, I worked with Google's engineers to meet their technical & testing requirements. The engineers & I created various proof of concepts along with prototypes that were tied to a suite of unit tests. This allowed us to test our architecture prior to kickoff and assisted in creating a seamless delivery process & streamlined the development process.
 								</p>
 							</div>
 						</div>
@@ -334,9 +332,7 @@ export default function Home() {
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">PlayStation Vue</div>
 								</OutboundLink>
 								<p className="text-stable">
-									The Odopod team and I built the iOS application for Sony's streaming service Vue. The application included live TV, DVR, and VOD features via a 3rd party content delivery service. As
-									the Technical Director, I worked with Sony on the iOS and Chromecast builds while also managing both internal & external engineering teams. I also assisted various design &
-									engineering vendors by on-boarding them into the product's vast ecosystem.
+									The Odopod team & I built the iOS application for Sony's streaming service Vue. The application included live TV, DVR, and VOD features via a 3rd party content delivery service. As the Technical Director, I worked with Sony on the iOS & Chromecast builds while also managing both the internal & external engineering teams. I also assisted various design & engineering vendors by on-boarding them into Vue's vast ecosystem.
 								</p>
 							</div>
 						</div>
@@ -422,8 +418,7 @@ export default function Home() {
 								</p>
 
 								<p className="text-stable">
-									I'm obsessed with this album. So much so that for some time I've been trying to make an app that would use the album song's as the data for the waveform. I've tried before and hit
-									walls. Recently I've started working on it again and with some help from{" "}
+									I'm obsessed with this album. So much so that for some time I've been trying to make an application that would use the album song's as data for the waveform. I've tried before and hit walls. Recently I've started working on it again & with some help from{" "}
 									<a
 										href="https://www.anthropic.com/"
 										target={LINK_ATTRIBUTES.TARGET}
@@ -456,7 +451,7 @@ export default function Home() {
 							<div className="text-primary text-3xl font-bold leading-tight mb-2">What technologies have I been working with?</div>
 
 							<p className="text-stable">
-								Angular, React, ReactNative, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, NX, Tailwind,{" "}
+								Angular, React, ReactNative, iOS, Android, C#, Blazor, Vite, TypeScript, PostgreSQL, Mongo, Figma, NX, Tailwind, Kiro,{" "}
 								{TECH_NAMES.map((tech, i) => (
 									<React.Fragment key={tech}>
 										<OutboundLink
@@ -471,7 +466,7 @@ export default function Home() {
 										{i < 2 && ", "}
 									</React.Fragment>
 								))}
-								& a lot of 💖&nbsp;
+								& a lot of 💖...{' '}
 								<OutboundLink
 									href="https://en.wikipedia.org/wiki/The_Outsiders_(film)"
 									target={LINK_ATTRIBUTES.TARGET}
@@ -479,7 +474,7 @@ export default function Home() {
 									className="text-primary hover:text-highlight"
 									aria-label="Learn about The Outsiders film on Wikipedia (opens in new tab)"
 								>
-									Stay Gold
+									Stay Gold!
 								</OutboundLink>
 							</p>
 						</div>
@@ -489,8 +484,8 @@ export default function Home() {
 				{isVideoModalOpen && (
 					<Suspense
 						fallback={
-							<div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-								<div className="text-white">Loading...</div>
+							<div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+								<div className="text-primary">Loading...</div>
 							</div>
 						}
 					>

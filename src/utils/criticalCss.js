@@ -43,16 +43,20 @@ const generateCriticalCSS = () => `
     font-family: ${FONT_FAMILIES.fredoka};
   }
 
-  /* Container with consistent spacing */
+  /* Container with consistent spacing - single source of truth */
   .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     width: 100%;
+    /* Prevent layout shifts */
+    box-sizing: border-box;
   }
 
   @media (min-width: 768px) {
-    .container { padding: 0; }
+    .container {
+      padding: 0 1rem;
+    }
   }
 
   /* Logo container - prevent CLS */

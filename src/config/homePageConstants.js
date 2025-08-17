@@ -18,6 +18,6 @@ export const VIDEO_CONFIG = {
 
 export const SEO_CONFIG = {
 	DESCRIPTION:
-		"Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics by up to 60%",
+		"Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance & implementing modern frontend architectures with a strong focus on design systems & automated testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics.",
 	KEYWORDS: "software development, engineering, AI, design systems, front end development, web development, design technology, design systems engineering, design systems architecture",
 };
