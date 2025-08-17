@@ -179,17 +179,31 @@ const getSplitChunksConfig = (isModern = isModernBuild()) => {
   if (isModern) {
     return {
       chunks: "all",
-      minSize: 15000,
-      maxSize: 200000,
+      minSize: 10000,
+      maxSize: 150000, // Smaller chunks for better loading
       minChunks: 1,
       maxAsyncRequests: 30,
-      maxInitialRequests: 30,
-      enforceSizeThreshold: 50000,
+      maxInitialRequests: 6, // Reduced to improve initial load
+      enforceSizeThreshold: 40000,
       cacheGroups: {
-        // Framework chunk (React, ReactDOM)
-        framework: {
-          test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
-          name: "framework",
+        // Split React and ReactDOM into separate chunks for better caching
+        react: {
+          test: /[\\/]node_modules[\\/]react[\\/]/,
+          name: "react",
+          chunks: "all",
+          priority: 50,
+          enforce: true,
+        },
+        reactDom: {
+          test: /[\\/]node_modules[\\/]react-dom[\\/]/,
+          name: "react-dom",
+          chunks: "all",
+          priority: 45,
+          enforce: true,
+        },
+        scheduler: {
+          test: /[\\/]node_modules[\\/]scheduler[\\/]/,
+          name: "scheduler",
           chunks: "all",
           priority: 40,
           enforce: true,

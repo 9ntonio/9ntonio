@@ -28,17 +28,19 @@ module.exports = {
 					respectDNT: true,
 					exclude: ["/preview/**", "/do-not-track/me/too/"],
 					delayOnRouteUpdate: 0, // No delay on route updates
+					// Critical: Delay GA loading until after page is interactive
+					defer: true,
 				},
 			},
 		},
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Fredoka:300,400,500,600,700`],
+				fonts: [`Fredoka:400,600`], // Only load essential weights initially
 				display: "swap",
 				preconnect: true,
 				crossOrigin: "anonymous",
-				preload: true,
+				preload: false, // Don't preload to reduce initial requests
 				subsets: ['latin'],
 				// Only load characters we actually use for better performance
 				text: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!?:;()[]{}@#$%&*+-=<>/"\'',

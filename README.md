@@ -16,7 +16,7 @@ This portfolio demonstrates technical expertise through both content and impleme
 - **Performance Optimized**: Lighthouse score optimized from 64 to 90+ through strategic lazy loading and code splitting
 - **PWA Ready**: Web App Manifest enables installation as a native-like app experience
 - **Accessibility Compliant**: WCAG 2.1 AA compliant with comprehensive aria-labels and screen reader support
-- **Error Handling**: Comprehensive error boundaries and direct DOM SEO management with favicon handling for robust user experience
+- **Error Handling**: Comprehensive error boundaries and Gatsby Head API SEO management with favicon handling for robust user experience
 - **Favicon Management**: Dual-layer favicon system with static HTML fallbacks and dynamic JavaScript management
 - **Video Modal System**: Interactive video thumbnails with play button overlays trigger accessible modal component for embedded video playback with keyboard navigation and backdrop controls
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
@@ -47,12 +47,19 @@ This portfolio demonstrates technical expertise through both content and impleme
 - **Google Fonts**: Fredoka font family with display swap
 - **Custom CSS**: Critical CSS inlining for performance
 
+### SEO & Meta Management
+
+- **Gatsby Head API**: Modern SEO management using Gatsby's Head API for optimal SSR performance
+- **MinimalSeo Component**: Lightweight SEO component for performance-critical pages
+- **Comprehensive Meta Tags**: Open Graph, Twitter Cards, and structured data support
+- **Dynamic Favicon Management**: Multi-format favicon support with fallback handling
+
 ### Performance & Optimization
 
 - **Gatsby Image**: Optimized images with WebP/AVIF formats, 75% quality compression, and metadata stripping
 - **Responsive Images**: Enhanced breakpoints (480, 750, 1080, 1366, 1920px) for optimal mobile performance
 - **Code Splitting**: Webpack chunks for vendors, particles, react-player
-- **Lazy Loading**: React.lazy() for heavy components
+- **Lazy Loading**: React.lazy() for heavy components and core utilities with dedicated webpack chunks
 - **Bundle Analysis**: Custom script for monitoring JS bundle sizes
 - **Terser Minification**: Advanced JavaScript compression achieving 83.7% size reduction with aggressive optimization settings
 
@@ -183,7 +190,8 @@ yarn verify-build            # Verify build integrity
 ```
 ├── src/                    # Source code
 │   ├── components/         # Reusable React components
-│   │   ├── Seo.js         # SEO/meta tags component with dynamic favicon management
+│   │   ├── Seo.js         # SEO/meta tags component using Gatsby Head API
+│   │   ├── MinimalSeo.js  # Lightweight SEO component for performance-critical pages
 │   │   ├── FontAwesome.js # Lazy-loaded icon component
 │   │   ├── ErrorBoundary.js # Error handling and recovery
 │   │   ├── VideoModal.js  # Accessible video modal with keyboard navigation
@@ -217,18 +225,22 @@ This portfolio has been optimized for maximum performance:
 
 ### Key Optimizations
 
-- **Code Splitting**: Separate chunks for vendors, particles, react-player
-- **Lazy Loading**: Heavy components load only when needed
+- **Code Splitting**: Separate chunks for vendors, particles, react-player, and core utility components
+- **Lazy Loading**: Heavy components and core utilities load only when needed with dedicated webpack chunks
+- **Component-Level Optimization**: Core utilities (PreloadResources, PerformanceMonitor, ErrorBoundary, etc.) lazy-loaded to reduce initial bundle size
 - **Image Optimization**: WebP/AVIF formats with progressive loading, 75% quality compression, and metadata stripping for smaller file sizes
 - **Critical Resource Preloading**: Above-the-fold images (logo, hero images) and direct WOFF2 font file preloading for faster initial render
 - **Layout Shift Prevention**: Comprehensive CLS fixes with explicit dimensions and stable loading states
-- **Bundle Analysis**: Continuous monitoring of JavaScript bundle sizes
+- **Bundle Analysis**: Continuous monitoring of JavaScript bundle sizes with 250KB asset limits
 - **Critical CSS**: Inlined essential styles to prevent render blocking
 - **Smart Resource Hints**: Strategic DNS prefetch and preconnect with user interaction-based loading for third-party resources (Vimeo)
 - **Performance Monitoring**: Real-time CLS and LCP tracking in development
-- **SSR Optimization**: SEO component excluded from server-side rendering fallback for improved hydration
-- **Error Handling**: React error boundaries and direct DOM SEO management for stability
+- **SSR Optimization**: Gatsby Head API for optimal server-side rendering and hydration performance
+- **Modern SEO Architecture**: Gatsby Head API replaces React Helmet for better performance and React compliance
+- **Error Handling**: React error boundaries and Gatsby Head API SEO management for stability
 - **Advanced Minification**: Terser configuration with aggressive compression, console removal, and multi-pass optimization achieving 83.7% JavaScript size reduction
+- **Enhanced Tree Shaking**: Advanced webpack optimizations including `usedExports`, `sideEffects`, and `innerGraph` for maximum dead code elimination
+- **Runtime Optimization**: Smaller runtime chunks with deterministic module IDs for improved caching efficiency
 
 ### Bundle Splitting Strategy
 
@@ -237,7 +249,13 @@ This portfolio has been optimized for maximum performance:
     - FontAwesome icons
     - Particles.js
     - ReactPlayer
+- **Core Utility Chunks**: Dedicated chunks for performance and utility components:
+    - PreloadResources, ThirdPartyScriptLoader
+    - PerformanceMonitor, LayoutStabilityMonitor
+    - ErrorBoundary, CriticalCSSLoader, FontLoadingOptimizer
 - **Better Caching**: Users only re-download changed chunks
+- **Advanced Tree Shaking**: Enhanced dead code elimination with `usedExports`, `sideEffects`, and `innerGraph` optimizations
+- **Performance Monitoring**: Build-time asset size limits (250KB) with production warnings for oversized bundles
 
 ### Component Implementation
 
@@ -302,7 +320,7 @@ The deployment configuration includes comprehensive asset processing for maximum
 ### Favicon Management System
 
 - **Static HTML Fallbacks**: ICO and PNG favicons in HTML template for immediate display
-- **Dynamic JavaScript Management**: SEO component ensures favicon presence with existence checking
+- **Gatsby Head API Management**: SEO components use Gatsby's Head API for optimal meta tag handling
 - **Progressive Enhancement**: Works without JavaScript, enhanced with client-side management
 - **Browser Compatibility**: Multiple formats (ICO, PNG) for broad browser support
 
@@ -332,7 +350,7 @@ The deployment configuration includes comprehensive asset processing for maximum
 - **Color Contrast**: Meets AA standards throughout
 - **External Link Indicators**: Clear indication of links opening in new tabs
 - **Modal Accessibility**: Proper focus management, backdrop dismissal, and keyboard controls
-- **Error Handling**: Accessible error messages, recovery options, and stable SEO management
+- **Error Handling**: Accessible error messages, recovery options, and stable Gatsby Head API SEO management
 
 ### Implementation Details
 
@@ -357,7 +375,7 @@ The deployment configuration includes comprehensive asset processing for maximum
 ### Typography
 
 - **Font Family**: Fredoka (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700
+- **Weights**: 400, 600 (optimized for performance)
 - **Loading**: Display swap for performance
 
 ### Responsive Breakpoints
@@ -547,11 +565,11 @@ Read about the AI-assisted development process: [Unknown Pleasures in a Brave Ne
 - **[TERSER_OPTIMIZATION_GUIDE.md](./TERSER_OPTIMIZATION_GUIDE.md)**: Advanced Terser configuration achieving 83.7% compression
 - **[MODERN_BUILD_IMPLEMENTATION.md](./MODERN_BUILD_IMPLEMENTATION.md)**: Differential serving architecture and implementation details
 - **[LAYOUT_SHIFT_GUIDE.md](./LAYOUT_SHIFT_GUIDE.md)**: Cumulative Layout Shift prevention and monitoring
-- **[ERROR_HANDLING_GUIDE.md](./ERROR_HANDLING_GUIDE.md)**: Error boundaries and direct DOM SEO management
+- **[ERROR_HANDLING_GUIDE.md](./ERROR_HANDLING_GUIDE.md)**: Error boundaries and Gatsby Head API SEO management
 - **[VIDEO_MODAL_IMPLEMENTATION.md](./VIDEO_MODAL_IMPLEMENTATION.md)**: Accessible video modal component with keyboard navigation
 - **[VIDEO_MODAL_INTEGRATION_GUIDE.md](./VIDEO_MODAL_INTEGRATION_GUIDE.md)**: Integration guide for VideoModal component
 - **[VIDEO_THUMBNAIL_IMPLEMENTATION_UPDATE.md](./VIDEO_THUMBNAIL_IMPLEMENTATION_UPDATE.md)**: Interactive video thumbnail with play button overlay implementation
-- **[SEO_OPTIMIZATION_UPDATE.md](./SEO_OPTIMIZATION_UPDATE.md)**: Direct DOM SEO management replacing React Helmet
+- **[SEO_OPTIMIZATION_UPDATE.md](./SEO_OPTIMIZATION_UPDATE.md)**: Gatsby Head API SEO management for optimal performance
 - **[FAVICON_MANAGEMENT_UPDATE.md](./FAVICON_MANAGEMENT_UPDATE.md)**: Comprehensive dual-layer favicon management system
 - **[HTML_TEMPLATE_FAVICON_UPDATE.md](./HTML_TEMPLATE_FAVICON_UPDATE.md)**: Static favicon fallbacks in HTML template
 - **[PWA_MANIFEST_UPDATE.md](./PWA_MANIFEST_UPDATE.md)**: Progressive Web App implementation with installable app experience

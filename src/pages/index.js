@@ -2,19 +2,29 @@ import React, { Suspense } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { OutboundLink } from "gatsby-plugin-gtag";
 import Seo from "../components/Seo";
-import PreloadResources from "../components/PreloadResources";
-import ThirdPartyScriptLoader from "../components/ThirdPartyScriptLoader";
-import PerformanceMonitor from "../components/PerformanceMonitor";
-import LayoutStabilityMonitor from "../components/LayoutStabilityMonitor";
 import ErrorBoundary from "../components/ErrorBoundary";
-import VideoModal from "../components/VideoModal";
-import CriticalCSSLoader from "../components/CriticalCSSLoader";
-import FontLoadingOptimizer from "../components/FontLoadingOptimizer";
 import logo from "../../static/logo-2.svg";
 
-// *Lazy load heavy components only when needed
-const Particles = React.lazy(() => import("react-tsparticles"));
-const FontAwesome = React.lazy(() => import("../components/FontAwesome"));
+// Lazy load only the heaviest, non-critical components
+const PreloadResources = React.lazy(() =>
+	import(/* webpackChunkName: "preload-resources" */ "../components/PreloadResources")
+);
+const ThirdPartyScriptLoader = React.lazy(() =>
+	import(/* webpackChunkName: "third-party-scripts" */ "../components/ThirdPartyScriptLoader")
+);
+
+// *Lazy load heavy components only when needed - with better chunking
+const Particles = React.lazy(() =>
+	import(/* webpackChunkName: "particles" */ "react-tsparticles")
+);
+const FontAwesome = React.lazy(() =>
+	import(/* webpackChunkName: "fontawesome" */ "../components/FontAwesome")
+);
+
+// Lazy load video modal only when needed
+const VideoModal = React.lazy(() =>
+	import(/* webpackChunkName: "video-modal" */ "../components/VideoModal")
+);
 
 export default function Home() {
 	const [isMounted, setIsMounted] = React.useState(false);
@@ -30,10 +40,36 @@ export default function Home() {
 			// *Check if device is mobile (using 768px as breakpoint)
 			const isMobile = window.innerWidth < 768;
 
-			// *Only load particles on desktop after a delay to improve initial load
+			// *Only load particles on desktop after user interaction or delay
 			if (!isMobile) {
-				const timer = setTimeout(() => setShowParticles(true), 1000);
-				return () => clearTimeout(timer);
+				// Wait for user interaction or 2 seconds, whichever comes first
+				let hasInteracted = false;
+
+				const handleInteraction = () => {
+					if (!hasInteracted) {
+						hasInteracted = true;
+						setShowParticles(true);
+					}
+				};
+
+				const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+				events.forEach(event => {
+					document.addEventListener(event, handleInteraction, { once: true, passive: true });
+				});
+
+				// Fallback timer - load after 2 seconds if no interaction
+				const timer = setTimeout(() => {
+					if (!hasInteracted) {
+						setShowParticles(true);
+					}
+				}, 2000);
+
+				return () => {
+					clearTimeout(timer);
+					events.forEach(event => {
+						document.removeEventListener(event, handleInteraction);
+					});
+				};
 			}
 		}
 	}, []);
@@ -93,17 +129,13 @@ export default function Home() {
 
 	return (
 		<ErrorBoundary>
-			<CriticalCSSLoader>
-				<div className="font-fredoka text-textColor">
-				<PreloadResources />
-				<FontLoadingOptimizer />
-				<ThirdPartyScriptLoader />
-				{process.env.NODE_ENV === "development" && (
-					<>
-						<PerformanceMonitor />
-						<LayoutStabilityMonitor />
-					</>
-				)}
+			<div className="font-fredoka text-textColor">
+				<Suspense fallback={null}>
+					<PreloadResources />
+				</Suspense>
+				<Suspense fallback={null}>
+					<ThirdPartyScriptLoader />
+				</Suspense>
 
 				{showParticles && !hasError && (
 					<Suspense fallback={<div className="fixed inset-0" style={{ background: BACKGROUND_COLOR }} />}>
@@ -114,16 +146,11 @@ export default function Home() {
 
 				<Seo
 					description="Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance, and implementing modern frontend architectures with a strong focus on design systems and automated testing. Proven track record of reducing development time through reusable patterns and improving application performance metrics by up to 60%"
-					Sitetitle="Antonio Almena"
 					meta={[
 						{
 							name: "keywords",
 							content:
 								"software development, engineering, AI, design systems, front end development, web development, design technology, design systems engineering, design systems architecture",
-						},
-						{
-							property: "og:type",
-							content: "website",
 						},
 						{
 							name: "robots",
@@ -249,7 +276,7 @@ export default function Home() {
 											width={600}
 											height={400}
 											formats={["avif", "webp", "auto"]}
-											quality={80}
+											quality={75}
 											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105"
 											loading="eager"
@@ -314,7 +341,7 @@ export default function Home() {
 											width={600}
 											height={400}
 											formats={["avif", "webp", "auto"]}
-											quality={80}
+											quality={70}
 											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 											loading="lazy"
@@ -358,7 +385,7 @@ export default function Home() {
 											width={600}
 											height={400}
 											formats={["avif", "webp", "auto"]}
-											quality={80}
+											quality={70}
 											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 											loading="lazy"
@@ -400,7 +427,7 @@ export default function Home() {
 											width={600}
 											height={400}
 											formats={["avif", "webp", "auto"]}
-											quality={80}
+											quality={70}
 											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg"
 											loading="lazy"
@@ -523,14 +550,17 @@ export default function Home() {
 					</div>
 				</section>
 
-				<VideoModal
-					isOpen={isVideoModalOpen}
-					onClose={() => setIsVideoModalOpen(false)}
-					videoUrl="https://player.vimeo.com/video/374826636"
-					title="Gusto Project Showcase"
-				/>
-				</div>
-			</CriticalCSSLoader>
+				{isVideoModalOpen && (
+					<Suspense fallback={<div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"><div className="text-white">Loading...</div></div>}>
+						<VideoModal
+							isOpen={isVideoModalOpen}
+							onClose={() => setIsVideoModalOpen(false)}
+							videoUrl="https://player.vimeo.com/video/374826636"
+							title="Gusto Project Showcase"
+						/>
+					</Suspense>
+				)}
+			</div>
 		</ErrorBoundary>
 	);
 }

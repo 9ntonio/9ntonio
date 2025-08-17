@@ -3,10 +3,9 @@ import React, { useEffect } from "react";
 export default function PreloadResources() {
 	useEffect(() => {
 		if (typeof document !== "undefined") {
-			// Preload critical above-the-fold images
+			// Only preload the most critical above-the-fold image
 			const criticalImages = [
-				"/logo-2.svg",
-				"/gusto.webp"
+				"/logo-2.svg" // Only preload logo, let Gusto image load naturally
 			];
 
 			criticalImages.forEach((src) => {
@@ -14,13 +13,13 @@ export default function PreloadResources() {
 				link.rel = "preload";
 				link.href = src;
 				link.as = "image";
+				link.importance = "high";
 				document.head.appendChild(link);
 			});
 
-			// Preload critical font files directly (not CSS)
+			// Only preload the most critical font weight
 			const criticalFonts = [
-				"https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2", // Fredoka 400
-				"https://fonts.gstatic.com/s/fredoka/v14/X7nO4R8wZKCVl-PGzj9pGlOqpKkFcw.woff2" // Fredoka 600
+				"https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2" // Only Fredoka 400
 			];
 
 			criticalFonts.forEach((href) => {
@@ -30,13 +29,14 @@ export default function PreloadResources() {
 				link.as = "font";
 				link.type = "font/woff2";
 				link.crossOrigin = "anonymous";
+				link.importance = "high";
 				document.head.appendChild(link);
 			});
 
-			// Load font CSS with optimized strategy
+			// Load font CSS with optimized strategy - only essential weights
 			const fontPreload = document.createElement("link");
 			fontPreload.rel = "preload";
-			fontPreload.href = "https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap";
+			fontPreload.href = "https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap";
 			fontPreload.as = "style";
 			fontPreload.onload = function () {
 				this.onload = null;
@@ -48,7 +48,7 @@ export default function PreloadResources() {
 			const noscript = document.createElement("noscript");
 			const fontFallback = document.createElement("link");
 			fontFallback.rel = "stylesheet";
-			fontFallback.href = "https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap";
+			fontFallback.href = "https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap";
 			noscript.appendChild(fontFallback);
 			document.head.appendChild(noscript);
 

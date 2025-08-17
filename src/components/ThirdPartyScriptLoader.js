@@ -30,10 +30,10 @@ export default function ThirdPartyScriptLoader() {
 		// Add listeners immediately
 		addInteractionListeners();
 
-		// Fallback: load after 3 seconds if no interaction
+		// Fallback: load after 5 seconds if no interaction (increased delay)
 		const fallbackTimer = setTimeout(() => {
 			setHasUserInteracted(true);
-		}, 3000);
+		}, 5000);
 
 		return () => {
 			clearTimeout(fallbackTimer);

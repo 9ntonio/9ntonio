@@ -53,7 +53,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 				minimizer: [new TerserPlugin(getTerserOptions(isModern))],
 				splitChunks: getSplitChunksConfig(isModern),
 
-				// Runtime chunk optimization
+				// Runtime chunk optimization - smaller runtime
 				runtimeChunk: {
 					name: "runtime",
 				},
@@ -64,6 +64,18 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 				// Better module IDs for caching
 				moduleIds: "deterministic",
 				chunkIds: "deterministic",
+
+				// Additional optimizations for performance
+				usedExports: true,
+				sideEffects: false,
+				innerGraph: true,
+			},
+
+			// Performance hints
+			performance: {
+				maxAssetSize: 250000,
+				maxEntrypointSize: 250000,
+				hints: process.env.NODE_ENV === 'production' ? 'warning' : false,
 			},
 		};
 

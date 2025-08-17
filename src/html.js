@@ -1,129 +1,157 @@
-import React from "react";
-import PropTypes from "prop-types";
-
-const { getCriticalCSS } = require("./utils/criticalCss");
+import React from "react"
+import PropTypes from "prop-types"
 
 export default function HTML(props) {
-	return (
-		<html {...props.htmlAttributes}>
-			<head>
-				<meta charSet="utf-8" />
-				<meta httpEquiv="x-ua-compatible" content="ie=edge" />
-				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  return (
+    <html {...props.htmlAttributes}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
-				{/* Favicon */}
-				<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-				<link rel="icon" type="image/png" href="/favicon.png" />
+        {/* Critical resource hints */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-				{/* Resource hints for performance */}
-				<link rel="dns-prefetch" href="//fonts.googleapis.com" />
-				<link rel="dns-prefetch" href="//fonts.gstatic.com" />
-				<link rel="dns-prefetch" href="//vimeo.com" />
-				<link rel="dns-prefetch" href="//player.vimeo.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* Critical font preload - only the most essential */}
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
 
-				{/* Font optimization meta tags */}
-				<meta name="font-display" content="swap" />
-				<meta name="font-loading" content="optimized" />
+        {/* Critical CSS inline */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical above-the-fold styles */
+            body {
+              margin: 0;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              background-color: #00474f;
+              color: #fff;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
 
-				{/* Preload critical font weights with proper priorities */}
-				{/* Fredoka Regular (400) - Most commonly used weight */}
-				<link
-					rel="preload"
-					href="https://fonts.gstatic.com/s/fredoka/v14/X7nP4R8wZKCVl-PGzj9pGlOqpKk.woff2"
-					as="font"
-					type="font/woff2"
-					crossOrigin="anonymous"
-					importance="high"
-				/>
-				{/* Fredoka Medium (500) - Secondary weight for emphasis */}
-				<link
-					rel="preload"
-					href="https://fonts.gstatic.com/s/fredoka/v14/X7nO4R8wZKCVl-PGzj9pGlOqpKkFcw.woff2"
-					as="font"
-					type="font/woff2"
-					crossOrigin="anonymous"
-					importance="low"
-				/>
+            .font-fredoka {
+              font-family: Fredoka, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+              font-display: swap;
+            }
 
-				{/* Critical CSS inline for immediate rendering */}
-				<style
-					dangerouslySetInnerHTML={{
-						__html: getCriticalCSS(),
-					}}
-				/>
+            .container {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 0 1rem;
+            }
 
-				{/* Load non-critical CSS asynchronously */}
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-							(function() {
-								var link = document.createElement('link');
-								link.rel = 'stylesheet';
-								link.href = '/styles.css';
-								link.media = 'print';
-								link.onload = function() { this.media = 'all'; };
-								document.head.appendChild(link);
-							})();
-						`,
-					}}
-				/>
+            @media (min-width: 768px) {
+              .container { padding: 0; }
+            }
 
-				{/* Noscript fallback for CSS loading */}
-				<noscript>
-					<link rel="stylesheet" href="/styles.css" />
-				</noscript>
+            /* Loading state */
+            .loading-placeholder {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              min-height: 100vh;
+              background: #00474f;
+            }
 
-				{/* Modern JavaScript feature detection and differential serving */}
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-							(function() {
-								// Feature detection for modern JavaScript support
-								var isModern = (
-									'noModule' in HTMLScriptElement.prototype &&
-									'import' in document.createElement('link') &&
-									typeof Symbol !== 'undefined' &&
-									typeof Symbol.iterator !== 'undefined' &&
-									typeof Promise !== 'undefined' &&
-									typeof Object.assign !== 'undefined' &&
-									typeof Array.from !== 'undefined' &&
-									typeof Map !== 'undefined' &&
-									typeof Set !== 'undefined'
-								);
+            .animate-pulse {
+              animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
 
-								// Store modern browser detection for later use
-								window.__MODERN_BROWSER__ = isModern;
+            @keyframes pulse {
+              0%, 100% { opacity: 1; }
+              50% { opacity: 0.5; }
+            }
+          `
+        }} />
 
-								// Add class to document for CSS targeting
-								document.documentElement.className += isModern ? ' modern-js' : ' legacy-js';
+        {/* Load non-critical CSS asynchronously */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              var link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = '/styles.css';
+              link.media = 'print';
+              link.onload = function() { this.media = 'all'; };
+              document.head.appendChild(link);
+            })();
+          `
+        }} />
 
-								// Performance mark for modern browser detection
-								if (typeof performance !== 'undefined' && performance.mark) {
-									performance.mark('modern-detection-complete');
-								}
-							})();
-						`,
-					}}
-				/>
+        <noscript>
+          <link rel="stylesheet" href="/styles.css" />
+        </noscript>
 
-				{props.headComponents}
-			</head>
-			<body {...props.bodyAttributes}>
-				{props.preBodyComponents}
-				<div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
-				{props.postBodyComponents}
-			</body>
-		</html>
-	);
+        {props.headComponents}
+      </head>
+      <body {...props.bodyAttributes}>
+        {props.preBodyComponents}
+        <div
+          key={`body`}
+          id="___gatsby"
+          dangerouslySetInnerHTML={{ __html: props.body }}
+        />
+
+        {/* Prioritize critical scripts */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // Modern browser detection
+            (function() {
+              var isModern = 'noModule' in HTMLScriptElement.prototype &&
+                           'import' in document.createElement('link') &&
+                           typeof Symbol !== 'undefined' && Symbol.iterator !== undefined &&
+                           typeof Promise !== 'undefined' && Object.assign !== undefined &&
+                           Array.from !== undefined &&
+                           typeof Map !== 'undefined' && typeof Set !== 'undefined';
+
+              window.__MODERN_BROWSER__ = isModern;
+              document.documentElement.className += isModern ? ' modern-js' : ' legacy-js';
+
+              if (typeof performance !== 'undefined' && performance.mark) {
+                performance.mark('modern-detection-complete');
+              }
+            })();
+          `
+        }} />
+
+        {/* Load scripts with priority */}
+        {props.postBodyComponents.map((component, index) => {
+          // Prioritize runtime and framework scripts
+          if (component.props?.src?.includes('runtime-') ||
+              component.props?.src?.includes('framework-')) {
+            return React.cloneElement(component, {
+              key: index,
+              async: false, // Load synchronously for critical scripts
+              defer: false
+            });
+          }
+
+          // Defer non-critical scripts
+          return React.cloneElement(component, {
+            key: index,
+            async: true,
+            defer: true
+          });
+        })}
+      </body>
+    </html>
+  )
 }
 
 HTML.propTypes = {
-	htmlAttributes: PropTypes.object,
-	headComponents: PropTypes.array,
-	bodyAttributes: PropTypes.object,
-	preBodyComponents: PropTypes.array,
-	body: PropTypes.string,
-	postBodyComponents: PropTypes.array,
-};
+  htmlAttributes: PropTypes.object,
+  headComponents: PropTypes.array,
+  bodyAttributes: PropTypes.object,
+  preBodyComponents: PropTypes.array,
+  body: PropTypes.string,
+  postBodyComponents: PropTypes.array,
+}
