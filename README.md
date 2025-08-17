@@ -598,4 +598,6 @@ Senior Full Stack Engineer
 📧 [antonio@spacebase.one](mailto:antonio@spacebase.one)  
 🌐 [antonio.almena.io](https://antonio.almena.io)  
 💼 [LinkedIn](https://www.linkedin.com/in/antonio-almena/)
+
+## 💾 Netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cd9d239a-46b6-4066-ad93-532bdd965572/deploy-status)](https://app.netlify.com/projects/agitated-saha-24099f/deploys)
