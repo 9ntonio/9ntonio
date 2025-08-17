@@ -1,4 +1,4 @@
-# Antonio Almena Portfolio
+# Antonio Almena's Portfolio
 
 A high-performance personal portfolio website showcasing the work and expertise of Antonio Almena, a Senior Full Stack Engineer with 12+ years of experience.
 
@@ -581,31 +581,6 @@ This portfolio showcases modern AI-assisted development practices:
 ### Blog Post
 
 Read about the AI-assisted development process: [Unknown Pleasures in a Brave New World: AI & Creativity](https://medium.com/@9ntonio/unknown-pleasures-in-a-brave-new-world-ai-creativity-77f5560220bf)
-
-## 📚 Documentation
-
-- **[DEPENDENCY_RESOLUTION_GUIDE.md](./DEPENDENCY_RESOLUTION_GUIDE.md)**: Yarn resolutions for React Server Components compatibility
-- **[MISSING_ASSETS.md](./MISSING_ASSETS.md)**: Required assets for full functionality
-- **[ACCESSIBILITY_GUIDE.md](./ACCESSIBILITY_GUIDE.md)**: Comprehensive accessibility implementation guide
-- **[MINIFICATION_GUIDE.md](./MINIFICATION_GUIDE.md)**: JavaScript minification and optimization details
-- **[TERSER_OPTIMIZATION_GUIDE.md](./TERSER_OPTIMIZATION_GUIDE.md)**: Advanced Terser configuration achieving 83.7% compression
-- **[MODERN_BUILD_IMPLEMENTATION.md](./MODERN_BUILD_IMPLEMENTATION.md)**: Differential serving architecture and implementation details
-- **[LAYOUT_SHIFT_GUIDE.md](./LAYOUT_SHIFT_GUIDE.md)**: Cumulative Layout Shift prevention and monitoring
-- **[ERROR_HANDLING_GUIDE.md](./ERROR_HANDLING_GUIDE.md)**: Error boundaries and Gatsby Head API SEO management
-- **[VIDEO_MODAL_IMPLEMENTATION.md](./VIDEO_MODAL_IMPLEMENTATION.md)**: Accessible video modal component with keyboard navigation
-- **[VIDEO_MODAL_INTEGRATION_GUIDE.md](./VIDEO_MODAL_INTEGRATION_GUIDE.md)**: Integration guide for VideoModal component
-- **[VIDEO_THUMBNAIL_IMPLEMENTATION_UPDATE.md](./VIDEO_THUMBNAIL_IMPLEMENTATION_UPDATE.md)**: Interactive video thumbnail with play button overlay implementation
-- **[SEO_OPTIMIZATION_UPDATE.md](./SEO_OPTIMIZATION_UPDATE.md)**: Gatsby Head API SEO management for optimal performance
-- **[FAVICON_MANAGEMENT_UPDATE.md](./FAVICON_MANAGEMENT_UPDATE.md)**: Comprehensive dual-layer favicon management system
-- **[HTML_TEMPLATE_FAVICON_UPDATE.md](./HTML_TEMPLATE_FAVICON_UPDATE.md)**: Static favicon fallbacks in HTML template
-- **[PWA_MANIFEST_UPDATE.md](./PWA_MANIFEST_UPDATE.md)**: Progressive Web App implementation with installable app experience
-- **[PERFORMANCE_OPTIMIZATIONS.md](./PERFORMANCE_OPTIMIZATIONS.md)**: Detailed performance optimization strategies
-- **[SSR_OPTIMIZATION_UPDATE.md](./SSR_OPTIMIZATION_UPDATE.md)**: Latest SSR performance optimization details
-- **[GIT_HOOKS_INTEGRATION_UPDATE.md](./GIT_HOOKS_INTEGRATION_UPDATE.md)**: Git hooks setup with Husky and lint-staged for automated code quality
-- **[ASPECT_RATIO_CONSISTENCY_UPDATE.md](./ASPECT_RATIO_CONSISTENCY_UPDATE.md)**: Aspect ratio standardization for visual consistency
-- **[VIDEO_OPTIMIZATION_UPDATE.md](./VIDEO_OPTIMIZATION_UPDATE.md)**: Video content optimization with StaticImage and external links
-- **[DOCUMENTATION_UPDATES.md](./DOCUMENTATION_UPDATES.md)**: Summary of all documentation improvements
-- **[CLAUDE.md](./CLAUDE.md)**: AI assistant guidelines and project conventions
 
 ## 🏆 Awards & Recognition
 
