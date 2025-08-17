@@ -47,10 +47,12 @@
 	],
 	"scripts": {
 		"dev": "gatsby develop",
+		"dev:prod": "yarn build:modern && yarn serve",
+		"dev:watch": "yarn build:modern --watch",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"lint": "eslint \"src/**/*.{js,jsx}\" --fix",
 		"lint:check": "eslint \"src/**/*.{js,jsx}\"",
-		"start": "yarn dev",
+		"start": "yarn dev:prod",
 		"clean": "gatsby clean",
 		"build": "yarn build:modern && yarn postbuild && yarn analyze-bundle",
 		"build:modern": "NODE_ENV=production GATSBY_MODERN_BUILD=true GATSBY_CPU_COUNT=2 GATSBY_CONTINUE_BUILD_ON_MISSING_ADAPTER=true gatsby build",
