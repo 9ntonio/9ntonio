@@ -1,6 +1,6 @@
 /**
- * Babel configuration for differential serving
- * Supports both modern ES2020+ builds and legacy ES5 fallbacks
+ * Babel configuration optimized for modern JavaScript
+ * Reduces legacy JavaScript output for better performance
  */
 
 const isModernBuild = process.env.GATSBY_MODERN_BUILD !== "false";
@@ -19,14 +19,25 @@ module.exports = {
 					version: 3,
 					proposals: true,
 				},
-				// Different module handling for modern vs legacy builds
 				modules: false, // Let webpack handle modules
+				bugfixes: true,
 
-				// Modern builds can use more aggressive optimizations
-				bugfixes: isModernBuild,
-
-				// Simplified configuration to avoid transform conflicts
-				// exclude: [],
+				// For modern builds, exclude unnecessary transforms
+				...(isModernBuild && {
+					exclude: [
+						"@babel/plugin-transform-regenerator",
+						"@babel/plugin-transform-async-to-generator",
+						"@babel/plugin-proposal-async-generator-functions",
+						"@babel/plugin-transform-classes",
+						"@babel/plugin-transform-arrow-functions",
+						"@babel/plugin-transform-block-scoping",
+						"@babel/plugin-transform-destructuring",
+						"@babel/plugin-transform-parameters",
+						"@babel/plugin-transform-shorthand-properties",
+						"@babel/plugin-transform-spread",
+						"@babel/plugin-transform-template-literals",
+					],
+				}),
 			},
 		],
 		[
@@ -39,33 +50,22 @@ module.exports = {
 	],
 
 	plugins: [
-		// Modern builds can use more advanced syntax (temporarily disabled)
-		// ...(isModernBuild ? [
-		//   "@babel/plugin-proposal-nullish-coalescing-operator",
-		//   "@babel/plugin-proposal-optional-chaining",
-		// ] : []),
-
 		// Dynamic imports for code splitting
 		"@babel/plugin-syntax-dynamic-import",
 
-		// Production optimizations (temporarily disabled)
-		// ...(isProduction ? [
-		//   // Remove prop-types in production for smaller bundles
-		//   "babel-plugin-transform-react-remove-prop-types",
-		// ] : []),
+		// Production optimizations
+		...(isProduction ? [
+			"babel-plugin-transform-react-remove-prop-types",
+		] : []),
 	],
 
 	// Environment-specific configurations
 	env: {
 		development: {
-			plugins: [
-				// Development-only plugins for better debugging
-			],
+			plugins: [],
 		},
 		production: {
-			plugins: [
-				// Additional production optimizations
-			],
+			plugins: [],
 		},
 	},
 

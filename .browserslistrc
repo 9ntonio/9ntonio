@@ -1,33 +1,27 @@
-# Differential serving configuration for modern and legacy builds
-# Modern builds target browsers with ES2020+ support
-# Legacy builds provide fallback for older browsers
+# Modern JavaScript targeting for reduced bundle size
+# Target browsers that support ES2020+ features natively
 
-# Modern build targets (default)
-# These browsers support modern JavaScript features natively
-last 2 Chrome versions
-last 2 Firefox versions
-last 2 Safari versions
-last 2 Edge versions
+# Modern build targets (default) - more aggressive for smaller bundles
+Chrome >= 91
+Firefox >= 90
+Safari >= 15
+Edge >= 91
 not dead
-> 0.5%
+> 1%
 supports es6-module
 supports es6-module-dynamic-import
 supports async-functions
 
-
-# Legacy build targets
-# Fallback for older browsers that need transpilation
+# Legacy build targets (if needed)
 [legacy]
 > 0.25%
 not dead
-ie >= 11
 Chrome >= 60
 Firefox >= 60
 Safari >= 12
 Edge >= 79
 
-# Development environment
-# Use modern features for faster development builds
+# Development environment - use latest features
 [development]
 last 1 chrome version
 last 1 firefox version

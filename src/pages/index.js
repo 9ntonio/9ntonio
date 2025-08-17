@@ -77,7 +77,7 @@ export default function Home() {
 				<section className="mt-4">
 					<div className="container">
 						<div className="flex flex-col md:flex-row md:items-center mb-4">
-							<div className="logo-container mb-1">
+							<div className="logo-container mb-1" style={{ width: '510px', height: '83px', maxWidth: '100%' }}>
 								<img
 									src={logo}
 									alt="Antonio Almena - Senior Full Stack Engineer Logo"
@@ -89,13 +89,13 @@ export default function Home() {
 									decoding="sync"
 								/>
 							</div>
-							<div className="flex flex-row">
+							<div className="flex flex-row" style={{ minHeight: '48px', minWidth: '168px' }}>
 								<Suspense
 									fallback={
 										<div className="flex flex-row">
-											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12 mr-2" />
-											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12 mr-2" />
-											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12" />
+											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12 mr-2" style={{ width: '48px', height: '48px' }} />
+											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12 mr-2" style={{ width: '48px', height: '48px' }} />
+											<div className="circle-container animate-pulse bg-gray-300 rounded-full w-12 h-12" style={{ width: '48px', height: '48px' }} />
 										</div>
 									}
 								>
