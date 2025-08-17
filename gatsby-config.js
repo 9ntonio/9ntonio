@@ -62,8 +62,8 @@ module.exports = {
 				defaults: {
 					formats: [`auto`, `webp`, `avif`],
 					placeholder: `blurred`,
-					quality: 75, // Reduced from 85 for better compression
-					breakpoints: [480, 750, 1080, 1366, 1920],
+					quality: 70, // Further reduced for cellular data savings
+					breakpoints: [320, 480, 640, 768, 1024, 1280, 1536, 1920],
 					backgroundColor: `transparent`,
 				},
 			},
@@ -74,13 +74,21 @@ module.exports = {
 				defaults: {
 					formats: [`auto`, `webp`, `avif`],
 					placeholder: `blurred`,
-					quality: 75, // Reduced from 85 for better compression
-					breakpoints: [480, 750, 1080, 1366, 1920],
+					quality: 70, // Further reduced for cellular data savings
+					breakpoints: [320, 480, 640, 768, 1024, 1280, 1536, 1920],
 					backgroundColor: `transparent`,
 				},
-				// Optimize image processing
+				// Optimize image processing for cellular data
 				stripMetadata: true,
-				defaultQuality: 75,
+				defaultQuality: 70,
+				// Enable progressive JPEG for better perceived performance
+				progressive: true,
+				// Optimize for smaller file sizes
+				mozjpeg: true,
+				pngCompressionSpeed: 4,
+				pngQuality: 65,
+				webpQuality: 70,
+				avifQuality: 65,
 			},
 		},
 		`gatsby-transformer-sharp`,

@@ -6,6 +6,8 @@ import ErrorBoundary from "../components/ErrorBoundary";
 import ResourceHints from "../components/ResourceHints";
 import FontLoadingStrategy from "../components/FontLoadingStrategy";
 import LayoutStabilityMonitor from "../components/LayoutStabilityMonitor";
+import AdaptiveImagePreloader from "../components/AdaptiveImagePreloader";
+import ConnectionAwareImageLoader from "../components/ConnectionAwareImageLoader";
 import { useParticleLoader } from "../hooks/useParticleLoader";
 import { useVideoModal } from "../hooks/useVideoModal";
 import { LINK_ATTRIBUTES, TECH_URLS, TECH_NAMES, VIDEO_CONFIG, SEO_CONFIG } from "../config/homePageConstants";
@@ -45,9 +47,6 @@ export default function Home() {
 
 	const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
 
-	// Constants for backward compatibility with tsparticles
-	const BACKGROUND_COLOR = "#00474f";
-
 	// SSR-safe loading state
 	if (!isMounted) {
 		return (
@@ -61,6 +60,8 @@ export default function Home() {
 		<ErrorBoundary>
 			<ResourceHints />
 			<FontLoadingStrategy />
+			<AdaptiveImagePreloader />
+			<ConnectionAwareImageLoader />
 			{process.env.NODE_ENV === 'development' && <LayoutStabilityMonitor />}
 			<div className="font-fredoka text-textColor">
 				<Suspense fallback={null}>
@@ -211,7 +212,7 @@ export default function Home() {
 											width={400}
 											height={267}
 											formats={["avif", "webp", "auto"]}
-											quality={80}
+											quality={70}
 											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
 											className="transition-transform duration-300 group-hover:scale-105 w-full h-full object-cover"
 											loading="eager"
@@ -276,8 +277,8 @@ export default function Home() {
 											width={400}
 											height={267}
 											formats={["avif", "webp", "auto"]}
-											quality={75}
-											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
+											quality={65}
+											sizes="(max-width: 640px) 95vw, (max-width: 768px) 48vw, (max-width: 1024px) 32vw, 380px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg w-full h-full object-cover"
 											loading="lazy"
 										/>
@@ -319,9 +320,9 @@ export default function Home() {
 											layout="constrained"
 											width={400}
 											height={267}
-											formats={["avif", "webp", "auto"]}
-											quality={75}
-											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
+											formats={["webp", "auto"]}
+											quality={60}
+											sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 350px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg w-full h-full object-cover"
 											loading="lazy"
 										/>
@@ -361,9 +362,9 @@ export default function Home() {
 											layout="constrained"
 											width={400}
 											height={267}
-											formats={["avif", "webp", "auto"]}
-											quality={75}
-											sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
+											formats={["webp", "auto"]}
+											quality={60}
+											sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 350px"
 											className="transition-transform duration-300 group-hover:scale-105 rounded-lg w-full h-full object-cover"
 											loading="lazy"
 										/>

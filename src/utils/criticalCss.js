@@ -132,6 +132,37 @@ const generateCriticalCSS = () => `
   .bg-secondary { background-color: ${COLORS.secondary}; }
   .bg-primary { background-color: ${COLORS.primary}; }
 
+  /* Connection-aware image optimizations */
+  .connection-data-saver img:not([data-critical="true"]),
+  .connection-very-slow img:not([data-critical="true"]) {
+    opacity: 0.8;
+    filter: blur(0.5px);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+  }
+
+  .connection-slow img,
+  .connection-very-slow img {
+    image-rendering: optimizeSpeed;
+  }
+
+  .connection-fast img {
+    image-rendering: optimizeQuality;
+  }
+
+  /* Data saver indicator */
+  .connection-data-saver .project-image-container::after {
+    content: '📱';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 10px;
+    z-index: 10;
+  }
+
   /* Critical layout styles */
   .flex { display: flex; }
   .flex-col { flex-direction: column; }

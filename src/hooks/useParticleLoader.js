@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { PARTICLE_CONFIG } from '../config/particleConfig';
 
 // Performance constants
-const PARTICLE_LOAD_DELAY = 2000;
+const PARTICLE_LOAD_DELAY = 750;
 const INTERACTION_EVENTS = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
 const MOBILE_BREAKPOINT = 768;
 
