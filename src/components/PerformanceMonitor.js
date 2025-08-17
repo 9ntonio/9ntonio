@@ -26,22 +26,32 @@ export default function PerformanceMonitor() {
 				if (!navigation) return;
 
 				const metrics = {
-					"DOM Content Loaded": navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-					"Load Complete": navigation.loadEventEnd - navigation.loadEventStart,
+					"DOM Content Loaded": Math.max(0, navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
+					"Load Complete": Math.max(0, navigation.loadEventEnd - navigation.loadEventStart),
 					"First Paint": performance.getEntriesByName(PERFORMANCE_METRICS.FIRST_PAINT)[0]?.startTime || 0,
 					"First Contentful Paint": performance.getEntriesByName(PERFORMANCE_METRICS.FIRST_CONTENTFUL_PAINT)[0]?.startTime || 0,
+					"Total Load Time": Math.max(0, navigation.loadEventEnd - navigation.navigationStart),
 				};
 
-				logMetrics(metrics);
+				// Filter out zero/invalid values
+				const validMetrics = Object.fromEntries(
+					Object.entries(metrics).filter(([, value]) => value > 0)
+				);
+
+				if (Object.keys(validMetrics).length > 0) {
+					logMetrics(validMetrics);
+				}
 			} catch (error) {
-				console.warn("Performance measurement failed:", error);
+				if (process.env.NODE_ENV === 'development') {
+					console.warn("Performance measurement failed:", error);
+				}
 			}
 		};
 
 		if (window.requestIdleCallback) {
-			window.requestIdleCallback(measurePerformance);
+			window.requestIdleCallback(measurePerformance, { timeout: 5000 });
 		} else {
-			setTimeout(measurePerformance, 0);
+			setTimeout(measurePerformance, 100);
 		}
 	}, [logMetrics]);
 

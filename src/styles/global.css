@@ -27,10 +27,17 @@
 		@apply px-6 md:px-0 mx-auto;
 	}
 
+	/* Prevent layout shifts with consistent text sizing */
+	.text-stable {
+		@apply text-xl leading-7 mb-4;
+		/* Reserve space to prevent CLS */
+		min-height: 1.75rem;
+	}
 
-
+	/* Fixed dimensions for circle containers */
 	.circle-container {
 		@apply w-[46px] h-[46px] bg-secondary rounded-full mr-4 mt-0 md:mt-6 flex items-center justify-center;
+		flex-shrink: 0; /* Prevent shrinking that causes layout shifts */
 	}
 
 	.circle-container:hover {
@@ -51,5 +58,18 @@
 		@apply text-secondary;
 	}
 
+	/* Project image containers with fixed aspect ratios */
+	.project-image-container {
+		aspect-ratio: 3/2;
+		width: 100%;
+		overflow: hidden;
+	}
 
+	/* Logo container with reserved space */
+	.logo-container {
+		width: 100%;
+		max-width: 510px;
+		height: 83px;
+		aspect-ratio: 510/83;
+	}
 }

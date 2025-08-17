@@ -17,11 +17,14 @@ export const SITE_CONFIG = {
 
   // Performance settings
   PERFORMANCE: {
-    PARTICLES_DELAY: 1000,
+    PARTICLES_DELAY: 2000, // Increased for better initial load
     MOBILE_BREAKPOINT: 768,
-    IMAGE_QUALITY: 85,
+    IMAGE_QUALITY: 75, // Reduced for better compression
     IMAGE_FORMATS: ["auto", "webp", "avif"],
-    IMAGE_BREAKPOINTS: [750, 1080, 1366, 1920],
+    IMAGE_BREAKPOINTS: [480, 750, 1080, 1366, 1920],
+    LARGE_BUNDLE_SIZE: 100 * 1024, // 100KB threshold
+    MIN_FILE_SIZE_FOR_ANALYSIS: 10 * 1024, // 10KB
+    WHITESPACE_RATIO_THRESHOLD: 0.15,
   },
 
   // Social media links

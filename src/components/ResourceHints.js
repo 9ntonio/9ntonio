@@ -1,20 +1,40 @@
 import React from 'react';
 
 /**
- * Resource Hints Component
- * Adds DNS prefetch and preconnect hints to improve loading performance
- * This is a non-breaking addition that won't affect layout
+ * Enhanced Resource Hints Component
+ * Adds DNS prefetch, preconnect, and preload hints to improve loading performance
+ * Optimized for Core Web Vitals improvements
  */
 const ResourceHints = () => {
   React.useEffect(() => {
     if (typeof document === 'undefined') return;
 
-    // Add DNS prefetch hints
+    // Critical resource preloading for LCP improvement
+    const preloadCriticalResources = () => {
+      // Preload hero image (LCP candidate)
+      const heroImageLink = document.createElement('link');
+      heroImageLink.rel = 'preload';
+      heroImageLink.as = 'image';
+      heroImageLink.href = '/gusto.webp';
+      heroImageLink.type = 'image/webp';
+      document.head.appendChild(heroImageLink);
+
+      // Preload logo (above-the-fold)
+      const logoLink = document.createElement('link');
+      logoLink.rel = 'preload';
+      logoLink.as = 'image';
+      logoLink.href = '/logo-2.svg';
+      logoLink.type = 'image/svg+xml';
+      document.head.appendChild(logoLink);
+    };
+
+    // DNS prefetch for external domains
     const dnsPrefetches = [
       '//fonts.googleapis.com',
       '//fonts.gstatic.com',
       '//www.google-analytics.com',
-      '//www.googletagmanager.com'
+      '//www.googletagmanager.com',
+      '//player.vimeo.com'
     ];
 
     dnsPrefetches.forEach(href => {
@@ -24,7 +44,7 @@ const ResourceHints = () => {
       document.head.appendChild(link);
     });
 
-    // Add preconnect hints
+    // Preconnect to critical origins
     const preconnects = [
       { href: 'https://fonts.googleapis.com' },
       { href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
@@ -39,6 +59,9 @@ const ResourceHints = () => {
       }
       document.head.appendChild(link);
     });
+
+    // Preload critical resources after a short delay
+    setTimeout(preloadCriticalResources, 100);
 
   }, []);
 

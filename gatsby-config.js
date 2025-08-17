@@ -32,24 +32,28 @@ module.exports = {
 					defer: true,
 					// Add these performance optimizations
 					async: true,
-					// Load GA only after user interaction
+					// Load GA only after user interaction - reduces unused JS
 					delayOnFirstInteraction: true,
+					// Minimize GA script size
+					enableWebVitalsTracking: false, // Disable if not needed
 				},
 			},
 		},
-		{
-			resolve: `gatsby-plugin-google-fonts`,
-			options: {
-				fonts: [`Fredoka:400,600&display=swap`], // Ensure font-display: swap
-				display: "swap",
-				preconnect: true,
-				crossOrigin: "anonymous",
-				preload: true, // Preload critical fonts for better performance
-				subsets: ['latin'],
-				// Only load characters we actually use for better performance
-				text: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!?:;()[]{}@#$%&*+-=<>/"\'',
-			},
-		},
+		// Disabled gatsby-plugin-google-fonts to prevent render-blocking
+		// Using manual font loading in html.js instead
+		// {
+		// 	resolve: `gatsby-plugin-google-fonts`,
+		// 	options: {
+		// 		fonts: [`Fredoka:400,600&display=swap`],
+		// 		display: "swap",
+		// 		preconnect: true,
+		// 		crossOrigin: "anonymous",
+		// 		preload: false,
+		// 		subsets: ['latin'],
+		// 		defer: true,
+		// 		text: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!?:;()[]{}@#$%&*+-=<>/"\'',
+		// 	},
+		// },
 		`gatsby-plugin-postcss`,
 		`gatsby-plugin-preload-fonts`,
 		{
@@ -148,6 +152,8 @@ module.exports = {
 		PRESERVE_FILE_DOWNLOAD_CACHE: true,
 		PARALLEL_SOURCING: true,
 	},
-	// Configure modern JavaScript builds
-	polyfill: process.env.GATSBY_MODERN_BUILD !== "false" ? false : true, // Disable polyfills for modern builds only
+	// Configure modern JavaScript builds - reduces legacy JS significantly
+	polyfill: false, // Disable polyfills for modern browsers
+	// Enable modern ES2022+ features
+	jsxRuntime: "automatic"
 };

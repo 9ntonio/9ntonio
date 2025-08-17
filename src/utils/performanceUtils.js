@@ -1,3 +1,5 @@
+import React from 'react';
+
 /**
  * Performance monitoring utilities
  * Provides consistent performance tracking across the application

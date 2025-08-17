@@ -24,12 +24,12 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 
 		logBuildInfo(isModern);
 
-		// Base configuration for both modern and legacy builds
+		// Base configuration optimized for modern browsers
 		const baseConfig = {
-			target: isModern ? ["web", "es2020"] : ["web", "es5"],
+			target: ["web", "es2022"], // Target even more modern browsers
 
 			resolve: {
-				mainFields: isModern ? ["browser", "module", "main"] : ["browser", "main", "module"],
+				mainFields: ["browser", "module", "main"],
 				extensions: [".mjs", ".js", ".jsx", ".json"],
 			},
 
@@ -50,16 +50,52 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 
 			optimization: {
 				minimize: true,
-				minimizer: [new TerserPlugin(getTerserOptions(isModern))],
-				splitChunks: getSplitChunksConfig(isModern),
+				minimizer: [
+					new TerserPlugin({
+						terserOptions: {
+							parse: { ecma: 2022 },
+							compress: {
+								ecma: 2022,
+								drop_console: process.env.NODE_ENV === 'production',
+								drop_debugger: true,
+								pure_funcs: ['console.log', 'console.info', 'console.debug'],
+								passes: 2,
+							},
+							mangle: { safari10: false },
+							format: { ecma: 2022 },
+						},
+						parallel: true,
+						extractComments: false,
+					})
+				],
+				splitChunks: {
+					chunks: "all",
+					minSize: 20000,
+					maxSize: 244000,
+					cacheGroups: {
+						vendor: {
+							test: /[\\/]node_modules[\\/]/,
+							name: "vendors",
+							chunks: "all",
+							priority: 10,
+						},
+						common: {
+							name: "common",
+							minChunks: 2,
+							chunks: "all",
+							priority: 5,
+							reuseExistingChunk: true,
+						},
+					},
+				},
 
 				// Runtime chunk optimization - smaller runtime
 				runtimeChunk: {
 					name: "runtime",
 				},
 
-				// Module concatenation for better tree shaking (modern builds only)
-				concatenateModules: isModern,
+				// Module concatenation for better tree shaking
+				concatenateModules: true,
 
 				// Better module IDs for caching
 				moduleIds: "deterministic",

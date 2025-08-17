@@ -29,22 +29,33 @@ function Seo({ description = "", meta = [], Sitetitle = "Antonio Almena" }) {
 	const fullTitle = `${Sitetitle} | ${siteTitle}`;
 
 	// Memoize default meta tags to prevent recreation on every render
-	const defaultMeta = React.useMemo(() => [
-		{ name: "description", content: metaDescription },
-		{ name: "keywords", content: "software development, engineering, AI, design systems, front end development, web development, design technology" },
-		{ name: "robots", content: "index, follow" },
-		{ name: "viewport", content: "width=device-width, initial-scale=1" },
-		{ property: "og:type", content: "website" },
-		{ property: "og:url", content: siteUrl },
-		{ property: "og:title", content: fullTitle },
-		{ property: "og:description", content: metaDescription },
-		{ property: "og:image", content: `${siteUrl}${imageSEO}` },
-		{ name: "twitter:card", content: "summary_large_image" },
-		{ name: "twitter:creator", content: author },
-		{ name: "twitter:title", content: fullTitle },
-		{ name: "twitter:description", content: metaDescription },
-		{ name: "twitter:image", content: `${siteUrl}${imageSEO}` },
-	].filter(tag => tag.content), [metaDescription, siteUrl, fullTitle, imageSEO, author]);
+	const defaultMeta = React.useMemo(() => {
+		const baseTags = [
+			{ name: "description", content: metaDescription },
+			{ name: "keywords", content: "software development, engineering, AI, design systems, front end development, web development, design technology" },
+			{ name: "robots", content: "index, follow" },
+			{ name: "viewport", content: "width=device-width, initial-scale=1" },
+			{ property: "og:type", content: "website" },
+			{ property: "og:url", content: siteUrl },
+			{ property: "og:title", content: fullTitle },
+			{ property: "og:description", content: metaDescription },
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:creator", content: author },
+			{ name: "twitter:title", content: fullTitle },
+			{ name: "twitter:description", content: metaDescription },
+		];
+
+		// Only add image tags if we have valid URLs
+		if (siteUrl && imageSEO) {
+			const imageUrl = `${siteUrl}${imageSEO}`;
+			baseTags.push(
+				{ property: "og:image", content: imageUrl },
+				{ name: "twitter:image", content: imageUrl }
+			);
+		}
+
+		return baseTags.filter(tag => tag.content);
+	}, [metaDescription, siteUrl, fullTitle, imageSEO, author]);
 
 	// Merge and validate meta tags
 	const allMeta = React.useMemo(() => {
