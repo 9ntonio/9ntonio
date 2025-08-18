@@ -5,7 +5,7 @@ module.exports = {
 	}),
 	siteMetadata: {
 		title: `Design Technologist`,
-		description: `Antonio Almena`,
+		description: `Senior Full Stack Engineer with 12+ years of experience building high-performance web applications using React, Angular, TypeScript, and C#/Blazor. Expert in developing scalable component libraries, optimizing application performance & implementing modern frontend architectures with a strong focus on design systems & automated testing.`,
 		author: `@9ntonio`,
 		image: "/social.jpg",
 		siteUrl: "https://antonio.almena.io",

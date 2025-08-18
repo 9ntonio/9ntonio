@@ -72,19 +72,7 @@ export default function Home() {
 					</Suspense>
 				)}
 
-				<Seo
-					description={SEO_CONFIG.DESCRIPTION}
-					meta={[
-						{
-							name: "keywords",
-							content: SEO_CONFIG.KEYWORDS,
-						},
-						{
-							name: "robots",
-							content: "index, follow",
-						},
-					]}
-				/>
+
 
 				<section className="mt-4">
 					<div className="container">
@@ -497,3 +485,19 @@ export default function Home() {
 		</ErrorBoundary>
 	);
 }
+
+export const Head = () => (
+	<Seo
+		description={SEO_CONFIG.DESCRIPTION}
+		meta={[
+			{
+				name: "keywords",
+				content: SEO_CONFIG.KEYWORDS,
+			},
+			{
+				name: "robots",
+				content: "index, follow",
+			},
+		]}
+	/>
+);
