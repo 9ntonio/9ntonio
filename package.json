@@ -129,7 +129,7 @@
 		"gatsby-plugin-remove-serviceworker": "^1.0.0",
 		"gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.32",
 		"glob": "^11.0.3",
-		"husky": "^8.0.3",
+		"husky": "^9.0.0",
 		"lint-staged": "^15.2.0",
 		"node-addon-api": "^8.3.1",
 		"postcss": "^8.4.32",
