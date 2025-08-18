@@ -107,7 +107,7 @@ cd 9ntonio
 yarn install
 
 # Start development server
-yarn dev
+yarn start
 ```
 
 ### Dependency Resolution
@@ -144,7 +144,6 @@ Visit `http://localhost:8000` to view the site.
 ### Development
 
 ```bash
-yarn dev          # Start development server
 yarn start        # Alias for yarn dev
 yarn clean        # Clean Gatsby cache
 ```
@@ -523,7 +522,7 @@ yarn build:legacy        # ES5 build only
 - **Bundle Size**: Monitor and optimize large chunks (>100KB)
 - **Core Web Vitals**: Optimized FCP, LCP, CLS
 - **Cumulative Layout Shift**: < 0.1 (Good)
-- **Layout Stability**: Zero unexpected content jumps
+- **Layout Stability**: Zero unexpected content **jumps**
 
 ### Console Logging
 
@@ -536,7 +535,7 @@ yarn build:legacy        # ES5 build only
 
 ```bash
 # Development with monitoring
-yarn dev
+yarn start
 # Check browser console for layout shift logs
 
 # Production testing
