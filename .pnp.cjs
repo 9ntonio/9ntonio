@@ -74,7 +74,7 @@ const RAW_RUNTIME_STATE =
           ["glob", "npm:11.0.3"],\
           ["husky", "npm:8.0.3"],\
           ["lint-staged", "npm:15.5.2"],\
-          ["node-addon-api", "npm:8.3.1"],\
+          ["node-addon-api", "npm:8.5.0"],\
           ["postcss", "npm:8.5.6"],\
           ["postcss-loader", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:8.1.1"],\
           ["prettier", "npm:3.5.3"],\
@@ -8207,7 +8207,7 @@ const RAW_RUNTIME_STATE =
           ["glob", "npm:11.0.3"],\
           ["husky", "npm:8.0.3"],\
           ["lint-staged", "npm:15.5.2"],\
-          ["node-addon-api", "npm:8.3.1"],\
+          ["node-addon-api", "npm:8.5.0"],\
           ["postcss", "npm:8.5.6"],\
           ["postcss-loader", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:8.1.1"],\
           ["prettier", "npm:3.5.3"],\
@@ -17807,10 +17807,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:8.3.1", {\
-        "packageLocation": "./.yarn/unplugged/node-addon-api-npm-8.3.1-930b0a01a3/node_modules/node-addon-api/",\
+      ["npm:8.5.0", {\
+        "packageLocation": "./.yarn/unplugged/node-addon-api-npm-8.5.0-2920c05027/node_modules/node-addon-api/",\
         "packageDependencies": [\
-          ["node-addon-api", "npm:8.3.1"],\
+          ["node-addon-api", "npm:8.5.0"],\
           ["node-gyp", "npm:11.1.0"]\
         ],\
         "linkType": "HARD"\
