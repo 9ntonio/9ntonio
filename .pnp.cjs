@@ -82,7 +82,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:18.3.1"],\
           ["react-helmet", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.1.0"],\
-          ["react-player", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.0"],\
+          ["react-player", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.1"],\
           ["react-tsparticles", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.12.2"],\
           ["sass", "npm:1.86.1"],\
           ["sharp", "npm:0.33.5"],\
@@ -8215,7 +8215,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:18.3.1"],\
           ["react-helmet", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.1.0"],\
-          ["react-player", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.0"],\
+          ["react-player", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.1"],\
           ["react-tsparticles", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.12.2"],\
           ["sass", "npm:1.86.1"],\
           ["sharp", "npm:0.33.5"],\
@@ -20430,17 +20430,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["react-player", [\
-      ["npm:2.16.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/react-player-npm-2.16.0-c3172d3dd2-10c0.zip/node_modules/react-player/",\
+      ["npm:2.16.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/react-player-npm-2.16.1-9b70cff2c9-10c0.zip/node_modules/react-player/",\
         "packageDependencies": [\
-          ["react-player", "npm:2.16.0"]\
+          ["react-player", "npm:2.16.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.0", {\
-        "packageLocation": "./.yarn/__virtual__/react-player-virtual-aae3616067/7/runner/cache/others/berry/cache/react-player-npm-2.16.0-c3172d3dd2-10c0.zip/node_modules/react-player/",\
+      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-player-virtual-13e45de021/7/runner/cache/others/berry/cache/react-player-npm-2.16.1-9b70cff2c9-10c0.zip/node_modules/react-player/",\
         "packageDependencies": [\
-          ["react-player", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.0"],\
+          ["react-player", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.1"],\
           ["@types/react", null],\
           ["deepmerge", "npm:4.3.1"],\
           ["load-script", "npm:1.0.0"],\

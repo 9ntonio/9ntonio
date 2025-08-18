@@ -5484,7 +5484,7 @@ __metadata:
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-helmet: "npm:^6.1.0"
-    react-player: "npm:2.16.0"
+    react-player: "npm:2.16.1"
     react-tsparticles: "npm:^2.12.2"
     sass: "npm:^1.55.0"
     sharp: "npm:^0.33.5"
@@ -15344,9 +15344,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-player@npm:2.16.0":
-  version: 2.16.0
-  resolution: "react-player@npm:2.16.0"
+"react-player@npm:2.16.1":
+  version: 2.16.1
+  resolution: "react-player@npm:2.16.1"
   dependencies:
     deepmerge: "npm:^4.0.0"
     load-script: "npm:^1.0.0"
@@ -15355,7 +15355,7 @@ __metadata:
     react-fast-compare: "npm:^3.0.1"
   peerDependencies:
     react: ">=16.6.0"
-  checksum: 10c0/ee0f4cd3bd468b28af38dbbb65cae1659218153956f43c0bdd15cd8b38aaaf151deec43b93b7dd887c0ac28242a4ba7e9d01823351e78ba60ae04d5fb51defb4
+  checksum: 10c0/fb89e25e0fd4e5e97441f1617e2c658cda9738176dc2ce167d245435647f11bbfcafd165b86523ae57de29439f89adbe322e97b54d3772dcfbdb6a226466d9b9
   languageName: node
   linkType: hard
 
