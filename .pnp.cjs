@@ -46,7 +46,7 @@ const RAW_RUNTIME_STATE =
           ["babel-plugin-transform-imports", "npm:2.0.0"],\
           ["babel-plugin-transform-react-remove-prop-types", "npm:0.4.24"],\
           ["common-tags", "npm:1.8.2"],\
-          ["core-js", "npm:3.45.0"],\
+          ["core-js", "npm:3.45.1"],\
           ["eslint", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:9.33.0"],\
           ["eslint-config-prettier", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.1.8"],\
           ["eslint-plugin-gatsby", "npm:1.0.2"],\
@@ -8678,7 +8678,7 @@ const RAW_RUNTIME_STATE =
           ["babel-plugin-transform-imports", "npm:2.0.0"],\
           ["babel-plugin-transform-react-remove-prop-types", "npm:0.4.24"],\
           ["common-tags", "npm:1.8.2"],\
-          ["core-js", "npm:3.45.0"],\
+          ["core-js", "npm:3.45.1"],\
           ["eslint", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:9.33.0"],\
           ["eslint-config-prettier", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.1.8"],\
           ["eslint-plugin-gatsby", "npm:1.0.2"],\
@@ -9459,7 +9459,7 @@ const RAW_RUNTIME_STATE =
           ["babel-plugin-dynamic-import-node", "npm:2.3.3"],\
           ["babel-plugin-macros", "npm:3.1.0"],\
           ["babel-plugin-transform-react-remove-prop-types", "npm:0.4.24"],\
-          ["core-js", "npm:3.41.0"],\
+          ["core-js", "npm:3.45.1"],\
           ["gatsby-core-utils", "npm:4.14.0"],\
           ["gatsby-legacy-polyfills", "npm:3.14.0"]\
         ],\
@@ -10705,17 +10705,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["core-js", [\
-      ["npm:3.41.0", {\
-        "packageLocation": "./.yarn/unplugged/core-js-npm-3.41.0-c58970ae3d/node_modules/core-js/",\
+      ["npm:3.45.1", {\
+        "packageLocation": "./.yarn/unplugged/core-js-npm-3.45.1-44df7e5ad1/node_modules/core-js/",\
         "packageDependencies": [\
-          ["core-js", "npm:3.41.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:3.45.0", {\
-        "packageLocation": "./.yarn/unplugged/core-js-npm-3.45.0-adcc91d781/node_modules/core-js/",\
-        "packageDependencies": [\
-          ["core-js", "npm:3.45.0"]\
+          ["core-js", "npm:3.45.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13954,7 +13947,7 @@ const RAW_RUNTIME_STATE =
           ["common-tags", "npm:1.8.2"],\
           ["compression", "npm:1.8.0"],\
           ["cookie", "npm:0.5.0"],\
-          ["core-js", "npm:3.41.0"],\
+          ["core-js", "npm:3.45.1"],\
           ["cors", "npm:2.8.5"],\
           ["css-loader", "virtual:0ca52f6f4901f76250f1bddd551fbb3b7b1f9638111fd33f5ca5edc58d650bb22ae220dfd1228e8cdf204b8e793db331a4fa476446714f9a72d5fd9e6ca5407e#npm:5.2.7"],\
           ["css-minimizer-webpack-plugin", "virtual:0ca52f6f4901f76250f1bddd551fbb3b7b1f9638111fd33f5ca5edc58d650bb22ae220dfd1228e8cdf204b8e793db331a4fa476446714f9a72d5fd9e6ca5407e#npm:2.0.0"],\
