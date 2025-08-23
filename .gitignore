@@ -7,8 +7,9 @@ public
 .env.local
 .env.production
 .env.development
-.vscode/settings.json
+.vscode/
 .idea/
 *.swp
 *.swo
 *~
+.kiro/
