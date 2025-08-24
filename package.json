@@ -46,7 +46,7 @@
 		"joy-division"
 	],
 	"scripts": {
-		"dev": "gatsby develop",
+		"dev": "yarn dev:prod",
 		"dev:prod": "yarn build:modern && yarn serve",
 		"dev:watch": "yarn build:modern --watch",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",

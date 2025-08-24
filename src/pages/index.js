@@ -25,6 +25,7 @@ const FontAwesome = React.lazy(() => import(/* webpackChunkName: "fontawesome" *
 
 // !! Lazy load video modal only when needed
 const VideoModal = React.lazy(() => import(/* webpackChunkName: "video-modal" */ "../components/VideoModal"));
+const VideoModalFallback = React.lazy(() => import(/* webpackChunkName: "video-modal-fallback" */ "../components/VideoModalFallback"));
 
 export default function Home() {
 	const { isMounted, isParticlesLoaded, hasError, showParticles, fadeInParticles, particlesInit, handleParticlesLoaded, getParticleOptions } = useParticleLoader();
@@ -471,15 +472,34 @@ export default function Home() {
 				</section>
 
 				{isVideoModalOpen && (
-					<Suspense
-						fallback={
-							<div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-								<div className="text-primary">Loading...</div>
-							</div>
-						}
+					<ErrorBoundary
+						fallback={(error, retry) => (
+							<Suspense
+								fallback={
+									<div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+										<div className="text-center text-white p-6">
+											<p className="mb-4">Loading fallback video player...</p>
+											<button onClick={closeVideoModal} className="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded">
+												Close
+											</button>
+										</div>
+									</div>
+								}
+							>
+								<VideoModalFallback isOpen={isVideoModalOpen} onClose={closeVideoModal} videoUrl={VIDEO_CONFIG.GUSTO_VIDEO_URL} title={VIDEO_CONFIG.GUSTO_VIDEO_TITLE} />
+							</Suspense>
+						)}
 					>
-						<VideoModal isOpen={isVideoModalOpen} onClose={closeVideoModal} videoUrl={VIDEO_CONFIG.GUSTO_VIDEO_URL} title={VIDEO_CONFIG.GUSTO_VIDEO_TITLE} />
-					</Suspense>
+						<Suspense
+							fallback={
+								<div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+									<div className="text-primary">Loading video player...</div>
+								</div>
+							}
+						>
+							<VideoModal isOpen={isVideoModalOpen} onClose={closeVideoModal} videoUrl={VIDEO_CONFIG.GUSTO_VIDEO_URL} title={VIDEO_CONFIG.GUSTO_VIDEO_TITLE} />
+						</Suspense>
+					</ErrorBoundary>
 				)}
 			</div>
 		</ErrorBoundary>
