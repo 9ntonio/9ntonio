@@ -1,4 +1,48 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:base"]
+  // Renovate configuration file to control dependency updates
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  
+  // Extend from the base configuration preset
+  "extends": [
+    "config:base"
+  ],
+  
+  // Package-specific rules for version constraints
+  "packageRules": [
+    {
+      // Block React 19.x updates but allow React 18.x updates
+      "matchPackageNames": [
+        "react", 
+        "react-dom"
+      ],
+      // Only allow versions less than 19.0.0
+      "allowedVersions": "< 19.0.0",
+      // Optional: Add a description for why these versions are restricted
+      "description": "Staying on React 18.x, blocking React 19.x updates"
+    },
+    {
+      // Block eslint-plugin-react-hooks 5.x updates but allow 4.x updates
+      "matchPackageNames": [
+        "eslint-plugin-react-hooks"
+      ],
+      // Only allow versions less than 5.0.0
+      "allowedVersions": "< 5.0.0",
+      // Optional: Add a description for why these versions are restricted
+      "description": "Staying on eslint-plugin-react-hooks 4.x, blocking 5.x updates"
+    }
+  ],
+  
+  // Set timezone for scheduling (optional)
+  "timezone": "America/New_York",
+  
+  // Limit the number of open PRs at once
+  "prConcurrentLimit": 3,
+  
+  // Auto-merge minor and patch updates for other dependencies (optional)
+  "minor": {
+    "automerge": false
+  },
+  "patch": {
+    "automerge": false  
+  }
 }
