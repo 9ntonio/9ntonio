@@ -38,7 +38,7 @@ const RAW_RUNTIME_STATE =
           ["@fortawesome/free-brands-svg-icons", "npm:7.0.0"],\
           ["@fortawesome/free-regular-svg-icons", "npm:7.0.0"],\
           ["@fortawesome/free-solid-svg-icons", "npm:7.0.0"],\
-          ["@fortawesome/react-fontawesome", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.0.0"],\
+          ["@fortawesome/react-fontawesome", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.0.1"],\
           ["@gatsbyjs/reach-router", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.0.1"],\
           ["@netlify/plugin-gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.8.4"],\
           ["@popperjs/core", "npm:2.11.8"],\
@@ -4756,17 +4756,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@fortawesome/react-fontawesome", [\
-      ["npm:3.0.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@fortawesome-react-fontawesome-npm-3.0.0-6bf186dc20-10c0.zip/node_modules/@fortawesome/react-fontawesome/",\
+      ["npm:3.0.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@fortawesome-react-fontawesome-npm-3.0.1-6a6362352c-10c0.zip/node_modules/@fortawesome/react-fontawesome/",\
         "packageDependencies": [\
-          ["@fortawesome/react-fontawesome", "npm:3.0.0"]\
+          ["@fortawesome/react-fontawesome", "npm:3.0.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/@fortawesome-react-fontawesome-virtual-24d5e70477/7/runner/cache/others/berry/cache/@fortawesome-react-fontawesome-npm-3.0.0-6bf186dc20-10c0.zip/node_modules/@fortawesome/react-fontawesome/",\
+      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@fortawesome-react-fontawesome-virtual-889f905efb/7/runner/cache/others/berry/cache/@fortawesome-react-fontawesome-npm-3.0.1-6a6362352c-10c0.zip/node_modules/@fortawesome/react-fontawesome/",\
         "packageDependencies": [\
-          ["@fortawesome/react-fontawesome", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.0.0"],\
+          ["@fortawesome/react-fontawesome", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.0.1"],\
           ["@fortawesome/fontawesome-svg-core", "npm:7.0.0"],\
           ["@types/fortawesome__fontawesome-svg-core", null],\
           ["@types/react", null],\
@@ -8670,7 +8670,7 @@ const RAW_RUNTIME_STATE =
           ["@fortawesome/free-brands-svg-icons", "npm:7.0.0"],\
           ["@fortawesome/free-regular-svg-icons", "npm:7.0.0"],\
           ["@fortawesome/free-solid-svg-icons", "npm:7.0.0"],\
-          ["@fortawesome/react-fontawesome", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.0.0"],\
+          ["@fortawesome/react-fontawesome", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.0.1"],\
           ["@gatsbyjs/reach-router", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.0.1"],\
           ["@netlify/plugin-gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.8.4"],\
           ["@popperjs/core", "npm:2.11.8"],\
