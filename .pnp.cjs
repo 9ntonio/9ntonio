@@ -73,7 +73,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-transformer-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
           ["glob", "npm:11.0.3"],\
           ["husky", "npm:9.1.7"],\
-          ["lint-staged", "npm:16.2.0"],\
+          ["lint-staged", "npm:16.2.1"],\
           ["node-addon-api", "npm:8.5.0"],\
           ["postcss", "npm:8.5.6"],\
           ["postcss-loader", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:8.2.0"],\
@@ -8742,7 +8742,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-transformer-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
           ["glob", "npm:11.0.3"],\
           ["husky", "npm:9.1.7"],\
-          ["lint-staged", "npm:16.2.0"],\
+          ["lint-staged", "npm:16.2.1"],\
           ["node-addon-api", "npm:8.5.0"],\
           ["postcss", "npm:8.5.6"],\
           ["postcss-loader", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:8.2.0"],\
@@ -16982,10 +16982,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.2.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/lint-staged-npm-16.2.0-51347c0faf-10c0.zip/node_modules/lint-staged/",\
+      ["npm:16.2.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/lint-staged-npm-16.2.1-db04f97ee1-10c0.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:16.2.0"],\
+          ["lint-staged", "npm:16.2.1"],\
           ["commander", "npm:14.0.1"],\
           ["listr2", "npm:9.0.4"],\
           ["micromatch", "npm:4.0.8"],\
