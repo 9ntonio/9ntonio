@@ -21,7 +21,7 @@ module.exports = {
 				gtagConfig: {
 					anonymize_ip: true,
 					cookie_expires: 63072000, // 2 years
-					send_page_view: false, // Manual page view tracking for better control
+					send_page_view: true, // Manual page view tracking for better control
 				},
 				pluginConfig: {
 					// Delay GA loading until user interaction to improve performance
