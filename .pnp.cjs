@@ -84,7 +84,7 @@ const RAW_RUNTIME_STATE =
           ["react-helmet", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.1.0"],\
           ["react-player", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.1"],\
           ["react-tsparticles", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.12.2"],\
-          ["sass", "npm:1.93.2"],\
+          ["sass", "npm:1.94.0"],\
           ["sharp", "npm:0.34.5"],\
           ["tailwindcss", "npm:3.4.18"],\
           ["terser", "npm:5.44.1"],\
@@ -7821,7 +7821,7 @@ const RAW_RUNTIME_STATE =
           ["react-helmet", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:6.1.0"],\
           ["react-player", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.16.1"],\
           ["react-tsparticles", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.12.2"],\
-          ["sass", "npm:1.93.2"],\
+          ["sass", "npm:1.94.0"],\
           ["sharp", "npm:0.34.5"],\
           ["tailwindcss", "npm:3.4.18"],\
           ["terser", "npm:5.44.1"],\
@@ -20671,10 +20671,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.93.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.93.2-b5109840d8-10c0.zip/node_modules/sass/",\
+      ["npm:1.94.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.94.0-a5a155fbab-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
-          ["sass", "npm:1.93.2"],\
+          ["sass", "npm:1.94.0"],\
           ["@parcel/watcher", "npm:2.5.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["immutable", "npm:5.0.3"],\
