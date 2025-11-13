@@ -1,0 +1,5 @@
+# Redirect all www.almena.io traffic to antonio.almena.io
+# The 301! forces the redirect and :splat preserves the path
+https://www.almena.io/*  https://antonio.almena.io/:splat  301!
+http://www.almena.io/*   https://antonio.almena.io/:splat  301!
+
