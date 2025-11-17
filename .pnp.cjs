@@ -71,7 +71,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-webpack-bundle-analyser-v2", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:1.1.32"],\
           ["gatsby-source-filesystem", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
           ["gatsby-transformer-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
-          ["glob", "npm:11.0.3"],\
+          ["glob", "npm:12.0.0"],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.6"],\
           ["node-addon-api", "npm:8.5.0"],\
@@ -7808,7 +7808,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-webpack-bundle-analyser-v2", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:1.1.32"],\
           ["gatsby-source-filesystem", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
           ["gatsby-transformer-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
-          ["glob", "npm:11.0.3"],\
+          ["glob", "npm:12.0.0"],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.6"],\
           ["node-addon-api", "npm:8.5.0"],\
@@ -14163,13 +14163,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:11.0.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/glob-npm-11.0.3-f68382b3cc-10c0.zip/node_modules/glob/",\
+      ["npm:12.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/glob-npm-12.0.0-fbb850d155-10c0.zip/node_modules/glob/",\
         "packageDependencies": [\
-          ["glob", "npm:11.0.3"],\
+          ["glob", "npm:12.0.0"],\
           ["foreground-child", "npm:3.3.1"],\
           ["jackspeak", "npm:4.1.1"],\
-          ["minimatch", "npm:10.0.3"],\
+          ["minimatch", "npm:10.1.1"],\
           ["minipass", "npm:7.1.2"],\
           ["package-json-from-dist", "npm:1.0.1"],\
           ["path-scurry", "npm:2.0.0"]\
@@ -16933,10 +16933,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["minimatch", [\
-      ["npm:10.0.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/minimatch-npm-10.0.3-23e96438f0-10c0.zip/node_modules/minimatch/",\
+      ["npm:10.1.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/minimatch-npm-10.1.1-453db4ee1a-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["minimatch", "npm:10.0.3"],\
+          ["minimatch", "npm:10.1.1"],\
           ["@isaacs/brace-expansion", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
