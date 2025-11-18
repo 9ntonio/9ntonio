@@ -71,7 +71,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-webpack-bundle-analyser-v2", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:1.1.32"],\
           ["gatsby-source-filesystem", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
           ["gatsby-transformer-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
-          ["glob", "npm:11.0.3"],\
+          ["glob", "npm:11.1.0"],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.6"],\
           ["node-addon-api", "npm:8.5.0"],\
@@ -3759,7 +3759,7 @@ const RAW_RUNTIME_STATE =
           ["@expo/devcert", "npm:1.2.0"],\
           ["@expo/sudo-prompt", "npm:9.3.2"],\
           ["debug", "virtual:f40e59172633be4c7855771c0607bb2d974d35ba9281f460e4514315aa447dbb3983c198be66321e29356b1b67dc72482299d717b77ab0c48c189f6bf13b1f21#npm:3.2.7"],\
-          ["glob", "npm:10.4.5"]\
+          ["glob", "npm:10.5.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7808,7 +7808,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-webpack-bundle-analyser-v2", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:1.1.32"],\
           ["gatsby-source-filesystem", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
           ["gatsby-transformer-sharp", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
-          ["glob", "npm:11.0.3"],\
+          ["glob", "npm:11.1.0"],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.2.6"],\
           ["node-addon-api", "npm:8.5.0"],\
@@ -8948,7 +8948,7 @@ const RAW_RUNTIME_STATE =
           ["cacache", "npm:19.0.1"],\
           ["@npmcli/fs", "npm:4.0.0"],\
           ["fs-minipass", "npm:3.0.3"],\
-          ["glob", "npm:10.4.5"],\
+          ["glob", "npm:10.5.0"],\
           ["lru-cache", "npm:10.4.3"],\
           ["minipass", "npm:7.1.2"],\
           ["minipass-collect", "npm:2.0.1"],\
@@ -14150,10 +14150,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["glob", [\
-      ["npm:10.4.5", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/glob-npm-10.4.5-8c63175f05-10c0.zip/node_modules/glob/",\
+      ["npm:10.5.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/glob-npm-10.5.0-b569657078-10c0.zip/node_modules/glob/",\
         "packageDependencies": [\
-          ["glob", "npm:10.4.5"],\
+          ["glob", "npm:10.5.0"],\
           ["foreground-child", "npm:3.3.1"],\
           ["jackspeak", "npm:3.4.3"],\
           ["minimatch", "npm:9.0.5"],\
@@ -14163,13 +14163,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:11.0.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/glob-npm-11.0.3-f68382b3cc-10c0.zip/node_modules/glob/",\
+      ["npm:11.1.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/glob-npm-11.1.0-9420ed5efe-10c0.zip/node_modules/glob/",\
         "packageDependencies": [\
-          ["glob", "npm:11.0.3"],\
+          ["glob", "npm:11.1.0"],\
           ["foreground-child", "npm:3.3.1"],\
           ["jackspeak", "npm:4.1.1"],\
-          ["minimatch", "npm:10.0.3"],\
+          ["minimatch", "npm:10.1.1"],\
           ["minipass", "npm:7.1.2"],\
           ["package-json-from-dist", "npm:1.0.1"],\
           ["path-scurry", "npm:2.0.0"]\
@@ -16933,10 +16933,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["minimatch", [\
-      ["npm:10.0.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/minimatch-npm-10.0.3-23e96438f0-10c0.zip/node_modules/minimatch/",\
+      ["npm:10.1.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/minimatch-npm-10.1.1-453db4ee1a-10c0.zip/node_modules/minimatch/",\
         "packageDependencies": [\
-          ["minimatch", "npm:10.0.3"],\
+          ["minimatch", "npm:10.1.1"],\
           ["@isaacs/brace-expansion", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -17483,7 +17483,7 @@ const RAW_RUNTIME_STATE =
           ["node-gyp", "npm:11.1.0"],\
           ["env-paths", "npm:2.2.1"],\
           ["exponential-backoff", "npm:3.1.2"],\
-          ["glob", "npm:10.4.5"],\
+          ["glob", "npm:10.5.0"],\
           ["graceful-fs", "npm:4.2.11"],\
           ["make-fetch-happen", "npm:14.0.3"],\
           ["nopt", "npm:8.1.0"],\
@@ -20607,7 +20607,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/rimraf-npm-5.0.10-d0c6647697-10c0.zip/node_modules/rimraf/",\
         "packageDependencies": [\
           ["rimraf", "npm:5.0.10"],\
-          ["glob", "npm:10.4.5"]\
+          ["glob", "npm:10.5.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21889,7 +21889,7 @@ const RAW_RUNTIME_STATE =
           ["sucrase", "npm:3.35.0"],\
           ["@jridgewell/gen-mapping", "npm:0.3.8"],\
           ["commander", "npm:4.1.1"],\
-          ["glob", "npm:10.4.5"],\
+          ["glob", "npm:10.5.0"],\
           ["lines-and-columns", "npm:1.2.4"],\
           ["mz", "npm:2.7.0"],\
           ["pirates", "npm:4.0.6"],\
