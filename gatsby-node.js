@@ -250,6 +250,16 @@ exports.onPostBuild = ({ reporter }) => {
 		} else {
 			reporter.error("❌ Source unknown-pleasures directory not found");
 		}
+
+		// Fix X-Frame-Options header to allow iframe embeds
+		const headersPath = path.join(process.cwd(), "public", "_headers");
+		if (fs.existsSync(headersPath)) {
+			let headersContent = fs.readFileSync(headersPath, "utf8");
+			// Replace all instances of DENY with SAMEORIGIN (case insensitive)
+			headersContent = headersContent.replace(/x-frame-options:\s*DENY/i, "x-frame-options: SAMEORIGIN");
+			fs.writeFileSync(headersPath, headersContent);
+			reporter.info("✅ Fixed X-Frame-Options header to allow iframe embeds");
+		}
 	} catch (error) {
 		reporter.error("❌ Error in post-build check", error);
 	}
