@@ -6,12 +6,21 @@ import { useState } from "react";
  */
 export const useVideoModal = () => {
 	const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+	const [currentVideo, setCurrentVideo] = useState(null);
 
-	const openVideoModal = () => setIsVideoModalOpen(true);
-	const closeVideoModal = () => setIsVideoModalOpen(false);
+	const openVideoModal = (url, title) => {
+		setCurrentVideo({ url, title });
+		setIsVideoModalOpen(true);
+	};
+
+	const closeVideoModal = () => {
+		setIsVideoModalOpen(false);
+		setCurrentVideo(null);
+	};
 
 	return {
 		isVideoModalOpen,
+		currentVideo,
 		openVideoModal,
 		closeVideoModal,
 	};

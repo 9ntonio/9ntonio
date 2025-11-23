@@ -29,7 +29,7 @@ const VideoModalFallback = React.lazy(() => import(/* webpackChunkName: "video-m
 
 export default function Home() {
 	const { isMounted, isParticlesLoaded, hasError, showParticles, fadeInParticles, particlesInit, handleParticlesLoaded, getParticleOptions } = useParticleLoader();
-	const { isVideoModalOpen, openVideoModal, closeVideoModal } = useVideoModal();
+	const { isVideoModalOpen, currentVideo, openVideoModal, closeVideoModal } = useVideoModal();
 	const isHydrated = useHydrated();
 
 	// !! Suppress hydration warnings in production
@@ -180,7 +180,7 @@ export default function Home() {
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
 								<div className="project-image-container">
-									<button onClick={openVideoModal} aria-label="Play Gusto project video" className="relative block w-full h-full overflow-hidden rounded-lg border-none cursor-pointer group">
+									<button onClick={() => openVideoModal(VIDEO_CONFIG.GUSTO_VIDEO_URL, VIDEO_CONFIG.GUSTO_VIDEO_TITLE)} aria-label="Play Gusto project video" className="relative block w-full h-full overflow-hidden rounded-lg border-none cursor-pointer group">
 										<StaticImage
 											src="../../static/gusto.webp"
 											alt="Gusto project video thumbnail"
@@ -287,16 +287,10 @@ export default function Home() {
 						<div className="flex flex-wrap">
 							<div className="w-full md:w-1/3 mb-4 md:mb-0 md:pr-6">
 								<div className="project-image-container">
-									<a
-										href="https://www.odopod.com/case-studies/ps-vue"
-										target={LINK_ATTRIBUTES.TARGET}
-										rel={LINK_ATTRIBUTES.REL}
-										aria-label="View PlayStation Vue case study on Odopod website (opens in new tab)"
-										className="group block w-full h-full"
-									>
+									<button onClick={() => openVideoModal(VIDEO_CONFIG.PLAYSTATION_VIDEO_URL, VIDEO_CONFIG.PLAYSTATION_VIDEO_TITLE)} aria-label="Play PlayStation Vue project video" className="relative block w-full h-full overflow-hidden rounded-lg border-none cursor-pointer group">
 										<StaticImage
 											src="../../static/vue.webp"
-											alt="PlayStation Vue streaming service application"
+											alt="PlayStation Vue project video thumbnail"
 											placeholder="blurred"
 											layout="constrained"
 											width={400}
@@ -304,20 +298,27 @@ export default function Home() {
 											formats={["webp", "auto"]}
 											quality={60}
 											sizes="(max-width: 640px) 90vw, (max-width: 768px) 45vw, (max-width: 1024px) 30vw, 350px"
-											className="transition-transform duration-300 group-hover:scale-105 rounded-lg w-full h-full object-cover"
+											className="transition-transform duration-300 group-hover:scale-105 w-full h-full object-cover"
 											loading="lazy"
 											style={{ aspectRatio: "400/267" }}
 										/>
-									</a>
+
+										{/* Play Button Overlay */}
+										<div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all duration-300">
+											<div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+												<div className="w-0 h-0 border-l-[16px] border-l-black border-y-[12px] border-y-transparent ml-1"></div>
+											</div>
+										</div>
+									</button>
 								</div>
 							</div>
 
 							<div className="w-full md:w-2/3">
 								<OutboundLink
-									href="https://www.odopod.com/case-studies/ps-vue"
+									href="https://en.wikipedia.org/wiki/PlayStation_Vue"
 									target={LINK_ATTRIBUTES.TARGET}
 									rel={LINK_ATTRIBUTES.REL}
-									aria-label="View PlayStation Vue case study on Odopod website (opens in new tab)"
+									aria-label="View PlayStation Vue history on WikiPedia (opens in new tab)"
 								>
 									<div className="text-primary text-3xl font-bold leading-tight hover:text-highlight mb-2">PlayStation Vue</div>
 								</OutboundLink>
@@ -471,9 +472,9 @@ export default function Home() {
 					</div>
 				</section>
 
-				{isVideoModalOpen && (
+				{isVideoModalOpen && currentVideo && (
 					<ErrorBoundary
-						fallback={(error, retry) => (
+						fallback={() => (
 							<Suspense
 								fallback={
 									<div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
@@ -486,7 +487,7 @@ export default function Home() {
 									</div>
 								}
 							>
-								<VideoModalFallback isOpen={isVideoModalOpen} onClose={closeVideoModal} videoUrl={VIDEO_CONFIG.GUSTO_VIDEO_URL} title={VIDEO_CONFIG.GUSTO_VIDEO_TITLE} />
+								<VideoModalFallback isOpen={isVideoModalOpen} onClose={closeVideoModal} videoUrl={currentVideo.url} title={currentVideo.title} />
 							</Suspense>
 						)}
 					>
@@ -497,7 +498,7 @@ export default function Home() {
 								</div>
 							}
 						>
-							<VideoModal isOpen={isVideoModalOpen} onClose={closeVideoModal} videoUrl={VIDEO_CONFIG.GUSTO_VIDEO_URL} title={VIDEO_CONFIG.GUSTO_VIDEO_TITLE} />
+							<VideoModal isOpen={isVideoModalOpen} onClose={closeVideoModal} videoUrl={currentVideo.url} title={currentVideo.title} />
 						</Suspense>
 					</ErrorBoundary>
 				)}
