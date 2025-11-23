@@ -2,6 +2,8 @@ module.exports = {
 	adapter: require("gatsby-adapter-netlify").default({
 		excludeDatastoreFromEngineFunction: false,
 		imageCDN: false, // Let Netlify handle image optimization
+		// Disable adapter's header generation - use netlify.toml instead
+		headers: false,
 	}),
 	siteMetadata: {
 		title: `Design Technologist`,

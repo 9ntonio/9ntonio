@@ -88,13 +88,15 @@ for = "/*.xml"
 [headers.values]
 Cache-Control = "public, max-age=3600"
 
-# Security headers
+# Security headers - SAMEORIGIN allows embedding videos on our site
 [[headers]]
 for = "/*"
 [headers.values]
 X-Frame-Options = "SAMEORIGIN"
 X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Cache-Control = "public, max-age=0, must-revalidate"
 
 # Important: Ensure proper routing for unknown-pleasures section and its assets
 [[redirects]]

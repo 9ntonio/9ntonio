@@ -210,6 +210,7 @@ exports.onPreBuild = ({ reporter }) => {
 /**
  * Post-build hook to ensure files are properly copied and not overwritten
  * This runs after Gatsby's build process to restore the correct files
+ * Note: Adapter headers are generated AFTER this hook
  */
 exports.onPostBuild = ({ reporter }) => {
 	const sourceDir = path.join(process.cwd(), "static", "unknown-pleasures");
@@ -249,6 +250,24 @@ exports.onPostBuild = ({ reporter }) => {
 			}
 		} else {
 			reporter.error("❌ Source unknown-pleasures directory not found");
+		}
+
+		// Fix X-Frame-Options header to allow iframe embeds
+		const headersPath = path.join(process.cwd(), "public", "_headers");
+		if (fs.existsSync(headersPath)) {
+			reporter.info("🔍 Checking _headers file for X-Frame-Options...");
+			let headersContent = fs.readFileSync(headersPath, "utf8");
+			const beforeCount = (headersContent.match(/x-frame-options:\s*DENY/gi) || []).length;
+			reporter.info(`Found ${beforeCount} instances of X-Frame-Options: DENY`);
+
+			// Replace ALL instances of DENY with SAMEORIGIN (global + case insensitive)
+			headersContent = headersContent.replace(/x-frame-options:\s*DENY/gi, "x-frame-options: SAMEORIGIN");
+
+			const afterCount = (headersContent.match(/x-frame-options:\s*DENY/gi) || []).length;
+			fs.writeFileSync(headersPath, headersContent);
+			reporter.info(`✅ Fixed X-Frame-Options header (${beforeCount} → ${afterCount} DENY instances)`);
+		} else {
+			reporter.warn("⚠️ _headers file not found");
 		}
 	} catch (error) {
 		reporter.error("❌ Error in post-build check", error);
