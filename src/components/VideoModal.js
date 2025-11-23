@@ -68,8 +68,9 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 
 	let embedUrl = videoUrl;
 	if (isYouTube) {
-		// YouTube embed parameters
-		embedUrl = `${videoUrl}?autoplay=1&rel=0&modestbranding=1`;
+		// YouTube embed parameters - origin is required for Error 153 fix
+		const origin = typeof window !== 'undefined' ? window.location.origin : 'https://antonio.almena.io';
+		embedUrl = `${videoUrl}?autoplay=1&origin=${encodeURIComponent(origin)}`;
 	} else if (isVimeo) {
 		// Vimeo embed parameters
 		embedUrl = `${videoUrl}?autoplay=1&title=0&byline=0&portrait=0&dnt=1`;

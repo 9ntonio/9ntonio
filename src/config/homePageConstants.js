@@ -14,7 +14,7 @@ export const TECH_NAMES = ["Next.js", "Claude AI", "Web APIs "];
 export const VIDEO_CONFIG = {
 	GUSTO_VIDEO_URL: "https://player.vimeo.com/video/374826636",
 	GUSTO_VIDEO_TITLE: "Gusto Project Showcase",
-	PLAYSTATION_VIDEO_URL: "https://www.youtube-nocookie.com/embed/RtUsXIabvvw",
+	PLAYSTATION_VIDEO_URL: "https://www.youtube.com/embed/RtUsXIabvvw",
 	PLAYSTATION_VIDEO_TITLE: "PlayStation Vue Review"
 };
 
