@@ -2,6 +2,14 @@ module.exports = {
 	adapter: require("gatsby-adapter-netlify").default({
 		excludeDatastoreFromEngineFunction: false,
 		imageCDN: false, // Let Netlify handle image optimization
+		headers: {
+			"/*": [
+				"X-Frame-Options: SAMEORIGIN",
+				"X-Content-Type-Options: nosniff",
+				"X-XSS-Protection: 1; mode=block",
+				"Referrer-Policy: same-origin",
+			],
+		},
 	}),
 	siteMetadata: {
 		title: `Design Technologist`,
