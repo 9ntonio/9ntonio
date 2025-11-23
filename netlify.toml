@@ -95,6 +95,7 @@ for = "/*"
 X-Frame-Options = "SAMEORIGIN"
 X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
+Content-Security-Policy = "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://www.youtube-nocookie.com;"
 
 # Important: Ensure proper routing for unknown-pleasures section and its assets
 [[redirects]]

@@ -62,6 +62,19 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 
 	if (!isOpen) return null;
 
+	// Detect video platform and build appropriate URL with parameters
+	const isYouTube = videoUrl.includes('youtube.com');
+	const isVimeo = videoUrl.includes('vimeo.com');
+
+	let embedUrl = videoUrl;
+	if (isYouTube) {
+		// YouTube embed parameters
+		embedUrl = `${videoUrl}?autoplay=1&rel=0&modestbranding=1`;
+	} else if (isVimeo) {
+		// Vimeo embed parameters
+		embedUrl = `${videoUrl}?autoplay=1&title=0&byline=0&portrait=0&dnt=1`;
+	}
+
 	return (
 		<div className="fixed inset-0 z-50 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="video-modal-title" ref={modalRef}>
 			{/* Backdrop */}
@@ -90,15 +103,13 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
 				{/* Video Container */}
 				<div className="relative w-full" style={{ aspectRatio: "16/9" }}>
 					<iframe
-						src={`${videoUrl}?autoplay=1&title=0&byline=0&portrait=0&dnt=1`}
+						src={embedUrl}
 						width="100%"
 						height="100%"
-						frameBorder="0"
-						allow="autoplay; fullscreen; picture-in-picture"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 						allowFullScreen
 						title={`${title} - Video Player`}
 						className="w-full h-full"
-						loading="lazy"
 					/>
 				</div>
 			</div>
