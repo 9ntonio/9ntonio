@@ -16116,7 +16116,7 @@ const RAW_RUNTIME_STATE =
           ["http-shutdown", "npm:1.2.2"],\
           ["jiti", "npm:2.4.2"],\
           ["mlly", "npm:1.7.4"],\
-          ["node-forge", "npm:1.3.1"],\
+          ["node-forge", "npm:1.3.2"],\
           ["pathe", "npm:1.1.2"],\
           ["std-env", "npm:3.8.0"],\
           ["ufo", "npm:1.5.4"],\
@@ -17464,10 +17464,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["node-forge", [\
-      ["npm:1.3.1", {\
-        "packageLocation": "../../.yarn/berry/cache/node-forge-npm-1.3.1-f31fd566cc-10c0.zip/node_modules/node-forge/",\
+      ["npm:1.3.2", {\
+        "packageLocation": "../../.yarn/berry/cache/node-forge-npm-1.3.2-39b26c0214-10c0.zip/node_modules/node-forge/",\
         "packageDependencies": [\
-          ["node-forge", "npm:1.3.1"]\
+          ["node-forge", "npm:1.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
