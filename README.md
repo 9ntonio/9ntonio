@@ -27,8 +27,8 @@ This portfolio demonstrates technical expertise through both content and impleme
 
 - **[Gusto](https://www.gusto.com)**: Payroll, HR & Benefits platform (DEPT® collaboration)
 - **[Google Store](https://store.google.com)**: E-commerce platform (Odopod/Google collaboration)
-- **[PlayStation Vue](https://www.odopod.com/case-studies/ps-vue)**: Streaming service interface (Odopod/Sony collaboration)
-- **[Unknown Pleasures](/unknown-pleasures)**: Personal creative coding project using AI assistance
+- **[PlayStation Vue](https://en.wikipedia.org/wiki/PlayStation_Vue)**: Streaming service interface (Odopod/Sony collaboration)
+- **[Unknown Pleasures](https://antonio.almena.io/unknown-pleasures)**: Personal creative coding project using AI assistance
 
 ## 🛠 Technology Stack
 
@@ -582,3 +582,4 @@ Senior Full Stack Engineer
 
 ## 💾 Netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cd9d239a-46b6-4066-ad93-532bdd965572/deploy-status)](https://app.netlify.com/projects/agitated-saha-24099f/deploys)
+
