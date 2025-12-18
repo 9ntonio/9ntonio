@@ -91,7 +91,7 @@ const RAW_RUNTIME_STATE =
           ["terser-webpack-plugin", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.3.16"],\
           ["tsparticles", "npm:3.9.1"],\
           ["tsparticles-preset-triangles", "npm:2.12.0"],\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.0"]\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -7446,10 +7446,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:8c5fd3b51b31c20e3b8d810894180d1f33b4a7cb7982170111fcca13420ea066112d93ebec92ea42bdb9953f28a4364ec50987078bdbc0fd206966484ff97e01#npm:1.0.4", {\
-        "packageLocation": "./.yarn/__virtual__/acorn-import-phases-virtual-2ac8a287fb/7/runner/cache/others/berry/cache/acorn-import-phases-npm-1.0.4-c85e685904-10c0.zip/node_modules/acorn-import-phases/",\
+      ["virtual:f2bedd3d73fde7080ff4df3d7b32582fd25f969898f766ef5955ecdc10dad1f501afc7979899542f8315b7c664e18bec0966f1b33f874e36460a0e044ae50a8b#npm:1.0.4", {\
+        "packageLocation": "./.yarn/__virtual__/acorn-import-phases-virtual-aceff4c6f1/7/runner/cache/others/berry/cache/acorn-import-phases-npm-1.0.4-c85e685904-10c0.zip/node_modules/acorn-import-phases/",\
         "packageDependencies": [\
-          ["acorn-import-phases", "virtual:8c5fd3b51b31c20e3b8d810894180d1f33b4a7cb7982170111fcca13420ea066112d93ebec92ea42bdb9953f28a4364ec50987078bdbc0fd206966484ff97e01#npm:1.0.4"],\
+          ["acorn-import-phases", "virtual:f2bedd3d73fde7080ff4df3d7b32582fd25f969898f766ef5955ecdc10dad1f501afc7979899542f8315b7c664e18bec0966f1b33f874e36460a0e044ae50a8b#npm:1.0.4"],\
           ["@types/acorn", null],\
           ["acorn", "npm:8.15.0"]\
         ],\
@@ -7828,7 +7828,7 @@ const RAW_RUNTIME_STATE =
           ["terser-webpack-plugin", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.3.16"],\
           ["tsparticles", "npm:3.9.1"],\
           ["tsparticles-preset-triangles", "npm:2.12.0"],\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.0"]\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -18849,7 +18849,7 @@ const RAW_RUNTIME_STATE =
           ["postcss", "npm:8.5.6"],\
           ["semver", "npm:7.7.2"],\
           ["tailwindcss", "npm:3.4.19"],\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.0"]\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.1"]\
         ],\
         "packagePeers": [\
           "@rspack/core",\
@@ -22168,7 +22168,7 @@ const RAW_RUNTIME_STATE =
           ["serialize-javascript", "npm:6.0.2"],\
           ["terser", "npm:5.44.1"],\
           ["uglify-js", null],\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.0"]\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.1"]\
         ],\
         "packagePeers": [\
           "@swc/core",\
@@ -23241,10 +23241,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["webpack", [\
-      ["npm:5.104.0", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webpack-npm-5.104.0-5c9d1ad9fa-10c0.zip/node_modules/webpack/",\
+      ["npm:5.104.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/webpack-npm-5.104.1-e9b2ae6a2f-10c0.zip/node_modules/webpack/",\
         "packageDependencies": [\
-          ["webpack", "npm:5.104.0"]\
+          ["webpack", "npm:5.104.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -23291,10 +23291,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.0", {\
-        "packageLocation": "./.yarn/__virtual__/webpack-virtual-8c5fd3b51b/7/runner/cache/others/berry/cache/webpack-npm-5.104.0-5c9d1ad9fa-10c0.zip/node_modules/webpack/",\
+      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.1", {\
+        "packageLocation": "./.yarn/__virtual__/webpack-virtual-f2bedd3d73/7/runner/cache/others/berry/cache/webpack-npm-5.104.1-e9b2ae6a2f-10c0.zip/node_modules/webpack/",\
         "packageDependencies": [\
-          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.0"],\
+          ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.1"],\
           ["@types/eslint-scope", "npm:3.7.7"],\
           ["@types/estree", "npm:1.0.8"],\
           ["@types/json-schema", "npm:7.0.15"],\
@@ -23303,7 +23303,7 @@ const RAW_RUNTIME_STATE =
           ["@webassemblyjs/wasm-edit", "npm:1.14.1"],\
           ["@webassemblyjs/wasm-parser", "npm:1.14.1"],\
           ["acorn", "npm:8.15.0"],\
-          ["acorn-import-phases", "virtual:8c5fd3b51b31c20e3b8d810894180d1f33b4a7cb7982170111fcca13420ea066112d93ebec92ea42bdb9953f28a4364ec50987078bdbc0fd206966484ff97e01#npm:1.0.4"],\
+          ["acorn-import-phases", "virtual:f2bedd3d73fde7080ff4df3d7b32582fd25f969898f766ef5955ecdc10dad1f501afc7979899542f8315b7c664e18bec0966f1b33f874e36460a0e044ae50a8b#npm:1.0.4"],\
           ["browserslist", "npm:4.28.1"],\
           ["chrome-trace-event", "npm:1.0.4"],\
           ["enhanced-resolve", "npm:5.18.4"],\
