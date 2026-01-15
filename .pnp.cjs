@@ -77,7 +77,7 @@ const RAW_RUNTIME_STATE =
           ["node-addon-api", "npm:8.5.0"],\
           ["postcss", "npm:8.5.6"],\
           ["postcss-loader", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:8.2.0"],\
-          ["prettier", "npm:3.7.4"],\
+          ["prettier", "npm:3.8.0"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:18.3.1"],\
@@ -7930,7 +7930,7 @@ const RAW_RUNTIME_STATE =
           ["node-addon-api", "npm:8.5.0"],\
           ["postcss", "npm:8.5.6"],\
           ["postcss-loader", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:8.2.0"],\
-          ["prettier", "npm:3.7.4"],\
+          ["prettier", "npm:3.8.0"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:18.3.1"],\
@@ -19652,10 +19652,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier", [\
-      ["npm:3.7.4", {\
-        "packageLocation": "./.yarn/unplugged/prettier-npm-3.7.4-78f94d4194/node_modules/prettier/",\
+      ["npm:3.8.0", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.8.0-7cbf267d2c/node_modules/prettier/",\
         "packageDependencies": [\
-          ["prettier", "npm:3.7.4"]\
+          ["prettier", "npm:3.8.0"]\
         ],\
         "linkType": "HARD"\
       }]\
