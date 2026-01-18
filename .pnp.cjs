@@ -87,7 +87,7 @@ const RAW_RUNTIME_STATE =
           ["sass", "npm:1.97.2"],\
           ["sharp", "npm:0.34.5"],\
           ["tailwindcss", "npm:3.4.19"],\
-          ["terser", "npm:5.44.1"],\
+          ["terser", "npm:5.46.0"],\
           ["terser-webpack-plugin", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.3.16"],\
           ["tsparticles", "npm:3.9.1"],\
           ["tsparticles-preset-triangles", "npm:2.12.0"],\
@@ -5682,7 +5682,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/source-map", "npm:2.1.1"],\
           ["@parcel/utils", "npm:2.8.3"],\
           ["nullthrows", "npm:1.1.1"],\
-          ["terser", "npm:5.44.1"]\
+          ["terser", "npm:5.46.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7940,7 +7940,7 @@ const RAW_RUNTIME_STATE =
           ["sass", "npm:1.97.2"],\
           ["sharp", "npm:0.34.5"],\
           ["tailwindcss", "npm:3.4.19"],\
-          ["terser", "npm:5.44.1"],\
+          ["terser", "npm:5.46.0"],\
           ["terser-webpack-plugin", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.3.16"],\
           ["tsparticles", "npm:3.9.1"],\
           ["tsparticles-preset-triangles", "npm:2.12.0"],\
@@ -14798,7 +14798,7 @@ const RAW_RUNTIME_STATE =
           ["entities", "npm:4.5.0"],\
           ["param-case", "npm:3.0.4"],\
           ["relateurl", "npm:0.2.7"],\
-          ["terser", "npm:5.44.1"]\
+          ["terser", "npm:5.46.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22247,10 +22247,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["terser", [\
-      ["npm:5.44.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/terser-npm-5.44.1-48464a937a-10c0.zip/node_modules/terser/",\
+      ["npm:5.46.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/terser-npm-5.46.0-2870f1e002-10c0.zip/node_modules/terser/",\
         "packageDependencies": [\
-          ["terser", "npm:5.44.1"],\
+          ["terser", "npm:5.46.0"],\
           ["@jridgewell/source-map", "npm:0.3.6"],\
           ["acorn", "npm:8.15.0"],\
           ["commander", "npm:2.20.3"],\
@@ -22281,7 +22281,7 @@ const RAW_RUNTIME_STATE =
           ["jest-worker", "npm:27.5.1"],\
           ["schema-utils", "npm:4.3.0"],\
           ["serialize-javascript", "npm:6.0.2"],\
-          ["terser", "npm:5.44.1"],\
+          ["terser", "npm:5.46.0"],\
           ["uglify-js", null],\
           ["webpack", "virtual:5f7c9cbf03c7afb7ee5cfd7b23ced58c3c18712a997e0e262c9cfa78e9cc5dbf237782ebb8985bda2924d3170e86186d0dc5bf995f5cc6f94d8fb852579e385e#npm:5.98.0"]\
         ],\
@@ -22311,7 +22311,7 @@ const RAW_RUNTIME_STATE =
           ["jest-worker", "npm:27.5.1"],\
           ["schema-utils", "npm:4.3.0"],\
           ["serialize-javascript", "npm:6.0.2"],\
-          ["terser", "npm:5.44.1"],\
+          ["terser", "npm:5.46.0"],\
           ["uglify-js", null],\
           ["webpack", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.104.1"]\
         ],\
