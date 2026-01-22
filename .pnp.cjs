@@ -4101,7 +4101,7 @@ const RAW_RUNTIME_STATE =
           ["common-tags", "npm:1.8.2"],\
           ["graphql", "npm:16.10.0"],\
           ["import-from", "npm:4.0.0"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["tslib", "npm:2.4.1"]\
         ],\
         "packagePeers": [\
@@ -4120,7 +4120,7 @@ const RAW_RUNTIME_STATE =
           ["common-tags", "npm:1.8.2"],\
           ["graphql", "npm:16.10.0"],\
           ["import-from", "npm:4.0.0"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["tslib", "npm:2.4.1"]\
         ],\
         "packagePeers": [\
@@ -6251,7 +6251,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-module-imports", "npm:7.25.9"],\
           ["@babel/types", "npm:7.26.9"],\
           ["glob", "npm:7.2.3"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["require-package-name", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
@@ -11785,7 +11785,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-flowtype", "virtual:5f7c9cbf03c7afb7ee5cfd7b23ced58c3c18712a997e0e262c9cfa78e9cc5dbf237782ebb8985bda2924d3170e86186d0dc5bf995f5cc6f94d8fb852579e385e#npm:5.10.0"],\
           ["@types/eslint", null],\
           ["eslint", "npm:7.32.0"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["string-natural-compare", "npm:3.0.1"]\
         ],\
         "packagePeers": [\
@@ -13254,7 +13254,7 @@ const RAW_RUNTIME_STATE =
           ["latest-version", "npm:7.0.0"],\
           ["linkfs", "npm:2.1.0"],\
           ["lmdb", "virtual:fe3df271547318c08698c1ad4aa929b160a053f072e63f51c0ec9712df14abb1627a5076c2f6850273ed9278b96bf3f38180d6099521eab09afb0f50d0a8ced9#npm:2.5.3"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["meant", "npm:1.0.3"],\
           ["memoizee", "npm:0.4.17"],\
           ["micromatch", "npm:4.0.8"],\
@@ -13382,7 +13382,7 @@ const RAW_RUNTIME_STATE =
           ["hosted-git-info", "npm:3.0.8"],\
           ["is-valid-path", "npm:0.1.1"],\
           ["joi", "npm:17.13.3"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["node-fetch", "virtual:021a300b61b0fdf6410317607fb40d4e250ef547740c20c5b5c0064109c815c4ac1833a9feb57823a8c94be2918e5142e09037218b5412c8b47996f76c0d1a04#npm:2.7.0"],\
           ["opentracing", "npm:0.14.7"],\
           ["pretty-error", "npm:2.1.2"],\
@@ -13513,7 +13513,7 @@ const RAW_RUNTIME_STATE =
           ["fs-exists-cached", "npm:1.0.0"],\
           ["gatsby-core-utils", "npm:4.15.0"],\
           ["glob", "npm:7.2.3"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["micromatch", "npm:4.0.8"]\
         ],\
         "linkType": "HARD"\
@@ -13730,7 +13730,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-page-utils", "npm:3.15.0"],\
           ["gatsby-plugin-utils", "virtual:cc034b1ca80e56f0fae64ecd3296ca666c5739f96d5c995c9d4e7f22808e71eaa85e65ae239d4ef6d97c721b6c79a1d0aecdca9cbd2325df84002b2f997c6cb7#npm:4.15.0"],\
           ["globby", "npm:11.1.0"],\
-          ["lodash", "npm:4.17.21"]\
+          ["lodash", "npm:4.17.23"]\
         ],\
         "packagePeers": [\
           "@types/gatsby",\
@@ -13832,7 +13832,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:5.15.0"],\
           ["gatsby-core-utils", "npm:4.15.0"],\
           ["gatsby-plugin-utils", "virtual:cc034b1ca80e56f0fae64ecd3296ca666c5739f96d5c995c9d4e7f22808e71eaa85e65ae239d4ef6d97c721b6c79a1d0aecdca9cbd2325df84002b2f997c6cb7#npm:4.15.0"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["probe-image-size", "npm:7.2.3"],\
           ["semver", "npm:7.7.1"],\
           ["sharp", "npm:0.32.6"]\
@@ -15146,7 +15146,7 @@ const RAW_RUNTIME_STATE =
           ["cli-width", "npm:3.0.0"],\
           ["external-editor", "npm:3.1.0"],\
           ["figures", "npm:3.2.0"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["mute-stream", "npm:0.0.8"],\
           ["run-async", "npm:2.4.1"],\
           ["rxjs", "npm:6.6.7"],\
@@ -16433,10 +16433,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lodash", [\
-      ["npm:4.17.21", {\
-        "packageLocation": "../../.yarn/berry/cache/lodash-npm-4.17.21-6382451519-10c0.zip/node_modules/lodash/",\
+      ["npm:4.17.23", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash-npm-4.17.23-50bdb1c01a-10c0.zip/node_modules/lodash/",\
         "packageDependencies": [\
-          ["lodash", "npm:4.17.21"]\
+          ["lodash", "npm:4.17.23"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19682,7 +19682,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/pretty-error-npm-2.1.2-7a43e8ca26-10c0.zip/node_modules/pretty-error/",\
         "packageDependencies": [\
           ["pretty-error", "npm:2.1.2"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["renderkid", "npm:2.0.7"]\
         ],\
         "linkType": "HARD"\
@@ -20578,7 +20578,7 @@ const RAW_RUNTIME_STATE =
           ["css-select", "npm:4.3.0"],\
           ["dom-converter", "npm:0.2.0"],\
           ["htmlparser2", "npm:6.1.0"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.17.23"],\
           ["strip-ansi", "npm:3.0.1"]\
         ],\
         "linkType": "HARD"\
