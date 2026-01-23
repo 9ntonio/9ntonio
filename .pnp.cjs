@@ -16442,10 +16442,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lodash-es", [\
-      ["npm:4.17.21", {\
-        "packageLocation": "../../.yarn/berry/cache/lodash-es-npm-4.17.21-b45832dfce-10c0.zip/node_modules/lodash-es/",\
+      ["npm:4.17.23", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash-es-npm-4.17.23-b4279789e6-10c0.zip/node_modules/lodash-es/",\
         "packageDependencies": [\
-          ["lodash-es", "npm:4.17.21"]\
+          ["lodash-es", "npm:4.17.23"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17470,7 +17470,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["netlify", "npm:13.3.3"],\
           ["@netlify/open-api", "npm:2.36.0"],\
-          ["lodash-es", "npm:4.17.21"],\
+          ["lodash-es", "npm:4.17.23"],\
           ["micro-api-client", "npm:3.3.0"],\
           ["node-fetch", "npm:3.3.2"],\
           ["omit.js", "npm:2.0.2"],\
