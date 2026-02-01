@@ -42,7 +42,7 @@ const RAW_RUNTIME_STATE =
           ["@gatsbyjs/reach-router", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.0.1"],\
           ["@netlify/plugin-gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.8.4"],\
           ["@popperjs/core", "npm:2.11.8"],\
-          ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.23"],\
+          ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.24"],\
           ["babel-plugin-transform-imports", "npm:2.0.0"],\
           ["babel-plugin-transform-react-remove-prop-types", "npm:0.4.24"],\
           ["common-tags", "npm:1.8.2"],\
@@ -7895,7 +7895,7 @@ const RAW_RUNTIME_STATE =
           ["@gatsbyjs/reach-router", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:2.0.1"],\
           ["@netlify/plugin-gatsby", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:3.8.4"],\
           ["@popperjs/core", "npm:2.11.8"],\
-          ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.23"],\
+          ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.24"],\
           ["babel-plugin-transform-imports", "npm:2.0.0"],\
           ["babel-plugin-transform-react-remove-prop-types", "npm:0.4.24"],\
           ["common-tags", "npm:1.8.2"],\
@@ -8239,20 +8239,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["autoprefixer", [\
-      ["npm:10.4.23", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/autoprefixer-npm-10.4.23-2df749c438-10c0.zip/node_modules/autoprefixer/",\
+      ["npm:10.4.24", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/autoprefixer-npm-10.4.24-5553c1db29-10c0.zip/node_modules/autoprefixer/",\
         "packageDependencies": [\
-          ["autoprefixer", "npm:10.4.23"]\
+          ["autoprefixer", "npm:10.4.24"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.23", {\
-        "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-c6bbfaf5a1/7/runner/cache/others/berry/cache/autoprefixer-npm-10.4.23-2df749c438-10c0.zip/node_modules/autoprefixer/",\
+      ["virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.24", {\
+        "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-820bc7a2e9/7/runner/cache/others/berry/cache/autoprefixer-npm-10.4.24-5553c1db29-10c0.zip/node_modules/autoprefixer/",\
         "packageDependencies": [\
-          ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.23"],\
+          ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.24"],\
           ["@types/postcss", null],\
           ["browserslist", "npm:4.28.1"],\
-          ["caniuse-lite", "npm:1.0.30001760"],\
+          ["caniuse-lite", "npm:1.0.30001766"],\
           ["fraction.js", "npm:5.3.4"],\
           ["picocolors", "npm:1.1.1"],\
           ["postcss", "npm:8.5.6"],\
@@ -9246,6 +9246,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../../runner/cache/others/berry/cache/caniuse-lite-npm-1.0.30001760-c4aa807132-10c0.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
           ["caniuse-lite", "npm:1.0.30001760"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:1.0.30001766", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/caniuse-lite-npm-1.0.30001766-3c13c99c61-10c0.zip/node_modules/caniuse-lite/",\
+        "packageDependencies": [\
+          ["caniuse-lite", "npm:1.0.30001766"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13207,7 +13214,7 @@ const RAW_RUNTIME_STATE =
           ["acorn-walk", "npm:8.3.4"],\
           ["address", "npm:1.2.2"],\
           ["anser", "npm:2.3.2"],\
-          ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.23"],\
+          ["autoprefixer", "virtual:a17b2292982898c3efac92b9d100849e5b5d6b07524a45a88aaa433131ee13cfaab8e1b32158f56334eaf0cb968dcc4ee7da2ad787dde88e89a4020deb1b825c#npm:10.4.24"],\
           ["axios", "npm:1.12.1"],\
           ["babel-jsx-utils", "npm:1.1.0"],\
           ["babel-loader", "virtual:874af4d7398455656a59069f9aa16ffed8638b85b449eecb50d49e99268e0092d9db822cac0b62fed5b25ba99bde14b1669ed0018bc8f346779ddeae9f92be8f#npm:8.4.1"],\
